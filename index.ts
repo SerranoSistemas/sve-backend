@@ -1,8 +1,8 @@
 import express, { Request, Response } from "express";
+
 import PlantaRouter from "./Routes/Planta";
 
 const APP = express();
-APP.use(express.json());
 
 APP.get("/", (req: Request, res: Response) =>
   res.status(200).json({ message: "Bem vindo ao Sistema de Medição" })
