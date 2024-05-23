@@ -1,24 +1,15 @@
 import express, { Request, Response } from "express";
-import { Plantas } from "./Data/Planta";
+import PlantaRouter from "./Routes/Planta";
 
-const app = express();
-app.use(express.json());
+const APP = express();
+APP.use(express.json());
 
-// get post routes
-app.get("/post", (req: Request, res: Response) => {
-  res.status(200).json({ message: "post routes" });
-});
+APP.get("/", (req: Request, res: Response) =>
+  res.status(200).json({ message: "Bem vindo ao Sistema de Medição" })
+);
 
-// root routes
-app.get("/", (req: Request, res: Response) => {
-  res.status(200).json({ message: "Hello World" });
-});
+APP.use("/planta", PlantaRouter);
 
-// root routes
-app.get("/planta", (req: Request, res: Response) => {
-  res.status(200).json(Plantas);
-});
+APP.listen(3000, () => console.log("Server is running on port 3000"));
 
-app.listen(3000, () => console.log("Server is running on port 3000"));
-
-export default app;
+export default APP;
