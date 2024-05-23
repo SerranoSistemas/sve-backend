@@ -1,8 +1,8 @@
 {
-  "name": "express",
+  "name": "sve-backend",
   "version": "0.0.1",
   "scripts": {
-    "dev": "nodemon index.ts"
+    "dev": "nodemon server.ts"
   },
   "devDependencies": {
     "@types/express": "^4.17.21",
