@@ -36,7 +36,7 @@ HTTP_POST("/", (REQ: Request, RES: Response) => {
   });
 });
 
-HTTP_DELETE("/", (REQ: Request, RES: Response) => {
+HTTP_DELETE("/:id", (REQ: Request, RES: Response) => {
   const ID = REQ.params.id;
   RES.status(200).json({
     Data: `Deletando Estação de Medição com ID: ${ID}`,
