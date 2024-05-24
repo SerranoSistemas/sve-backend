@@ -1,5 +1,5 @@
 import express, { Request, Response } from "express";
-import { CheckDelay } from "../Lib/Utils";
+import { Middleware } from "../Lib/Utils";
 import { EstacoesMedicao } from "../Data/EstacaoMedicao";
 
 const EstacaoMedicaoRouter = express.Router();
@@ -8,7 +8,7 @@ const HTTP_POST = EstacaoMedicaoRouter.post.bind(EstacaoMedicaoRouter);
 const HTTP_DELETE = EstacaoMedicaoRouter.delete.bind(EstacaoMedicaoRouter);
 const HTTP_PUT = EstacaoMedicaoRouter.put.bind(EstacaoMedicaoRouter);
 
-EstacaoMedicaoRouter.use(CheckDelay);
+EstacaoMedicaoRouter.use(Middleware);
 
 HTTP_GET("/", (REQ: Request, RES: Response) => {
   RES.status(200).json({
@@ -24,6 +24,7 @@ HTTP_GET("/:id", (REQ: Request, RES: Response) => {
 });
 
 HTTP_PUT("/:id", (REQ: Request, RES: Response) => {
+  console.log(REQ.body);
   const ID = REQ.params.id;
   RES.status(200).json({
     Data: `Editando Estação de Medição com ID: ${ID}`,
@@ -31,6 +32,7 @@ HTTP_PUT("/:id", (REQ: Request, RES: Response) => {
 });
 
 HTTP_POST("/", (REQ: Request, RES: Response) => {
+  console.log(REQ.body);
   RES.status(200).json({
     Data: `Inserindo Estação de Medição`,
   });
