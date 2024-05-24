@@ -12,7 +12,6 @@ EstacaoMedicaoRouter.use(CheckDelay);
 
 HTTP_GET("/", (REQ: Request, RES: Response) => {
   RES.status(200).json({
-    Code: 200,
     Data: EstacoesMedicao,
   });
 });
@@ -20,7 +19,6 @@ HTTP_GET("/", (REQ: Request, RES: Response) => {
 HTTP_GET("/:id", (REQ: Request, RES: Response) => {
   const ID = REQ.params.id;
   RES.status(200).json({
-    Code: 200,
     Data: `Detalhes da Estação de Medição com ID: ${ID}`,
   });
 });
@@ -28,14 +26,12 @@ HTTP_GET("/:id", (REQ: Request, RES: Response) => {
 HTTP_PUT("/:id", (REQ: Request, RES: Response) => {
   const ID = REQ.params.id;
   RES.status(200).json({
-    Code: 200,
     Data: `Editando Estação de Medição com ID: ${ID}`,
   });
 });
 
 HTTP_POST("/", (REQ: Request, RES: Response) => {
   RES.status(200).json({
-    Code: 200,
     Data: `Inserindo Estação de Medição`,
   });
 });
@@ -43,7 +39,6 @@ HTTP_POST("/", (REQ: Request, RES: Response) => {
 HTTP_DELETE("/", (REQ: Request, RES: Response) => {
   const ID = REQ.params.id;
   RES.status(200).json({
-    Code: 200,
     Data: `Deletando Estação de Medição com ID: ${ID}`,
   });
 });
