@@ -1,6 +1,7 @@
 import express, { Request, Response } from "express";
 
 import PlantaRouter from "./Routes/Planta";
+import EstacaoMedicaoRouter from "./Routes/EstacaoMedicao";
 
 const APP = express();
 
@@ -9,6 +10,7 @@ APP.get("/", (req: Request, res: Response) =>
 );
 
 APP.use("/planta", PlantaRouter);
+APP.use("/estacaoMedicao", EstacaoMedicaoRouter);
 
 APP.listen(3000, () => console.log("Server is running on port 3000"));
 
