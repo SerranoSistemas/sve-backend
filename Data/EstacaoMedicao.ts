@@ -1,65 +1,76 @@
-import { EstacoesMedicaoType } from "./Types";
+import moment from "moment";
+import { DefaultClass, EstacoesMedicaoType } from "./Types";
 
-export const EstacoesMedicao: EstacoesMedicaoType[] = [
+export const EstacoesMedicao: DefaultClass[] = [
   {
-    id: "estacao1",
+    identificador: "estacao1",
     codigo: "BSM",
     descricao: "EMED OSM ELASTOMEROS",
-    observacao: "",
+    incluidoEm: moment(new Date()).unix(),
+    alteradoEm: moment(new Date()).unix(),
   },
   {
-    id: "estacao2",
+    identificador: "estacao2",
     codigo: "INNOVA",
     descricao: "CMED INNOVA",
-    observacao: "",
+    incluidoEm: moment(new Date()).unix(),
+    alteradoEm: moment(new Date()).unix(),
   },
   {
-    id: "estacao3",
+    identificador: "estacao3",
     codigo: "PPZIPES",
     descricao: "ENED PPEIPES",
-    observacao: "",
+    incluidoEm: moment(new Date()).unix(),
+    alteradoEm: moment(new Date()).unix(),
   },
   {
-    id: "estacao4",
+    identificador: "estacao4",
     codigo: "OXITERO",
     descricao: "EMED OXITENG",
-    observacao: "",
+    incluidoEm: moment(new Date()).unix(),
+    alteradoEm: moment(new Date()).unix(),
   },
   {
-    id: "estacao5",
+    identificador: "estacao5",
     codigo: "",
     descricao: "SMED PER",
-    observacao: "",
+    incluidoEm: moment(new Date()).unix(),
+    alteradoEm: moment(new Date()).unix(),
   },
   {
-    id: "estacao6",
+    identificador: "estacao6",
     codigo: "PEA",
     descricao: "LMED PEA",
-    observacao: "",
+    incluidoEm: moment(new Date()).unix(),
+    alteradoEm: moment(new Date()).unix(),
   },
   {
-    id: "estacao7",
+    identificador: "estacao7",
     codigo: "PPI",
     descricao: "LMED PPI",
-    observacao: "",
+    incluidoEm: moment(new Date()).unix(),
+    alteradoEm: moment(new Date()).unix(),
   },
   {
-    id: "estacao8",
+    identificador: "estacao8",
     codigo: "LANXESS",
     descricao: "EMED LANXESS",
-    observacao: "",
+    incluidoEm: moment(new Date()).unix(),
+    alteradoEm: moment(new Date()).unix(),
   },
   {
-    id: "estacao9",
+    identificador: "estacao9",
     codigo: "WHITE MARTINS",
     descricao: "SMED WHITE MARTINS",
-    observacao: "",
+    incluidoEm: moment(new Date()).unix(),
+    alteradoEm: moment(new Date()).unix(),
   },
   {
-    id: "estacao10",
+    identificador: "estacao10",
     codigo: "BRASKEM GREEN",
     descricao: "EMED BRASKEM GREEN",
-    observacao: "",
+    incluidoEm: moment(new Date()).unix(),
+    alteradoEm: moment(new Date()).unix(),
   },
 ];
 

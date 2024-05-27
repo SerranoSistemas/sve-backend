@@ -1,35 +1,48 @@
-import { PlantaType } from "./Types";
+import moment from "moment";
+import { DefaultClass } from "./Types";
 
-export const Plantas: PlantaType[] = [
+export const Plantas: DefaultClass[] = [
   {
-    id: "PLant1",
+    identificador: "Plant1",
     codigo: "UNIB 2 RS",
     descricao: "UNIB 2 RS",
+    incluidoEm: moment(new Date()).unix(),
+    alteradoEm: moment(new Date()).unix(),
   },
   {
-    id: "PLant2",
+    identificador: "Plant2",
     codigo: "ARO",
     descricao: "AROMÁTICOS",
+    incluidoEm: moment(new Date()).unix(),
+    alteradoEm: moment(new Date()).unix(),
   },
   {
-    id: "PLant3",
+    identificador: "Plant3",
     codigo: "OLE1",
     descricao: "OLEFINAS 1",
+    incluidoEm: moment(new Date()).unix(),
+    alteradoEm: moment(new Date()).unix(),
   },
   {
-    id: "PLant4",
+    identificador: "Plant4",
     codigo: "OLE2",
     descricao: "OLEFINAS 2",
+    incluidoEm: moment(new Date()).unix(),
+    alteradoEm: moment(new Date()).unix(),
   },
   {
-    id: "PLant5",
+    identificador: "Plant5",
     codigo: "EV",
     descricao: "ETENO VERDE",
+    incluidoEm: moment(new Date()).unix(),
+    alteradoEm: moment(new Date()).unix(),
   },
   {
-    id: "PLant6",
+    identificador: "Plant6",
     codigo: "UTIL",
     descricao: "UTILIDADES",
+    incluidoEm: moment(new Date()).unix(),
+    alteradoEm: moment(new Date()).unix(),
   },
 ];
 
