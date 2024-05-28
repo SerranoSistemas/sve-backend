@@ -1,5 +1,5 @@
 import express, { Request, Response } from "express";
-
+import cors from "cors";
 import { GetElementByID, Middleware, PaginateAndSort } from "../Lib/Utils";
 import { ResponseType } from "../Data/Types";
 import { EstacoesMedicao, EstacoesMedicaoDropdown } from "../Data/EstacaoMedicao";
@@ -14,6 +14,8 @@ const HTTP_PUT = EstacaoMedicaoRouter.put.bind(EstacaoMedicaoRouter);
 EstacaoMedicaoRouter.use(express.json());
 //Apply Middleware for Delay and Error simulation
 EstacaoMedicaoRouter.use(Middleware);
+// Use o middleware CORS
+EstacaoMedicaoRouter.use(cors());
 
 HTTP_GET("/", (REQ: Request, RES: Response) => {
   const { paginatedData, totalRows, currentPage, totalPages } = PaginateAndSort(EstacoesMedicao, REQ.body.pagination);

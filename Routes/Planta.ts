@@ -1,4 +1,5 @@
 import express, { Request, Response } from "express";
+import cors from "cors";
 import { Plantas, PlantasDropdown } from "../Data/Planta";
 import { GetElementByID, Middleware, PaginateAndSort } from "../Lib/Utils";
 import { ResponseType } from "../Data/Types";
@@ -13,6 +14,8 @@ const HTTP_PUT = Router_Planta.put.bind(Router_Planta);
 Router_Planta.use(express.json());
 //Apply Middleware for Delay and Error simulation
 Router_Planta.use(Middleware);
+// Use o middleware CORS
+Router_Planta.use(cors());
 
 HTTP_GET("/", (REQ: Request, RES: Response) => {
   const { paginatedData, totalRows, currentPage, totalPages } = PaginateAndSort(Plantas, REQ.body.pagination);
