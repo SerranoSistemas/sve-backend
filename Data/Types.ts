@@ -21,6 +21,17 @@ export type DefaultClass = {
   excluidoEm?: Date | number;
 };
 
+//Objeto mínimo por enquanto
+export type DefaultAreaClass = {
+  codigo: number | string;
+  descricao: string;
+  identificador: string;
+  planta: string;
+  incluidoEm: Date | number;
+  alteradoEm: Date | number;
+  excluidoEm?: Date | number;
+};
+
 export type Pagination = {
   page: number;
   rows: number;
