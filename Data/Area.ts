@@ -22,8 +22,8 @@ export const Areas: DefaultAreaClass[] = [
   },
   {
     identificador: "Area3",
-    codigo: "A",
-    descricao: "HIDRODENAÇÃO DE CE DE PIROLISE",
+    codigo: "A25",
+    descricao: "HIDRODENAÇÃO DE C9 DE PIROLISE",
     planta: "OLEFINAS",
 
     incluidoEm: moment(new Date()).unix(),
@@ -31,7 +31,7 @@ export const Areas: DefaultAreaClass[] = [
   },
   {
     identificador: "Area4",
-    codigo: "",
+    codigo: "A31",
     descricao: "ESTOCAGEM DE MATERIAS PRIMAS 1",
     planta: "OLEFINAS 1",
 
@@ -40,7 +40,7 @@ export const Areas: DefaultAreaClass[] = [
   },
   {
     identificador: "Area5",
-    codigo: "432",
+    codigo: "A32",
     descricao: "ESTOCAGEM INTERMEDIAPLA",
     planta: "OLEFINAS",
 
@@ -58,8 +58,8 @@ export const Areas: DefaultAreaClass[] = [
   },
   {
     identificador: "Area7",
-    codigo: "",
-    descricao: "ESTERAS DE ARMAZENAMENTO",
+    codigo: "A35",
+    descricao: "ESFERAS DE ARMAZENAMENTO",
     planta: "AROMÁTICOS",
 
     incluidoEm: moment(new Date()).unix(),
@@ -76,7 +76,7 @@ export const Areas: DefaultAreaClass[] = [
   },
   {
     identificador: "Area9",
-    codigo: "422",
+    codigo: "A22",
     descricao: "EXTRAÇÃO DE AROMATICOS",
     planta: "AROMÁTICOS",
 
@@ -94,7 +94,7 @@ export const Areas: DefaultAreaClass[] = [
   },
   {
     identificador: "Area11",
-    codigo: "",
+    codigo: "A38",
     descricao: "ESTOGAGEM DE HIDROGÈNIO",
     planta: "OLEFINAS 1",
 
@@ -112,7 +112,7 @@ export const Areas: DefaultAreaClass[] = [
   },
   {
     identificador: "Area13",
-    codigo: "NAPOR",
+    codigo: "VAPOR",
     descricao: "SISTEMADE GERAÇÃO DE VAPOR",
     planta: "UTILIDADES",
 
@@ -131,7 +131,7 @@ export const Areas: DefaultAreaClass[] = [
   {
     identificador: "Area15",
     codigo: "AR",
-    descricao: "SISTEMADE AGUA DE HESFHIAMENTO",
+    descricao: "SISTEMA DE AGUA DE RESFHIAMENTO",
     planta: "UTILIDADES",
 
     incluidoEm: moment(new Date()).unix(),
@@ -139,7 +139,7 @@ export const Areas: DefaultAreaClass[] = [
   },
   {
     identificador: "Area16",
-    codigo: "462",
+    codigo: "A62",
     descricao: "TRATAMENTO DE SODA GASTA",
     planta: "OLEFINAS 1",
 
@@ -148,7 +148,7 @@ export const Areas: DefaultAreaClass[] = [
   },
   {
     identificador: "Area17",
-    codigo: "A",
+    codigo: "A63",
     descricao: "CARREGAMENTO RODOFERROVIÁRIO",
     planta: "AROMÁTICOS",
 
@@ -158,7 +158,7 @@ export const Areas: DefaultAreaClass[] = [
   {
     identificador: "Area18",
     codigo: "A84",
-    descricao: "SISTEMA DE PURGA E TOCHA",
+    descricao: "SISTEMA DE PURGA E TOCHA 1",
     planta: "OLEFINAS T",
 
     incluidoEm: moment(new Date()).unix(),
@@ -184,7 +184,7 @@ export const Areas: DefaultAreaClass[] = [
   },
   {
     identificador: "Area21",
-    codigo: "ART",
+    codigo: "A67",
     descricao: "RECUPERAÇÃO DE VAPORES",
     planta: "AROMÁTICOS",
 
@@ -202,7 +202,7 @@ export const Areas: DefaultAreaClass[] = [
   },
   {
     identificador: "Area23",
-    codigo: "TESO",
+    codigo: "TESC",
     descricao: "TERMINAL SANTA CLARA",
     planta: "AROMÁTICOS",
 
@@ -211,8 +211,8 @@ export const Areas: DefaultAreaClass[] = [
   },
   {
     identificador: "Area24",
-    codigo: "TERHIT",
-    descricao: "PARQUE DE ESTOCACIEM DE OSONID",
+    codigo: "TEDUT",
+    descricao: "PARQUE DE ESTOCACIEM DE OSÓRIO",
     planta: "UNE 2 RS",
 
     incluidoEm: moment(new Date()).unix(),
