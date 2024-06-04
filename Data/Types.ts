@@ -48,6 +48,7 @@ export type PageType = {
   totalRows: number;
   currentPage: number;
   totalPages: number;
+  rowsPerPage: number;
 };
 
 export type ResponseType = {

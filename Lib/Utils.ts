@@ -70,6 +70,7 @@ export const PaginateAndSort = (data: any[], pagination = DefaultPagination) => 
     totalRows: sortedData.length,
     currentPage: page,
     totalPages: totalPages,
+    rowsPerPage: rows,
   };
 };
 
