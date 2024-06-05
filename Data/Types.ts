@@ -13,7 +13,7 @@ export type EstacoesMedicaoType = {
 
 //Objeto mínimo por enquanto
 export type DefaultClass = {
-  codigo: number | string;
+  codigo: number | string; 
   descricao: string;
   identificador: string;
   incluidoEm: Date | number;

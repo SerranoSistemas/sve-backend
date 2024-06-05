@@ -6,7 +6,7 @@ export const Areas: DefaultAreaClass[] = [
     identificador: "Area1",
     codigo: "A13",
     descricao: "SEPARAÇÃO DE GASES",
-    planta: "OLEFINAS 1",
+    planta: "OLE1",
 
     incluidoEm: moment(new Date()).unix(),
     alteradoEm: moment(new Date()).unix(),
@@ -15,7 +15,7 @@ export const Areas: DefaultAreaClass[] = [
     identificador: "Area2",
     codigo: "A14",
     descricao: "REFRIGERAÇÃO",
-    planta: "OLEFINAS 1",
+    planta: "OLE1",
 
     incluidoEm: moment(new Date()).unix(),
     alteradoEm: moment(new Date()).unix(),
@@ -24,7 +24,7 @@ export const Areas: DefaultAreaClass[] = [
     identificador: "Area3",
     codigo: "A25",
     descricao: "HIDRODENAÇÃO DE C9 DE PIROLISE",
-    planta: "OLEFINAS",
+    planta: "OLE1",
 
     incluidoEm: moment(new Date()).unix(),
     alteradoEm: moment(new Date()).unix(),
@@ -33,7 +33,7 @@ export const Areas: DefaultAreaClass[] = [
     identificador: "Area4",
     codigo: "A31",
     descricao: "ESTOCAGEM DE MATERIAS PRIMAS 1",
-    planta: "OLEFINAS 1",
+    planta: "OLE1",
 
     incluidoEm: moment(new Date()).unix(),
     alteradoEm: moment(new Date()).unix(),
@@ -42,7 +42,7 @@ export const Areas: DefaultAreaClass[] = [
     identificador: "Area5",
     codigo: "A32",
     descricao: "ESTOCAGEM INTERMEDIAPLA",
-    planta: "OLEFINAS",
+    planta: "OLE2",
 
     incluidoEm: moment(new Date()).unix(),
     alteradoEm: moment(new Date()).unix(),
@@ -51,7 +51,7 @@ export const Areas: DefaultAreaClass[] = [
     identificador: "Area6",
     codigo: "A34",
     descricao: "ESTOCAGEM CHIOGENICA",
-    planta: "OLEFINAS 1",
+    planta: "OLE1",
 
     incluidoEm: moment(new Date()).unix(),
     alteradoEm: moment(new Date()).unix(),
@@ -60,7 +60,7 @@ export const Areas: DefaultAreaClass[] = [
     identificador: "Area7",
     codigo: "A35",
     descricao: "ESFERAS DE ARMAZENAMENTO",
-    planta: "AROMÁTICOS",
+    planta: "ARO",
 
     incluidoEm: moment(new Date()).unix(),
     alteradoEm: moment(new Date()).unix(),
@@ -69,7 +69,7 @@ export const Areas: DefaultAreaClass[] = [
     identificador: "Area8",
     codigo: "A36",
     descricao: "TANCAGEM DE PRODUTOS FINAIS 1",
-    planta: "AROMÁTICOS",
+    planta: "ARO",
 
     incluidoEm: moment(new Date()).unix(),
     alteradoEm: moment(new Date()).unix(),
@@ -78,7 +78,7 @@ export const Areas: DefaultAreaClass[] = [
     identificador: "Area9",
     codigo: "A22",
     descricao: "EXTRAÇÃO DE AROMATICOS",
-    planta: "AROMÁTICOS",
+    planta: "ARO",
 
     incluidoEm: moment(new Date()).unix(),
     alteradoEm: moment(new Date()).unix(),
@@ -87,7 +87,7 @@ export const Areas: DefaultAreaClass[] = [
     identificador: "Area10",
     codigo: "A37",
     descricao: "SISTEMA DE METANOL",
-    planta: "OLEFINAS 1",
+    planta: "OLE1",
 
     incluidoEm: moment(new Date()).unix(),
     alteradoEm: moment(new Date()).unix(),
@@ -96,7 +96,7 @@ export const Areas: DefaultAreaClass[] = [
     identificador: "Area11",
     codigo: "A38",
     descricao: "ESTOGAGEM DE HIDROGÈNIO",
-    planta: "OLEFINAS 1",
+    planta: "OLE1",
 
     incluidoEm: moment(new Date()).unix(),
     alteradoEm: moment(new Date()).unix(),
@@ -105,7 +105,7 @@ export const Areas: DefaultAreaClass[] = [
     identificador: "Area12",
     codigo: "ÁGUAS",
     descricao: "ESTAÇÃO DE TRATAMENTO DE ÁGUA",
-    planta: "UTILIDADES",
+    planta: "UTIL",
 
     incluidoEm: moment(new Date()).unix(),
     alteradoEm: moment(new Date()).unix(),
@@ -114,7 +114,7 @@ export const Areas: DefaultAreaClass[] = [
     identificador: "Area13",
     codigo: "VAPOR",
     descricao: "SISTEMADE GERAÇÃO DE VAPOR",
-    planta: "UTILIDADES",
+    planta: "UTIL",
 
     incluidoEm: moment(new Date()).unix(),
     alteradoEm: moment(new Date()).unix(),
@@ -123,7 +123,7 @@ export const Areas: DefaultAreaClass[] = [
     identificador: "Area14",
     codigo: "EE",
     descricao: "SISTEMA DE GERAÇÃO DE ENERGIA ELÉTRICA 1",
-    planta: "UTILIDADES",
+    planta: "UTIL",
 
     incluidoEm: moment(new Date()).unix(),
     alteradoEm: moment(new Date()).unix(),
@@ -132,7 +132,7 @@ export const Areas: DefaultAreaClass[] = [
     identificador: "Area15",
     codigo: "AR",
     descricao: "SISTEMA DE AGUA DE RESFHIAMENTO",
-    planta: "UTILIDADES",
+    planta: "UTIL",
 
     incluidoEm: moment(new Date()).unix(),
     alteradoEm: moment(new Date()).unix(),
@@ -141,7 +141,7 @@ export const Areas: DefaultAreaClass[] = [
     identificador: "Area16",
     codigo: "A62",
     descricao: "TRATAMENTO DE SODA GASTA",
-    planta: "OLEFINAS 1",
+    planta: "OLE1",
 
     incluidoEm: moment(new Date()).unix(),
     alteradoEm: moment(new Date()).unix(),
@@ -150,7 +150,7 @@ export const Areas: DefaultAreaClass[] = [
     identificador: "Area17",
     codigo: "A63",
     descricao: "CARREGAMENTO RODOFERROVIÁRIO",
-    planta: "AROMÁTICOS",
+    planta: "ARO",
 
     incluidoEm: moment(new Date()).unix(),
     alteradoEm: moment(new Date()).unix(),
@@ -159,7 +159,7 @@ export const Areas: DefaultAreaClass[] = [
     identificador: "Area18",
     codigo: "A84",
     descricao: "SISTEMA DE PURGA E TOCHA 1",
-    planta: "OLEFINAS T",
+    planta: "OLE1",
 
     incluidoEm: moment(new Date()).unix(),
     alteradoEm: moment(new Date()).unix(),
@@ -168,7 +168,7 @@ export const Areas: DefaultAreaClass[] = [
     identificador: "Area19",
     codigo: "OLEO",
     descricao: "SISTEMA DE OLEO E GÁS COMBUSTÍVEL",
-    planta: "UTILIDADES",
+    planta: "UTIL",
 
     incluidoEm: moment(new Date()).unix(),
     alteradoEm: moment(new Date()).unix(),
@@ -176,8 +176,8 @@ export const Areas: DefaultAreaClass[] = [
   {
     identificador: "Area20",
     codigo: "A23",
-    descricao: "FRACIONAMENTO DE AROMÁTICOS",
-    planta: "AROMÁTICOS",
+    descricao: "FRACIONAMENTO DE ARO",
+    planta: "ARO",
 
     incluidoEm: moment(new Date()).unix(),
     alteradoEm: moment(new Date()).unix(),
@@ -186,7 +186,7 @@ export const Areas: DefaultAreaClass[] = [
     identificador: "Area21",
     codigo: "A67",
     descricao: "RECUPERAÇÃO DE VAPORES",
-    planta: "AROMÁTICOS",
+    planta: "ARO",
 
     incluidoEm: moment(new Date()).unix(),
     alteradoEm: moment(new Date()).unix(),
@@ -195,7 +195,7 @@ export const Areas: DefaultAreaClass[] = [
     identificador: "Area22",
     codigo: "TERG",
     descricao: "TERMINAL DE RIO GRANDE",
-    planta: "UNGB 2RS",
+    planta: "UNIB 2 RS",
 
     incluidoEm: moment(new Date()).unix(),
     alteradoEm: moment(new Date()).unix(),
@@ -204,7 +204,7 @@ export const Areas: DefaultAreaClass[] = [
     identificador: "Area23",
     codigo: "TESC",
     descricao: "TERMINAL SANTA CLARA",
-    planta: "AROMÁTICOS",
+    planta: "ARO",
 
     incluidoEm: moment(new Date()).unix(),
     alteradoEm: moment(new Date()).unix(),
@@ -213,7 +213,7 @@ export const Areas: DefaultAreaClass[] = [
     identificador: "Area24",
     codigo: "TEDUT",
     descricao: "PARQUE DE ESTOCACIEM DE OSÓRIO",
-    planta: "UNE 2 RS",
+    planta: "UNIB 2 RS",
 
     incluidoEm: moment(new Date()).unix(),
     alteradoEm: moment(new Date()).unix(),

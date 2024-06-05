@@ -1,6 +1,6 @@
 import express, { Request, Response } from "express";
 import cors from "cors";
-import { GetElementByID, Middleware, PaginateAndSort } from "../Lib/Utils";
+import { Filter, GetElementByID, InnerJoins, Middleware, PaginateAndSort } from "../Lib/Utils";
 import { ResponseType } from "../Data/Types";
 import { Areas, AreasDropdown } from "../Data/Area";
 
@@ -18,8 +18,9 @@ Router_Area.use(Middleware);
 Router_Area.use(cors());
 
 HTTP_GET("/", (REQ: Request, RES: Response) => {
-  const { paginatedData, totalRows, currentPage, totalPages, rowsPerPage } = PaginateAndSort(Areas, REQ.body.pagination);
-
+  const JoinedData = InnerJoins(Areas, "Areas");
+  const FilteredData = Filter(JoinedData, REQ.body.text, "Areas");
+  const { paginatedData, totalRows, currentPage, totalPages, rowsPerPage } = PaginateAndSort(FilteredData, REQ.body.pagination);
   const Response: ResponseType = {
     data: paginatedData,
     success: true,

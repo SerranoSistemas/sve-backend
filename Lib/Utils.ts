@@ -1,5 +1,10 @@
 import { NextFunction, Request, Response } from "express";
 import { Pagination } from "../Data/Types";
+import { Plantas } from "../Data/Planta";
+
+export const Copy = (data: any) => {
+  return JSON.parse(JSON.stringify(data));
+};
 
 export const Middleware = (REQ: Request, RES: Response, NEXT: NextFunction) => {
   if (REQ.query.status) {
@@ -76,4 +81,43 @@ export const PaginateAndSort = (data: any[], pagination = DefaultPagination) => 
 
 export const GetElementByID = (data: any[], Id: string | number) => {
   return data.find((Element) => Element.identificador === Id);
+};
+
+export const Filter = (data: any[], text: string | null, type: string) => {
+  if (!text) return data;
+
+  var NewData = Copy(data); 
+
+  if (type === "Plantas") {
+    NewData = data.filter((Item) => {
+      const codigo = Item.codigo.includes(text);
+      const descricao = Item.descricao.toLowerCase().includes(text.toLowerCase());
+      return codigo | descricao;
+    });
+  }
+
+  if (type === "Areas") {
+    NewData = data.filter((Item) => {
+      const codigo = Item.codigo.includes(text);
+      const descricao = Item.descricao.toLowerCase().includes(text.toLowerCase());
+      const planta = Item.planta.toLowerCase().includes(text.toLowerCase());
+      return codigo | descricao | planta;
+    });
+  }
+
+  return NewData;
+};
+
+export const InnerJoins = (data: any[], type: string) => {
+  var NewData = Copy(data);
+
+  if (type === "Areas") {
+    NewData = NewData.map((Item) => {
+      const ItemPlanta = Plantas.find((planta) => planta.codigo === Item.planta);
+      Item.planta = ItemPlanta.descricao;
+      return Item;
+    });
+  }
+
+  return NewData;
 };

@@ -18,7 +18,7 @@ EstacaoMedicaoRouter.use(Middleware);
 EstacaoMedicaoRouter.use(cors());
 
 HTTP_GET("/", (REQ: Request, RES: Response) => {
-  const { paginatedData, totalRows, currentPage, totalPages } = PaginateAndSort(EstacoesMedicao, REQ.body.pagination);
+  const { paginatedData, totalRows, currentPage, totalPages, rowsPerPage } = PaginateAndSort(EstacoesMedicao, REQ.body.pagination);
 
   const Response: ResponseType = {
     data: paginatedData,
@@ -28,6 +28,7 @@ HTTP_GET("/", (REQ: Request, RES: Response) => {
       totalRows,
       currentPage,
       totalPages,
+      rowsPerPage,
     },
   };
 
