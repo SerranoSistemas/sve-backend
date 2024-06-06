@@ -18,12 +18,14 @@ Router_Planta.use(Middleware);
 Router_Planta.use(cors());
 
 HTTP_GET("/", (REQ: Request, RES: Response) => {
-  const FilteredData = Filter(Plantas, REQ.body.text, "Plantas");
+  const Text = REQ.query?.text?.toString() || "";
+
+  const FilteredData = Filter(Plantas, Text, "Plantas");
 
   const { paginatedData, totalRows, currentPage, totalPages, rowsPerPage } = PaginateAndSort(FilteredData, REQ.body.pagination);
 
   const Response: ResponseType = {
-    data: paginatedData, 
+    data: paginatedData,
     success: true,
     message: "Dados processados com sucesso",
     page: {

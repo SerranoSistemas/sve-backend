@@ -71,7 +71,7 @@ export const PaginateAndSort = (data: any[], pagination = DefaultPagination) => 
 
   // Retorne os dados paginados e as informações adicionais
   return {
-    paginatedData: sortedData.slice(startIndex, Math.min(endIndex, sortedData.length)),
+    paginatedData: sortedData.slice(startIndex, Math.min(endIndex, sortedData.length)) || [],
     totalRows: sortedData.length,
     currentPage: page,
     totalPages: totalPages,
@@ -86,7 +86,7 @@ export const GetElementByID = (data: any[], Id: string | number) => {
 export const Filter = (data: any[], text: string | null, type: string) => {
   if (!text) return data;
 
-  var NewData = Copy(data); 
+  var NewData = Copy(data);
 
   if (type === "Plantas") {
     NewData = data.filter((Item) => {

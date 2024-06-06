@@ -2,7 +2,7 @@ import express, { Request, Response } from "express";
 import cors from "cors";
 import { Filter, GetElementByID, InnerJoins, Middleware, PaginateAndSort } from "../Lib/Utils";
 import { ResponseType } from "../Data/Types";
-import { Areas, AreasDropdown } from "../Data/Area";
+import { Areas, AreasDropdown, FilterAreaJoins, FilterAreaText } from "../Data/Area";
 
 const Router_Area = express.Router();
 const HTTP_GET = Router_Area.get.bind(Router_Area);
@@ -18,11 +18,15 @@ Router_Area.use(Middleware);
 Router_Area.use(cors());
 
 HTTP_GET("/", (REQ: Request, RES: Response) => {
-  const JoinedData = InnerJoins(Areas, "Areas");
-  const FilteredData = Filter(JoinedData, REQ.body.text, "Areas");
+  const Text = REQ.query?.text?.toString() || "";
+  const Planta = REQ.query?.planta?.toString() || "";
+  const FilteredJoins = FilterAreaJoins(Areas, Planta);
+  const JoinedData = InnerJoins(FilteredJoins, "Areas");
+  const FilteredData = FilterAreaText(JoinedData, Text);
+
   const { paginatedData, totalRows, currentPage, totalPages, rowsPerPage } = PaginateAndSort(FilteredData, REQ.body.pagination);
   const Response: ResponseType = {
-    data: paginatedData,
+    data: paginatedData || [],
     success: true,
     message: "Dados processados com sucesso",
     page: {

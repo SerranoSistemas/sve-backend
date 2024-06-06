@@ -1,5 +1,6 @@
 import moment from "moment";
 import { DefaultAreaClass } from "./Types";
+import { Copy } from "../Lib/Utils";
 
 export const Areas: DefaultAreaClass[] = [
   {
@@ -226,3 +227,33 @@ export const AreasDropdown = Areas.map((Area) => {
     value: Area.codigo,
   };
 });
+
+export const FilterAreaJoins = (data: any[], planta: string) => {
+  if (!planta) return data;
+
+  var NewData = Copy(data);
+
+  NewData = data.filter((Item) => {
+    const PlantaFilter = planta ? Item.planta === planta : true;
+
+    return PlantaFilter;
+  });
+
+  return NewData;
+};
+
+export const FilterAreaText = (data: any[], text: string | null) => {
+  if (!text) return data;
+
+  var NewData = Copy(data);
+
+  NewData = data.filter((Item) => {
+    const codigoText = Item.codigo.includes(text);
+    const descricaoText = Item.descricao.toLowerCase().includes(text.toLowerCase());
+    const plantaText = Item.planta.toLowerCase().includes(text.toLowerCase());
+
+    return codigoText || descricaoText || plantaText;
+  });
+
+  return NewData;
+};
