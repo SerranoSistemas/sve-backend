@@ -1,6 +1,7 @@
 import { NextFunction, Request, Response } from "express";
 import { Pagination } from "../Data/Types";
 import { Plantas } from "../Data/Planta";
+import { DefaultPagination } from "../Data/Pagination";
 
 export const Copy = (data: any) => {
   return JSON.parse(JSON.stringify(data));
@@ -23,11 +24,6 @@ export const Middleware = (REQ: Request, RES: Response, NEXT: NextFunction) => {
     }
   }
   NEXT();
-};
-
-export const DefaultPagination: Pagination = {
-  page: 1,
-  rows: 10,
 };
 
 export const PaginateAndSort = (data: any[], pagination = DefaultPagination) => {

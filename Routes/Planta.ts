@@ -3,6 +3,7 @@ import cors from "cors";
 import { Plantas, PlantasDropdown } from "../Data/Planta";
 import { Filter, GetElementByID, Middleware, PaginateAndSort } from "../Lib/Utils";
 import { ResponseType } from "../Data/Types";
+import { GetPagination } from "../Data/Pagination";
 
 const Router_Planta = express.Router();
 const HTTP_GET = Router_Planta.get.bind(Router_Planta);
@@ -18,11 +19,12 @@ Router_Planta.use(Middleware);
 Router_Planta.use(cors());
 
 HTTP_GET("/", (REQ: Request, RES: Response) => {
+  const Pagination = GetPagination(REQ);
   const Text = REQ.query?.text?.toString() || "";
 
   const FilteredData = Filter(Plantas, Text, "Plantas");
 
-  const { paginatedData, totalRows, currentPage, totalPages, rowsPerPage } = PaginateAndSort(FilteredData, REQ.body.pagination);
+  const { paginatedData, totalRows, currentPage, totalPages, rowsPerPage } = PaginateAndSort(FilteredData, Pagination);
 
   const Response: ResponseType = {
     data: paginatedData,

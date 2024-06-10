@@ -1,8 +1,9 @@
 import express, { Request, Response } from "express";
 import cors from "cors";
 import { Filter, GetElementByID, InnerJoins, Middleware, PaginateAndSort } from "../Lib/Utils";
-import { ResponseType } from "../Data/Types";
+import { Pagination, ResponseType } from "../Data/Types";
 import { Areas, AreasDropdown, FilterAreaJoins, FilterAreaText } from "../Data/Area";
+import { GetPagination, PaginaNationGetPage, PaginaNationGetRows, PaginationGetOrderBy } from "../Data/Pagination";
 
 const Router_Area = express.Router();
 const HTTP_GET = Router_Area.get.bind(Router_Area);
@@ -18,13 +19,14 @@ Router_Area.use(Middleware);
 Router_Area.use(cors());
 
 HTTP_GET("/", (REQ: Request, RES: Response) => {
+  const Pagination = GetPagination(REQ);
   const Text = REQ.query?.text?.toString() || "";
   const Planta = REQ.query?.planta?.toString() || "";
   const FilteredJoins = FilterAreaJoins(Areas, Planta);
   const JoinedData = InnerJoins(FilteredJoins, "Areas");
   const FilteredData = FilterAreaText(JoinedData, Text);
 
-  const { paginatedData, totalRows, currentPage, totalPages, rowsPerPage } = PaginateAndSort(FilteredData, REQ.body.pagination);
+  const { paginatedData, totalRows, currentPage, totalPages, rowsPerPage } = PaginateAndSort(FilteredData, Pagination);
   const Response: ResponseType = {
     data: paginatedData || [],
     success: true,
