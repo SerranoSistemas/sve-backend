@@ -28,11 +28,11 @@ export const PaginationGetorderDirection = (queryValue: any): string => {
 
 export const GetPagination = (REQ: Request) => {
   const Pagination: Pagination = {
-    page: PaginaNationGetPage(REQ.query?.text),
+    page: PaginaNationGetPage(REQ.query?.page),
     rows: PaginaNationGetRows(REQ.query?.rows),
     orderBy: PaginationGetOrderBy(REQ.query?.orderBy),
     orderDirection: PaginationGetOrderBy(REQ.query?.orderDirection),
   };
-
+  console.log(Pagination)
   return Pagination;
 };
