@@ -33,6 +33,6 @@ export const GetPagination = (REQ: Request) => {
     orderBy: PaginationGetOrderBy(REQ.query?.orderBy),
     orderDirection: PaginationGetOrderBy(REQ.query?.orderDirection),
   };
-  console.log(Pagination)
+
   return Pagination;
 };
