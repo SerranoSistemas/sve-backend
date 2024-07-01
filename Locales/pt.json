@@ -1,5 +1,10 @@
 {
   "hello": "Olá",
   "bye": "Tchau",
-  "user": "Usuário"
+  "user": "Usuário",
+  "locales": {
+    "pt": "Português",
+    "es": "Espanhol",
+    "en": "Inglês"
+  }
 }

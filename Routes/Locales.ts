@@ -7,6 +7,7 @@ const LocalesRouter = express.Router();
 
 //Apply JSON parse
 LocalesRouter.use(express.json());
+//Apply Middleware
 LocalesRouter.use(Middleware);
 // Use o middleware CORS
 LocalesRouter.use(cors());
