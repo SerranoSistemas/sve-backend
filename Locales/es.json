@@ -2,7 +2,7 @@
   "hello": "Hola",
   "bye": "Adiós",
   "user": "Usuario",
-  "locales": {
+  "localesLabels": {
     "pt": "Portugués",
     "es": "Español",
     "en": "Inglés"
