@@ -101,6 +101,14 @@ export const Filter = (data: any[], text: string | null, type: string) => {
     });
   }
 
+  if (type === "ServersPIMS") {
+    NewData = data.filter((Item) => {
+      const title = Item.title.includes(text);
+      const odbc = Item.odbc.toLowerCase().includes(text.toLowerCase());
+      return title | odbc;
+    });
+  }
+
   return NewData;
 };
 

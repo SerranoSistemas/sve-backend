@@ -1,31 +1,7 @@
-export type PlantaType = {
-  id: string;
-  codigo: string;
-  descricao: string;
-};
-
-export type EstacoesMedicaoType = {
-  id: string;
-  codigo: string;
-  descricao: string;
-  observacao: string;
-};
-
 //Objeto mínimo por enquanto
 export type DefaultClass = {
-  codigo: number | string; 
+  codigo: number | string;
   descricao: string;
-  identificador: string;
-  incluidoEm: Date | number;
-  alteradoEm: Date | number;
-  excluidoEm?: Date | number;
-};
-
-
-//Objeto mínimo por enquanto
-export type ServersPIMS = {
-  title: number | string; 
-  odbc: string;
   identificador: string;
   incluidoEm: Date | number;
   alteradoEm: Date | number;
@@ -38,14 +14,14 @@ export type DefaultAreaClass = {
   descricao: string;
   identificador: string;
   planta: string;
-  incluidoEm: Date | number;
-  alteradoEm: Date | number;
-  excluidoEm?: Date | number;
+  incluidoEm: Date | number; //No front de preferencia timestamp
+  alteradoEm: Date | number; //No front de preferencia timestamp
+  excluidoEm?: Date | number; //No front de preferencia timestamp
 };
 
 export type Pagination = {
-  page: number;
-  rows: number;
+  page: number; //Pagina que eu se quer 
+  rows: number; //Linhas por Página que se quer
   orderBy?: string; //Nome da Coluna do JSON
   orderDirection?: string; //'asc' ou 'desc'
 };
