@@ -1,13 +1,23 @@
 export const Medicoes = [
   {
-    Medidor: "506FQ04 1.PV",
-    Produto: "BUTADIENO",
+    Medidor: {
+      Codigo: "",
+      Descricao: "",
+    },
+    Produto: {
+      Codigo: "",
+      Descricao: "",
+    },
     TotalPrimaria: 148407281,
     TotalSecundaria: 49708390,
     Dif: 0.02,
     MedicaoAcordada: 251485,
-    Situacao: { Checked: true, Label: "Liberada" },
+    Situacao: "L", //Vazio, L ou I
+    UnidadeDeMedidaPrimaria: "To",
+    UnidadeDeMedidaSecundaria: "To",
+    PossuiMedidorSecundario: true,
   },
+
   {
     Medidor: "506FQ12 1.PV",
     Produto: "VAPOR DE MÉDIA",
@@ -15,7 +25,7 @@ export const Medicoes = [
     TotalSecundaria: 164728109,
     Dif: 1.38,
     MedicaoAcordada: 666812,
-    Situacao: { Checked: true, Label: "Liberada" },
+    Situacao: { checkBox: true, Label: "Liberada" },
   },
   {
     Medidor: "506FQ13 1.PV",
@@ -24,7 +34,7 @@ export const Medicoes = [
     TotalSecundaria: 0,
     Dif: 0.0,
     MedicaoAcordada: 777375,
-    Situacao: { Checked: true, Label: "Liberada" },
+    Situacao: { checkBox: true, Label: "Liberada" },
   },
   {
     Medidor: "506FQ14 1.PV",
@@ -33,7 +43,7 @@ export const Medicoes = [
     TotalSecundaria: 1036125,
     Dif: 0.0,
     MedicaoAcordada: 626770125,
-    Situacao: { Checked: true, Label: "Liberada" },
+    Situacao: { checkBox: true, Label: "Liberada" },
   },
   {
     Medidor: "506FQ15 1.PV",
@@ -42,7 +52,7 @@ export const Medicoes = [
     TotalSecundaria: 0,
     Dif: 0.0,
     MedicaoAcordada: 17254,
-    Situacao: { Checked: true, Label: "Liberada" },
+    Situacao: { checkBox: true, Label: "Liberada" },
   },
   {
     Medidor: "506FQ16 1.PV",
@@ -51,7 +61,7 @@ export const Medicoes = [
     TotalSecundaria: 0,
     Dif: 0.0,
     MedicaoAcordada: 3104000,
-    Situacao: { Checked: false, Label: "Liberada" },
+    Situacao: { checkBox: false, Label: "Liberada" },
   },
   {
     Medidor: "506FQ112 1.PV",
@@ -60,6 +70,6 @@ export const Medicoes = [
     TotalSecundaria: 0,
     Dif: 0.0,
     MedicaoAcordada: 0,
-    Situacao: { Checked: true, Label: "Liberada" },
+    Situacao: { checkBox: true, Label: "Liberada" },
   },
 ];

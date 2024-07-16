@@ -13,7 +13,7 @@ export type EstacoesMedicaoType = {
 
 //Objeto mínimo por enquanto
 export type DefaultClass = {
-  codigo: number | string; 
+  codigo: number | string;
   descricao: string;
   identificador: string;
   incluidoEm: Date | number;
@@ -21,10 +21,9 @@ export type DefaultClass = {
   excluidoEm?: Date | number;
 };
 
-
 //Objeto mínimo por enquanto
 export type ServersPIMS = {
-  title: number | string; 
+  title: number | string;
   odbc: string;
   identificador: string;
   incluidoEm: Date | number;
@@ -69,4 +68,28 @@ export type ResponseType = {
   message?: string;
 };
 
-
+export type Totalizadores = {
+  Dia: 1;
+  TotalPrimario: number;
+  TotalSecundario: number;
+  DataHoraMedicao?: Date;
+  DataRealMedicao?: Date;
+  Desconto?: number;
+  TotalizadorPrimario?: number;
+  TotalizadorPrimarioDigitado?: number;
+  TotalizadorSecundario?: number;
+  TotalizadorSecundarioDigitado?: number;
+  MedicaoAcordada?: string;
+  MedicaoPrimario?: number;
+  MedicaoPrimariaDigitada?: number;
+  MedicaoSecundaria?: number;
+  MedicaoSecundariaDigitada?: number;
+  MedicaoLiberada?: number;
+  Observacao?: string;
+  Situacao?: string;
+  PercentualAcumulado?: number;
+  Acrescimo: number;
+  Diferenca: number;
+  IndicativoDeAfericao: "A" | "M";
+  Status: string;
+};

@@ -42,7 +42,7 @@ HTTP_GET("/", (REQ: Request, RES: Response) => {
   return RES.status(200).json(Response);
 });
 
-HTTP_GET("/select", (REQ: Request, RES: Response) => {
+HTTP_GET("/get-list", (REQ: Request, RES: Response) => {
   const Response: ResponseType = {
     data: AreasDropdown,
     success: true,

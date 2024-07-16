@@ -84,7 +84,7 @@ export const Filter = (data: any[], text: string | null, type: string) => {
 
   var NewData = Copy(data);
 
-  if (type === "Plantas") {
+  if (type === "Plantas" || type === "UnidadesDeMedida") {
     NewData = data.filter((Item) => {
       const codigo = Item.codigo.includes(text);
       const descricao = Item.descricao.toLowerCase().includes(text.toLowerCase());
