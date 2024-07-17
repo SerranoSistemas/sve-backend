@@ -1,5 +1,4 @@
 import { NextFunction, Request, Response } from "express";
-import { Pagination } from "../Data/Types";
 import { Plantas } from "../Data/Planta";
 import { DefaultPagination } from "../Data/Pagination";
 
@@ -8,6 +7,17 @@ export const Copy = (data: any) => {
 };
 
 export const Middleware = (REQ: Request, RES: Response, NEXT: NextFunction) => {
+  if (REQ.query.gerarErro) {
+    const ErrorResponse = {
+      data: {},
+      success: false,
+      message: "Ocorreu um Erro, tente novamente",
+      page: {},
+    };
+
+    return RES.status(500).json(ErrorResponse);
+  }
+
   if (REQ.query.status) {
     //@ts-ignore
     RES.status(parseInt(REQ.query.status, 200));
@@ -98,6 +108,15 @@ export const Filter = (data: any[], text: string | null, type: string) => {
       const descricao = Item.descricao.toLowerCase().includes(text.toLowerCase());
       const planta = Item.planta.toLowerCase().includes(text.toLowerCase());
       return codigo | descricao | planta;
+    });
+  }
+
+  if (type === "Produtos") {
+    NewData = data.filter((Item) => {
+      const codigo = Item.codigo.includes(text);
+      const descricao = Item.descricao.toLowerCase().includes(text.toLowerCase());
+      const unidadeMedida = Item.unidadeMedida.toLowerCase().includes(text.toLowerCase());
+      return codigo | descricao | unidadeMedida;
     });
   }
 

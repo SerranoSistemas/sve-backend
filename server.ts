@@ -7,6 +7,7 @@ import LocalesRouter from "./Routes/Locales";
 import Router_ServersPIMS from "./Routes/ServersPIMS";
 import Router_Medicoes from "./Routes/Medicoes";
 import Router_UnidadesDeMedida from "./Routes/UnidadesDeMedida";
+import Router_Produto from "./Routes/Produto";
 
 const APP = express();
 
@@ -17,6 +18,7 @@ APP.use("/unidadeMedida", Router_UnidadesDeMedida);
 APP.use("/medicao", Router_Medicoes);
 APP.use("/servers", Router_ServersPIMS);
 APP.use("/area", Router_Area);
+APP.use("/produto", Router_Produto);
 APP.use("/estacaoMedicao", EstacaoMedicaoRouter);
 APP.use("/locales", LocalesRouter);
 

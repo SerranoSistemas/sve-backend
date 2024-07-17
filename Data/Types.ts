@@ -42,6 +42,18 @@ export type DefaultAreaClass = {
   excluidoEm?: Date | number;
 };
 
+
+//Objeto mínimo por enquanto
+export type DefaultProdutoClass = {
+  codigo: number | string;
+  descricao: string;
+  identificador: string;
+  unidadeMedida: string;
+  incluidoEm: Date | number;
+  alteradoEm: Date | number;
+  excluidoEm?: Date | number;
+};
+
 export type Pagination = {
   page: number;
   rows: number;
