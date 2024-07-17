@@ -1,6 +1,8 @@
 import { NextFunction, Request, Response } from "express";
+
 import { Plantas } from "../Data/Planta";
 import { DefaultPagination } from "../Data/Pagination";
+import { UnidadesDeMedida } from "../Data/UnidadesDeMedida";
 
 export const Copy = (data: any) => {
   return JSON.parse(JSON.stringify(data));
@@ -138,6 +140,14 @@ export const InnerJoins = (data: any[], type: string) => {
     NewData = NewData.map((Item) => {
       const ItemPlanta = Plantas.find((planta) => planta.codigo === Item.planta);
       Item.planta = ItemPlanta.descricao;
+      return Item;
+    });
+  }
+
+  if (type === "Produtos") {
+    NewData = NewData.map((Item) => {
+      const ItemPlanta = UnidadesDeMedida.find((UnidadeMedida) => UnidadeMedida.identificador === Item.unidadeMedida);
+      Item.unidadeMedida = ItemPlanta.descricao;
       return Item;
     });
   }
