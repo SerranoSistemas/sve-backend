@@ -1,13 +1,13 @@
 import express, { Request, Response } from "express";
-
-import Router_Planta from "./Routes/Planta";
-import EstacaoMedicaoRouter from "./Routes/EstacaoMedicao";
-import Router_Area from "./Routes/Area";
-import LocalesRouter from "./Routes/Locales";
-import Router_ServersPIMS from "./Routes/ServersPIMS";
-import Router_Medicoes from "./Routes/Medicoes";
-import Router_UnidadesDeMedida from "./Routes/UnidadesDeMedida";
-import Router_Produto from "./Routes/Produto";
+import { Router as Router_Planta } from "./Routes/Planta";
+import { Router as EstacaoMedicaoRouter } from "./Routes/EstacaoMedicao";
+import { Router as Router_Area } from "./Routes/Area";
+import { Router as LocalesRouter } from "./Routes/Locales";
+import { Router as Router_ServersPIMS } from "./Routes/ServersPIMS";
+import { Router as Router_Medicoes } from "./Routes/Medicoes";
+import { Router as Router_UnidadesDeMedida } from "./Routes/UnidadesDeMedida";
+import { Router as Router_Produto } from "./Routes/Produto";
+import { Router as SistemaRoutes } from "./Routes/Sistema";
 
 const APP = express();
 
@@ -19,6 +19,7 @@ APP.use("/medicao", Router_Medicoes);
 APP.use("/servers", Router_ServersPIMS);
 APP.use("/area", Router_Area);
 APP.use("/produto", Router_Produto);
+APP.use("/sistema", SistemaRoutes);
 APP.use("/estacaoMedicao", EstacaoMedicaoRouter);
 APP.use("/locales", LocalesRouter);
 

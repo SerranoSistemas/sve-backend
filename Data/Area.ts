@@ -4,38 +4,34 @@ import { Copy } from "../Lib/Utils";
 
 export const Areas: DefaultAreaClass[] = [
   {
-    identificador: "Area1",
+    identificador: "123e4567-e89b-12d3-a456-426614174000",
     codigo: "A13",
     descricao: "SEPARAÇÃO DE GASES",
     planta: "OLE1",
-
     incluidoEm: moment(new Date()).unix(),
     alteradoEm: moment(new Date()).unix(),
   },
   {
-    identificador: "Area2",
+    identificador: "123e4567-e89b-12d3-a456-426614174001",
     codigo: "A14",
     descricao: "REFRIGERAÇÃO",
     planta: "OLE1",
-
     incluidoEm: moment(new Date()).unix(),
     alteradoEm: moment(new Date()).unix(),
   },
   {
-    identificador: "Area3",
+    identificador: "d91a9d37-6b6d-495d-bd1f-6e1f70e9245c",
     codigo: "A25",
     descricao: "HIDRODENAÇÃO DE C9 DE PIROLISE",
     planta: "OLE1",
-
     incluidoEm: moment(new Date()).unix(),
     alteradoEm: moment(new Date()).unix(),
   },
   {
-    identificador: "Area4",
+    identificador: "1f50f8b6-8f58-4689-88da-f13cbf0e6768",
     codigo: "A31",
     descricao: "ESTOCAGEM DE MATERIAS PRIMAS 1",
     planta: "OLE1",
-
     incluidoEm: moment(new Date()).unix(),
     alteradoEm: moment(new Date()).unix(),
   },
@@ -44,7 +40,6 @@ export const Areas: DefaultAreaClass[] = [
     codigo: "A32",
     descricao: "ESTOCAGEM INTERMEDIAPLA",
     planta: "OLE2",
-
     incluidoEm: moment(new Date()).unix(),
     alteradoEm: moment(new Date()).unix(),
   },

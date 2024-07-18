@@ -6,15 +6,15 @@ import { ResponseType } from "../Data/Types";
 import { GetPagination } from "../Data/Pagination";
 import { Medicoes } from "../Data/Medicao";
 
-const Router_Medicoes = express.Router();
-const HTTP_GET = Router_Medicoes.get.bind(Router_Medicoes);
+const Router = express.Router();
+const HTTP_GET = Router.get.bind(Router);
 
 //Apply JSON parse
-Router_Medicoes.use(express.json());
+Router.use(express.json());
 //Apply Middleware for Delay and Error simulation
-Router_Medicoes.use(Middleware);
+Router.use(Middleware);
 // Use o middleware CORS
-Router_Medicoes.use(cors());
+Router.use(cors());
 
 HTTP_GET("/", (REQ: Request, RES: Response) => {
   var Pagination = GetPagination(REQ);
@@ -39,4 +39,4 @@ HTTP_GET("/", (REQ: Request, RES: Response) => {
   return RES.status(200).json(Response);
 });
 
-export default Router_Medicoes;
+export { Router };

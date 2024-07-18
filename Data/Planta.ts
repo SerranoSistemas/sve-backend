@@ -3,14 +3,14 @@ import { DefaultClass } from "./Types";
 
 export const Plantas: DefaultClass[] = [
   {
-    identificador: "Plant1",
+    identificador: "97a47f12-d08b-44d2-9f37-3a3c6723d3e5",
     codigo: "UNIB 2 RS",
     descricao: "UNIB 2 RS",
     incluidoEm: moment(new Date()).unix(),
     alteradoEm: moment(new Date()).unix(),
   },
   {
-    identificador: "Plant2",
+    identificador: "2e34bffa-56e8-4a9f-b749-7b84c917c27b",
     codigo: "ARO",
     descricao: "AROMÁTICOS",
     incluidoEm: moment(new Date()).unix(),

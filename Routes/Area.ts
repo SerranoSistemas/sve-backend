@@ -5,18 +5,18 @@ import { Pagination, ResponseType } from "../Data/Types";
 import { Areas, AreasDropdown, FilterAreaJoins, FilterAreaText } from "../Data/Area";
 import { GetPagination, PaginaNationGetPage, PaginaNationGetRows, PaginationGetOrderBy } from "../Data/Pagination";
 
-const Router_Area = express.Router();
-const HTTP_GET = Router_Area.get.bind(Router_Area);
-const HTTP_POST = Router_Area.post.bind(Router_Area);
-const HTTP_DELETE = Router_Area.delete.bind(Router_Area);
-const HTTP_PUT = Router_Area.put.bind(Router_Area);
+const Router = express.Router();
+const HTTP_GET = Router.get.bind(Router);
+const HTTP_POST = Router.post.bind(Router);
+const HTTP_DELETE = Router.delete.bind(Router);
+const HTTP_PUT = Router.put.bind(Router);
 
 //Apply JSON parse
-Router_Area.use(express.json());
+Router.use(express.json());
 //Apply Middleware for Delay and Error simulation
-Router_Area.use(Middleware);
+Router.use(Middleware);
 // Use o middleware CORS
-Router_Area.use(cors());
+Router.use(cors());
 
 HTTP_GET("/", (REQ: Request, RES: Response) => {
   const Pagination = GetPagination(REQ);
@@ -92,4 +92,4 @@ HTTP_DELETE("/:id", (REQ: Request, RES: Response) => {
   RES.status(200).json(Response);
 });
 
-export default Router_Area;
+export { Router };

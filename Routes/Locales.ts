@@ -3,19 +3,19 @@ import path from "path";
 import cors from "cors";
 import { Middleware } from "../Lib/Utils";
 
-const LocalesRouter = express.Router();
+const Router = express.Router();
 
 //Apply JSON parse
-LocalesRouter.use(express.json());
+Router.use(express.json());
 //Apply Middleware
-LocalesRouter.use(Middleware);
+Router.use(Middleware);
 // Use o middleware CORS
-LocalesRouter.use(cors());
+Router.use(cors());
 
-LocalesRouter.get("/:lng", (req, res) => {
+Router.get("/:lng", (req, res) => {
   const { lng } = req.params;
 
   res.sendFile(path.join(__dirname, `../Locales/${lng}.json`));
 });
 
-export default LocalesRouter;
+export { Router };

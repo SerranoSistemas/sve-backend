@@ -4,13 +4,14 @@ import { Copy } from "../Lib/Utils";
 
 export const Produtos: DefaultProdutoClass[] = [
   {
-    identificador: "Prod1",
+    identificador: "85f1e645-3bc2-49a7-a4c4-82a627d5c81f",
     codigo: "P013",
     descricao: "ETENO FÓSSIL",
-    unidadeMedida: "Unid1",
+    unidadeMedida: "Ud91a9d37-6b6d-495d-bd1f-6e1f70e9245id1",
     incluidoEm: moment(new Date()).unix(),
     alteradoEm: moment(new Date()).unix(),
   },
+
   {
     identificador: "Prod2",
     codigo: "P048",

@@ -147,7 +147,7 @@ export const InnerJoins = (data: any[], type: string) => {
   if (type === "Produtos") {
     NewData = NewData.map((Item) => {
       const ItemPlanta = UnidadesDeMedida.find((UnidadeMedida) => UnidadeMedida.identificador === Item.unidadeMedida);
-      Item.unidadeMedida = ItemPlanta.descricao;
+      Item.unidadeMedida = ItemPlanta?.descricao;
       return Item;
     });
   }

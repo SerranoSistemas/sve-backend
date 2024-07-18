@@ -5,18 +5,18 @@ import { ResponseType } from "../Data/Types";
 import { GetPagination } from "../Data/Pagination";
 import { UnidadeMedidasDropdown, UnidadesDeMedida } from "../Data/UnidadesDeMedida";
 
-const Router_UnidadesDeMedida = express.Router();
-const HTTP_GET = Router_UnidadesDeMedida.get.bind(Router_UnidadesDeMedida);
-const HTTP_POST = Router_UnidadesDeMedida.post.bind(Router_UnidadesDeMedida);
-const HTTP_DELETE = Router_UnidadesDeMedida.delete.bind(Router_UnidadesDeMedida);
-const HTTP_PUT = Router_UnidadesDeMedida.put.bind(Router_UnidadesDeMedida);
+const Router = express.Router();
+const HTTP_GET = Router.get.bind(Router);
+const HTTP_POST = Router.post.bind(Router);
+const HTTP_DELETE = Router.delete.bind(Router);
+const HTTP_PUT = Router.put.bind(Router);
 
 //Apply JSON parse
-Router_UnidadesDeMedida.use(express.json());
+Router.use(express.json());
 //Apply Middleware for Delay and Error simulation
-Router_UnidadesDeMedida.use(Middleware);
+Router.use(Middleware);
 // Use o middleware CORS
-Router_UnidadesDeMedida.use(cors());
+Router.use(cors());
 
 HTTP_GET("/", (REQ: Request, RES: Response) => {
   const Pagination = GetPagination(REQ);
@@ -91,4 +91,4 @@ HTTP_DELETE("/:id", (REQ: Request, RES: Response) => {
   RES.status(200).json(Response);
 });
 
-export default Router_UnidadesDeMedida;
+export { Router };

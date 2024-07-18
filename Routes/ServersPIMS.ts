@@ -6,18 +6,18 @@ import { ResponseType } from "../Data/Types";
 import { GetPagination } from "../Data/Pagination";
 import { PIMSServers, PIMSServersDropdown } from "../Data/ServersPIMS";
 
-const Router_ServersPIMS = express.Router();
-const HTTP_GET = Router_ServersPIMS.get.bind(Router_ServersPIMS);
-const HTTP_POST = Router_ServersPIMS.post.bind(Router_ServersPIMS);
-const HTTP_DELETE = Router_ServersPIMS.delete.bind(Router_ServersPIMS);
-const HTTP_PUT = Router_ServersPIMS.put.bind(Router_ServersPIMS);
+const Router = express.Router();
+const HTTP_GET = Router.get.bind(Router);
+const HTTP_POST = Router.post.bind(Router);
+const HTTP_DELETE = Router.delete.bind(Router);
+const HTTP_PUT = Router.put.bind(Router);
 
 //Apply JSON parse
-Router_ServersPIMS.use(express.json());
+Router.use(express.json());
 //Apply Middleware for Delay and Error simulation
-Router_ServersPIMS.use(Middleware);
+Router.use(Middleware);
 // Use o middleware CORS
-Router_ServersPIMS.use(cors());
+Router.use(cors());
 
 HTTP_GET("/", (REQ: Request, RES: Response) => {
   const Pagination = GetPagination(REQ);
@@ -92,4 +92,4 @@ HTTP_DELETE("/:id", (REQ: Request, RES: Response) => {
   RES.status(200).json(Response);
 });
 
-export default Router_ServersPIMS;
+export { Router };

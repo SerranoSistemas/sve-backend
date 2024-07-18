@@ -5,18 +5,18 @@ import { Filter, GetElementByID, Middleware, PaginateAndSort } from "../Lib/Util
 import { ResponseType } from "../Data/Types";
 import { GetPagination } from "../Data/Pagination";
 
-const Router_Planta = express.Router();
-const HTTP_GET = Router_Planta.get.bind(Router_Planta);
-const HTTP_POST = Router_Planta.post.bind(Router_Planta);
-const HTTP_DELETE = Router_Planta.delete.bind(Router_Planta);
-const HTTP_PUT = Router_Planta.put.bind(Router_Planta);
+const Router = express.Router();
+const HTTP_GET = Router.get.bind(Router);
+const HTTP_POST = Router.post.bind(Router);
+const HTTP_DELETE = Router.delete.bind(Router);
+const HTTP_PUT = Router.put.bind(Router);
 
 //Apply JSON parse
-Router_Planta.use(express.json());
+Router.use(express.json());
 //Apply Middleware for Delay and Error simulation
-Router_Planta.use(Middleware);
+Router.use(Middleware);
 // Use o middleware CORS
-Router_Planta.use(cors());
+Router.use(cors());
 
 HTTP_GET("/", (REQ: Request, RES: Response) => {
   const Pagination = GetPagination(REQ);
@@ -91,4 +91,4 @@ HTTP_DELETE("/:id", (REQ: Request, RES: Response) => {
   RES.status(200).json(Response);
 });
 
-export default Router_Planta;
+export { Router };

@@ -4,18 +4,18 @@ import { GetElementByID, Middleware, PaginateAndSort } from "../Lib/Utils";
 import { ResponseType } from "../Data/Types";
 import { EstacoesMedicao, EstacoesMedicaoDropdown } from "../Data/EstacaoMedicao";
 
-const EstacaoMedicaoRouter = express.Router();
-const HTTP_GET = EstacaoMedicaoRouter.get.bind(EstacaoMedicaoRouter);
-const HTTP_POST = EstacaoMedicaoRouter.post.bind(EstacaoMedicaoRouter);
-const HTTP_DELETE = EstacaoMedicaoRouter.delete.bind(EstacaoMedicaoRouter);
-const HTTP_PUT = EstacaoMedicaoRouter.put.bind(EstacaoMedicaoRouter);
+const Router = express.Router();
+const HTTP_GET = Router.get.bind(Router);
+const HTTP_POST = Router.post.bind(Router);
+const HTTP_DELETE = Router.delete.bind(Router);
+const HTTP_PUT = Router.put.bind(Router);
 
 //Apply JSON parse
-EstacaoMedicaoRouter.use(express.json());
+Router.use(express.json());
 //Apply Middleware for Delay and Error simulation
-EstacaoMedicaoRouter.use(Middleware);
+Router.use(Middleware);
 // Use o middleware CORS
-EstacaoMedicaoRouter.use(cors());
+Router.use(cors());
 
 HTTP_GET("/", (REQ: Request, RES: Response) => {
   const { paginatedData, totalRows, currentPage, totalPages, rowsPerPage } = PaginateAndSort(EstacoesMedicao, REQ.body.pagination);
@@ -85,4 +85,4 @@ HTTP_DELETE("/:id", (REQ: Request, RES: Response) => {
   RES.status(200).json(Response);
 });
 
-export default EstacaoMedicaoRouter;
+export { Router };
