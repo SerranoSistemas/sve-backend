@@ -24,8 +24,8 @@ APP.use("/produto", Router_Produto);
 APP.use("/sistema", SistemaRoutes);
 APP.use("/estacaoMedicao", EstacaoMedicaoRouter);
 APP.use("/locales", LocalesRouter);
-APP.use("/grupoderede", GruposDeRedeRoutes);
-APP.use("/configuracao", ConfiguracaoRoutes);
+// APP.use("/grupoderede", GruposDeRedeRoutes);
+// APP.use("/configuracao", ConfiguracaoRoutes);
 
 APP.listen(3000, () => console.log("Server is running on port 3000"));
 
