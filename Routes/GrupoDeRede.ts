@@ -17,6 +17,8 @@ Router.use(Middleware);
 // Use o middleware CORS
 Router.use(cors());
 
+HTTP_GET("/", (req: Request, res: Response) => res.status(200).json({ message: "Módulo de Grupos de Rede" }));
+
 HTTP_GET("/get-list", (REQ: Request, RES: Response) => {
   const Response: ResponseType = {
     data: GruposDeRedeDropdown,
