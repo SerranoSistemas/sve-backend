@@ -87,7 +87,11 @@ export const PaginateAndSort = (data: any[], pagination = DefaultPagination) => 
   };
 };
 
-export const GetElementByID = (data: any[], Id: string | number) => {
+export const GetElementByID = (data: any[], Id: string | number, List?: string) => {
+  if (List === "GruposDeRede") {
+    return data.find((Element) => Element.uuid === Id);
+  }
+
   return data.find((Element) => Element.identificador === Id);
 };
 
