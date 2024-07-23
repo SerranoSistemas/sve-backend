@@ -10,6 +10,7 @@ import { Router as SistemaRoutes } from "./Routes/Sistema";
 import { Router as GruposDeRedeRoutes } from "./Routes/GruposDeRede";
 import { Router as ConfiguracaoRoutes } from "./Routes/Configuracao";
 import { Router as DepositosRoutes } from "./Routes/DepositosSAP";
+import { Router as ClientesRoutes } from "./Routes/Clientes";
 
 const APP = express();
 
@@ -26,6 +27,7 @@ APP.use("/estacaoMedicao", EstacaoMedicaoRouter);
 APP.use("/grupoderede", GruposDeRedeRoutes);
 APP.use("/configuracao", ConfiguracaoRoutes);
 APP.use("/depositos", DepositosRoutes);
+APP.use("/cliente", ClientesRoutes);
 
 APP.listen(3000, () => console.log("Server is running on port 3000"));
 
