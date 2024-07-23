@@ -69,7 +69,7 @@ Router.get("/inicio", (REQ: Request, RES: Response) => {
       { chave: "4.7", valor: ESCRITA },
       { chave: "4.8", valor: ESCRITA },
     ],
-  };
+  }; 
 
   const Response = {
     data: Data,

@@ -31,7 +31,7 @@ export type DefaultFilter = {
   pagination: Pagination;
 };
 
-export type PageType = {
+export type PageType = { 
   totalRows: number;
   currentPage: number;
   totalPages: number;

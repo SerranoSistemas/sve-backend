@@ -2,7 +2,6 @@ import express, { Request, Response } from "express";
 import { Router as Router_Planta } from "./Routes/Planta";
 import { Router as EstacaoMedicaoRouter } from "./Routes/EstacaoMedicao";
 import { Router as Router_Area } from "./Routes/Area";
-import { Router as LocalesRouter } from "./Routes/Locales";
 import { Router as Router_ServersPIMS } from "./Routes/ServersPIMS";
 import { Router as Router_Medicoes } from "./Routes/Medicoes";
 import { Router as Router_UnidadesDeMedida } from "./Routes/UnidadesDeMedida";
@@ -23,7 +22,6 @@ APP.use("/area", Router_Area);
 APP.use("/produto", Router_Produto);
 APP.use("/sistema", SistemaRoutes);
 APP.use("/estacaoMedicao", EstacaoMedicaoRouter);
-APP.use("/locales", LocalesRouter);
 APP.use("/grupoderede", GruposDeRedeRoutes);
 APP.use("/configuracao", ConfiguracaoRoutes);
 

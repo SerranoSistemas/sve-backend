@@ -13,12 +13,16 @@ export type EstacoesMedicaoType = {
 
 //Objeto mínimo por enquanto
 export type DefaultClass = {
-  codigo: number | string;
+  uuid?: string;
+  codigo?: number | string;
   descricao: string;
   identificador: string;
-  incluidoEm: Date | number;
-  alteradoEm: Date | number;
+  incluidoEm?: Date | number;
+  alteradoEm?: Date | number;
   excluidoEm?: Date | number;
+  incluidoPor?: string;
+  alteradoPor?: string;
+  excluidoPor?: string;
 };
 
 //Objeto mínimo por enquanto
@@ -26,22 +30,25 @@ export type ServersPIMS = {
   title: number | string;
   odbc: string;
   identificador: string;
-  incluidoEm: Date | number;
-  alteradoEm: Date | number;
+  incluidoEm?: Date | number;
+  alteradoEm?: Date | number;
   excluidoEm?: Date | number;
 };
 
 //Objeto mínimo por enquanto
 export type DefaultAreaClass = {
+  uuid?: string;
   codigo: number | string;
   descricao: string;
   identificador: string;
   planta: string;
-  incluidoEm: Date | number;
-  alteradoEm: Date | number;
+  incluidoEm?: Date | number;
+  alteradoEm?: Date | number;
   excluidoEm?: Date | number;
+  incluidoPor?: string;
+  alteradoPor?: string;
+  excluidoPor?: string;
 };
-
 
 //Objeto mínimo por enquanto
 export type DefaultProdutoClass = {
@@ -49,8 +56,8 @@ export type DefaultProdutoClass = {
   descricao: string;
   identificador: string;
   unidadeMedida: string;
-  incluidoEm: Date | number;
-  alteradoEm: Date | number;
+  incluidoEm?: Date | number;
+  alteradoEm?: Date | number;
   excluidoEm?: Date | number;
 };
 

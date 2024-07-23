@@ -1,4 +1,4 @@
-const EstacoesDeMedicao = [
+export const EstacoesDeMedicao = [
   {
     uuid: "2f3806aa89384243a29b43145082168d",
     identificador: "BRASKEM GREEN",
@@ -109,4 +109,5 @@ const EstacoesDeMedicao = [
     alteradoPor: null,
     excluidoPor: null,
   },
-];
+]; 
+

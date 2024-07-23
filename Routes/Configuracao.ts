@@ -1,6 +1,6 @@
 import express, { Request, Response } from "express";
 import cors from "cors";
-import { Plantas, PlantasDropdown } from "../Data/Planta";
+
 import { Filter, GetElementByID, Middleware, PaginateAndSort } from "../Lib/Utils";
 import { ResponseType } from "../Data/Types";
 import { GetPagination } from "../Data/Pagination";

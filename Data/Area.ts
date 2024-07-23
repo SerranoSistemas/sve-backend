@@ -2,224 +2,190 @@ import moment from "moment";
 import { DefaultAreaClass } from "./Types";
 import { Copy } from "../Lib/Utils";
 
-export const Areas: DefaultAreaClass[] = [
+const DatesInfo = {
+  incluidoEm: moment(new Date()).unix(),
+  alteradoEm: moment(new Date()).unix(),
+  excluidoEm: null,
+  incluidoPor: null,
+  alteradoPor: null,
+  excluidoPor: null,
+};
+
+export const Areas = [
   {
-    identificador: "123e4567-e89b-12d3-a456-426614174000",
-    codigo: "A13",
+    uuid: "123e4567-e89b-12d3-a456-426614174000",
+    identificador: "A13",
     descricao: "SEPARAÇÃO DE GASES",
-    planta: "OLE1",
-    incluidoEm: moment(new Date()).unix(),
-    alteradoEm: moment(new Date()).unix(),
+    planta: "be9b1a1c-8cf7-41b8-9b90-54100e4e4fc5", //OLE1
+    ...DatesInfo,
   },
   {
-    identificador: "123e4567-e89b-12d3-a456-426614174001",
-    codigo: "A14",
+    uuid: "123e4567-e89b-12d3-a456-426614174001",
+    identificador: "A14",
     descricao: "REFRIGERAÇÃO",
-    planta: "OLE1",
-    incluidoEm: moment(new Date()).unix(),
-    alteradoEm: moment(new Date()).unix(),
+    planta: "be9b1a1c-8cf7-41b8-9b90-54100e4e4fc5", //OLE1
+    ...DatesInfo,
   },
   {
-    identificador: "d91a9d37-6b6d-495d-bd1f-6e1f70e9245c",
-    codigo: "A25",
+    uuid: "d91a9d37-6b6d-495d-bd1f-6e1f70e9245c",
+    identificador: "A25",
     descricao: "HIDRODENAÇÃO DE C9 DE PIROLISE",
-    planta: "OLE1",
-    incluidoEm: moment(new Date()).unix(),
-    alteradoEm: moment(new Date()).unix(),
+    planta: "be9b1a1c-8cf7-41b8-9b90-54100e4e4fc5", //OLE1
+    ...DatesInfo,
   },
   {
-    identificador: "1f50f8b6-8f58-4689-88da-f13cbf0e6768",
-    codigo: "A31",
+    uuid: "1f50f8b6-8f58-4689-88da-f13cbf0e6768",
+    identificador: "A31",
     descricao: "ESTOCAGEM DE MATERIAS PRIMAS 1",
-    planta: "OLE1",
-    incluidoEm: moment(new Date()).unix(),
-    alteradoEm: moment(new Date()).unix(),
+    planta: "be9b1a1c-8cf7-41b8-9b90-54100e4e4fc5", //OLE1
+    ...DatesInfo,
   },
   {
-    identificador: "Area5",
-    codigo: "A32",
+    uuid: "f5f8c667-3f29-4885-857b-c805b9d9a834",
+    identificador: "A32",
     descricao: "ESTOCAGEM INTERMEDIAPLA",
-    planta: "OLE2",
-    incluidoEm: moment(new Date()).unix(),
-    alteradoEm: moment(new Date()).unix(),
+    planta: "98ab1e13-4203-4cb4-8a88-2f77e4bc7d33", //OLE2
+    ...DatesInfo,
   },
   {
-    identificador: "Area6",
-    codigo: "A34",
+    uuid: "eecbaff0-8c9a-40e1-89e3-8c5d6c6b4a2f",
+    identificador: "A34",
     descricao: "ESTOCAGEM CHIOGENICA",
-    planta: "OLE1",
-
-    incluidoEm: moment(new Date()).unix(),
-    alteradoEm: moment(new Date()).unix(),
+    planta: "be9b1a1c-8cf7-41b8-9b90-54100e4e4fc5", //OLE1
+    ...DatesInfo,
   },
   {
-    identificador: "Area7",
-    codigo: "A35",
+    uuid: "b3a95180-1253-4aaf-8152-b08bced8cf88",
+    identificador: "A35",
     descricao: "ESFERAS DE ARMAZENAMENTO",
-    planta: "ARO",
-
-    incluidoEm: moment(new Date()).unix(),
-    alteradoEm: moment(new Date()).unix(),
+    planta: "7f8a2d22-0e0c-49d9-8edc-14ec1f108c3a", //ARO
+    ...DatesInfo,
   },
   {
-    identificador: "Area8",
-    codigo: "A36",
+    uuid: "82f1ab2c-e9d1-4680-9295-e13d92f382df",
+    identificador: "A36",
     descricao: "TANCAGEM DE PRODUTOS FINAIS 1",
-    planta: "ARO",
-
-    incluidoEm: moment(new Date()).unix(),
-    alteradoEm: moment(new Date()).unix(),
+    planta: "7f8a2d22-0e0c-49d9-8edc-14ec1f108c3a", //ARO
+    ...DatesInfo,
   },
   {
-    identificador: "Area9",
-    codigo: "A22",
+    uuid: "fb37f2df-7357-4fbb-8f9f-50dcfcad0bb4",
+    identificador: "A22",
     descricao: "EXTRAÇÃO DE AROMATICOS",
-    planta: "ARO",
-
-    incluidoEm: moment(new Date()).unix(),
-    alteradoEm: moment(new Date()).unix(),
+    planta: "7f8a2d22-0e0c-49d9-8edc-14ec1f108c3a", //ARO
+    ...DatesInfo,
   },
   {
-    identificador: "Area10",
-    codigo: "A37",
+    uuid: "dd6848e7-75b5-414e-9f0d-9e4b38abfaba",
+    identificador: "A37",
     descricao: "SISTEMA DE METANOL",
-    planta: "OLE1",
-
-    incluidoEm: moment(new Date()).unix(),
-    alteradoEm: moment(new Date()).unix(),
+    planta: "be9b1a1c-8cf7-41b8-9b90-54100e4e4fc5", //OLE1
+    ...DatesInfo,
   },
   {
-    identificador: "Area11",
-    codigo: "A38",
+    uuid: "06d7be18-8ba6-49b8-84ec-2d5a1ddf9141",
+    identificador: "A38",
     descricao: "ESTOGAGEM DE HIDROGÈNIO",
-    planta: "OLE1",
-
-    incluidoEm: moment(new Date()).unix(),
-    alteradoEm: moment(new Date()).unix(),
+    planta: "be9b1a1c-8cf7-41b8-9b90-54100e4e4fc5", //OLE1
+    ...DatesInfo,
   },
   {
-    identificador: "Area12",
-    codigo: "ÁGUAS",
+    uuid: "c6d603d6-3e65-4f20-8b1b-3ffbbd43e3f5",
+    identificador: "ÁGUAS",
     descricao: "ESTAÇÃO DE TRATAMENTO DE ÁGUA",
-    planta: "UTIL",
-
-    incluidoEm: moment(new Date()).unix(),
-    alteradoEm: moment(new Date()).unix(),
+    planta: "2e67c81e-0280-4b5a-bb9a-0b4695f1b6b1", //UTIL
+    ...DatesInfo,
   },
   {
-    identificador: "Area13",
-    codigo: "VAPOR",
+    uuid: "fe33a2e0-fb88-47df-b9b8-402c5a62d929",
+    identificador: "VAPOR",
     descricao: "SISTEMADE GERAÇÃO DE VAPOR",
-    planta: "UTIL",
-
-    incluidoEm: moment(new Date()).unix(),
-    alteradoEm: moment(new Date()).unix(),
+    planta: "2e67c81e-0280-4b5a-bb9a-0b4695f1b6b1", //UTIL
+    ...DatesInfo,
   },
   {
-    identificador: "Area14",
-    codigo: "EE",
+    uuid: "82cf2597-7d79-4c3b-a84f-5b0b6c5678c0",
+    identificador: "EE",
     descricao: "SISTEMA DE GERAÇÃO DE ENERGIA ELÉTRICA 1",
-    planta: "UTIL",
-
-    incluidoEm: moment(new Date()).unix(),
-    alteradoEm: moment(new Date()).unix(),
+    planta: "2e67c81e-0280-4b5a-bb9a-0b4695f1b6b1", //UTIL
+    ...DatesInfo,
   },
   {
-    identificador: "Area15",
-    codigo: "AR",
+    uuid: "bc2336f0-1453-401d-8b5d-6b9f91e8b646",
+    identificador: "AR",
     descricao: "SISTEMA DE AGUA DE RESFHIAMENTO",
-    planta: "UTIL",
-
-    incluidoEm: moment(new Date()).unix(),
-    alteradoEm: moment(new Date()).unix(),
+    planta: "2e67c81e-0280-4b5a-bb9a-0b4695f1b6b1", //UTIL
+    ...DatesInfo,
   },
   {
-    identificador: "Area16",
-    codigo: "A62",
+    uuid: "d378ba62-65b8-49a1-9b36-fc86715e4ed6",
+    identificador: "A62",
     descricao: "TRATAMENTO DE SODA GASTA",
-    planta: "OLE1",
-
-    incluidoEm: moment(new Date()).unix(),
-    alteradoEm: moment(new Date()).unix(),
+    planta: "be9b1a1c-8cf7-41b8-9b90-54100e4e4fc5", //OLE1
+    ...DatesInfo,
   },
   {
-    identificador: "Area17",
-    codigo: "A63",
+    uuid: "3b2df68d-8b59-4f17-a72d-c7388b5e536e",
+    identificador: "A63",
     descricao: "CARREGAMENTO RODOFERROVIÁRIO",
-    planta: "ARO",
-
-    incluidoEm: moment(new Date()).unix(),
-    alteradoEm: moment(new Date()).unix(),
+    planta: "7f8a2d22-0e0c-49d9-8edc-14ec1f108c3a", //ARO
+    ...DatesInfo,
   },
   {
-    identificador: "Area18",
-    codigo: "A84",
+    uuid: "925f36a2-d6d4-49c4-9fa7-1bb1a65739e3",
+    identificador: "A84",
     descricao: "SISTEMA DE PURGA E TOCHA 1",
-    planta: "OLE1",
-
-    incluidoEm: moment(new Date()).unix(),
-    alteradoEm: moment(new Date()).unix(),
+    planta: "be9b1a1c-8cf7-41b8-9b90-54100e4e4fc5", //OLE1
+    ...DatesInfo,
   },
   {
-    identificador: "Area19",
-    codigo: "OLEO",
+    uuid: "61e1e4b5-abb3-47a3-bb8f-b5d7ecb2e786",
+    identificador: "OLEO",
     descricao: "SISTEMA DE OLEO E GÁS COMBUSTÍVEL",
-    planta: "UTIL",
-
-    incluidoEm: moment(new Date()).unix(),
-    alteradoEm: moment(new Date()).unix(),
+    planta: "2e67c81e-0280-4b5a-bb9a-0b4695f1b6b1", //UTIL
+    ...DatesInfo,
   },
   {
-    identificador: "Area20",
-    codigo: "A23",
+    uuid: "d0f418db-40ae-4dc2-a9cb-b71c29e68d8c",
+    identificador: "A23",
     descricao: "FRACIONAMENTO DE ARO",
-    planta: "ARO",
-
-    incluidoEm: moment(new Date()).unix(),
-    alteradoEm: moment(new Date()).unix(),
+    planta: "7f8a2d22-0e0c-49d9-8edc-14ec1f108c3a", //ARO
+    ...DatesInfo,
   },
   {
-    identificador: "Area21",
-    codigo: "A67",
+    uuid: "ef491c3b-676d-43c1-b550-47a0a1ec0b4b",
+    identificador: "A67",
     descricao: "RECUPERAÇÃO DE VAPORES",
-    planta: "ARO",
-
-    incluidoEm: moment(new Date()).unix(),
-    alteradoEm: moment(new Date()).unix(),
+    planta: "7f8a2d22-0e0c-49d9-8edc-14ec1f108c3a", //ARO
+    ...DatesInfo,
   },
   {
-    identificador: "Area22",
-    codigo: "TERG",
+    uuid: "a75f7c56-9ba5-4c7d-b486-90f6e0a4e0c1",
+    identificador: "TERG",
     descricao: "TERMINAL DE RIO GRANDE",
-    planta: "UNIB 2 RS",
-
-    incluidoEm: moment(new Date()).unix(),
-    alteradoEm: moment(new Date()).unix(),
+    planta: "4b2e0c19-40b4-4f0d-b72b-4e6dfb5a6c28", //UNIB 2
+    ...DatesInfo,
   },
   {
-    identificador: "Area23",
-    codigo: "TESC",
+    uuid: "bb728a28-d193-41da-96ae-72782b89c4da",
+    identificador: "TESC",
     descricao: "TERMINAL SANTA CLARA",
-    planta: "ARO",
-
-    incluidoEm: moment(new Date()).unix(),
-    alteradoEm: moment(new Date()).unix(),
+    planta: "7f8a2d22-0e0c-49d9-8edc-14ec1f108c3a", //ARO
+    ...DatesInfo,
   },
   {
-    identificador: "Area24",
-    codigo: "TEDUT",
+    uuid: "4d0918d0-ec9b-4118-a8c4-1ab271b7f74b",
+    identificador: "TEDUT",
     descricao: "PARQUE DE ESTOCACIEM DE OSÓRIO",
-    planta: "UNIB 2 RS",
-
-    incluidoEm: moment(new Date()).unix(),
-    alteradoEm: moment(new Date()).unix(),
+    planta: "4b2e0c19-40b4-4f0d-b72b-4e6dfb5a6c28", //UNIB 2
+    ...DatesInfo,
   },
 ];
 
 export const AreasDropdown = Areas.map((Area) => {
   return {
     label: Area.descricao,
-    value: Area.codigo,
+    value: Area.uuid,
   };
 });
 

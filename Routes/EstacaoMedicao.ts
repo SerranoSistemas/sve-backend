@@ -1,14 +1,13 @@
 import express, { Request, Response } from "express";
 import cors from "cors";
-import { GetElementByID, Middleware, PaginateAndSort } from "../Lib/Utils";
+import { Filter, GetElementByID, GetList, Middleware, PaginateAndSort } from "../Lib/Utils";
 import { ResponseType } from "../Data/Types";
-import { EstacoesMedicao, EstacoesMedicaoDropdown } from "../Data/EstacaoMedicao";
+import { GetPagination } from "../Data/Pagination";
+import { EstacoesDeMedicao } from "../Data/EstacaoDeMedicao";
+
+const OBJECT = "Estação de Medição";
 
 const Router = express.Router();
-const HTTP_GET = Router.get.bind(Router);
-const HTTP_POST = Router.post.bind(Router);
-const HTTP_DELETE = Router.delete.bind(Router);
-const HTTP_PUT = Router.put.bind(Router);
 
 //Apply JSON parse
 Router.use(express.json());
@@ -17,8 +16,14 @@ Router.use(Middleware);
 // Use o middleware CORS
 Router.use(cors());
 
-HTTP_GET("/", (REQ: Request, RES: Response) => {
-  const { paginatedData, totalRows, currentPage, totalPages, rowsPerPage } = PaginateAndSort(EstacoesMedicao, REQ.body.pagination);
+Router.get("/", (REQ: Request, RES: Response) => {
+  //FILTROS E PAGINAÇÂO
+  const Pagination = GetPagination(REQ);
+  const Text = REQ.query?.text?.toString() || "";
+
+  const FilteredData = Filter(EstacoesDeMedicao, Text);
+
+  const { paginatedData, totalRows, currentPage, totalPages, rowsPerPage } = PaginateAndSort(FilteredData, Pagination);
 
   const Response: ResponseType = {
     data: paginatedData,
@@ -35,9 +40,9 @@ HTTP_GET("/", (REQ: Request, RES: Response) => {
   return RES.status(200).json(Response);
 });
 
-HTTP_GET("/get-list", (REQ: Request, RES: Response) => {
+Router.get("/get-list", (REQ: Request, RES: Response) => {
   const Response: ResponseType = {
-    data: EstacoesMedicaoDropdown,
+    data: GetList(EstacoesDeMedicao),
     success: true,
     message: "Dados processados com sucesso",
   };
@@ -45,8 +50,8 @@ HTTP_GET("/get-list", (REQ: Request, RES: Response) => {
   return RES.status(200).json(Response);
 });
 
-HTTP_GET("/:id", (REQ: Request, RES: Response) => {
-  const data = GetElementByID(EstacoesMedicao, REQ.params.id);
+Router.get("/:id", (REQ: Request, RES: Response) => {
+  const data = GetElementByID(EstacoesDeMedicao, REQ.params.id);
 
   RES.status(200).json({
     data: data || {},
@@ -55,31 +60,31 @@ HTTP_GET("/:id", (REQ: Request, RES: Response) => {
   });
 });
 
-HTTP_PUT("/:id", (REQ: Request, RES: Response) => {
+Router.put("/:id", (REQ: Request, RES: Response) => {
   const Response: ResponseType = {
     data: REQ.body,
     success: true,
-    message: `Editando Estaçãode Medição com ID: ${REQ.params.id}`,
+    message: `Editando ${OBJECT} com ID: ${REQ.params.id}`,
   };
 
   RES.status(200).json(Response);
 });
 
-HTTP_POST("/", (REQ: Request, RES: Response) => {
+Router.post("/", (REQ: Request, RES: Response) => {
   const Response: ResponseType = {
     data: REQ.body,
     success: true,
-    message: `Adicionando Estaçãode Medição`,
+    message: `Adicionando ${OBJECT}`,
   };
 
   RES.status(200).json(Response);
 });
 
-HTTP_DELETE("/:id", (REQ: Request, RES: Response) => {
+Router.delete("/:id", (REQ: Request, RES: Response) => {
   const Response: ResponseType = {
     data: {},
     success: true,
-    message: `Deletando Estaçãode Medição com ID: ${REQ.params.id}`,
+    message: `Deletando ${OBJECT} com ID: ${REQ.params.id}`,
   };
 
   RES.status(200).json(Response);

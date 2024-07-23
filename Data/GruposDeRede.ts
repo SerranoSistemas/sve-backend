@@ -2,7 +2,7 @@ const LEITURA = 10;
 const ESCRITA = 20;
 
 export const GruposDeRede = [
-  { 
+  {
     uuid: "550e8400-e29b-41d4-a716-446655440000",
     descricao: "GG-BRA-SISTEMAMEDICAO-ADMMASTER",
     permissoes: [
@@ -315,10 +315,3 @@ export const GruposDeRede = [
     ],
   },
 ];
-
-export const GruposDeRedeDropdown = GruposDeRede.map((Grupo) => {
-  return {
-    uuid: Grupo.uuid,
-    nome: Grupo.descricao,
-  };
-});

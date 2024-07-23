@@ -1,15 +1,13 @@
 import express, { Request, Response } from "express";
 import cors from "cors";
-import { Filter, GetElementByID, InnerJoins, Middleware, PaginateAndSort } from "../Lib/Utils";
+import { Filter, FilterByKey, GetElementByID, GetList, InnerJoins, Middleware, PaginateAndSort } from "../Lib/Utils";
 import { Pagination, ResponseType } from "../Data/Types";
 import { Areas, AreasDropdown, FilterAreaJoins, FilterAreaText } from "../Data/Area";
 import { GetPagination, PaginaNationGetPage, PaginaNationGetRows, PaginationGetOrderBy } from "../Data/Pagination";
 
+const OBJECT = "Área";
+
 const Router = express.Router();
-const HTTP_GET = Router.get.bind(Router);
-const HTTP_POST = Router.post.bind(Router);
-const HTTP_DELETE = Router.delete.bind(Router);
-const HTTP_PUT = Router.put.bind(Router);
 
 //Apply JSON parse
 Router.use(express.json());
@@ -18,13 +16,15 @@ Router.use(Middleware);
 // Use o middleware CORS
 Router.use(cors());
 
-HTTP_GET("/", (REQ: Request, RES: Response) => {
+Router.get("/", (REQ: Request, RES: Response) => {
+  //FILTROS E PAGINAÇÂO
   const Pagination = GetPagination(REQ);
   const Text = REQ.query?.text?.toString() || "";
   const Planta = REQ.query?.planta?.toString() || "";
-  const FilteredJoins = FilterAreaJoins(Areas, Planta);
+
+  const FilteredJoins = FilterByKey(Areas, "planta", Planta);
   const JoinedData = InnerJoins(FilteredJoins, "Areas");
-  const FilteredData = FilterAreaText(JoinedData, Text);
+  const FilteredData = Filter(JoinedData, Text);
 
   const { paginatedData, totalRows, currentPage, totalPages, rowsPerPage } = PaginateAndSort(FilteredData, Pagination);
   const Response: ResponseType = {
@@ -42,9 +42,9 @@ HTTP_GET("/", (REQ: Request, RES: Response) => {
   return RES.status(200).json(Response);
 });
 
-HTTP_GET("/get-list", (REQ: Request, RES: Response) => {
+Router.get("/get-list", (REQ: Request, RES: Response) => {
   const Response: ResponseType = {
-    data: AreasDropdown,
+    data: GetList(Areas),
     success: true,
     message: "Dados processados com sucesso",
   };
@@ -52,7 +52,7 @@ HTTP_GET("/get-list", (REQ: Request, RES: Response) => {
   return RES.status(200).json(Response);
 });
 
-HTTP_GET("/:id", (REQ: Request, RES: Response) => {
+Router.get("/:id", (REQ: Request, RES: Response) => {
   const data = GetElementByID(Areas, REQ.params.id);
 
   RES.status(200).json({
@@ -62,31 +62,31 @@ HTTP_GET("/:id", (REQ: Request, RES: Response) => {
   });
 });
 
-HTTP_PUT("/:id", (REQ: Request, RES: Response) => {
+Router.put("/:id", (REQ: Request, RES: Response) => {
   const Response: ResponseType = {
     data: REQ.body,
     success: true,
-    message: `Editando Area com ID: ${REQ.params.id}`,
+    message: `Editando ${OBJECT} com ID: ${REQ.params.id}`,
   };
 
   RES.status(200).json(Response);
 });
 
-HTTP_POST("/", (REQ: Request, RES: Response) => {
+Router.post("/", (REQ: Request, RES: Response) => {
   const Response: ResponseType = {
     data: REQ.body,
     success: true,
-    message: `Adicionando Area`,
+    message: `Adicionando ${OBJECT}`,
   };
 
   RES.status(200).json(Response);
 });
 
-HTTP_DELETE("/:id", (REQ: Request, RES: Response) => {
+Router.delete("/:id", (REQ: Request, RES: Response) => {
   const Response: ResponseType = {
     data: {},
     success: true,
-    message: `Deletando Area com ID: ${REQ.params.id}`,
+    message: `Deletando ${OBJECT} com ID: ${REQ.params.id}`,
   };
 
   RES.status(200).json(Response);

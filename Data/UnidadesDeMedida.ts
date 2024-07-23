@@ -1,54 +1,49 @@
 import moment from "moment";
-import { DefaultClass } from "./Types";
 
-export const UnidadesDeMedida: DefaultClass[] = [
+const DatesInfo = {
+  incluidoEm: moment(new Date()).unix(),
+  alteradoEm: moment(new Date()).unix(),
+  excluidoEm: null,
+  incluidoPor: null,
+  alteradoPor: null,
+  excluidoPor: null,
+};
+
+export const UnidadesDeMedida = [
   {
-    identificador: "Unid1",
-    codigo: "TO",
+    uuid: "72c6b29c-b7c2-41f0-b9f4-5b6eac65b215",
+    identificador: "TO",
     descricao: "Toneladas",
-    incluidoEm: moment(new Date()).unix(),
-    alteradoEm: moment(new Date()).unix(),
+    ...DatesInfo,
   },
   {
-    identificador: "Unid2",
-    codigo: "KG",
+    uuid: "9d4b02e2-13de-497f-961d-64d80ff71b65",
+    identificador: "KG",
     descricao: "Quilogramas",
-    incluidoEm: moment(new Date()).unix(),
-    alteradoEm: moment(new Date()).unix(),
+    ...DatesInfo,
   },
   {
-    identificador: "Unid3",
-    codigo: "M3",
+    uuid: "c8a7e37b-b06a-42b6-b594-3f2e51e6d98c",
+    identificador: "M3",
     descricao: "Metros Cúbicos",
-    incluidoEm: moment(new Date()).unix(),
-    alteradoEm: moment(new Date()).unix(),
+    ...DatesInfo,
   },
   {
-    identificador: "Unid4",
-    codigo: "MWH",
+    uuid: "c2b7b0ec-f658-45ed-908d-4d92be15e4d3",
+    identificador: "MWH",
     descricao: "Megawatt hora",
-    incluidoEm: moment(new Date()).unix(),
-    alteradoEm: moment(new Date()).unix(),
+    ...DatesInfo,
   },
   {
-    identificador: "Unid5",
-    codigo: "NM3",
+    uuid: "f8b32c4e-59f0-4c5e-8835-96d374aedaef",
+    identificador: "NM3",
     descricao: "Normal metros cúbicos",
-    incluidoEm: moment(new Date()).unix(),
-    alteradoEm: moment(new Date()).unix(),
+    ...DatesInfo,
   },
   {
-    identificador: "Unid6",
-    codigo: "KWH",
+    uuid: "ea92e3b1-5b54-41de-b1c8-0a4ffed558d3",
+    identificador: "KWH",
     descricao: "Kilowatt hora",
-    incluidoEm: moment(new Date()).unix(),
-    alteradoEm: moment(new Date()).unix(),
+    ...DatesInfo,
   },
 ];
-
-export const UnidadeMedidasDropdown = UnidadesDeMedida.map((UnidadeMedida) => {
-  return {
-    label: UnidadeMedida.descricao,
-    value: UnidadeMedida.codigo,
-  };
-});

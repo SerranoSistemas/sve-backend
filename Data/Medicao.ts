@@ -1,5 +1,5 @@
 export const Medicoes = [
-  {
+  { 
     Medidor: {
       Codigo: "",
       Descricao: "",

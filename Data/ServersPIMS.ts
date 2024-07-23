@@ -1,47 +1,43 @@
 import moment from "moment";
-import { DefaultClass, ServersPIMS } from "./Types";
 
-export const PIMSServers: DefaultClass[] = [
+const DatesInfo = {
+  incluidoEm: moment(new Date()).unix(),
+  alteradoEm: moment(new Date()).unix(),
+  excluidoEm: null,
+  incluidoPor: null,
+  alteradoPor: null,
+  excluidoPor: null,
+};
+
+export const PIMSServers = [
   {
-    identificador: "PIMS1",
-    codigo: "Eteno Verde",
+    uuid: "PIMS1",
+    identificador: "Eteno Verde",
     descricao: "INFOEV101",
-    incluidoEm: moment(new Date()).unix(),
-    alteradoEm: moment(new Date()).unix(),
+    ...DatesInfo,
   },
   {
-    identificador: "PIMS2",
-    codigo: "Olefinas 1",
+    uuid: "PIMS2",
+    identificador: "Olefinas 1",
     descricao: "OLEFI1-IP21",
-    incluidoEm: moment(new Date()).unix(),
-    alteradoEm: moment(new Date()).unix(),
+    ...DatesInfo,
   },
   {
-    identificador: "PIMS3",
-    codigo: "Olefinas 2",
+    uuid: "PIMS3",
+    identificador: "Olefinas 2",
     descricao: "OLEFI2-IP21",
-    incluidoEm: moment(new Date()).unix(),
-    alteradoEm: moment(new Date()).unix(),
+    ...DatesInfo,
   },
   {
-    identificador: "PIMS4",
-    codigo: "Utilidades",
+    uuid: "PIMS4",
+    identificador: "Utilidades",
     descricao: "UTIL-IP21",
-    incluidoEm: moment(new Date()).unix(),
-    alteradoEm: moment(new Date()).unix(),
+    ...DatesInfo,
   },
   {
-    identificador: "PIMS5",
-    codigo: "Conexão UNIB RS",
+    uuid: "PIMS5",
+    identificador: "Conexão UNIB RS",
     descricao: "WTRI83",
-    incluidoEm: moment(new Date()).unix(),
-    alteradoEm: moment(new Date()).unix(),
+    ...DatesInfo,
   },
 ];
-
-export const PIMSServersDropdown = PIMSServers.map((PIMS) => {
-  return {
-    label: PIMS.descricao,
-    value: PIMS.identificador,
-  };
-});

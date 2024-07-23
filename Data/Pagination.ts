@@ -1,6 +1,6 @@
 import { Request } from "express";
 import { Pagination } from "./Types";
-
+ 
 export const DefaultPagination: Pagination = {
   page: 1,
   rows: 20,

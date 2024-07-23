@@ -1,16 +1,13 @@
-import { ServersPIMS } from "./../Data/Types";
 import express, { Request, Response } from "express";
 import cors from "cors";
-import { Filter, GetElementByID, Middleware, PaginateAndSort } from "../Lib/Utils";
+import { Filter, GetElementByID, GetList, Middleware, PaginateAndSort } from "../Lib/Utils";
 import { ResponseType } from "../Data/Types";
 import { GetPagination } from "../Data/Pagination";
-import { PIMSServers, PIMSServersDropdown } from "../Data/ServersPIMS";
+import { PIMSServers } from "../Data/ServersPIMS";
+
+const OBJECT = "Servidor PIMS";
 
 const Router = express.Router();
-const HTTP_GET = Router.get.bind(Router);
-const HTTP_POST = Router.post.bind(Router);
-const HTTP_DELETE = Router.delete.bind(Router);
-const HTTP_PUT = Router.put.bind(Router);
 
 //Apply JSON parse
 Router.use(express.json());
@@ -19,11 +16,12 @@ Router.use(Middleware);
 // Use o middleware CORS
 Router.use(cors());
 
-HTTP_GET("/", (REQ: Request, RES: Response) => {
+Router.get("/", (REQ: Request, RES: Response) => {
+  //FITROS E PAGINACAO
   const Pagination = GetPagination(REQ);
   const Text = REQ.query?.text?.toString() || "";
 
-  const FilteredData = Filter(PIMSServers, Text, "ServersPIMS");
+  const FilteredData = Filter(PIMSServers, Text);
 
   const { paginatedData, totalRows, currentPage, totalPages, rowsPerPage } = PaginateAndSort(FilteredData, Pagination);
 
@@ -42,9 +40,9 @@ HTTP_GET("/", (REQ: Request, RES: Response) => {
   return RES.status(200).json(Response);
 });
 
-HTTP_GET("/get-list", (REQ: Request, RES: Response) => {
+Router.get("/get-list", (REQ: Request, RES: Response) => {
   const Response: ResponseType = {
-    data: PIMSServersDropdown,
+    data: GetList(PIMSServers),
     success: true,
     message: "Dados processados com sucesso",
   };
@@ -52,7 +50,7 @@ HTTP_GET("/get-list", (REQ: Request, RES: Response) => {
   return RES.status(200).json(Response);
 });
 
-HTTP_GET("/:id", (REQ: Request, RES: Response) => {
+Router.get("/:id", (REQ: Request, RES: Response) => {
   const data = GetElementByID(PIMSServers, REQ.params.id);
 
   RES.status(200).json({
@@ -62,31 +60,31 @@ HTTP_GET("/:id", (REQ: Request, RES: Response) => {
   });
 });
 
-HTTP_PUT("/:id", (REQ: Request, RES: Response) => {
+Router.put("/:id", (REQ: Request, RES: Response) => {
   const Response: ResponseType = {
     data: REQ.body,
     success: true,
-    message: `Editando Servidor PIMS com ID: ${REQ.params.id}`,
+    message: `Editando ${OBJECT} com ID: ${REQ.params.id}`,
   };
 
   RES.status(200).json(Response);
 });
 
-HTTP_POST("/", (REQ: Request, RES: Response) => {
+Router.post("/", (REQ: Request, RES: Response) => {
   const Response: ResponseType = {
     data: REQ.body,
     success: true,
-    message: `Adicionando Servidor PIMS`,
+    message: `Adicionando ${OBJECT}`,
   };
 
   RES.status(200).json(Response);
 });
 
-HTTP_DELETE("/:id", (REQ: Request, RES: Response) => {
+Router.delete("/:id", (REQ: Request, RES: Response) => {
   const Response: ResponseType = {
     data: {},
     success: true,
-    message: `Deletando Servidor PIMS com ID: ${REQ.params.id}`,
+    message: `Deletando ${OBJECT} com ID: ${REQ.params.id}`,
   };
 
   RES.status(200).json(Response);

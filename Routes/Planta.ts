@@ -1,15 +1,11 @@
 import express, { Request, Response } from "express";
 import cors from "cors";
-import { Plantas, PlantasDropdown } from "../Data/Planta";
-import { Filter, GetElementByID, Middleware, PaginateAndSort } from "../Lib/Utils";
+import { Plantas } from "../Data/Planta";
+import { Filter, GetElementByID, GetList, Middleware, PaginateAndSort } from "../Lib/Utils";
 import { ResponseType } from "../Data/Types";
 import { GetPagination } from "../Data/Pagination";
 
 const Router = express.Router();
-const HTTP_GET = Router.get.bind(Router);
-const HTTP_POST = Router.post.bind(Router);
-const HTTP_DELETE = Router.delete.bind(Router);
-const HTTP_PUT = Router.put.bind(Router);
 
 //Apply JSON parse
 Router.use(express.json());
@@ -18,11 +14,11 @@ Router.use(Middleware);
 // Use o middleware CORS
 Router.use(cors());
 
-HTTP_GET("/", (REQ: Request, RES: Response) => {
+Router.get("/", (REQ: Request, RES: Response) => {
   const Pagination = GetPagination(REQ);
   const Text = REQ.query?.text?.toString() || "";
 
-  const FilteredData = Filter(Plantas, Text, "Plantas");
+  const FilteredData = Filter(Plantas, Text);
 
   const { paginatedData, totalRows, currentPage, totalPages, rowsPerPage } = PaginateAndSort(FilteredData, Pagination);
 
@@ -41,9 +37,9 @@ HTTP_GET("/", (REQ: Request, RES: Response) => {
   return RES.status(200).json(Response);
 });
 
-HTTP_GET("/get-list", (REQ: Request, RES: Response) => {
+Router.get("/get-list", (REQ: Request, RES: Response) => {
   const Response: ResponseType = {
-    data: PlantasDropdown,
+    data: GetList(Plantas),
     success: true,
     message: "Dados processados com sucesso",
   };
@@ -51,7 +47,7 @@ HTTP_GET("/get-list", (REQ: Request, RES: Response) => {
   return RES.status(200).json(Response);
 });
 
-HTTP_GET("/:id", (REQ: Request, RES: Response) => {
+Router.get("/:id", (REQ: Request, RES: Response) => {
   const data = GetElementByID(Plantas, REQ.params.id);
 
   RES.status(200).json({
@@ -61,7 +57,7 @@ HTTP_GET("/:id", (REQ: Request, RES: Response) => {
   });
 });
 
-HTTP_PUT("/:id", (REQ: Request, RES: Response) => {
+Router.put("/:id", (REQ: Request, RES: Response) => {
   const Response: ResponseType = {
     data: REQ.body,
     success: true,
@@ -71,7 +67,7 @@ HTTP_PUT("/:id", (REQ: Request, RES: Response) => {
   RES.status(200).json(Response);
 });
 
-HTTP_POST("/", (REQ: Request, RES: Response) => {
+Router.post("/", (REQ: Request, RES: Response) => {
   const Response: ResponseType = {
     data: REQ.body,
     success: true,
@@ -81,7 +77,7 @@ HTTP_POST("/", (REQ: Request, RES: Response) => {
   RES.status(200).json(Response);
 });
 
-HTTP_DELETE("/:id", (REQ: Request, RES: Response) => {
+Router.delete("/:id", (REQ: Request, RES: Response) => {
   const Response: ResponseType = {
     data: {},
     success: true,

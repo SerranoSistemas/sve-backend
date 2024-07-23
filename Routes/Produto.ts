@@ -1,16 +1,13 @@
 import express, { Request, Response } from "express";
 import cors from "cors";
-import { Filter, GetElementByID, InnerJoins, Middleware, PaginateAndSort } from "../Lib/Utils";
-import { Pagination, ResponseType } from "../Data/Types";
+import { Filter, FilterByKey, GetElementByID, GetList, InnerJoins, Middleware, PaginateAndSort } from "../Lib/Utils";
+import { ResponseType } from "../Data/Types";
+import { GetPagination } from "../Data/Pagination";
+import { Produtos } from "../Data/Produto";
 
-import { GetPagination, PaginaNationGetPage, PaginaNationGetRows, PaginationGetOrderBy } from "../Data/Pagination";
-import { FilterProdutoJoins, FilterProdutoText, Produtos, ProdutosDropdown } from "../Data/Produto";
+const OBJECT = "Produto";
 
 const Router = express.Router();
-const HTTP_GET = Router.get.bind(Router);
-const HTTP_POST = Router.post.bind(Router);
-const HTTP_DELETE = Router.delete.bind(Router);
-const HTTP_PUT = Router.put.bind(Router);
 
 //Apply JSON parse
 Router.use(express.json());
@@ -19,13 +16,15 @@ Router.use(Middleware);
 // Use o middleware CORS
 Router.use(cors());
 
-HTTP_GET("/", (REQ: Request, RES: Response) => {
+Router.get("/", (REQ: Request, RES: Response) => {
+  //FITROS E PAGINACAO
   const Pagination = GetPagination(REQ);
   const Text = REQ.query?.text?.toString() || "";
   const UnidadeMedida = REQ.query?.unidadeMedida?.toString() || "";
-  const FilteredJoins = FilterProdutoJoins(Produtos, UnidadeMedida);
+
+  const FilteredJoins = FilterByKey(Produtos, "unidadeMedida", UnidadeMedida);
   const JoinedData = InnerJoins(FilteredJoins, "Produtos");
-  const FilteredData = FilterProdutoText(JoinedData, Text);
+  const FilteredData = Filter(JoinedData, Text);
 
   const { paginatedData, totalRows, currentPage, totalPages, rowsPerPage } = PaginateAndSort(FilteredData, Pagination);
   const Response: ResponseType = {
@@ -43,9 +42,9 @@ HTTP_GET("/", (REQ: Request, RES: Response) => {
   return RES.status(200).json(Response);
 });
 
-HTTP_GET("/get-list", (REQ: Request, RES: Response) => {
+Router.get("/get-list", (REQ: Request, RES: Response) => {
   const Response: ResponseType = {
-    data: ProdutosDropdown,
+    data: GetList(Produtos),
     success: true,
     message: "Dados processados com sucesso",
   };
@@ -53,7 +52,7 @@ HTTP_GET("/get-list", (REQ: Request, RES: Response) => {
   return RES.status(200).json(Response);
 });
 
-HTTP_GET("/:id", (REQ: Request, RES: Response) => {
+Router.get("/:id", (REQ: Request, RES: Response) => {
   const data = GetElementByID(Produtos, REQ.params.id);
 
   RES.status(200).json({
@@ -63,31 +62,31 @@ HTTP_GET("/:id", (REQ: Request, RES: Response) => {
   });
 });
 
-HTTP_PUT("/:id", (REQ: Request, RES: Response) => {
+Router.put("/:id", (REQ: Request, RES: Response) => {
   const Response: ResponseType = {
     data: REQ.body,
     success: true,
-    message: `Editando Produto com ID: ${REQ.params.id}`,
+    message: `Editando ${OBJECT} com ID: ${REQ.params.id}`,
   };
 
   RES.status(200).json(Response);
 });
 
-HTTP_POST("/", (REQ: Request, RES: Response) => {
+Router.post("/", (REQ: Request, RES: Response) => {
   const Response: ResponseType = {
     data: REQ.body,
     success: true,
-    message: `Adicionando Produto`,
+    message: `Adicionando ${OBJECT}`,
   };
 
   RES.status(200).json(Response);
 });
 
-HTTP_DELETE("/:id", (REQ: Request, RES: Response) => {
+Router.delete("/:id", (REQ: Request, RES: Response) => {
   const Response: ResponseType = {
     data: {},
     success: true,
-    message: `Deletando Produto com ID: ${REQ.params.id}`,
+    message: `Deletando ${OBJECT} com ID: ${REQ.params.id}`,
   };
 
   RES.status(200).json(Response);

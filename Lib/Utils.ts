@@ -87,74 +87,54 @@ export const PaginateAndSort = (data: any[], pagination = DefaultPagination) => 
   };
 };
 
-export const GetElementByID = (data: any[], Id: string | number, List?: string) => {
-  if (List === "GruposDeRede") {
-    return data.find((Element) => Element.uuid === Id);
-  }
-
-  return data.find((Element) => Element.identificador === Id);
+export const GetElementByID = (data, Id, List?: string) => {
+  return data.find((Element) => Element.uuid === Id || Element.identificador === Id);
 };
 
-export const Filter = (data: any[], text: string | null, type: string) => {
+export const Filter = (data, text, type?: string) => {
   if (!text) return data;
 
-  var NewData = Copy(data);
-
-  if (type === "Plantas" || type === "UnidadesDeMedida") {
-    NewData = data.filter((Item) => {
-      const codigo = Item.codigo.includes(text);
-      const descricao = Item.descricao.toLowerCase().includes(text.toLowerCase());
-      return codigo | descricao;
+  return data.filter((item) => {
+    return Object.keys(item).some((key) => {
+      const value = item[key];
+      return typeof value === "string" && value.toLowerCase().includes(text.toLowerCase());
     });
-  }
+  });
+};
 
-  if (type === "Areas") {
-    NewData = data.filter((Item) => {
-      const codigo = Item.codigo.includes(text);
-      const descricao = Item.descricao.toLowerCase().includes(text.toLowerCase());
-      const planta = Item.planta.toLowerCase().includes(text.toLowerCase());
-      return codigo | descricao | planta;
-    });
-  }
+export const FilterByKey = (data, key, value) => {
+  if (!value) return data;
+  return data.filter((item) => item[key] === value);
+};
 
-  if (type === "Produtos") {
-    NewData = data.filter((Item) => {
-      const codigo = Item.codigo.includes(text);
-      const descricao = Item.descricao.toLowerCase().includes(text.toLowerCase());
-      const unidadeMedida = Item.unidadeMedida.toLowerCase().includes(text.toLowerCase());
-      return codigo | descricao | unidadeMedida;
-    });
-  }
-
-  if (type === "ServersPIMS") {
-    NewData = data.filter((Item) => {
-      const title = Item.title.includes(text);
-      const odbc = Item.odbc.toLowerCase().includes(text.toLowerCase());
-      return title | odbc;
-    });
-  }
-
-  return NewData;
+export const GetList = (Data) => {
+  return Data.map((Item) => {
+    return {
+      descricao: Item.descricao,
+      uuid: Item.uuid,
+    };
+  });
 };
 
 export const InnerJoins = (data: any[], type: string) => {
   var NewData = Copy(data);
+  var RefData;
+  var Key;
 
   if (type === "Areas") {
-    NewData = NewData.map((Item) => {
-      const ItemPlanta = Plantas.find((planta) => planta.codigo === Item.planta);
-      Item.planta = ItemPlanta.descricao;
-      return Item;
-    });
+    RefData = Plantas;
+    Key = "planta";
+  }
+  if (type === "Produtos") {
+    RefData = UnidadesDeMedida;
+    Key = "unidadeMedida";
   }
 
-  if (type === "Produtos") {
-    NewData = NewData.map((Item) => {
-      const ItemPlanta = UnidadesDeMedida.find((UnidadeMedida) => UnidadeMedida.identificador === Item.unidadeMedida);
-      Item.unidadeMedida = ItemPlanta?.descricao;
-      return Item;
-    });
-  }
+  NewData = NewData.map((Item) => {
+    const RefDataUnit = RefData.find((item) => item.uuid === Item[Key]);
+    Item[Key] = RefDataUnit?.descricao || "";
+    return Item;
+  });
 
   return NewData;
 };
