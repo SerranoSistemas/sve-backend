@@ -36,14 +36,14 @@ Router.get("/inicio", (REQ: Request, RES: Response) => {
     idiomaSecundario: { pt: "Teste PT", en: "Teste EN", es: "Teste ES" },
     permissoes: [
       //TODAS AS PERMISSÔES CONCEDIDAS
-      //SAP
+      //MODULO DE SAP
       { chave: "1", valor: ESCRITA },
       { chave: "1.1", valor: ESCRITA },
       { chave: "1.2", valor: ESCRITA },
       { chave: "1.3", valor: ESCRITA },
       { chave: "1.4", valor: ESCRITA },
 
-      //ADM
+      //MODULO DE ADM
       { chave: "2", valor: ESCRITA },
       { chave: "2.1", valor: ESCRITA },
       { chave: "2.2", valor: ESCRITA },
@@ -52,13 +52,13 @@ Router.get("/inicio", (REQ: Request, RES: Response) => {
       { chave: "2.5", valor: ESCRITA },
       { chave: "2.6", valor: ESCRITA },
 
-      //MOVIMENTACAO
+      //MODULO DE MOVIMENTACAO
       { chave: "3", valor: ESCRITA },
       { chave: "3.1", valor: ESCRITA },
       { chave: "3.2", valor: ESCRITA },
       { chave: "3.3", valor: ESCRITA },
 
-      //CADASTRO
+      //MODULO DE CADASTRO
       { chave: "4", valor: ESCRITA },
       { chave: "4.1", valor: ESCRITA },
       { chave: "4.2", valor: ESCRITA },
