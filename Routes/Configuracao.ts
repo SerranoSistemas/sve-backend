@@ -1,15 +1,9 @@
 import express, { Request, Response } from "express";
 import cors from "cors";
-
-import { Filter, GetElementByID, Middleware, PaginateAndSort } from "../Lib/Utils";
+import { Middleware } from "../Lib/Utils";
 import { ResponseType } from "../Data/Types";
-import { GetPagination } from "../Data/Pagination";
 
 const Router = express.Router();
-const HTTP_GET = Router.get.bind(Router);
-const HTTP_POST = Router.post.bind(Router);
-const HTTP_DELETE = Router.delete.bind(Router);
-const HTTP_PUT = Router.put.bind(Router);
 
 //Apply JSON parse
 Router.use(express.json());
@@ -18,7 +12,7 @@ Router.use(Middleware);
 // Use o middleware CORS
 Router.use(cors());
 
-HTTP_GET("/", (REQ: Request, RES: Response) => {
+Router.get("/", (REQ: Request, RES: Response) => {
   const Response: ResponseType = {
     data: {
       nomeDoUsuario: "Usuário",
@@ -55,7 +49,7 @@ HTTP_GET("/", (REQ: Request, RES: Response) => {
   return RES.status(200).json(Response);
 });
 
-HTTP_PUT("/", (REQ: Request, RES: Response) => {
+Router.put("/", (REQ: Request, RES: Response) => {
   const Response: ResponseType = {
     data: REQ.body,
     success: true,
@@ -66,3 +60,4 @@ HTTP_PUT("/", (REQ: Request, RES: Response) => {
 });
 
 export { Router };
+

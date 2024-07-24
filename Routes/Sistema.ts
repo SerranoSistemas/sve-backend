@@ -24,6 +24,17 @@ Router.get("/logotipo", (REQ: Request, RES: Response) => {
   return RES.status(200).json(Response);
 });
 
+Router.post("/logotipo", (REQ: Request, RES: Response) => {
+  const Response = {
+    data: {},
+    success: true,
+    message: "Imagem Inserida com Sucesso!", 
+    page: null,
+  };
+
+  return RES.status(200).json(Response);
+});
+
 Router.get("/inicio", (REQ: Request, RES: Response) => {
   const LEITURA = 10;
   const ESCRITA = 20;
@@ -69,7 +80,7 @@ Router.get("/inicio", (REQ: Request, RES: Response) => {
       { chave: "4.7", valor: ESCRITA },
       { chave: "4.8", valor: ESCRITA },
     ],
-  }; 
+  };
 
   const Response = {
     data: Data,
