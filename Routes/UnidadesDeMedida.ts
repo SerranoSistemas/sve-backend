@@ -26,8 +26,8 @@ Router.get("/", (REQ: Request, RES: Response) => {
 
   const Response: ResponseType = {
     data: paginatedData,
-    success: true,
-    message: "Dados processados com sucesso",
+    sucesso: true,
+     mensagem:  "Dados processados com sucesso",
     page: {
       totalRows,
       currentPage,
@@ -42,8 +42,8 @@ Router.get("/", (REQ: Request, RES: Response) => {
 Router.get("/get-list", (REQ: Request, RES: Response) => {
   const Response: ResponseType = {
     data: GetList(UnidadesDeMedida),
-    success: true,
-    message: "Dados processados com sucesso",
+    sucesso: true,
+     mensagem:  "Dados processados com sucesso",
   };
 
   return RES.status(200).json(Response);
@@ -54,16 +54,16 @@ Router.get("/:id", (REQ: Request, RES: Response) => {
 
   RES.status(200).json({
     data: data || {},
-    success: data ? true : false,
-    message: data ? "Dados processados com sucesso" : "Dado não encontrado",
+    sucesso: data ? true : false,
+     mensagem:  data ? "Dados processados com sucesso" : "Dado não encontrado",
   });
 });
 
 Router.put("/:id", (REQ: Request, RES: Response) => {
   const Response: ResponseType = {
     data: REQ.body,
-    success: true,
-    message: `Editando ${OBJECT} com ID: ${REQ.params.id}`,
+    sucesso: true,
+     mensagem:  `Editando ${OBJECT} com ID: ${REQ.params.id}`,
   };
 
   RES.status(200).json(Response);
@@ -72,8 +72,8 @@ Router.put("/:id", (REQ: Request, RES: Response) => {
 Router.post("/", (REQ: Request, RES: Response) => {
   const Response: ResponseType = {
     data: REQ.body,
-    success: true,
-    message: `Adicionando ${OBJECT}`,
+    sucesso: true,
+     mensagem:  `Adicionando ${OBJECT}`,
   };
 
   RES.status(200).json(Response);
@@ -82,8 +82,8 @@ Router.post("/", (REQ: Request, RES: Response) => {
 Router.delete("/:id", (REQ: Request, RES: Response) => {
   const Response: ResponseType = {
     data: {},
-    success: true,
-    message: `Deletando ${OBJECT} com ID: ${REQ.params.id}`,
+    sucesso: true,
+     mensagem:  `Deletando ${OBJECT} com ID: ${REQ.params.id}`,
   };
 
   RES.status(200).json(Response);

@@ -16,8 +16,8 @@ Router.use(cors());
 Router.get("/logotipo", (REQ: Request, RES: Response) => {
   const Response = {
     data: Base64,
-    success: true,
-    message: "Dados processados com sucesso", 
+    sucesso: true,
+     mensagem:  "Dados processados com sucesso",
     page: null,
   };
 
@@ -27,8 +27,8 @@ Router.get("/logotipo", (REQ: Request, RES: Response) => {
 Router.post("/logotipo", (REQ: Request, RES: Response) => {
   const Response = {
     data: {},
-    success: true,
-    message: "Imagem Inserida com Sucesso!", 
+    sucesso: true,
+     mensagem:  "Imagem Inserida com Sucesso!",
     page: null,
   };
 
@@ -42,7 +42,6 @@ Router.get("/inicio", (REQ: Request, RES: Response) => {
   const Data = {
     nomeDoUsuario: "Usuário",
     nomeDoSistema: "Q 2 RS",
-    urlLogotipo: "https://sve-backend.vercel.app/sistema/logotipo",
     idiomaPrimario: { pt: "Teste PT", en: "Teste EN", es: "Teste ES" },
     idiomaSecundario: { pt: "Teste PT", en: "Teste EN", es: "Teste ES" },
     permissoes: [
@@ -84,8 +83,8 @@ Router.get("/inicio", (REQ: Request, RES: Response) => {
 
   const Response = {
     data: Data,
-    success: true,
-    message: "Dados processados com sucesso",
+    sucesso: true,
+     mensagem:  "Dados processados com sucesso",
     page: null,
   };
 

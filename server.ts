@@ -11,10 +11,11 @@ import { Router as GruposDeRedeRoutes } from "./Routes/GruposDeRede";
 import { Router as ConfiguracaoRoutes } from "./Routes/Configuracao";
 import { Router as DepositosRoutes } from "./Routes/DepositosSAP";
 import { Router as ClientesRoutes } from "./Routes/Clientes";
+import { Router as FundoEscalaRoutes } from "./Routes/FundoEscala";
 
 const APP = express();
 
-APP.get("/", (req: Request, res: Response) => res.status(200).json({ message: "Bem vindo ao Sistema de Medição" }));
+APP.get("/", (req: Request, res: Response) => res.status(200).json({  mensagem:  "Bem vindo ao Sistema de Medição" }));
 
 APP.use("/planta", Router_Planta);
 APP.use("/unidadeMedida", Router_UnidadesDeMedida);
@@ -28,6 +29,7 @@ APP.use("/grupoderede", GruposDeRedeRoutes);
 APP.use("/configuracao", ConfiguracaoRoutes);
 APP.use("/depositos", DepositosRoutes);
 APP.use("/cliente", ClientesRoutes);
+APP.use("/fundoEscala", FundoEscalaRoutes);
 
 APP.listen(3000, () => console.log("Server is running on port 3000"));
 

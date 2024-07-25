@@ -41,7 +41,7 @@ export type PageType = {
 export type ResponseType = {
   data: any;
   page?: PageType;
-  success: boolean;
+  sucesso: boolean;
   message?: string;
 };
 

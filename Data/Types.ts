@@ -83,8 +83,8 @@ export type PageType = {
 export type ResponseType = {
   data: any;
   page?: PageType;
-  success: boolean;
-  message?: string;
+  sucesso: boolean;
+  mensagem?: string;
 };
 
 export type Totalizadores = {

@@ -26,8 +26,8 @@ HTTP_GET("/", (REQ: Request, RES: Response) => {
 
   const Response: ResponseType = {
     data: paginatedData,
-    success: true,
-    message: "Dados processados com sucesso",
+    sucesso: true,
+     mensagem:  "Dados processados com sucesso",
     page: {
       totalRows,
       currentPage,

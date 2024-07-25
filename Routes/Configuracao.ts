@@ -15,9 +15,9 @@ Router.use(cors());
 Router.get("/", (REQ: Request, RES: Response) => {
   const Response: ResponseType = {
     data: {
-      nomeDoUsuario: "Usuário",
       nomeDoSistema: "Q 2 RS",
       servidorTibco: "Servidor TIBCO",
+      servidorEscritaPims: "PIMS5",
       sapVKORG: "BR10",
       sapPONO: "10",
       sapSIST: "UNIB-RS",
@@ -31,7 +31,6 @@ Router.get("/", (REQ: Request, RES: Response) => {
       comunicarComPims: "1", //Vem em string 0 OU 1
       horarioDeCorte: "03:00", //'00:00'
       horarioTransferenciasAutomaticas: "10:00",
-      urlLogotipo: "https://sve-backend.vercel.app/sistema/logotipo",
       idiomaPrimario: {
         pt: "Teste PT",
         en: "Teste EN",
@@ -43,8 +42,8 @@ Router.get("/", (REQ: Request, RES: Response) => {
         es: "Teste ES",
       },
     },
-    success: true,
-    message: "Dados processados com sucesso",
+    sucesso: true,
+    mensagem: "Dados processados com sucesso",
     page: null,
   };
 
@@ -54,8 +53,8 @@ Router.get("/", (REQ: Request, RES: Response) => {
 Router.put("/", (REQ: Request, RES: Response) => {
   const Response: ResponseType = {
     data: REQ.body,
-    success: true,
-    message: `Editando Configurações`,
+    sucesso: true,
+    mensagem: `Editando Configurações`,
   };
 
   RES.status(200).json(Response);

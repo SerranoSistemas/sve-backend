@@ -12,8 +12,8 @@ export const Middleware = (REQ: Request, RES: Response, NEXT: NextFunction) => {
   if (REQ.query.gerarErro) {
     const ErrorResponse = {
       data: {},
-      success: false,
-      message: "Ocorreu um Erro, tente novamente",
+      sucesso: false,
+       mensagem:  "Ocorreu um Erro, tente novamente",
       page: {},
     };
 
@@ -138,3 +138,7 @@ export const InnerJoins = (data: any[], type: string) => {
 
   return NewData;
 };
+
+
+
+export const GenerateRandomValue = (min: number, max: number) => Math.floor(Math.random() * (max - min + 1)) + min;
