@@ -17,15 +17,14 @@ Router.get("/", (REQ: Request, RES: Response) => {
     data: {
       nomeDoUsuario: "Usuário",
       nomeDoSistema: "Q 2 RS",
-      servidorTibco: null,
+      servidorTibco: "Servidor TIBCO",
       sapVKORG: "BR10",
       sapPONO: "10",
       sapSIST: "UNIB-RS",
-      servicorTibco: null,
-      emailServidor: null,
-      emailConta: null,
-      emailSenha: null,
-      emailPorta: null,
+      emailServidor: "Email Servidor ",
+      emailConta: "Email Conta",
+      emailSenha: "Email Senha ",
+      emailPorta: "Email Porta",
       comunicarComPims: "1", //Vem em string 0 OU 1
       horarioDeCorte: "03:00", //'00:00'
       horarioTransferenciasAutomaticas: "10:00",
@@ -60,4 +59,3 @@ Router.put("/", (REQ: Request, RES: Response) => {
 });
 
 export { Router };
-

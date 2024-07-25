@@ -17,7 +17,7 @@ Router.get("/logotipo", (REQ: Request, RES: Response) => {
   const Response = {
     data: Base64,
     success: true,
-    message: "Dados processados com sucesso",
+    message: "Dados processados com sucesso", 
     page: null,
   };
 
