@@ -16,12 +16,12 @@ Router.use(cors());
 Router.get("/", (REQ: Request, RES: Response) => {
   const minMesParam = REQ.query.minMes as string;
   if (!minMesParam) {
-    return RES.status(400).json({ sucesso: false,  mensagem:  "Parâmetro 'minMes' é obrigatório" });
+    return RES.status(400).json({ sucesso: false, mensagem: "Parâmetro 'minMes' é obrigatório" });
   }
 
   const [month, year] = minMesParam.split("/").map(Number);
   if (isNaN(month) || isNaN(year)) {
-    return RES.status(400).json({ sucesso: false,  mensagem:  "Parâmetro 'minMes' deve estar no formato MM/YYYY" });
+    return RES.status(400).json({ sucesso: false, mensagem: "Parâmetro 'minMes' deve estar no formato MM/YYYY" });
   }
 
   const startDate = new Date(year, month - 1, 1);
@@ -45,8 +45,13 @@ Router.get("/", (REQ: Request, RES: Response) => {
   const response: ResponseType = {
     data: fundosEscala,
     sucesso: true,
-     mensagem:  "Dados processados com sucesso",
-    page: null,
+    mensagem: "Dados processados com sucesso",
+    page: {
+      totalPages: 1,
+      currentPage: 1,
+      rowsPerPage: fundosEscala.length,
+      totalRows: fundosEscala.length,
+    },
   };
 
   return RES.status(200).json(response);
@@ -56,7 +61,7 @@ Router.post("/", (REQ: Request, RES: Response) => {
   const response: ResponseType = {
     data: REQ.body,
     sucesso: true,
-     mensagem:  "Dados Recebidos",
+    mensagem: "Dados Recebidos",
   };
 
   RES.status(200).json(response);
