@@ -2,7 +2,7 @@ import express, { Request, Response } from "express";
 import cors from "cors";
 import { Middleware } from "../Lib/Utils";
 import { ResponseType } from "../Data/Types";
-import { FundoEscala, generateFundoEscala } from "../Data/FundoEscala";
+import { FundoEscala, GenerateFundoEscala } from "../Data/FundoEscala";
 
 const Router = express.Router();
 
@@ -14,14 +14,14 @@ Router.use(Middleware);
 Router.use(cors());
 
 Router.get("/", (REQ: Request, RES: Response) => {
-  const minMesParam = REQ.query.minMes as string;
-  if (!minMesParam) {
+  const mesAnoParam = REQ.query.mesAno as string;
+  if (!mesAnoParam) {
     return RES.status(400).json({ sucesso: false, mensagem: "Parâmetro 'minMes' é obrigatório" });
   }
 
-  const [month, year] = minMesParam.split("/").map(Number);
+  const [month, year] = mesAnoParam.split("/").map(Number);
   if (isNaN(month) || isNaN(year)) {
-    return RES.status(400).json({ sucesso: false, mensagem: "Parâmetro 'minMes' deve estar no formato MM/YYYY" });
+    return RES.status(400).json({ sucesso: false, mensagem: "Parâmetro 'mesAno' deve estar no formato MM/YYYY" });
   }
 
   const startDate = new Date(year, month - 1, 1);
@@ -37,7 +37,7 @@ Router.get("/", (REQ: Request, RES: Response) => {
     const date = new Date(startDate);
     date.setDate(startDate.getDate() + i);
 
-    const fundoEscala = generateFundoEscala(date, previousValueMedicao);
+    const fundoEscala = GenerateFundoEscala(date, previousValueMedicao);
     fundosEscala.push(fundoEscala);
     previousValueMedicao = fundoEscala.valorMedicao;
   }

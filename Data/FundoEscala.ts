@@ -10,7 +10,7 @@ export type FundoEscala = {
   situacao: "L" | "P"; //Liberada ou Pendente
 };
 
-export const generateFundoEscala = (date: Date, previousValueMedicao: number | null): FundoEscala => {
+export const GenerateFundoEscala = (date: Date, previousValueMedicao: number | null): FundoEscala => {
   const uuid = uuidv4();
   const dia = date.getDate().toString();
   const minMes = Math.random() < 0.9 ? 0 : GenerateRandomValue(0, 450);
