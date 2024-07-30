@@ -14,14 +14,14 @@ Router.use(Middleware);
 Router.use(cors());
 
 Router.get("/logotipo", (REQ: Request, RES: Response) => {
-  const Response = {
-    data: Base64,
-    sucesso: true,
-     mensagem:  "Dados processados com sucesso",
-    page: null,
-  };
+  // const Response = {
+  //   data: Base64,
+  //   sucesso: true,
+  //    mensagem:  "Dados processados com sucesso",
+  //   page: null,
+  // };
 
-  return RES.status(200).json(Response);
+  return RES.status(200).send(Base64);
 });
 
 Router.post("/logotipo", (REQ: Request, RES: Response) => {
