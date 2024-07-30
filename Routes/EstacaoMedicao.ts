@@ -40,7 +40,7 @@ Router.get("/", (REQ: Request, RES: Response) => {
   return RES.status(200).json(Response);
 });
 
-Router.get("/get-list", (REQ: Request, RES: Response) => {
+Router.get("/select", (REQ: Request, RES: Response) => {
   const Response: ResponseType = {
     data: GetList(EstacoesDeMedicao),
     sucesso: true,

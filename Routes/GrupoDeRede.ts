@@ -15,7 +15,7 @@ Router.use(cors());
 
 Router.get("/", (req: Request, res: Response) => res.status(200).json({  mensagem:  "Módulo de Grupos de Rede" }));
 
-Router.get("/get-list", (REQ: Request, RES: Response) => {
+Router.get("/select", (REQ: Request, RES: Response) => {
   const Response: ResponseType = {
     data: GetList(GruposDeRede),
     sucesso: true,
