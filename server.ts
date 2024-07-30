@@ -24,7 +24,7 @@ APP.use("/servers", Router_ServersPIMS);
 APP.use("/area", Router_Area);
 APP.use("/produto", Router_Produto);
 APP.use("/sistema", SistemaRoutes);
-APP.use("/estacaoMedicao", EstacaoMedicaoRouter);
+APP.use("/estacaoDeMedicao", EstacaoMedicaoRouter);
 APP.use("/grupoderede", GruposDeRedeRoutes);
 APP.use("/configuracao", ConfiguracaoRoutes);
 APP.use("/depositos", DepositosRoutes);
