@@ -18,7 +18,7 @@ const APP = express();
 APP.get("/", (req: Request, res: Response) => res.status(200).json({  mensagem:  "Bem vindo ao Sistema de Medição" }));
 
 APP.use("/planta", Router_Planta);
-APP.use("/unidadeMedida", Router_UnidadesDeMedida);
+APP.use("/unidadeDeMedida", Router_UnidadesDeMedida);
 APP.use("/medicao", Router_Medicoes);
 APP.use("/servers", Router_ServersPIMS);
 APP.use("/area", Router_Area);
@@ -27,7 +27,7 @@ APP.use("/sistema", SistemaRoutes);
 APP.use("/estacaoDeMedicao", EstacaoMedicaoRouter);
 APP.use("/grupoderede", GruposDeRedeRoutes);
 APP.use("/configuracao", ConfiguracaoRoutes);
-APP.use("/depositos", DepositosRoutes);
+APP.use("/deposito", DepositosRoutes);
 APP.use("/cliente", ClientesRoutes);
 APP.use("/fundoEscala", FundoEscalaRoutes);
 
