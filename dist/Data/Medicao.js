@@ -1,0 +1,77 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Medicoes = void 0;
+exports.Medicoes = [
+    {
+        Medidor: {
+            Codigo: "",
+            Descricao: "",
+        },
+        Produto: {
+            Codigo: "",
+            Descricao: "",
+        },
+        TotalPrimaria: 148407281,
+        TotalSecundaria: 49708390,
+        Dif: 0.02,
+        MedicaoAcordada: 251485,
+        Situacao: "L", //Vazio, L ou I
+        UnidadeDeMedidaPrimaria: "To",
+        UnidadeDeMedidaSecundaria: "To",
+        PossuiMedidorSecundario: true,
+    },
+    {
+        Medidor: "506FQ12 1.PV",
+        Produto: "VAPOR DE MÉDIA",
+        TotalPrimaria: 458688937,
+        TotalSecundaria: 164728109,
+        Dif: 1.38,
+        MedicaoAcordada: 666812,
+        Situacao: { checkBox: true, Label: "Liberada" },
+    },
+    {
+        Medidor: "506FQ13 1.PV",
+        Produto: "ÁGUA DESMINERALIZADA",
+        TotalPrimaria: 643606062,
+        TotalSecundaria: 0,
+        Dif: 0.0,
+        MedicaoAcordada: 777375,
+        Situacao: { checkBox: true, Label: "Liberada" },
+    },
+    {
+        Medidor: "506FQ14 1.PV",
+        Produto: "ÁGUA CLARIFICADA",
+        TotalPrimaria: 626770125,
+        TotalSecundaria: 1036125,
+        Dif: 0.0,
+        MedicaoAcordada: 626770125,
+        Situacao: { checkBox: true, Label: "Liberada" },
+    },
+    {
+        Medidor: "506FQ15 1.PV",
+        Produto: "ÁGUA POTÁVEL",
+        TotalPrimaria: 44376093,
+        TotalSecundaria: 0,
+        Dif: 0.0,
+        MedicaoAcordada: 17254,
+        Situacao: { checkBox: true, Label: "Liberada" },
+    },
+    {
+        Medidor: "506FQ16 1.PV",
+        Produto: "NITROGÊNIO",
+        TotalPrimaria: 4527254500,
+        TotalSecundaria: 0,
+        Dif: 0.0,
+        MedicaoAcordada: 3104000,
+        Situacao: { checkBox: false, Label: "Liberada" },
+    },
+    {
+        Medidor: "506FQ112 1.PV",
+        Produto: "VAPOR DE MÉDIA",
+        TotalPrimaria: 0,
+        TotalSecundaria: 0,
+        Dif: 0.0,
+        MedicaoAcordada: 0,
+        Situacao: { checkBox: true, Label: "Liberada" },
+    },
+];
