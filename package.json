@@ -2,9 +2,7 @@
   "name": "sve-backend",
   "version": "0.0.1",
   "scripts": {
-    "dev": "nodemon server.ts",
-    "build": "tsc",
-    "start": "node dist/server.js"
+    "dev": "nodemon server.ts"
   },
   "devDependencies": {
     "@types/express": "^4.17.21",
