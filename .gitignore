@@ -7,7 +7,3 @@ pnpm-lock.yaml
 dist
 /dist
 ./dist
-
-api
-/api
-./api
