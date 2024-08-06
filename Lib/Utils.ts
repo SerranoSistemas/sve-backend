@@ -13,7 +13,7 @@ export const Middleware = (REQ: Request, RES: Response, NEXT: NextFunction) => {
     const ErrorResponse = {
       data: {},
       sucesso: false,
-       mensagem:  "Ocorreu um Erro, tente novamente",
+      mensagem: "Ocorreu um Erro, tente novamente",
       page: {},
     };
 
@@ -139,6 +139,20 @@ export const InnerJoins = (data: any[], type: string) => {
   return NewData;
 };
 
-
-
 export const GenerateRandomValue = (min: number, max: number) => Math.floor(Math.random() * (max - min + 1)) + min;
+
+export const GetResponse = (PaginatedNada: any) => {
+  const Response = {
+    data: PaginatedNada.paginatedData,
+    sucesso: true,
+    mensagem: "Dados processados com sucesso",
+    page: {
+      totalRows: PaginatedNada.totalRows,
+      currentPage: PaginatedNada.currentPage,
+      totalPages: PaginatedNada.totalPages,
+      rowsPerPage: PaginatedNada.rowsPerPage,
+    },
+  };
+
+  return Response;
+};

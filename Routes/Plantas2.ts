@@ -1,11 +1,9 @@
 import express, { Request, Response } from "express";
 import cors from "cors";
-import { Filter, FilterByKey, GetElementByID, GetList, GetResponse, InnerJoins, Middleware, PaginateAndSort } from "../Lib/Utils";
-import { Pagination, ResponseType } from "../Data/Types";
-import { Areas, AreasDropdown, FilterAreaJoins, FilterAreaText } from "../Data/Area";
-import { GetPagination, PaginaNationGetPage, PaginaNationGetRows, PaginationGetOrderBy } from "../Data/Pagination";
-
-const OBJECT = "Área";
+import { Plantas } from "../Data/Planta";
+import { Filter, GetElementByID, GetList, Middleware, PaginateAndSort } from "../Lib/Utils";
+import { ResponseType } from "../Data/Types";
+import { GetPagination } from "../Data/Pagination";
 
 const Router = express.Router();
 
@@ -17,25 +15,37 @@ Router.use(Middleware);
 Router.use(cors());
 
 Router.get("/", (REQ: Request, RES: Response) => {
-  //FILTROS E PAGINAÇÂO
   const Pagination = GetPagination(REQ);
-  const Text = REQ.query?.text?.toString() || "";
-  const Planta = REQ.query?.planta?.toString() || "";
+  const Text = REQ.body.text;
 
-  const FilteredJoins = FilterByKey(Areas, "planta", Planta);
-  const JoinedData = InnerJoins(FilteredJoins, "Areas");
-  const FilteredData = Filter(JoinedData, Text);
+  const FilteredData = Filter(Plantas, Text);
 
-  const PaginatedData = PaginateAndSort(FilteredData, Pagination);
+  const { paginatedData, totalRows, currentPage, totalPages, rowsPerPage } = PaginateAndSort(FilteredData, Pagination);
 
-  const Response = GetResponse(PaginatedData);
+  const Response: ResponseType = {
+    data: paginatedData,
+    sucesso: true,
+    mensagem: "Dados processados com sucesso",
+    page: {
+      totalRows,
+      currentPage,
+      totalPages,
+      rowsPerPage,
+    },
+  };
 
   return RES.status(200).json(Response);
 });
 
 Router.get("/select", (REQ: Request, RES: Response) => {
+
+  const Text = REQ.body.text;
+
+  const FilteredData = Filter(Plantas, Text);
+
+
   const Response: ResponseType = {
-    data: GetList(Areas),
+    data: GetList(FilteredData),
     sucesso: true,
     mensagem: "Dados processados com sucesso",
   };
@@ -44,7 +54,7 @@ Router.get("/select", (REQ: Request, RES: Response) => {
 });
 
 Router.get("/:id", (REQ: Request, RES: Response) => {
-  const data = GetElementByID(Areas, REQ.params.id);
+  const data = GetElementByID(Plantas, REQ.params.id);
 
   RES.status(200).json({
     data: data || {},
@@ -57,7 +67,7 @@ Router.put("/:id", (REQ: Request, RES: Response) => {
   const Response: ResponseType = {
     data: REQ.body,
     sucesso: true,
-    mensagem: `Editando ${OBJECT} com ID: ${REQ.params.id}`,
+    mensagem: `Editando Planta com ID: ${REQ.params.id}`,
   };
 
   RES.status(200).json(Response);
@@ -67,7 +77,7 @@ Router.post("/", (REQ: Request, RES: Response) => {
   const Response: ResponseType = {
     data: REQ.body,
     sucesso: true,
-    mensagem: `Adicionando ${OBJECT}`,
+    mensagem: `Adicionando Planta`,
   };
 
   RES.status(200).json(Response);
@@ -77,7 +87,7 @@ Router.delete("/:id", (REQ: Request, RES: Response) => {
   const Response: ResponseType = {
     data: {},
     sucesso: true,
-    mensagem: `Deletando ${OBJECT} com ID: ${REQ.params.id}`,
+    mensagem: `Deletando Planta com ID: ${REQ.params.id}`,
   };
 
   RES.status(200).json(Response);
