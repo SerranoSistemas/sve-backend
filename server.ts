@@ -14,9 +14,13 @@ import { Router as DepositosRoutes } from "./Routes/DepositosSAP";
 import { Router as ClientesRoutes } from "./Routes/Clientes";
 import { Router as FundoEscalaRoutes } from "./Routes/FundoEscala";
 
+const PORT = process.env.PORT || 3000;
+
 const APP = express();
 
-APP.get("/", (req: Request, res: Response) => res.status(200).json({ mensagem: "Bem vindo ao Sistema de Medição" }));
+APP.get("/", (req: Request, res: Response) =>
+  res.status(200).json({ mensagem: "Bem vindo ao Sistema de Medição" })
+);
 
 APP.use("/planta", Router_Planta);
 APP.use("/zeev", Router_Planta);
@@ -27,12 +31,17 @@ APP.use("/area", Router_Area);
 APP.use("/produto", Router_Produto);
 APP.use("/sistema", SistemaRoutes);
 APP.use("/estacaoDeMedicao", EstacaoMedicaoRouter);
-APP.use("/grupoderede", GruposDeRedeRoutes);
+APP.use("/grupoderede", GruposDeRedeRoutes); 
 APP.use("/configuracao", ConfiguracaoRoutes);
 APP.use("/deposito", DepositosRoutes);
 APP.use("/cliente", ClientesRoutes);
 APP.use("/fundoEscala", FundoEscalaRoutes);
 
-APP.listen(3001, () => console.log("Server is running on port 3001"));
+APP.use((req: Request, res: Response, next: Function) => {
+  res.status(404).send("Rota não encontrada");
+});
 
-export default APP;
+APP.listen(PORT, () => console.log(`Servidor rodando na porta ${PORT}`));
+
+export default APP; 
+       
