@@ -26,12 +26,12 @@ APP.use("/planta", Router_Planta);
 APP.use("/zeev", Router_Planta);
 APP.use("/unidadeDeMedida", Router_UnidadesDeMedida);
 APP.use("/medicao", Router_Medicoes);
-APP.use("/servers", Router_ServersPIMS);
+APP.use("/servidorPims", Router_ServersPIMS);
 APP.use("/area", Router_Area);
 APP.use("/produto", Router_Produto);
 APP.use("/sistema", SistemaRoutes);
 APP.use("/estacaoDeMedicao", EstacaoMedicaoRouter);
-APP.use("/grupoderede", GruposDeRedeRoutes); 
+APP.use("/grupoderede", GruposDeRedeRoutes);
 APP.use("/configuracao", ConfiguracaoRoutes);
 APP.use("/deposito", DepositosRoutes);
 APP.use("/cliente", ClientesRoutes);
@@ -43,5 +43,4 @@ APP.use((req: Request, res: Response, next: Function) => {
 
 APP.listen(PORT, () => console.log(`Servidor rodando na porta ${PORT}`));
 
-export default APP; 
-       
+export default APP;
