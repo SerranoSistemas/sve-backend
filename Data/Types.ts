@@ -112,3 +112,40 @@ export type Totalizadores = {
   IndicativoDeAfericao: "A" | "M";
   Status: string;
 };
+
+//MEDIDOR
+export type Medidor = {
+  tagDeLiberacao?: string;
+  descricao?: string;
+  limiteDeMedicao?: number;
+  limiteDeTotalizacao?: number;
+  medidorOficial?: boolean;
+  medidorDeParceiro?: boolean;
+  unidadeDeMedidaPims?: string; //uuid
+  unidadeDeMedidaSVE?: string; //uuid
+  unidadeDeMedidaSAP?: string; //uuid
+  fatorDeConversaoSAP?: number;
+  fatorDeConversaoSVE?: number;
+  area?: string; //uuid
+  produto?: string; //uuid
+  estacaoDeMedicao?: string; //uuid
+  servidorPims?: string; //uuid
+  depositoParaSAP?: number; //Mudar para UUID - Mudar para depositoSAP
+  indicadorDeFaturamento?: boolean;
+  possuiMultaDeFundoDeEscala?: boolean;
+  cliente?: string; //uuid
+
+  liberarMedicaoSemAvaliacao?: boolean;
+  limiteDeMedicaoRuido?: number;
+  comentarioDeLiberacao?: string;
+  executarLeituraNoPims?: boolean;
+  executarLiberacaoAutomatica?: boolean;
+  dataDeCalibracao?: Date;
+  medidorParceiro?: string; //uuid
+};
+
+
+
+
+
+
