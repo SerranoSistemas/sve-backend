@@ -14,7 +14,7 @@ Router.get("/", (REQ: Request, RES: Response) => {
     data: {
       nomeDoSistema: "Q 2 RS",
       servidorTibco: "Servidor TIBCO",
-      servidorEscritaPims: "PIMS5",
+      servidorEscritaPims: "be9b1a1c-8cf7-41b8-9b90-54100e4e4fc5",
       sapVKORG: "BR10",
       sapPONO: "10",
       sapSIST: "UNIB-RS",
