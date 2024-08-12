@@ -11,7 +11,8 @@ export const Clientes = [
     identificador: "10000028111",
     descricao: "INNOVA - Videolar",
     centro: "",
-    email: "aline_nunes@innova.com.br; tasso.mandnarino@innova.com.br; bernardo.vacaro.estudante@innova.com.br; diego.wunsch@innova.com.br; camila.fernandes@innova.com.br; morgana.luz@braskem.com;",
+    email:
+      "aline_nunes@innova.com.br; tasso.mandnarino@innova.com.br; bernardo.vacaro.estudante@innova.com.br; diego.wunsch@innova.com.br; camila.fernandes@innova.com.br; morgana.luz@braskem.com;",
   },
   {
     uuid: "f87c19ab-58bb-45b4-9329-7a4c8b7b879f",

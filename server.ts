@@ -1,6 +1,5 @@
 import express, { Request, Response } from "express";
 import { Router as Router_Planta } from "./Routes/Planta";
-import { Router as Router_Zeev } from "./Routes/Plantas2";
 import { Router as EstacaoMedicaoRouter } from "./Routes/EstacaoMedicao";
 import { Router as Router_Area } from "./Routes/Area";
 import { Router as Router_ServersPIMS } from "./Routes/ServersPIMS";
@@ -13,17 +12,16 @@ import { Router as ConfiguracaoRoutes } from "./Routes/Configuracao";
 import { Router as DepositosRoutes } from "./Routes/DepositosSAP";
 import { Router as ClientesRoutes } from "./Routes/Clientes";
 import { Router as FundoEscalaRoutes } from "./Routes/FundoEscala";
+import { Router as MedicaoRoutes } from "./Routes/Medicao";
+import { Router as MedidorRoutes } from "./Routes/Medidor";
 
 const PORT = process.env.PORT || 3000;
 
 const APP = express();
 
-APP.get("/", (req: Request, res: Response) =>
-  res.status(200).json({ mensagem: "Bem vindo ao Sistema de Medição" })
-);
+APP.get("/", (req: Request, res: Response) => res.status(200).json({ mensagem: "Bem vindo ao Sistema de Medição" }));
 
 APP.use("/planta", Router_Planta);
-APP.use("/zeev", Router_Planta);
 APP.use("/unidadeDeMedida", Router_UnidadesDeMedida);
 APP.use("/medicao", Router_Medicoes);
 APP.use("/servidorPims", Router_ServersPIMS);
@@ -36,6 +34,8 @@ APP.use("/configuracao", ConfiguracaoRoutes);
 APP.use("/deposito", DepositosRoutes);
 APP.use("/cliente", ClientesRoutes);
 APP.use("/fundoEscala", FundoEscalaRoutes);
+APP.use("/medicao", MedicaoRoutes);
+APP.use("/medidor", MedidorRoutes);
 
 APP.use((req: Request, res: Response, next: Function) => {
   res.status(404).send("Rota não encontrada");

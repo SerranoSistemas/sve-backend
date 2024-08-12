@@ -3,6 +3,13 @@ import { NextFunction, Request, Response } from "express";
 import { Plantas } from "../Data/Planta";
 import { DefaultPagination } from "../Data/Pagination";
 import { UnidadesDeMedida } from "../Data/UnidadesDeMedida";
+import { Areas } from "../Data/Area";
+import { Produtos } from "../Data/Produto";
+import { EstacoesDeMedicao } from "../Data/EstacaoDeMedicao";
+import { PIMSServers } from "../Data/ServersPIMS";
+import { DepositosSAP } from "../Data/DepositosSAP";
+import { Clientes } from "../Data/Clientes";
+import { Medidores } from "../Data/Medidores";
 
 export const Copy = (data: any) => {
   return JSON.parse(JSON.stringify(data));
@@ -109,8 +116,14 @@ export const FilterByKey = (data, key, value) => {
 
 export const GetList = (Data) => {
   return Data.map((Item) => {
+    var Label = `${Item?.identificador ? Item?.identificador : ""} ${
+      Item?.tagDeLiberacao ? Item?.tagDeLiberacao : ""
+    } - ${Item?.descricao}`;
+
+    Label = Label.trimStart().trim();
+
     return {
-      descricao: Item.descricao,
+      descricao: Label,
       uuid: Item.uuid,
     };
   });
@@ -125,9 +138,40 @@ export const InnerJoins = (data: any[], type: string) => {
     RefData = Plantas;
     Key = "planta";
   }
+
   if (type === "Produtos") {
     RefData = UnidadesDeMedida;
     Key = "unidadeMedida";
+  }
+
+  if (type === "Medidores") {
+    NewData = NewData.map((Item) => {
+      const unidadeDeMedidaSAP = UnidadesDeMedida.find((item) => item.uuid === Item.unidadeDeMedidaSAP);
+      const unidadeDeMedidaSVE = UnidadesDeMedida.find((item) => item.uuid === Item.unidadeDeMedidaSVE);
+      const unidadeDeMedidaPims = UnidadesDeMedida.find((item) => item.uuid === Item.unidadeDeMedidaPims);
+      const area = Areas.find((item) => item.uuid === Item.area);
+      const produto = Produtos.find((item) => item.uuid === Item.produto);
+      const estacaoDeMedicao = EstacoesDeMedicao.find((item) => item.uuid === Item.estacaoDeMedicao);
+      const servidorPims = PIMSServers.find((item) => item.uuid === Item.servidorPims);
+      const depositoSAP = DepositosSAP.find((item) => item.uuid === Item.depositoSAP);
+      const cliente = Clientes.find((item) => item.uuid === Item.cliente);
+      const medidorParceiro = Medidores.find((item) => item.uuid === Item.medidorParceiro);
+
+      Item.unidadeDeMedidaSAP = unidadeDeMedidaSAP?.descricao || "";
+      Item.unidadeDeMedidaSVE = unidadeDeMedidaSVE?.descricao || "";
+      Item.unidadeDeMedidaPims = unidadeDeMedidaPims?.descricao || "";
+      Item.area = area?.descricao || "";
+      Item.produto = produto?.descricao || "";
+      Item.estacaoDeMedicao = estacaoDeMedicao?.descricao || "";
+      Item.servidorPims = servidorPims?.descricao || "";
+      Item.depositoSAP = depositoSAP?.descricao || "";
+      Item.cliente = cliente?.descricao || "";
+      Item.medidorParceiro = medidorParceiro?.descricao || "";
+
+      return Item;
+    });
+
+    return NewData;
   }
 
   NewData = NewData.map((Item) => {
@@ -142,8 +186,16 @@ export const InnerJoins = (data: any[], type: string) => {
 export const GenerateRandomValue = (min: number, max: number) => Math.floor(Math.random() * (max - min + 1)) + min;
 
 export const GetResponse = (PaginatedNada: any) => {
+  var Data;
+
+  if ("paginatedData" in PaginatedNada) {
+    Data = PaginatedNada.paginatedData;
+  } else {
+    Data = PaginatedNada;
+  }
+
   const Response = {
-    data: PaginatedNada.paginatedData,
+    data: Data,
     sucesso: true,
     mensagem: "Dados processados com sucesso",
     page: {

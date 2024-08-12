@@ -9,11 +9,8 @@ import { Medicoes } from "../Data/Medicao";
 const Router = express.Router();
 const HTTP_GET = Router.get.bind(Router);
 
-//Apply JSON parse
 Router.use(express.json());
-//Apply Middleware for Delay and Error simulation
 Router.use(Middleware);
-// Use o middleware CORS
 Router.use(cors());
 
 HTTP_GET("/", (REQ: Request, RES: Response) => {

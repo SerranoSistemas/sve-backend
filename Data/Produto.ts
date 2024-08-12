@@ -20,7 +20,7 @@ export const Produtos = [
   },
 
   {
-    uuid: "Prod2",
+    uuid: "72c6b29c-xxxx-41f0-b9f4-5b6eac65b215",
     identificador: "P048",
     descricao: "PROPENO GP",
     unidadeMedida: "72c6b29c-b7c2-41f0-b9f4-5b6eac65b215",
@@ -83,7 +83,7 @@ export const Produtos = [
     ...DatesInfo,
   },
   {
-    uuid: "Prod11",
+    uuid: "56e17b84-edcd-4ff7-8aaf-8af7a6ecdd88",
     identificador: "U204",
     descricao: "VAPOR DE BAIXA",
     unidadeMedida: "72c6b29c-b7c2-41f0-b9f4-5b6eac65b215",
@@ -118,7 +118,7 @@ export const Produtos = [
     ...DatesInfo,
   },
   {
-    uuid: "Prod16",
+    uuid: "48dd8740b889479XX5b5a414d309765a",
     identificador: "RETORNO DE OFF GAS",
     descricao: "CORRENTE RETORNO GASOSO",
     unidadeMedida: "72c6b29c-b7c2-41f0-b9f4-5b6eac65b215",

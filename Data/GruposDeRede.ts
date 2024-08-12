@@ -11,17 +11,17 @@ export const GruposDeRede = [
       { chave: "1", valor: ESCRITA },
       { chave: "1.1", valor: ESCRITA },
       { chave: "1.2", valor: ESCRITA },
-      { chave: "1.3", valor: ESCRITA },
+      { chave: "1.3", valor: LEITURA },
       { chave: "1.4", valor: ESCRITA },
 
       //ADM
       { chave: "2", valor: ESCRITA },
       { chave: "2.1", valor: ESCRITA },
       { chave: "2.2", valor: ESCRITA },
-      { chave: "2.3", valor: ESCRITA },
+      { chave: "2.3", valor: LEITURA },
       { chave: "2.4", valor: ESCRITA },
       { chave: "2.5", valor: ESCRITA },
-      { chave: "2.6", valor: ESCRITA },
+      { chave: "2.6", valor: LEITURA },
 
       //MOVIMENTACAO
       { chave: "3", valor: ESCRITA },
@@ -33,7 +33,7 @@ export const GruposDeRede = [
       { chave: "4", valor: ESCRITA },
       { chave: "4.1", valor: ESCRITA },
       { chave: "4.2", valor: ESCRITA },
-      { chave: "4.3", valor: ESCRITA },
+      { chave: "4.3", valor: LEITURA },
       { chave: "4.4", valor: ESCRITA },
       { chave: "4.5", valor: ESCRITA },
       { chave: "4.6", valor: ESCRITA },
@@ -48,9 +48,9 @@ export const GruposDeRede = [
       //TODAS AS PERMISSÔES CONCEDIDAS
       //SAP
       { chave: "1", valor: ESCRITA },
-      { chave: "1.1", valor: ESCRITA },
+      { chave: "1.1", valor: LEITURA },
       { chave: "1.2", valor: ESCRITA },
-      { chave: "1.3", valor: ESCRITA },
+      { chave: "1.3", valor: LEITURA },
       { chave: "1.4", valor: ESCRITA },
 
       //ADM
@@ -64,20 +64,20 @@ export const GruposDeRede = [
 
       //MOVIMENTACAO
       { chave: "3", valor: ESCRITA },
-      { chave: "3.1", valor: ESCRITA },
+      { chave: "3.1", valor: LEITURA },
       { chave: "3.2", valor: ESCRITA },
-      { chave: "3.3", valor: ESCRITA },
+      { chave: "3.3", valor: LEITURA },
 
       //CADASTRO
       { chave: "4", valor: ESCRITA },
       { chave: "4.1", valor: ESCRITA },
       { chave: "4.2", valor: ESCRITA },
       { chave: "4.3", valor: ESCRITA },
-      { chave: "4.4", valor: ESCRITA },
-      { chave: "4.5", valor: ESCRITA },
+      { chave: "4.4", valor: LEITURA },
+      { chave: "4.5", valor: LEITURA },
       { chave: "4.6", valor: ESCRITA },
       { chave: "4.7", valor: ESCRITA },
-      { chave: "4.8", valor: ESCRITA },
+      { chave: "4.8", valor: LEITURA },
     ],
   },
   {
@@ -94,12 +94,12 @@ export const GruposDeRede = [
 
       //ADM
       { chave: "2", valor: ESCRITA },
-      { chave: "2.1", valor: ESCRITA },
+      { chave: "2.1", valor: LEITURA },
       { chave: "2.2", valor: ESCRITA },
-      { chave: "2.3", valor: ESCRITA },
+      { chave: "2.3", valor: LEITURA },
       { chave: "2.4", valor: ESCRITA },
       { chave: "2.5", valor: ESCRITA },
-      { chave: "2.6", valor: ESCRITA },
+      { chave: "2.6", valor: LEITURA },
 
       //MOVIMENTACAO
       { chave: "3", valor: ESCRITA },
@@ -108,14 +108,14 @@ export const GruposDeRede = [
       { chave: "3.3", valor: ESCRITA },
 
       //CADASTRO
-      { chave: "4", valor: ESCRITA },
+      { chave: "4", valor: LEITURA },
       { chave: "4.1", valor: ESCRITA },
       { chave: "4.2", valor: ESCRITA },
       { chave: "4.3", valor: ESCRITA },
-      { chave: "4.4", valor: ESCRITA },
+      { chave: "4.4", valor: LEITURA },
       { chave: "4.5", valor: ESCRITA },
       { chave: "4.6", valor: ESCRITA },
-      { chave: "4.7", valor: ESCRITA },
+      { chave: "4.7", valor: LEITURA },
       { chave: "4.8", valor: ESCRITA },
     ],
   },
@@ -126,7 +126,7 @@ export const GruposDeRede = [
       //TODAS AS PERMISSÔES CONCEDIDAS
       //SAP
       { chave: "1", valor: ESCRITA },
-      { chave: "1.1", valor: ESCRITA },
+      { chave: "1.1", valor: LEITURA },
       { chave: "1.2", valor: ESCRITA },
       { chave: "1.3", valor: ESCRITA },
       { chave: "1.4", valor: ESCRITA },
@@ -135,7 +135,7 @@ export const GruposDeRede = [
       { chave: "2", valor: ESCRITA },
       { chave: "2.1", valor: ESCRITA },
       { chave: "2.2", valor: ESCRITA },
-      { chave: "2.3", valor: ESCRITA },
+      { chave: "2.3", valor: LEITURA },
       { chave: "2.4", valor: ESCRITA },
       { chave: "2.5", valor: ESCRITA },
       { chave: "2.6", valor: ESCRITA },
@@ -150,9 +150,9 @@ export const GruposDeRede = [
       { chave: "4", valor: ESCRITA },
       { chave: "4.1", valor: ESCRITA },
       { chave: "4.2", valor: ESCRITA },
-      { chave: "4.3", valor: ESCRITA },
+      { chave: "4.3", valor: LEITURA },
       { chave: "4.4", valor: ESCRITA },
-      { chave: "4.5", valor: ESCRITA },
+      { chave: "4.5", valor: LEITURA },
       { chave: "4.6", valor: ESCRITA },
       { chave: "4.7", valor: ESCRITA },
       { chave: "4.8", valor: ESCRITA },
@@ -167,7 +167,7 @@ export const GruposDeRede = [
       { chave: "1", valor: ESCRITA },
       { chave: "1.1", valor: ESCRITA },
       { chave: "1.2", valor: ESCRITA },
-      { chave: "1.3", valor: ESCRITA },
+      { chave: "1.3", valor: LEITURA },
       { chave: "1.4", valor: ESCRITA },
 
       //ADM
@@ -181,7 +181,7 @@ export const GruposDeRede = [
 
       //MOVIMENTACAO
       { chave: "3", valor: ESCRITA },
-      { chave: "3.1", valor: ESCRITA },
+      { chave: "3.1", valor: LEITURA },
       { chave: "3.2", valor: ESCRITA },
       { chave: "3.3", valor: ESCRITA },
 
@@ -190,11 +190,11 @@ export const GruposDeRede = [
       { chave: "4.1", valor: ESCRITA },
       { chave: "4.2", valor: ESCRITA },
       { chave: "4.3", valor: ESCRITA },
-      { chave: "4.4", valor: ESCRITA },
+      { chave: "4.4", valor: LEITURA },
       { chave: "4.5", valor: ESCRITA },
       { chave: "4.6", valor: ESCRITA },
       { chave: "4.7", valor: ESCRITA },
-      { chave: "4.8", valor: ESCRITA },
+      { chave: "4.8", valor: LEITURA },
     ],
   },
   {
@@ -204,16 +204,16 @@ export const GruposDeRede = [
       //TODAS AS PERMISSÔES CONCEDIDAS
       //SAP
       { chave: "1", valor: ESCRITA },
-      { chave: "1.1", valor: ESCRITA },
+      { chave: "1.1", valor: LEITURA },
       { chave: "1.2", valor: ESCRITA },
       { chave: "1.3", valor: ESCRITA },
-      { chave: "1.4", valor: ESCRITA },
+      { chave: "1.4", valor: LEITURA },
 
       //ADM
       { chave: "2", valor: ESCRITA },
       { chave: "2.1", valor: ESCRITA },
       { chave: "2.2", valor: ESCRITA },
-      { chave: "2.3", valor: ESCRITA },
+      { chave: "2.3", valor: LEITURA },
       { chave: "2.4", valor: ESCRITA },
       { chave: "2.5", valor: ESCRITA },
       { chave: "2.6", valor: ESCRITA },
@@ -228,12 +228,12 @@ export const GruposDeRede = [
       { chave: "4", valor: ESCRITA },
       { chave: "4.1", valor: ESCRITA },
       { chave: "4.2", valor: ESCRITA },
-      { chave: "4.3", valor: ESCRITA },
+      { chave: "4.3", valor: LEITURA },
       { chave: "4.4", valor: ESCRITA },
-      { chave: "4.5", valor: ESCRITA },
+      { chave: "4.5", valor: LEITURA },
       { chave: "4.6", valor: ESCRITA },
       { chave: "4.7", valor: ESCRITA },
-      { chave: "4.8", valor: ESCRITA },
+      { chave: "4.8", valor: LEITURA },
     ],
   },
   {
@@ -243,7 +243,7 @@ export const GruposDeRede = [
       //TODAS AS PERMISSÔES CONCEDIDAS
       //SAP
       { chave: "1", valor: ESCRITA },
-      { chave: "1.1", valor: ESCRITA },
+      { chave: "1.1", valor: LEITURA },
       { chave: "1.2", valor: ESCRITA },
       { chave: "1.3", valor: ESCRITA },
       { chave: "1.4", valor: ESCRITA },
@@ -254,19 +254,19 @@ export const GruposDeRede = [
       { chave: "2.2", valor: ESCRITA },
       { chave: "2.3", valor: ESCRITA },
       { chave: "2.4", valor: ESCRITA },
-      { chave: "2.5", valor: ESCRITA },
+      { chave: "2.5", valor: LEITURA },
       { chave: "2.6", valor: ESCRITA },
 
       //MOVIMENTACAO
       { chave: "3", valor: ESCRITA },
-      { chave: "3.1", valor: ESCRITA },
+      { chave: "3.1", valor: LEITURA },
       { chave: "3.2", valor: ESCRITA },
       { chave: "3.3", valor: ESCRITA },
 
       //CADASTRO
       { chave: "4", valor: ESCRITA },
       { chave: "4.1", valor: ESCRITA },
-      { chave: "4.2", valor: ESCRITA },
+      { chave: "4.2", valor: LEITURA },
       { chave: "4.3", valor: ESCRITA },
       { chave: "4.4", valor: ESCRITA },
       { chave: "4.5", valor: ESCRITA },
@@ -281,7 +281,7 @@ export const GruposDeRede = [
     permissoes: [
       //TODAS AS PERMISSÔES CONCEDIDAS
       //SAP
-      { chave: "1", valor: ESCRITA },
+      { chave: "1", valor: LEITURA },
       { chave: "1.1", valor: ESCRITA },
       { chave: "1.2", valor: ESCRITA },
       { chave: "1.3", valor: ESCRITA },
@@ -297,7 +297,7 @@ export const GruposDeRede = [
       { chave: "2.6", valor: ESCRITA },
 
       //MOVIMENTACAO
-      { chave: "3", valor: ESCRITA },
+      { chave: "3", valor: LEITURA },
       { chave: "3.1", valor: ESCRITA },
       { chave: "3.2", valor: ESCRITA },
       { chave: "3.3", valor: ESCRITA },
@@ -307,11 +307,11 @@ export const GruposDeRede = [
       { chave: "4.1", valor: ESCRITA },
       { chave: "4.2", valor: ESCRITA },
       { chave: "4.3", valor: ESCRITA },
-      { chave: "4.4", valor: ESCRITA },
+      { chave: "4.4", valor: LEITURA },
       { chave: "4.5", valor: ESCRITA },
       { chave: "4.6", valor: ESCRITA },
       { chave: "4.7", valor: ESCRITA },
-      { chave: "4.8", valor: ESCRITA },
+      { chave: "4.8", valor: LEITURA },
     ],
   },
 ];

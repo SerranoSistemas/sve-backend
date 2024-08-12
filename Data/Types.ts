@@ -87,65 +87,86 @@ export type ResponseType = {
   mensagem?: string;
 };
 
-export type Totalizadores = {
-  Dia: 1;
-  TotalPrimario: number;
-  TotalSecundario: number;
-  DataHoraMedicao?: Date;
-  DataRealMedicao?: Date;
-  Desconto?: number;
-  TotalizadorPrimario?: number;
-  TotalizadorPrimarioDigitado?: number;
-  TotalizadorSecundario?: number;
-  TotalizadorSecundarioDigitado?: number;
-  MedicaoAcordada?: string;
-  MedicaoPrimario?: number;
-  MedicaoPrimariaDigitada?: number;
-  MedicaoSecundaria?: number;
-  MedicaoSecundariaDigitada?: number;
-  MedicaoLiberada?: number;
-  Observacao?: string;
-  Situacao?: string;
-  PercentualAcumulado?: number;
-  Acrescimo: number;
-  Diferenca: number;
-  IndicativoDeAfericao: "A" | "M";
-  Status: string;
-};
-
 //MEDIDOR
 export type Medidor = {
+  uuid: string; //CONFIRMAR
   tagDeLiberacao?: string;
   descricao?: string;
   limiteDeMedicao?: number;
   limiteDeTotalizacao?: number;
   medidorOficial?: boolean;
-  medidorDeParceiro?: boolean;
-  unidadeDeMedidaPims?: string; //uuid
-  unidadeDeMedidaSVE?: string; //uuid
-  unidadeDeMedidaSAP?: string; //uuid
+  medidorDeParceiro?: boolean; //Indica se é um Medidor Secundário
+  medidorParceiro?: string; //UUID
+
+  //UNIDADES DE MEDIDA
+  unidadeDeMedidaPims?: string; //UUID
+  unidadeDeMedidaSVE?: string; //UUID
+  unidadeDeMedidaSAP?: string; //UUID
+
+  //FATOR DE CONVERSÃO
   fatorDeConversaoSAP?: number;
   fatorDeConversaoSVE?: number;
-  area?: string; //uuid
-  produto?: string; //uuid
-  estacaoDeMedicao?: string; //uuid
-  servidorPims?: string; //uuid
-  depositoParaSAP?: number; //Mudar para UUID - Mudar para depositoSAP
+
+  //Checkbox
   indicadorDeFaturamento?: boolean;
   possuiMultaDeFundoDeEscala?: boolean;
-  cliente?: string; //uuid
 
-  liberarMedicaoSemAvaliacao?: boolean;
+  //Outras relações
+  area?: string; //UUID
+  produto?: string; //UUID
+  estacaoDeMedicao?: string; //UUID
+  servidorPims?: string; //UUID
+  depositoSAP?: string; //UUID
+  cliente?: string; //UUID
+
+  //########## ITENS DE RPA ###########
+  liberarMedicaoSemAvaliacao?: boolean; //
   limiteDeMedicaoRuido?: number;
   comentarioDeLiberacao?: string;
   executarLeituraNoPims?: boolean;
   executarLiberacaoAutomatica?: boolean;
   dataDeCalibracao?: Date;
-  medidorParceiro?: string; //uuid
+  //########## ITENS DE RPA ###########
 };
 
+// #################### MEDIÇÂO ######################### //
 
+export type Medicao = {
+  medidor: {
+    uuid: string;
+    descricao: string;
+  };
+  produto: string;
+  totalPrimario: number;
+  totalSecundario: number;
+  secundaria: boolean; //INDICA SE TEM MEDICAO PARCEIRA OU NAO
+  dif: number;
+  medicaoLiberada: number;
+  situacao: "L" | "P";
+};
 
-
-
-
+export type Detalhamento = {
+  dia: number;
+  totalPrimario: number;
+  totalSecundario: number;
+  dataHoraMedicao?: Date;
+  dataRealMedicao?: Date;
+  desconto?: number;
+  totalizadorPrimario?: number;
+  totalizadorPrimarioDigitado?: number;
+  totalizadorSecundario?: number;
+  totalizadorSecundarioDigitado?: number;
+  medicaoAcordada?: number;
+  medicaoPrimario?: number;
+  medicaoPrimariaDigitada?: number;
+  medicaoSecundaria?: number;
+  medicaoSecundariaDigitada?: number;
+  medicaoLiberada?: number;
+  observacao?: string;
+  situacao?: "L" | "P";
+  percentualAcumulado?: number;
+  acrescimo: number;
+  diferenca: number;
+  indicativoDeAfericao: "A" | "M";
+  status: string;
+};

@@ -28,7 +28,7 @@ Router.post("/logotipo", (REQ: Request, RES: Response) => {
   const Response = {
     data: {},
     sucesso: true,
-     mensagem:  "Imagem Inserida com Sucesso!",
+    mensagem: "Imagem Inserida com Sucesso!",
     page: null,
   };
 
@@ -78,13 +78,19 @@ Router.get("/inicio", (REQ: Request, RES: Response) => {
       { chave: "4.6", valor: ESCRITA },
       { chave: "4.7", valor: ESCRITA },
       { chave: "4.8", valor: ESCRITA },
+
+      //MODULO DE RELATORIO
+      { chave: "5", valor: ESCRITA },
+      { chave: "5.1", valor: ESCRITA },
+      { chave: "5.2", valor: ESCRITA },
+      { chave: "5.3", valor: ESCRITA },
     ],
   };
 
   const Response = {
     data: Data,
     sucesso: true,
-     mensagem:  "Dados processados com sucesso",
+    mensagem: "Dados processados com sucesso",
     page: null,
   };
 

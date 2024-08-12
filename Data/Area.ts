@@ -1,10 +1,8 @@
-import moment from "moment";
-import { DefaultAreaClass } from "./Types";
 import { Copy } from "../Lib/Utils";
 
 const DatesInfo = {
-  incluidoEm: moment(new Date()).unix(),
-  alteradoEm: moment(new Date()).unix(),
+  incluidoEm: new Date("2024-08-03T10:00:00Z"),
+  alteradoEm: new Date("2024-08-03T10:00:00Z"),
   excluidoEm: null,
   incluidoPor: null,
   alteradoPor: null,

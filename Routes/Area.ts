@@ -1,19 +1,25 @@
 import express, { Request, Response } from "express";
 import cors from "cors";
-import { Filter, FilterByKey, GetElementByID, GetList, GetResponse, InnerJoins, Middleware, PaginateAndSort } from "../Lib/Utils";
-import { Pagination, ResponseType } from "../Data/Types";
-import { Areas, AreasDropdown, FilterAreaJoins, FilterAreaText } from "../Data/Area";
-import { GetPagination, PaginaNationGetPage, PaginaNationGetRows, PaginationGetOrderBy } from "../Data/Pagination";
+import {
+  Filter,
+  FilterByKey,
+  GetElementByID,
+  GetList,
+  GetResponse,
+  InnerJoins,
+  Middleware,
+  PaginateAndSort,
+} from "../Lib/Utils";
+import { Areas } from "../Data/Area";
+import { GetPagination } from "../Data/Pagination";
+import { CadastroDELETEResponse, CadastroPOSTResponse, CadastroPUTResponse } from "../Lib/Responses";
 
-const OBJECT = "Área";
+const DATA = Areas;
 
 const Router = express.Router();
 
-//Apply JSON parse
 Router.use(express.json());
-//Apply Middleware for Delay and Error simulation
 Router.use(Middleware);
-// Use o middleware CORS
 Router.use(cors());
 
 Router.get("/", (REQ: Request, RES: Response) => {
@@ -22,29 +28,22 @@ Router.get("/", (REQ: Request, RES: Response) => {
   const Text = REQ.query?.text?.toString() || "";
   const Planta = REQ.query?.planta?.toString() || "";
 
-  const FilteredJoins = FilterByKey(Areas, "planta", Planta);
+  const FilteredJoins = FilterByKey(DATA, "planta", Planta);
   const JoinedData = InnerJoins(FilteredJoins, "Areas");
   const FilteredData = Filter(JoinedData, Text);
 
   const PaginatedData = PaginateAndSort(FilteredData, Pagination);
-
   const Response = GetResponse(PaginatedData);
-
   return RES.status(200).json(Response);
 });
 
 Router.get("/select", (REQ: Request, RES: Response) => {
-  const Response: ResponseType = {
-    data: GetList(Areas),
-    sucesso: true,
-    mensagem: "Dados processados com sucesso",
-  };
-
+  const Response = GetResponse(GetList(DATA));
   return RES.status(200).json(Response);
 });
 
 Router.get("/:id", (REQ: Request, RES: Response) => {
-  const data = GetElementByID(Areas, REQ.params.id);
+  const data = GetElementByID(DATA, REQ.params.id);
 
   RES.status(200).json({
     data: data || {},
@@ -54,32 +53,17 @@ Router.get("/:id", (REQ: Request, RES: Response) => {
 });
 
 Router.put("/:id", (REQ: Request, RES: Response) => {
-  const Response: ResponseType = {
-    data: REQ.body,
-    sucesso: true,
-    mensagem: `Editando ${OBJECT} com ID: ${REQ.params.id}`,
-  };
-
+  const Response = CadastroPUTResponse(REQ.body);
   RES.status(200).json(Response);
 });
 
 Router.post("/", (REQ: Request, RES: Response) => {
-  const Response: ResponseType = {
-    data: REQ.body,
-    sucesso: true,
-    mensagem: `Adicionando ${OBJECT}`,
-  };
-
+  const Response = CadastroPOSTResponse(REQ.body);
   RES.status(200).json(Response);
 });
 
 Router.delete("/:id", (REQ: Request, RES: Response) => {
-  const Response: ResponseType = {
-    data: {},
-    sucesso: true,
-    mensagem: `Deletando ${OBJECT} com ID: ${REQ.params.id}`,
-  };
-
+  const Response = CadastroDELETEResponse(REQ.body);
   RES.status(200).json(Response);
 });
 

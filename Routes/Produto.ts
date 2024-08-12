@@ -1,19 +1,30 @@
 import express, { Request, Response } from "express";
 import cors from "cors";
-import { Filter, FilterByKey, GetElementByID, GetList, InnerJoins, Middleware, PaginateAndSort } from "../Lib/Utils";
-import { ResponseType } from "../Data/Types";
+import {
+  Filter,
+  FilterByKey,
+  GetElementByID,
+  GetList,
+  GetResponse,
+  InnerJoins,
+  Middleware,
+  PaginateAndSort,
+} from "../Lib/Utils";
 import { GetPagination } from "../Data/Pagination";
 import { Produtos } from "../Data/Produto";
+import {
+  CadastroDELETEResponse,
+  CadastroPOSTResponse,
+  CadastroPUTResponse,
+  GetElementByIDResponse,
+} from "../Lib/Responses";
 
-const OBJECT = "Produto";
+const DATA = Produtos;
 
 const Router = express.Router();
 
-//Apply JSON parse
 Router.use(express.json());
-//Apply Middleware for Delay and Error simulation
 Router.use(Middleware);
-// Use o middleware CORS
 Router.use(cors());
 
 Router.get("/", (REQ: Request, RES: Response) => {
@@ -26,69 +37,34 @@ Router.get("/", (REQ: Request, RES: Response) => {
   const JoinedData = InnerJoins(FilteredJoins, "Produtos");
   const FilteredData = Filter(JoinedData, Text);
 
-  const { paginatedData, totalRows, currentPage, totalPages, rowsPerPage } = PaginateAndSort(FilteredData, Pagination);
-  const Response: ResponseType = {
-    data: paginatedData || [],
-    sucesso: true,
-     mensagem:  "Dados processados com sucesso",
-    page: {
-      totalRows,
-      currentPage,
-      totalPages,
-      rowsPerPage,
-    },
-  };
-
+  const PaginatedData = PaginateAndSort(FilteredData, Pagination);
+  const Response = GetResponse(PaginatedData);
   return RES.status(200).json(Response);
 });
 
 Router.get("/select", (REQ: Request, RES: Response) => {
-  const Response: ResponseType = {
-    data: GetList(Produtos),
-    sucesso: true,
-     mensagem:  "Dados processados com sucesso",
-  };
-
+  const Response = GetResponse(GetList(Produtos));
   return RES.status(200).json(Response);
 });
 
 Router.get("/:id", (REQ: Request, RES: Response) => {
-  const data = GetElementByID(Produtos, REQ.params.id);
-
-  RES.status(200).json({
-    data: data || {},
-    sucesso: data ? true : false,
-     mensagem:  data ? "Dados processados com sucesso" : "Dado não encontrado",
-  });
+  const data = GetElementByID(DATA, REQ.params.id);
+  const Response = GetElementByIDResponse(data);
+  RES.status(200).json(Response);
 });
 
 Router.put("/:id", (REQ: Request, RES: Response) => {
-  const Response: ResponseType = {
-    data: REQ.body,
-    sucesso: true,
-     mensagem:  `Editando ${OBJECT} com ID: ${REQ.params.id}`,
-  };
-
+  const Response = CadastroPUTResponse(REQ.body);
   RES.status(200).json(Response);
 });
 
 Router.post("/", (REQ: Request, RES: Response) => {
-  const Response: ResponseType = {
-    data: REQ.body,
-    sucesso: true,
-     mensagem:  `Adicionando ${OBJECT}`,
-  };
-
+  const Response = CadastroPOSTResponse(REQ.body);
   RES.status(200).json(Response);
 });
 
 Router.delete("/:id", (REQ: Request, RES: Response) => {
-  const Response: ResponseType = {
-    data: {},
-    sucesso: true,
-     mensagem:  `Deletando ${OBJECT} com ID: ${REQ.params.id}`,
-  };
-
+  const Response = CadastroDELETEResponse(REQ.body);
   RES.status(200).json(Response);
 });
 
