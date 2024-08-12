@@ -116,9 +116,7 @@ export const FilterByKey = (data, key, value) => {
 
 export const GetList = (Data) => {
   return Data.map((Item) => {
-    var Label = `${Item?.identificador ? Item?.identificador : ""} ${
-      Item?.tagDeLiberacao ? Item?.tagDeLiberacao : ""
-    } - ${Item?.descricao}`;
+    var Label = `${Item?.identificador ? Item?.identificador : ""} - ${Item?.descricao}`;
 
     Label = Label.trimStart().trim();
 

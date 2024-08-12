@@ -90,6 +90,7 @@ export type ResponseType = {
 //MEDIDOR
 export type Medidor = {
   uuid: string; //CONFIRMAR
+  identificador: string;
   tagDeLiberacao?: string;
   descricao?: string;
   limiteDeMedicao?: number;
