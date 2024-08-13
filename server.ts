@@ -14,6 +14,7 @@ import { Router as ClientesRoutes } from "./Routes/Clientes";
 import { Router as FundoEscalaRoutes } from "./Routes/FundoEscala";
 import { Router as MedicaoRoutes } from "./Routes/Medicao";
 import { Router as MedidorRoutes } from "./Routes/Medidor";
+import { Router as AutomacaoPimsRoutes } from "./Routes/AutomacaoPims";
 
 const PORT = process.env.PORT || 3000;
 
@@ -36,6 +37,7 @@ APP.use("/cliente", ClientesRoutes);
 APP.use("/fundoEscala", FundoEscalaRoutes);
 APP.use("/medicao", MedicaoRoutes);
 APP.use("/medidor", MedidorRoutes);
+APP.use("/automacao-pims", AutomacaoPimsRoutes);
 
 APP.use((req: Request, res: Response, next: Function) => {
   res.status(404).send("Rota não encontrada");

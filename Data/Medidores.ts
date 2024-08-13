@@ -1,3 +1,4 @@
+import test from "node:test";
 import { Medidor } from "./Types";
 
 export const Medidores: Medidor[] = [
