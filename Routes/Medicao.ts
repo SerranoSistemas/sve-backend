@@ -2,7 +2,6 @@ import express, { Request, Response } from "express";
 import cors from "cors";
 import { Middleware } from "../Lib/Utils";
 import { ResponseType } from "../Data/Types";
-
 import { Medicoes } from "../Data/Medicao";
 import { DetalhamentoDeMedicao } from "../Data/Medicao.Detalhamento";
 
@@ -14,7 +13,7 @@ Router.use(express.json());
 Router.use(Middleware);
 Router.use(cors());
 
-Router.get("/totalizadores", (REQ: Request, RES: Response) => {
+Router.get("/listar-medidores", (REQ: Request, RES: Response) => {
   const Response: ResponseType = {
     data: Medicoes,
     sucesso: true,
@@ -25,7 +24,7 @@ Router.get("/totalizadores", (REQ: Request, RES: Response) => {
   return RES.status(200).json(Response);
 });
 
-Router.get("/detalhamento", (REQ: Request, RES: Response) => {
+Router.post("/detalhes ", (REQ: Request, RES: Response) => {
   const Response: ResponseType = {
     data: DetalhamentoDeMedicao,
     sucesso: true,
