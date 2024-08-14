@@ -27,7 +27,7 @@ export const Medidores: Medidor[] = [
     produto: "48dd8740b889479XX5b5a414d309765a",
     estacaoDeMedicao: "48dd8740b889479ea5b5a414d309765a",
     servidorPims: "5ecd6bcc2bc84e2490d8891c9ebbea29",
-    depositoParaSAP: "1",
+    depositoParaSAP: 1,
     cliente: "a7e91a6b-ff7b-4dbf-8599-8f3dca9f04b3",
     //Itens de RPA
     liberarMedicaoSemAvaliacao: false, //
@@ -62,7 +62,7 @@ export const Medidores: Medidor[] = [
     produto: "72c6b29c-xxxx-41f0-b9f4-5b6eac65b215",
     estacaoDeMedicao: "48dd8740b889479ea5b5a414d309765a",
     servidorPims: "be9b1a1c-8cf7-41b8-9b90-32100e4e4fc5",
-    depositoParaSAP: "1",
+    depositoParaSAP: 1,
     cliente: "d2853e3b-5a41-4e8c-9e55-9a57a6e3b8fc",
     //Itens de RPA
     liberarMedicaoSemAvaliacao: true, //
@@ -97,7 +97,7 @@ export const Medidores: Medidor[] = [
     produto: "56e17b84-edcd-4ff7-8aaf-8af7a6ecdd88",
     estacaoDeMedicao: "657fafaa61804c1e8e8b72620780be69",
     servidorPims: "be9b1a1c-8cf7-41b8-9b90-54100e4e4fc5",
-    depositoParaSAP: "2",
+    depositoParaSAP: 2,
     cliente: "d2853e3b-5a41-4e8c-9e55-9a57a6e3b8fc",
     //Itens de RPA
     liberarMedicaoSemAvaliacao: true, //
@@ -135,7 +135,7 @@ export const Medidores: Medidor[] = [
     produto: "48dd8740b889479XX5b5a414d309765a",
     estacaoDeMedicao: "48dd8740b889479ea5b5a414d309765a",
     servidorPims: "5ecd6bcc2bc84e2490d8891c9ebbea29",
-    depositoParaSAP: "2",
+    depositoParaSAP: 2,
     cliente: "a7e91a6b-ff7b-4dbf-8599-8f3dca9f04b3",
     //Itens de RPA
     liberarMedicaoSemAvaliacao: false, //
@@ -170,7 +170,7 @@ export const Medidores: Medidor[] = [
     produto: "72c6b29c-xxxx-41f0-b9f4-5b6eac65b215",
     estacaoDeMedicao: "48dd8740b889479ea5b5a414d309765a",
     servidorPims: "be9b1a1c-8cf7-41b8-9b90-32100e4e4fc5",
-    depositoParaSAP: "1",
+    depositoParaSAP: 1,
     cliente: "d2853e3b-5a41-4e8c-9e55-9a57a6e3b8fc",
     //Itens de RPA
     liberarMedicaoSemAvaliacao: true, //
@@ -205,7 +205,7 @@ export const Medidores: Medidor[] = [
     produto: "56e17b84-edcd-4ff7-8aaf-8af7a6ecdd88",
     estacaoDeMedicao: "657fafaa61804c1e8e8b72620780be69",
     servidorPims: "be9b1a1c-8cf7-41b8-9b90-54100e4e4fc5",
-    depositoParaSAP: "1",
+    depositoParaSAP: 1,
     cliente: "d2853e3b-5a41-4e8c-9e55-9a57a6e3b8fc",
     //Itens de RPA
     liberarMedicaoSemAvaliacao: true, //

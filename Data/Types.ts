@@ -113,7 +113,7 @@ export type Medidor = {
   produto?: string; //UUID
   estacaoDeMedicao?: string; //UUID
   servidorPims?: string; //UUID
-  depositoParaSAP?: string; //UUID
+  depositoParaSAP?: number; //UUID
   cliente?: string; //UUID 
   //########## ITENS DE RPA ###########
   liberarMedicaoSemAvaliacao?: boolean; //
