@@ -89,7 +89,7 @@ export type ResponseType = {
 
 //MEDIDOR
 export type Medidor = {
-  uuid: string; //CONFIRMAR
+  uuid: string;
   identificador: string;
   tagDeLiberacao?: string;
   descricao?: string;
@@ -98,28 +98,23 @@ export type Medidor = {
   medidorOficial?: boolean;
   medidorDeParceiro?: boolean; //Indica se é um Medidor Secundário
   medidorParceiro?: string; //UUID
-
   //UNIDADES DE MEDIDA
   unidadeDeMedidaPims?: string; //UUID
   unidadeDeMedidaSVE?: string; //UUID
   unidadeDeMedidaSAP?: string; //UUID
-
   //FATOR DE CONVERSÃO
   fatorDeConversaoSAP?: number;
   fatorDeConversaoSVE?: number;
-
   //Checkbox
   indicadorDeFaturamento?: boolean;
   possuiMultaDeFundoDeEscala?: boolean;
-
   //Outras relações
   area?: string; //UUID
   produto?: string; //UUID
   estacaoDeMedicao?: string; //UUID
   servidorPims?: string; //UUID
-  depositoSAP?: string; //UUID
-  cliente?: string; //UUID
-
+  depositoParaSAP?: string; //UUID
+  cliente?: string; //UUID 
   //########## ITENS DE RPA ###########
   liberarMedicaoSemAvaliacao?: boolean; //
   limiteDeMedicaoRuido?: number;
