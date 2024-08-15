@@ -5,8 +5,6 @@ import { ResponseType } from "../Data/Types";
 import { Medicoes } from "../Data/Medicao";
 import { DetalhamentoDeMedicao } from "../Data/Medicao.Detalhamento";
 
-const OBJECT = "Produto";
-
 const Router = express.Router();
 
 Router.use(express.json());

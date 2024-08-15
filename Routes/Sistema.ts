@@ -1,26 +1,15 @@
 import express, { Request, Response } from "express";
-import path from "path";
 import cors from "cors";
 import { Middleware } from "../Lib/Utils";
 import { Base64 } from "../Data/Logotipo";
 
 const Router = express.Router();
 
-//Apply JSON parse
 Router.use(express.json());
-//Apply Middleware
 Router.use(Middleware);
-// Use o middleware CORS
 Router.use(cors());
 
 Router.get("/logotipo", (REQ: Request, RES: Response) => {
-  // const Response = {
-  //   data: Base64,
-  //   sucesso: true,
-  //    mensagem:  "Dados processados com sucesso",
-  //   page: null,
-  // };
-
   return RES.status(200).send(Base64);
 });
 
@@ -98,3 +87,4 @@ Router.get("/inicio", (REQ: Request, RES: Response) => {
 });
 
 export { Router };
+
