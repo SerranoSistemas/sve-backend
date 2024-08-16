@@ -18,11 +18,11 @@ Router.get("/listar-medidores", (REQ: Request, RES: Response) => {
     mensagem: "Dados processados com sucesso",
     page: null,
   };
- 
+
   return RES.status(200).json(Response);
 });
 
-Router.post("/detalhes ", (REQ: Request, RES: Response) => {
+Router.post("/detalhes", (REQ: Request, RES: Response) => {
   const Response: ResponseType = {
     data: DetalhamentoDeMedicao,
     sucesso: true,
@@ -30,7 +30,7 @@ Router.post("/detalhes ", (REQ: Request, RES: Response) => {
     page: null,
   };
 
-  return RES.status(200).json(Response); 
+  return RES.status(200).json(Response);
 });
 
 export { Router };
