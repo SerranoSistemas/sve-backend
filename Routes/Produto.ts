@@ -1,15 +1,5 @@
 import express, { Request, Response } from "express";
-import cors from "cors";
-import {
-  Filter,
-  FilterByKey,
-  GetElementByID,
-  GetList,
-  GetResponse,
-  InnerJoins,
-  Middleware,
-  PaginateAndSort,
-} from "../Lib/Utils";
+import { Filter, FilterByKey, GetElementByID, GetList, GetResponse, InnerJoins, PaginateAndSort } from "../Lib/Utils";
 import { GetPagination } from "../Data/Pagination";
 import { Produtos } from "../Data/Produto";
 import {
@@ -22,10 +12,6 @@ import {
 const DATA = Produtos;
 
 const Router = express.Router();
-
-Router.use(express.json());
-Router.use(Middleware);
-Router.use(cors());
 
 Router.get("/", (REQ: Request, RES: Response) => {
   //FITROS E PAGINACAO

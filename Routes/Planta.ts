@@ -1,7 +1,6 @@
 import express, { Request, Response } from "express";
-import cors from "cors";
 import { Plantas } from "../Data/Planta";
-import { Filter, GetElementByID, GetList, GetResponse, Middleware, PaginateAndSort } from "../Lib/Utils";
+import { Filter, GetElementByID, GetList, GetResponse, PaginateAndSort } from "../Lib/Utils";
 import { GetPagination } from "../Data/Pagination";
 import {
   CadastroDELETEResponse,
@@ -13,10 +12,6 @@ import {
 const DATA = Plantas;
 
 const Router = express.Router();
-
-Router.use(express.json());
-Router.use(Middleware);
-Router.use(cors());
 
 Router.get("/", (REQ: Request, RES: Response) => {
   const Pagination = GetPagination(REQ);

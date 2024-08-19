@@ -1,13 +1,7 @@
 import express, { Request, Response } from "express";
-import cors from "cors";
-import { Middleware } from "../Lib/Utils";
 import { Base64 } from "../Data/Logotipo";
 
 const Router = express.Router();
-
-Router.use(express.json());
-Router.use(Middleware);
-Router.use(cors());
 
 Router.get("/logotipo", (REQ: Request, RES: Response) => {
   return RES.status(200).send(Base64);
@@ -87,4 +81,3 @@ Router.get("/inicio", (REQ: Request, RES: Response) => {
 });
 
 export { Router };
-

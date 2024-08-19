@@ -1,6 +1,5 @@
 import express, { Request, Response } from "express";
-import cors from "cors";
-import { Filter, GetElementByID, GetList, GetResponse, Middleware, PaginateAndSort } from "../Lib/Utils";
+import { Filter, GetElementByID, GetList, GetResponse, PaginateAndSort } from "../Lib/Utils";
 import { GetPagination } from "../Data/Pagination";
 import { PIMSServers } from "../Data/ServersPIMS";
 import {
@@ -13,10 +12,6 @@ import {
 const DATA = PIMSServers;
 
 const Router = express.Router();
-
-Router.use(express.json());
-Router.use(Middleware);
-Router.use(cors());
 
 Router.get("/", (REQ: Request, RES: Response) => {
   //FITROS E PAGINACAO

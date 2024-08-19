@@ -1,13 +1,7 @@
 import express, { Request, Response } from "express";
-import cors from "cors";
-import { Middleware } from "../Lib/Utils";
 import { ResponseType } from "../Data/Types";
 
 const Router = express.Router();
-
-Router.use(express.json());
-Router.use(Middleware);
-Router.use(cors());
 
 Router.get("/", (REQ: Request, RES: Response) => {
   const Response: ResponseType = {

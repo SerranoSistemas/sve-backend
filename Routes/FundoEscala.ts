@@ -1,15 +1,8 @@
 import express, { Request, Response } from "express";
-import cors from "cors";
-import { Middleware } from "../Lib/Utils";
 import { ResponseType } from "../Data/Types";
 import { FundoEscala, GenerateFundoEscala } from "../Data/FundoEscala";
 
 const Router = express.Router();
-
-
-Router.use(express.json());
-Router.use(Middleware);
-Router.use(cors());
 
 Router.get("/", (REQ: Request, RES: Response) => {
   const mesAnoParam = REQ.query.mesAno as string;

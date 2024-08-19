@@ -114,7 +114,7 @@ export type Medidor = {
   estacaoDeMedicao?: string; //UUID
   servidorPims?: string; //UUID
   depositoParaSAP?: number; //UUID
-  cliente?: string; //UUID 
+  cliente?: string; //UUID
   //########## ITENS DE RPA ###########
   liberarMedicaoSemAvaliacao?: boolean; //
   limiteDeMedicaoRuido?: number;
@@ -130,39 +130,37 @@ export type Medidor = {
 export type Medicao = {
   medidor: {
     uuid: string;
-    descricao: string;
+    identificador: string;
   };
   produto: string;
-  totalPrimario: number;
-  totalSecundario: number;
-  secundaria: boolean; //INDICA SE TEM MEDICAO PARCEIRA OU NAO
-  dif: number;
+  totalizadorPrimarioDigitado: number;
+  totalizadorSecundarioDigitado: number;
+  possuiMedidorSecundario: boolean; //INDICA SE TEM MEDICAO PARCEIRA OU NAO
+  diferenca: number;
   medicaoLiberada: number;
   situacao: "L" | "P";
 };
 
 export type Detalhamento = {
-  dia: number;
-  totalPrimario: number;
-  totalSecundario: number;
-  dataHoraMedicao?: Date;
-  dataRealMedicao?: Date;
-  desconto?: number;
-  totalizadorPrimario?: number;
-  totalizadorPrimarioDigitado?: number;
-  totalizadorSecundario?: number;
-  totalizadorSecundarioDigitado?: number;
-  medicaoAcordada?: number;
-  medicaoPrimario?: number;
-  medicaoPrimariaDigitada?: number;
-  medicaoSecundaria?: number;
-  medicaoSecundariaDigitada?: number;
-  medicaoLiberada?: number;
+  uuid: string;
+  dia: string;
+  totalizadorPrimarioDigitado: number;
+  totalizadorSecundarioDigitado: number;
   observacao?: string;
-  situacao?: "L" | "P";
-  percentualAcumulado?: number;
-  acrescimo: number;
+  medicaoPrimarioDigitada: number;
+  medicaoSecundariaDigitada: number;
+  unidadeDeMedidaPrimaria: string; //Sem Parenteses
+  unidadeDeMedidaSecundaria: string; //Sem Parenteses
   diferenca: number;
-  indicativoDeAfericao: "A" | "M";
-  status: string;
+  //ACUM UNIB CALCULO medicaoPrimarioDigitada + acumuladoPrimarioAnterior
+  //ACUM UNIB CALCULO medicaoSecundariaDigitada + acumuladoSecundarioAnterior
+  acrescimo: number;
+  desconto: number;
+  medicaoLiberada: number; //(Med. Acordada) Usar a unidade de Medida
+  unidadeDeMedidaLiberacao: string; //Sem Parenteses
+  situacao?: "L" | "P";
+  indicadorDeAfericao: "A" | "M";
+  status: string; //Aparece junto com o totalizadorPrimarioDigitado
+  oberservacaoFundoDeEscala: string;
+  medidorOficialPrimario: boolean; //SE TRUE coloca oberservacaoFundoDeEscala no medicaoPrimarioDigitada se for FALSE coloca no medicaoSecundariaDigitada //!!
 };

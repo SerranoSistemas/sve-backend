@@ -1,17 +1,11 @@
 import express, { Request, Response } from "express";
-import cors from "cors";
-
-import { Filter, GetElementByID, Middleware, PaginateAndSort } from "../Lib/Utils";
+import { PaginateAndSort } from "../Lib/Utils";
 import { ResponseType } from "../Data/Types";
 import { GetPagination } from "../Data/Pagination";
 import { Medicoes } from "../Data/Medicao";
 
 const Router = express.Router();
 const HTTP_GET = Router.get.bind(Router);
-
-Router.use(express.json());
-Router.use(Middleware);
-Router.use(cors());
 
 HTTP_GET("/", (REQ: Request, RES: Response) => {
   var Pagination = GetPagination(REQ);
@@ -24,7 +18,7 @@ HTTP_GET("/", (REQ: Request, RES: Response) => {
   const Response: ResponseType = {
     data: paginatedData,
     sucesso: true,
-     mensagem:  "Dados processados com sucesso",
+    mensagem: "Dados processados com sucesso",
     page: {
       totalRows,
       currentPage,

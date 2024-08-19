@@ -1,14 +1,9 @@
 import express, { Request, Response } from "express";
-import cors from "cors";
-import { GetElementByID, GetList, Middleware } from "../Lib/Utils";
+import { GetElementByID, GetList } from "../Lib/Utils";
 import { ResponseType } from "../Data/Types";
 import { GruposDeRede } from "../Data/GruposDeRede";
 
 const Router = express.Router();
-
-Router.use(express.json());
-Router.use(Middleware);
-Router.use(cors());
 
 Router.get("/", (req: Request, res: Response) => res.status(200).json({ mensagem: "Módulo de Grupos de Rede" }));
 

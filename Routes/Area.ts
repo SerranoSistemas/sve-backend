@@ -1,15 +1,5 @@
 import express, { Request, Response } from "express";
-import cors from "cors";
-import {
-  Filter,
-  FilterByKey,
-  GetElementByID,
-  GetList,
-  GetResponse,
-  InnerJoins,
-  Middleware,
-  PaginateAndSort,
-} from "../Lib/Utils";
+import { Filter, FilterByKey, GetElementByID, GetList, GetResponse, InnerJoins, PaginateAndSort } from "../Lib/Utils";
 import { Areas } from "../Data/Area";
 import { GetPagination } from "../Data/Pagination";
 import { CadastroDELETEResponse, CadastroPOSTResponse, CadastroPUTResponse } from "../Lib/Responses";
@@ -17,10 +7,6 @@ import { CadastroDELETEResponse, CadastroPOSTResponse, CadastroPUTResponse } fro
 const DATA = Areas;
 
 const Router = express.Router();
-
-Router.use(express.json());
-Router.use(Middleware);
-Router.use(cors());
 
 Router.get("/", (REQ: Request, RES: Response) => {
   //FILTROS E PAGINAÇÂO

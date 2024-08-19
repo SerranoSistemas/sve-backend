@@ -1,3 +1,4 @@
+import cors from "cors";
 import express, { Request, Response } from "express";
 import { Router as Router_Planta } from "./Routes/Planta";
 import { Router as EstacaoMedicaoRouter } from "./Routes/EstacaoMedicao";
@@ -15,10 +16,16 @@ import { Router as FundoEscalaRoutes } from "./Routes/FundoEscala";
 import { Router as MedicaoRoutes } from "./Routes/Medicao";
 import { Router as MedidorRoutes } from "./Routes/Medidor";
 import { Router as AutomacaoPimsRoutes } from "./Routes/AutomacaoPims";
+import { Middleware } from "./Lib/Utils";
 
 const PORT = process.env.PORT || 3000;
 
 const APP = express();
+
+// Aplicando middlewares globais
+APP.use(express.json());
+APP.use(Middleware);
+APP.use(cors());
 
 APP.get("/", (req: Request, res: Response) => res.status(200).json({ mensagem: "Bem vindo ao Sistema de Medição" }));
 
