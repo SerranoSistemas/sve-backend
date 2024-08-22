@@ -141,26 +141,44 @@ export type Medicao = {
   situacao: "L" | "P";
 };
 
+//Detalhamentos de Medição
+//Receberá um parâmaetro de MM/AAAA
+//Função deve gerar e retornar o seguinte:
+//Antes do dia '01' adicionar um registro do dia '31' (mes passado) contendo apenas as 6 primeiras propriedades, o restante pode vir 0 ou string vazia ou false
+//Começar os valores que vão somando com a contagem do dia 31
 export type Detalhamento = {
-  uuid: string;
-  dia: string;
-  totalizadorPrimarioDigitado: number;
-  totalizadorSecundarioDigitado: number;
-  observacao?: string;
-  medicaoPrimarioDigitada: number;
-  medicaoSecundariaDigitada: number;
-  unidadeDeMedidaPrimaria: string; //Sem Parenteses
-  unidadeDeMedidaSecundaria: string; //Sem Parenteses
-  diferenca: number;
-  //ACUM UNIB CALCULO medicaoPrimarioDigitada + acumuladoPrimarioAnterior
-  //ACUM UNIB CALCULO medicaoSecundariaDigitada + acumuladoSecundarioAnterior
-  acrescimo: number;
-  desconto: number;
-  medicaoLiberada: number; //(Med. Acordada) Usar a unidade de Medida
-  unidadeDeMedidaLiberacao: string; //Sem Parenteses
-  situacao?: "L" | "P";
-  indicadorDeAfericao: "A" | "M";
-  status: string; //Aparece junto com o totalizadorPrimarioDigitado
-  oberservacaoFundoDeEscala: string;
-  medidorOficialPrimario: boolean; //SE TRUE coloca oberservacaoFundoDeEscala no medicaoPrimarioDigitada se for FALSE coloca no medicaoSecundariaDigitada //!!
+  uuid: string; //uuid gerado com v4 do uuid
+  dia: string; //string do dia 31 do ultimo mes ao ultimo dia do mês atual passado, exemplo: 31, 01, 02, 03, 04.... 31
+  totalizadorPrimario: number; //Mesmo valor de 'totalizadorPrimarioDigitado', porém 10% da vezes tem chance de vir (totalizadorPrimarioDigitado - 2%)
+  totalizadorSecundario: number; //Mesmo valor de 'totalizadorSecundarioDigitado', porém 10% da vezes tem chance de vir (totalizadorPrimarioDigitado - 2%)
+  totalizadorPrimarioDigitado: number; //Começa com aleatório entre 100.000.000,000 e 500.000.000,000 e incrementa cada vez com o valor de 'medicaoPrimarioDigitada'
+  totalizadorSecundarioDigitado: number; //Começa com aleatório entre 10.000.000,000 e 100.000.000,000 e incrementa cada vez com o valor de 'medicaoSecundariaDigitada'
+
+  observacao?: string; //20% de Chance de Vir 'Observação Backend' e 80% de vir vazia ''
+
+  medicaoPrimario: number; //Mesmo valor de 'medicaoPrimarioDigitada', porém 15% da vezes tem chance de vir (medicaoPrimarioDigitada - 3%)
+  medicaoSecundaria: number; //Mesmo valor de 'medicaoSecundariaDigitada', porém 15% da vezes tem chance de vir (medicaoPrimarioDigitada - 3%)
+  medicaoPrimarioDigitada: number; //Começa com aleatório entre 100.000,000 e 200.000,000 e vai incrementando cada vez com valores entre 10.000 e 20.000
+  medicaoSecundariaDigitada: number; //Valor de 'medicaoPrimarioDigitada' com acrescimo de 2%
+
+  unidadeDeMedidaPrimaria: string; //String contendo 'T'
+  unidadeDeMedidaSecundaria: string; //String contendo 'T'
+  unidadeDeMedidaLiberacao: string; //String contendo 'T'
+
+  diferenca: number; //Diferença Percentual entre 'medicaoPrimarioDigitada' e 'medicaoSecundariaDigitada'
+
+  acrescimo: number; //Sempre 0 por enquanto
+  desconto: number; //Sempre 0 por enquanto
+  medicaoLiberada: number; //Mesmo Valor de 'medicaoSecundariaDigitada' -- Também chamada de (Med. Acordada) na Tabela
+
+  situacao?: "L" | "P"; //60% de chance de vir 'L' e 40% de 'P'
+  indicadorDeAfericao: "A" | "M"; //70% de chance de vir 'A' e 40% de 'M'
+  status: string; //Trazer string 'Good' por enquanto
+  statusGood: boolean; //10% de Chance de vir TRUE, 90% de vir FALSE
+  oberservacaoFundoDeEscala: string; //20% de Chance de Vir 'Observação Fundo Escala Backend' e 80% de vir vazia ''
+  medidorOficialPrimario: boolean; //SE TRUE coloca oberservacaoFundoDeEscala no medicaoPrimarioDigitada se for FALSE coloca no medicaoSecundariaDigitada
+  statusSap: "P" | "I" | "E"; //40% de Chance de Vir 'I', 40% de vir 'I' e 20% de vir 'E'
+  multaFundoDeEscala: number; //Se mostrarFundoDeEscala for TRUE, gerar numero aleatorio entre 10,000 e 100,000
+  multaFundoDeEscalaMensal: number; //Se mostrarFundoDeEscala for TRUE, gerar numero aleatorio entre 1,000 e 20,000
+  mostrarFundoDeEscala: boolean; //TRUE se dia for '10', '20' ou o ultimo dia do Mês
 };
