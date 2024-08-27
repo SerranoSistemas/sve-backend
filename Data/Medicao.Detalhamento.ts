@@ -92,6 +92,10 @@ function gerarNumeroAleatorio(min: number, max: number): number {
   return Math.random() * (max - min) + min;
 }
 
+function generateRandomNumber(min: number, max: number): number {
+  return Math.random() * (max - min + 1) + min;
+}
+
 export function gerarDetalhamentos(data: string): Detalhamento[] {
   const [mes, ano] = data.split("/");
 
@@ -133,6 +137,8 @@ export function gerarDetalhamentos(data: string): Detalhamento[] {
     mostrarFundoDeEscala: false,
   });
 
+  var TemFundoEscala = false;
+
   // Gerar registros para o mês atual
   for (let dia = 1; dia <= diasNoMes; dia++) {
     const incrementoPrimario = gerarNumeroAleatorio(10_000, 20_000);
@@ -140,6 +146,8 @@ export function gerarDetalhamentos(data: string): Detalhamento[] {
 
     medicaoPrimarioDigitada += incrementoPrimario;
     medicaoSecundariaDigitada += incrementoSecundario;
+
+    TemFundoEscala = Math.random() > 0.6;
 
     detalhamentos.push({
       uuid: uuid(),
@@ -167,11 +175,11 @@ export function gerarDetalhamentos(data: string): Detalhamento[] {
       oberservacaoFundoDeEscala: Math.random() < 0.2 ? "Observação Fundo Escala Backend" : "",
       medidorOficialPrimario: Math.random() < 0.5,
       statusSap: Math.random() < 0.4 ? "I" : Math.random() < 0.5 ? "P" : "E",
-      multaFundoDeEscala: 0,
-      multaFundoDeEscalaMensal: 0,
+      multaFundoDeEscala: TemFundoEscala ? generateRandomNumber(1, 100) : 0, 
+      multaFundoDeEscalaMensal: dia === diasNoMes && TemFundoEscala ? generateRandomNumber(2, 20) : 0,
       mostrarFundoDeEscala: dia === 10 || dia === 20 || dia === diasNoMes,
     });
   }
 
-  return detalhamentos;
+  return detalhamentos; 
 }
