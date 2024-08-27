@@ -23,14 +23,14 @@ Router.get("/", (REQ: Request, RES: Response) => {
       horarioDeCorte: "03:00", //'00:00'
       horarioTransferenciasAutomaticas: "10:00",
       idiomaPrimario: {
-        pt: "Teste PT",
-        en: "Teste EN",
-        es: "Teste ES",
+        pt: "Primario",
+        en: "Primary",
+        es: "Primario",
       },
       idiomaSecundario: {
-        pt: "Teste PT",
-        en: "Teste EN",
-        es: "Teste ES",
+        pt: "Secundário",
+        en: "Secondary",
+        es: "Secundario",
       },
     },
     sucesso: true,

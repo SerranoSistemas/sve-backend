@@ -25,8 +25,16 @@ Router.get("/inicio", (REQ: Request, RES: Response) => {
   const Data = {
     nomeDoUsuario: "Usuário",
     nomeDoSistema: "Q 2 RS",
-    idiomaPrimario: { pt: "Teste PT", en: "Teste EN", es: "Teste ES" },
-    idiomaSecundario: { pt: "Teste PT", en: "Teste EN", es: "Teste ES" },
+    idiomaPrimario: {
+      pt: "Primario",
+      en: "Primary",
+      es: "Primario",
+    },
+    idiomaSecundario: {
+      pt: "Secundário",
+      en: "Secondary",
+      es: "Secundario",
+    },
     permissoes: [
       //TODAS AS PERMISSÔES CONCEDIDAS
       //MODULO DE SAP
