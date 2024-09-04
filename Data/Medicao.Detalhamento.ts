@@ -149,16 +149,18 @@ export function gerarDetalhamentos(data: string): Detalhamento[] {
 
     TemFundoEscala = Math.random() > 0.6;
 
+    const ValuemedidorOficialPrimario = Math.random() < 0.5;
+
     detalhamentos.push({
       uuid: uuid(),
       dia: dia.toString().padStart(2, "0"),
-      totalizadorPrimario: Math.random() < 0.15 ? medicaoPrimarioDigitada * 0.98 : medicaoPrimarioDigitada,
-      totalizadorSecundario: Math.random() < 0.15 ? medicaoSecundariaDigitada * 0.98 : medicaoSecundariaDigitada,
+      totalizadorPrimario: Math.random() < 0.1 ? medicaoPrimarioDigitada * 0.98 : medicaoPrimarioDigitada,
+      totalizadorSecundario: Math.random() < 0.1 ? medicaoSecundariaDigitada * 0.98 : medicaoSecundariaDigitada,
       totalizadorPrimarioDigitado: medicaoPrimarioDigitada,
       totalizadorSecundarioDigitado: medicaoSecundariaDigitada,
       observacao: Math.random() < 0.2 ? "Observação Backend" : "",
-      medicaoPrimario: Math.random() < 0.15 ? medicaoPrimarioDigitada * 0.97 : medicaoPrimarioDigitada,
-      medicaoSecundaria: Math.random() < 0.15 ? medicaoSecundariaDigitada * 0.97 : medicaoSecundariaDigitada,
+      medicaoPrimario: Math.random() < 0.1 ? medicaoPrimarioDigitada * 0.97 : medicaoPrimarioDigitada,
+      medicaoSecundaria: Math.random() < 0.1 ? medicaoSecundariaDigitada * 0.97 : medicaoSecundariaDigitada,
       medicaoPrimarioDigitada: medicaoPrimarioDigitada,
       medicaoSecundariaDigitada: medicaoSecundariaDigitada,
       unidadeDeMedidaPrimaria: "T",
@@ -173,13 +175,13 @@ export function gerarDetalhamentos(data: string): Detalhamento[] {
       status: "Good",
       statusGood: Math.random() > 0.1,
       oberservacaoFundoDeEscala: Math.random() < 0.2 ? "Observação Fundo Escala Backend" : "",
-      medidorOficialPrimario: Math.random() < 0.5,
+      medidorOficialPrimario: ValuemedidorOficialPrimario,
       statusSap: Math.random() < 0.4 ? "I" : Math.random() < 0.5 ? "P" : "E",
-      multaFundoDeEscala: TemFundoEscala ? generateRandomNumber(1, 100) : 0, 
+      multaFundoDeEscala: TemFundoEscala ? generateRandomNumber(1, 100) : 0,
       multaFundoDeEscalaMensal: dia === diasNoMes && TemFundoEscala ? generateRandomNumber(2, 20) : 0,
       mostrarFundoDeEscala: dia === 10 || dia === 20 || dia === diasNoMes,
     });
   }
 
-  return detalhamentos; 
+  return detalhamentos;
 }

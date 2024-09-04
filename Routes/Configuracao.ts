@@ -51,4 +51,14 @@ Router.put("/", (REQ: Request, RES: Response) => {
   RES.status(200).json(Response);
 });
 
+Router.post("/upload", (REQ: Request, RES: Response) => {
+  const Response: ResponseType = {
+    data: REQ.body,
+    sucesso: true,
+    mensagem: `Editando Logotipo`,
+  };
+
+  RES.status(200).json(Response);
+});
+
 export { Router };
