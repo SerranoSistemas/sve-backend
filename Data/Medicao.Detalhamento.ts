@@ -137,7 +137,8 @@ export function gerarDetalhamentos(data: string): Detalhamento[] {
     mostrarFundoDeEscala: false,
   });
 
-  var TemFundoEscala = false;
+  var TemFundoEscala = Math.random() > 0.6;
+  const ValuemedidorOficialPrimario = Math.random() < 0.5;
 
   // Gerar registros para o mês atual
   for (let dia = 1; dia <= diasNoMes; dia++) {
@@ -146,10 +147,6 @@ export function gerarDetalhamentos(data: string): Detalhamento[] {
 
     medicaoPrimarioDigitada += incrementoPrimario;
     medicaoSecundariaDigitada += incrementoSecundario;
-
-    TemFundoEscala = Math.random() > 0.6;
-
-    const ValuemedidorOficialPrimario = Math.random() < 0.5;
 
     detalhamentos.push({
       uuid: uuid(),
