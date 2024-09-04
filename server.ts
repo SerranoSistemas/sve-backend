@@ -18,6 +18,7 @@ import { Router as MedidorRoutes } from "./Routes/Medidor";
 import { Router as AutomacaoPimsRoutes } from "./Routes/AutomacaoPims";
 import { Router as EvidenciasRoutes } from "./Routes/Evidencias";
 import { Router as PermissaoRoutes } from "./Routes/Permissao";
+import { Router as ProdutoPorClienteRoutes } from "./Routes/ProdutoPorCliente";
 import { Middleware } from "./Lib/Utils";
 
 const PORT = process.env.PORT || 3000;
@@ -54,6 +55,7 @@ APP.use("/grupoderede", GruposDeRedeRoutes);
 APP.use("/configuracao", ConfiguracaoRoutes);
 APP.use("/evidencias", EvidenciasRoutes);
 APP.use("/permissao", PermissaoRoutes);
+APP.use("/produtoPorCliente", ProdutoPorClienteRoutes);
 
 APP.use((req: Request, res: Response, next: Function) => {
   res.status(404).send("Rota não encontrada");
