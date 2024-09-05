@@ -111,7 +111,7 @@ export const Medidores: Medidor[] = [
   //########################DAQUI PARA BAIXO SÓ REPETE OS ANTETIORES ###########################
 
   {
-    uuid: "131a00f8-2f68-44f7-8f19-88a6851424ba-2",
+    uuid: "131a00f8-2f68-44f7-8f19-88a6851aaaaaa",
     identificador: "210FQI005A_1",
     tagDeLiberacao: "210FQI005A_1.PV",
     descricao: "Totalização - Vapor de Baixa",
@@ -146,7 +146,7 @@ export const Medidores: Medidor[] = [
     dataDeCalibracao: new Date("2024-08-03T10:00:00Z"),
   },
   {
-    uuid: "ad415a45-2737-406e-a301-ca0e08a18e25-2",
+    uuid: "ad415a45-2737-406e-a301-ca0e08a18aaaaa",
     identificador: "210FQI005A_1",
     tagDeLiberacao: "210FQI012_1.PV",
     descricao: "Totalização - Propeno",
@@ -181,7 +181,7 @@ export const Medidores: Medidor[] = [
     dataDeCalibracao: new Date("2024-08-03T10:00:00Z"),
   },
   {
-    uuid: "db14fe5d-7897-47eb-b07e-6eec6a199fc2-2",
+    uuid: "db14fe5d-7897-47eb-b07e-6eec6a1aaaaaa",
     identificador: "210FQI340_1",
     tagDeLiberacao: "210FQI340_1.PV",
     descricao: "Totalização - Condensado Vapor",

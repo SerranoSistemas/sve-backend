@@ -1,7 +1,10 @@
+import cors from "cors";
 import express, { Request, Response } from "express";
 import { ResponseType } from "../Data/Types";
 
 const Router = express.Router();
+
+Router.use(cors());
 
 Router.get("/", (REQ: Request, RES: Response) => {
   const Response: ResponseType = {
@@ -14,11 +17,9 @@ Router.get("/", (REQ: Request, RES: Response) => {
       sapSIST: "UNIB-RS",
       emailServidor: "Email Servidor ",
       emailConta: "Email Conta",
-      emailSenha: "Email Senha ",
       emailPorta: "Email Porta",
       adDominio: "AD dominio",
       adUsuario: "AD dominio",
-      adHost: "AD dominio",
       comunicarComPims: "1", //Vem em string 0 OU 1
       horarioDeCorte: "03:00", //'00:00'
       horarioTransferenciasAutomaticas: "10:00",
