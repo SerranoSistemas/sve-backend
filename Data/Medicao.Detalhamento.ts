@@ -8,7 +8,7 @@ export const DetalhamentoDeMedicao: Detalhamento[] = [
   //   totalizadorPrimarioDigitado: 578031808,
   //   totalizadorSecundarioDigitado: 31945934,
   //   observacao: "",
-  //   medicaoPrimarioDigitada: 0,
+  //   medicaoPrimariaDigitada: 0,
   //   medicaoSecundariaDigitada: 0,
   //   unidadeDeMedidaPrimaria: "T",
   //   unidadeDeMedidaSecundaria: "T",
@@ -29,7 +29,7 @@ export const DetalhamentoDeMedicao: Detalhamento[] = [
   //   totalizadorPrimarioDigitado: 578226560,
   //   totalizadorSecundarioDigitado: 32143700,
   //   observacao: "Oberservação Backend",
-  //   medicaoPrimarioDigitada: 194752,
+  //   medicaoPrimariaDigitada: 194752,
   //   medicaoSecundariaDigitada: 197766,
   //   unidadeDeMedidaPrimaria: "T",
   //   unidadeDeMedidaSecundaria: "T",
@@ -42,7 +42,7 @@ export const DetalhamentoDeMedicao: Detalhamento[] = [
   //   indicadorDeAfericao: Math.random() < 0.5 ? "A" : "M",
   //   status: Math.random() < 0.5 ? "Status" : "", //Aparece junto com o totalizadorPrimarioDigitado
   //   oberservacaoFundoDeEscala: Math.random() < 0.3 ? "Observação Fundo de Escala" : "",
-  //   medidorOficialPrimario: Math.random() < 0.5 ? true : false, //SE TRUE coloca oberservacaoFundoDeEscala no medicaoPrimarioDigitada se for FALSE coloca no medicaoSecundariaDigitada
+  //   medidorOficialPrimario: Math.random() < 0.5 ? true : false, //SE TRUE coloca oberservacaoFundoDeEscala no medicaoPrimariaDigitada se for FALSE coloca no medicaoSecundariaDigitada
   // },
   // {
   //   uuid: uuid(),
@@ -50,7 +50,7 @@ export const DetalhamentoDeMedicao: Detalhamento[] = [
   //   totalizadorPrimarioDigitado: 578404032,
   //   totalizadorSecundarioDigitado: 32324578,
   //   observacao: "Oberservação Backend 2",
-  //   medicaoPrimarioDigitada: 177472,
+  //   medicaoPrimariaDigitada: 177472,
   //   medicaoSecundariaDigitada: 180878,
   //   unidadeDeMedidaPrimaria: "T",
   //   unidadeDeMedidaSecundaria: "T",
@@ -63,7 +63,7 @@ export const DetalhamentoDeMedicao: Detalhamento[] = [
   //   indicadorDeAfericao: Math.random() < 0.5 ? "A" : "M",
   //   status: Math.random() < 0.5 ? "Status" : "", //Aparece junto com o totalizadorPrimarioDigitado
   //   oberservacaoFundoDeEscala: Math.random() < 0.3 ? "Observação Fundo de Escala" : "",
-  //   medidorOficialPrimario: Math.random() < 0.5 ? true : false, //SE TRUE coloca oberservacaoFundoDeEscala no medicaoPrimarioDigitada se for FALSE coloca no medicaoSecundariaDigitada
+  //   medidorOficialPrimario: Math.random() < 0.5 ? true : false, //SE TRUE coloca oberservacaoFundoDeEscala no medicaoPrimariaDigitada se for FALSE coloca no medicaoSecundariaDigitada
   // },
   // {
   //   uuid: uuid(),
@@ -71,7 +71,7 @@ export const DetalhamentoDeMedicao: Detalhamento[] = [
   //   totalizadorPrimarioDigitado: 578588864,
   //   totalizadorSecundarioDigitado: 32512942,
   //   observacao: "Oberservação Backend 3",
-  //   medicaoPrimarioDigitada: 184832,
+  //   medicaoPrimariaDigitada: 184832,
   //   medicaoSecundariaDigitada: 188364,
   //   unidadeDeMedidaPrimaria: "T",
   //   unidadeDeMedidaSecundaria: "T",
@@ -84,7 +84,7 @@ export const DetalhamentoDeMedicao: Detalhamento[] = [
   //   indicadorDeAfericao: Math.random() < 0.5 ? "A" : "M",
   //   status: Math.random() < 0.5 ? "Status" : "", //Aparece junto com o totalizadorPrimarioDigitado
   //   oberservacaoFundoDeEscala: Math.random() < 0.3 ? "Observação Fundo de Escala" : "",
-  //   medidorOficialPrimario: Math.random() < 0.5 ? true : false, //SE TRUE coloca oberservacaoFundoDeEscala no medicaoPrimarioDigitada se for FALSE coloca no medicaoSecundariaDigitada
+  //   medidorOficialPrimario: Math.random() < 0.5 ? true : false, //SE TRUE coloca oberservacaoFundoDeEscala no medicaoPrimariaDigitada se for FALSE coloca no medicaoSecundariaDigitada
   // },
 ];
 
@@ -102,21 +102,21 @@ export function gerarDetalhamentos(data: string): Detalhamento[] {
   const diasNoMes = new Date(parseInt(ano), parseInt(mes), 0).getDate();
   const detalhamentos: Detalhamento[] = [];
 
-  let medicaoPrimarioDigitada = gerarNumeroAleatorio(100_000, 200_000);
-  let medicaoSecundariaDigitada = medicaoPrimarioDigitada * 1.02; // 2% acima de medicaoPrimarioDigitada
+  let medicaoPrimariaDigitada = gerarNumeroAleatorio(100_000, 200_000);
+  let medicaoSecundariaDigitada = medicaoPrimariaDigitada * 1.02; // 2% acima de medicaoPrimariaDigitada
 
   // Adicionar o registro do dia 31 do mês anterior
   detalhamentos.push({
     uuid: uuid(),
     dia: "31",
-    totalizadorPrimario: medicaoPrimarioDigitada,
+    totalizadorPrimario: medicaoPrimariaDigitada,
     totalizadorSecundario: medicaoSecundariaDigitada,
-    totalizadorPrimarioDigitado: medicaoPrimarioDigitada,
+    totalizadorPrimarioDigitado: medicaoPrimariaDigitada,
     totalizadorSecundarioDigitado: medicaoSecundariaDigitada,
     observacao: "",
-    medicaoPrimario: medicaoPrimarioDigitada,
+    medicaoPrimario: medicaoPrimariaDigitada,
     medicaoSecundaria: medicaoSecundariaDigitada,
-    medicaoPrimarioDigitada: 0,
+    medicaoPrimariaDigitada: 0,
     medicaoSecundariaDigitada: 0,
     unidadeDeMedidaPrimaria: "T",
     unidadeDeMedidaSecundaria: "T",
@@ -145,25 +145,25 @@ export function gerarDetalhamentos(data: string): Detalhamento[] {
     const incrementoPrimario = gerarNumeroAleatorio(10_000, 20_000);
     const incrementoSecundario = incrementoPrimario * 1.02;
 
-    medicaoPrimarioDigitada += incrementoPrimario;
+    medicaoPrimariaDigitada += incrementoPrimario;
     medicaoSecundariaDigitada += incrementoSecundario;
 
     detalhamentos.push({
       uuid: uuid(),
       dia: dia.toString().padStart(2, "0"),
-      totalizadorPrimario: Math.random() < 0.1 ? medicaoPrimarioDigitada * 0.98 : medicaoPrimarioDigitada,
+      totalizadorPrimario: Math.random() < 0.1 ? medicaoPrimariaDigitada * 0.98 : medicaoPrimariaDigitada,
       totalizadorSecundario: Math.random() < 0.1 ? medicaoSecundariaDigitada * 0.98 : medicaoSecundariaDigitada,
-      totalizadorPrimarioDigitado: medicaoPrimarioDigitada,
+      totalizadorPrimarioDigitado: medicaoPrimariaDigitada,
       totalizadorSecundarioDigitado: medicaoSecundariaDigitada,
       observacao: Math.random() < 0.2 ? "Observação Backend" : "",
-      medicaoPrimario: Math.random() < 0.1 ? medicaoPrimarioDigitada * 0.97 : medicaoPrimarioDigitada,
+      medicaoPrimario: Math.random() < 0.1 ? medicaoPrimariaDigitada * 0.97 : medicaoPrimariaDigitada,
       medicaoSecundaria: Math.random() < 0.1 ? medicaoSecundariaDigitada * 0.97 : medicaoSecundariaDigitada,
-      medicaoPrimarioDigitada: medicaoPrimarioDigitada,
+      medicaoPrimariaDigitada: medicaoPrimariaDigitada,
       medicaoSecundariaDigitada: medicaoSecundariaDigitada,
       unidadeDeMedidaPrimaria: "T",
       unidadeDeMedidaSecundaria: "T",
       unidadeDeMedidaLiberacao: "T",
-      diferenca: ((medicaoSecundariaDigitada - medicaoPrimarioDigitada) / medicaoPrimarioDigitada) * 100,
+      diferenca: ((medicaoSecundariaDigitada - medicaoPrimariaDigitada) / medicaoPrimariaDigitada) * 100,
       acrescimo: 0,
       desconto: 0,
       medicaoLiberada: medicaoSecundariaDigitada,

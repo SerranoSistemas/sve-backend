@@ -151,21 +151,21 @@ export type Detalhamento = {
   dia: string; //string do dia 31 do ultimo mes ao ultimo dia do mês atual passado, exemplo: 31, 01, 02, 03, 04.... 31
   totalizadorPrimario: number; //Mesmo valor de 'totalizadorPrimarioDigitado', porém 10% da vezes tem chance de vir (totalizadorPrimarioDigitado - 2%)
   totalizadorSecundario: number; //Mesmo valor de 'totalizadorSecundarioDigitado', porém 10% da vezes tem chance de vir (totalizadorPrimarioDigitado - 2%)
-  totalizadorPrimarioDigitado: number; //Começa com aleatório entre 100.000.000,000 e 500.000.000,000 e incrementa cada vez com o valor de 'medicaoPrimarioDigitada'
+  totalizadorPrimarioDigitado: number; //Começa com aleatório entre 100.000.000,000 e 500.000.000,000 e incrementa cada vez com o valor de 'medicaoPrimariaDigitada'
   totalizadorSecundarioDigitado: number; //Começa com aleatório entre 10.000.000,000 e 100.000.000,000 e incrementa cada vez com o valor de 'medicaoSecundariaDigitada'
 
   observacao?: string; //20% de Chance de Vir 'Observação Backend' e 80% de vir vazia ''
 
-  medicaoPrimario: number; //Mesmo valor de 'medicaoPrimarioDigitada', porém 15% da vezes tem chance de vir (medicaoPrimarioDigitada - 3%)
-  medicaoSecundaria: number; //Mesmo valor de 'medicaoSecundariaDigitada', porém 15% da vezes tem chance de vir (medicaoPrimarioDigitada - 3%)
-  medicaoPrimarioDigitada: number; //Começa com aleatório entre 100.000,000 e 200.000,000 e vai incrementando cada vez com valores entre 10.000 e 20.000
-  medicaoSecundariaDigitada: number; //Valor de 'medicaoPrimarioDigitada' com acrescimo de 2%
+  medicaoPrimario: number; //Mesmo valor de 'medicaoPrimariaDigitada', porém 15% da vezes tem chance de vir (medicaoPrimariaDigitada - 3%)
+  medicaoSecundaria: number; //Mesmo valor de 'medicaoSecundariaDigitada', porém 15% da vezes tem chance de vir (medicaoPrimariaDigitada - 3%)
+  medicaoPrimariaDigitada: number; //Começa com aleatório entre 100.000,000 e 200.000,000 e vai incrementando cada vez com valores entre 10.000 e 20.000
+  medicaoSecundariaDigitada: number; //Valor de 'medicaoPrimariaDigitada' com acrescimo de 2%
 
   unidadeDeMedidaPrimaria: string; //String contendo 'T'
   unidadeDeMedidaSecundaria: string; //String contendo 'T'
   unidadeDeMedidaLiberacao: string; //String contendo 'T'
 
-  diferenca: number; //Diferença Percentual entre 'medicaoPrimarioDigitada' e 'medicaoSecundariaDigitada'
+  diferenca: number; //Diferença Percentual entre 'medicaoPrimariaDigitada' e 'medicaoSecundariaDigitada'
 
   acrescimo: number; //Sempre 0 por enquanto
   desconto: number; //Sempre 0 por enquanto
@@ -176,7 +176,7 @@ export type Detalhamento = {
   status: string; //Trazer string 'Good' por enquanto
   statusGood: boolean; //10% de Chance de vir TRUE, 90% de vir FALSE
   oberservacaoFundoDeEscala: string; //20% de Chance de Vir 'Observação Fundo Escala Backend' e 80% de vir vazia ''
-  medidorOficialPrimario: boolean; //SE TRUE coloca oberservacaoFundoDeEscala no medicaoPrimarioDigitada se for FALSE coloca no medicaoSecundariaDigitada
+  medidorOficialPrimario: boolean; //SE TRUE coloca oberservacaoFundoDeEscala no medicaoPrimariaDigitada se for FALSE coloca no medicaoSecundariaDigitada
   statusSap: "P" | "I" | "E"; //40% de Chance de Vir 'I', 40% de vir 'I' e 20% de vir 'E'
   multaFundoDeEscala: number; //Se mostrarFundoDeEscala for TRUE, gerar numero aleatorio entre 10,000 e 100,000
   multaFundoDeEscalaMensal: number; //Se mostrarFundoDeEscala for TRUE, gerar numero aleatorio entre 1,000 e 20,000
