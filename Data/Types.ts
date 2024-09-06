@@ -156,7 +156,7 @@ export type Detalhamento = {
 
   observacao?: string; //20% de Chance de Vir 'Observação Backend' e 80% de vir vazia ''
 
-  medicaoPrimario: number; //Mesmo valor de 'medicaoPrimariaDigitada', porém 15% da vezes tem chance de vir (medicaoPrimariaDigitada - 3%)
+  medicaoPrimaria: number; //Mesmo valor de 'medicaoPrimariaDigitada', porém 15% da vezes tem chance de vir (medicaoPrimariaDigitada - 3%)
   medicaoSecundaria: number; //Mesmo valor de 'medicaoSecundariaDigitada', porém 15% da vezes tem chance de vir (medicaoPrimariaDigitada - 3%)
   medicaoPrimariaDigitada: number; //Começa com aleatório entre 100.000,000 e 200.000,000 e vai incrementando cada vez com valores entre 10.000 e 20.000
   medicaoSecundariaDigitada: number; //Valor de 'medicaoPrimariaDigitada' com acrescimo de 2%
