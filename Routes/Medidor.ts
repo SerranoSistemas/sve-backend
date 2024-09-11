@@ -53,6 +53,11 @@ Router.get("/select", (REQ: Request, RES: Response) => {
   return RES.status(200).json(Response);
 });
 
+Router.get("/select-parceiros", (REQ: Request, RES: Response) => {
+  const Response = GetResponse(GetList(DATA));
+  return RES.status(200).json(Response);
+});
+
 Router.get("/:id", (REQ: Request, RES: Response) => {
   const data = GetElementByID(DATA, REQ.params.id);
   const Response = GetElementByIDResponse(data);
