@@ -123,6 +123,13 @@ export type Medidor = {
   executarLiberacaoAutomatica?: boolean;
   dataDeCalibracao?: Date;
   //########## ITENS DE RPA ###########
+
+  incluidoEm?: string;
+  alteradoEm?: string;
+  excluidoEm?: string;
+  incluidoPor?: string;
+  alteradoPor?: string;
+  excluidoPor?: string;
 };
 
 // #################### MEDIÇÂO ######################### //

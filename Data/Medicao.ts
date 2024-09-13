@@ -3,7 +3,7 @@ import { Medicao } from "./Types";
 export const Medicoes: Medicao[] = [
   {
     medidor: {
-      uuid: "131a00f8-2f68-44f7-8f19-88a6851424ba",
+      uuid: "3b6a1d7ad4ec4e22913d8006e9382631",
       identificador: "210FQI005A_1.PV",
     },
     produto: "ETENO FÓSSIL",
@@ -16,7 +16,7 @@ export const Medicoes: Medicao[] = [
   },
   {
     medidor: {
-      uuid: "ad415a45-2737-406e-a301-ca0e08a18e25",
+      uuid: "6a480a46198b455abd525ab3be572015",
       identificador: "210FQI012_1.PV",
     },
     produto: "PROPENO GP",
@@ -29,7 +29,7 @@ export const Medicoes: Medicao[] = [
   },
   {
     medidor: {
-      uuid: "db14fe5d-7897-47eb-b07e-6eec6a199fc2",
+      uuid: "2827a2e7bd46436f8eda4f903099df31",
       identificador: "210FQI340_1.PV",
     },
     produto: "ETENO RETORNO",
@@ -42,7 +42,7 @@ export const Medicoes: Medicao[] = [
   },
   {
     medidor: {
-      uuid: "131a00f8-2f68-44f7-8f19-88a6851424ba",
+      uuid: "3b6a1d7ad4ec4e22913d8006e9382631",
       identificador: "210FQI005A_1.PV",
     },
     produto: "VAPOR DE ALTA",
@@ -55,7 +55,7 @@ export const Medicoes: Medicao[] = [
   },
   {
     medidor: {
-      uuid: "131a00f8-2f68-44f7-8f19-88a6851424ba",
+      uuid: "3b6a1d7ad4ec4e22913d8006e9382631",
       identificador: "210FQI005A_1.PV",
     },
     produto: "ÁGUA DESMINERALIZADA",
@@ -68,7 +68,7 @@ export const Medicoes: Medicao[] = [
   },
   {
     medidor: {
-      uuid: "131a00f8-2f68-44f7-8f19-88a6851424ba",
+      uuid: "3b6a1d7ad4ec4e22913d8006e9382631",
       identificador: "210FQI005A_1.PV",
     },
     produto: "ÁGUA CLARIFICADA",
@@ -81,7 +81,7 @@ export const Medicoes: Medicao[] = [
   },
   {
     medidor: {
-      uuid: "ad415a45-2737-406e-a301-ca0e08a18e25",
+      uuid: "6a480a46198b455abd525ab3be572015",
       identificador: "210FQI012_1.PV",
     },
     produto: "ÁGUA POTÁVEL",
@@ -94,7 +94,7 @@ export const Medicoes: Medicao[] = [
   },
   {
     medidor: {
-      uuid: "ad415a45-2737-406e-a301-ca0e08a18e25",
+      uuid: "6a480a46198b455abd525ab3be572015",
       identificador: "210FQI012_1.PV",
     },
     produto: "NITROGÊNIO",
@@ -107,7 +107,7 @@ export const Medicoes: Medicao[] = [
   },
   {
     medidor: {
-      uuid: "ad415a45-2737-406e-a301-ca0e08a18e25",
+      uuid: "6a480a46198b455abd525ab3be572015",
       identificador: "210FQI012_1.PV",
     },
     produto: "ETENO VERDE",
