@@ -116,8 +116,7 @@ export const FilterByKey = (data, key, value) => {
 
 export const GetList = (Data) => {
   return Data.map((Item) => {
-
-    var Label = `${Item?.identificador ? Item?.identificador + " - " : ""}  ${Item?.descricao}`; 
+    var Label = `${Item?.identificador ? Item?.identificador + " - " : ""}  ${Item?.descricao}`;
     Label = Label.trimStart().trim();
 
     return {
@@ -165,6 +164,26 @@ export const InnerJoins = (data: any[], type: string) => {
       Item.depositoSAP = depositoSAP?.descricao || "";
       Item.cliente = cliente?.descricao || "";
       Item.medidorParceiro = medidorParceiro?.descricao || "";
+
+      return Item;
+    });
+
+    return NewData;
+  }
+
+  if (type === "ProdutosPorCliente") {
+    NewData = NewData.map((Item) => {
+      const cliente = Clientes.find((item) => item.uuid === Item.cliente); 
+      const produto = Produtos.find((item) => item.uuid === Item.produto);
+      const depositoDeOrigem = DepositosSAP.find((item) => item.uuid === Item.depositoDeOrigem);
+      const depositoDeDestino = DepositosSAP.find((item) => item.uuid === Item.depositoDeDestino);
+      const depositoDeDestino2 = DepositosSAP.find((item) => item.uuid === Item.depositoDeDestino2);
+
+      Item.cliente = (cliente && cliente?.descricao) || "";
+      Item.produto = produto?.descricao || "";
+      Item.depositoDeOrigem = depositoDeOrigem?.descricao || "";
+      Item.depositoDeDestino = depositoDeDestino?.descricao || "";
+      Item.depositoDeDestino2 = depositoDeDestino2?.descricao || "";
 
       return Item;
     });
