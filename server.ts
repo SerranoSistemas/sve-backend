@@ -19,6 +19,7 @@ import { Router as AutomacaoPimsRoutes } from "./Routes/AutomacaoPims";
 import { Router as EvidenciasRoutes } from "./Routes/Evidencias";
 import { Router as PermissaoRoutes } from "./Routes/Permissao";
 import { Router as ProdutoPorClienteRoutes } from "./Routes/ProdutoPorCliente";
+import { Router as EstornoRoutes } from "./Routes/Estorno";
 import { Middleware } from "./Lib/Utils";
 
 const PORT = process.env.PORT || 3000;
@@ -55,7 +56,10 @@ APP.use("/grupoderede", GruposDeRedeRoutes);
 APP.use("/configuracao", ConfiguracaoRoutes);
 APP.use("/evidencias", EvidenciasRoutes);
 APP.use("/permissao", PermissaoRoutes);
+
+//SAP
 APP.use("/produtoPorCliente", ProdutoPorClienteRoutes);
+APP.use("/estorno", EstornoRoutes);
 
 APP.use((req: Request, res: Response, next: Function) => {
   res.status(404).send("Rota não encontrada");
