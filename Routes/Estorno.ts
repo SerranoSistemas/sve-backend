@@ -29,7 +29,7 @@ Router.put("/", (REQ: Request, RES: Response) => {
     sucesso: true,
     mensagem: "Dados Recebidos",
     page: null,
-  };
+  }; 
 
   RES.status(200).json(response);
 });
