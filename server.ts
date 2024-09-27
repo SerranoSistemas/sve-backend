@@ -20,6 +20,8 @@ import { Router as EvidenciasRoutes } from "./Routes/Evidencias";
 import { Router as PermissaoRoutes } from "./Routes/Permissao";
 import { Router as ProdutoPorClienteRoutes } from "./Routes/ProdutoPorCliente";
 import { Router as EstornoRoutes } from "./Routes/Estorno";
+import { Router as TransferenciasRoutes } from "./Routes/Transferencias";
+import { Router as OrdensDeVendaRoutes } from "./Routes/OrdensDeVenda";
 import { Middleware } from "./Lib/Utils";
 
 const PORT = process.env.PORT || 3000;
@@ -60,6 +62,8 @@ APP.use("/permissao", PermissaoRoutes);
 //SAP
 APP.use("/produtoPorCliente", ProdutoPorClienteRoutes);
 APP.use("/estorno", EstornoRoutes);
+APP.use("/transferencias", TransferenciasRoutes);
+APP.use("/ordensDeVenda", OrdensDeVendaRoutes);
 
 APP.use((req: Request, res: Response, next: Function) => {
   res.status(404).send("Rota não encontrada");
