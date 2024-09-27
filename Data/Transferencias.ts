@@ -1,4 +1,7 @@
+import { v4 as uuid } from "uuid";
+
 type Transferencia = {
+  uuid: string;
   tag: string;
   demonstrativo: number;
   cliente: string;
@@ -14,6 +17,7 @@ type Transferencia = {
 
 export const Transferencias: Transferencia[] = [
   {
+    uuid: uuid(),
     tag: "502FQ01_1.PV",
     demonstrativo: 250160,
     cliente: "BRASKEM PE4",
@@ -27,6 +31,7 @@ export const Transferencias: Transferencia[] = [
     status: "Enviado com Sucesso!",
   },
   {
+    uuid: uuid(),
     tag: "502FQ02_1.PV",
     demonstrativo: 250165,
     cliente: "BRASKEM PE4",
@@ -40,6 +45,7 @@ export const Transferencias: Transferencia[] = [
     status: "Enviado com Sucesso!",
   },
   {
+    uuid: uuid(),
     tag: "502FQ03_1.PV",
     demonstrativo: 250175,
     cliente: "BRASKEM PE4",
@@ -53,6 +59,7 @@ export const Transferencias: Transferencia[] = [
     status: "Enviado com Sucesso!",
   },
   {
+    uuid: uuid(),
     tag: "502FQ04_1.PV",
     demonstrativo: 250177,
     cliente: "BRASKEM PE4",
@@ -66,6 +73,7 @@ export const Transferencias: Transferencia[] = [
     status: "Enviado com Sucesso!",
   },
   {
+    uuid: uuid(),
     tag: "502FQ11_1.PV",
     demonstrativo: 250180,
     cliente: "BRASKEM PE4",
@@ -79,6 +87,7 @@ export const Transferencias: Transferencia[] = [
     status: "Enviado com Sucesso!",
   },
   {
+    uuid: uuid(),
     tag: "502FQ19_1.PV",
     demonstrativo: 250185,
     cliente: "BRASKEM PE4",
@@ -92,6 +101,7 @@ export const Transferencias: Transferencia[] = [
     status: "Enviado com Sucesso!",
   },
   {
+    uuid: uuid(),
     tag: "503FQ01_1.PV",
     demonstrativo: 250190,
     cliente: "BRASKEM PE6",
@@ -105,6 +115,7 @@ export const Transferencias: Transferencia[] = [
     status: "Enviado com Sucesso!",
   },
   {
+    uuid: uuid(),
     tag: "503FQ02_1.PV",
     demonstrativo: 250195,
     cliente: "BRASKEM PE6",
@@ -118,6 +129,7 @@ export const Transferencias: Transferencia[] = [
     status: "Enviado com Sucesso!",
   },
   {
+    uuid: uuid(),
     tag: "503FQ11_1.PV",
     demonstrativo: 250200,
     cliente: "BRASKEM PE6",
@@ -131,6 +143,7 @@ export const Transferencias: Transferencia[] = [
     status: "Enviado com Sucesso!",
   },
   {
+    uuid: uuid(),
     tag: "504FQ01_1.PV",
     demonstrativo: 250205,
     cliente: "BRASKEM PP1",
@@ -144,6 +157,7 @@ export const Transferencias: Transferencia[] = [
     status: "Enviado com Sucesso!",
   },
   {
+    uuid: uuid(),
     tag: "504FQ02_1.PV",
     demonstrativo: 250210,
     cliente: "BRASKEM PP1",
@@ -157,6 +171,7 @@ export const Transferencias: Transferencia[] = [
     status: "Enviado com Sucesso!",
   },
   {
+    uuid: uuid(),
     tag: "504FQ03_1.PV",
     demonstrativo: 250215,
     cliente: "BRASKEM PP1",
@@ -170,6 +185,7 @@ export const Transferencias: Transferencia[] = [
     status: "Enviado com Sucesso!",
   },
   {
+    uuid: uuid(),
     tag: "504FQ11_1.PV",
     demonstrativo: 250220,
     cliente: "BRASKEM PP1",
@@ -183,6 +199,7 @@ export const Transferencias: Transferencia[] = [
     status: "Enviado com Sucesso!",
   },
   {
+    uuid: uuid(),
     tag: "504FQ12_1.PV",
     demonstrativo: 250225,
     cliente: "BRASKEM PP1",
@@ -196,6 +213,7 @@ export const Transferencias: Transferencia[] = [
     status: "Enviado com Sucesso!",
   },
   {
+    uuid: uuid(),
     tag: "504FQ19_1.PV",
     demonstrativo: 250230,
     cliente: "BRASKEM PP1",
@@ -209,6 +227,7 @@ export const Transferencias: Transferencia[] = [
     status: "",
   },
   {
+    uuid: uuid(),
     tag: "507FQ01_1.PV",
     demonstrativo: 250235,
     cliente: "BRASKEM PP2/PE5",

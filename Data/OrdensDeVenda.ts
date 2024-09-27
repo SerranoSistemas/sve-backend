@@ -1,4 +1,7 @@
+import { v4 as uuid } from "uuid";
+
 type OrdemDeVenda = {
+  uuid: string;
   tag: string;
   demonstrativo: number;
   cliente: string;
@@ -14,6 +17,7 @@ type OrdemDeVenda = {
 
 export const OrdensDeVenda: OrdemDeVenda[] = [
   {
+    uuid: uuid(),
     tag: "505FQ01_1.PV",
     demonstrativo: 250148,
     cliente: "INNOVA - Videolar",
@@ -27,6 +31,7 @@ export const OrdensDeVenda: OrdemDeVenda[] = [
     status: "Enviado com Sucesso!",
   },
   {
+    uuid: uuid(),
     tag: "505FQ05_1.PV",
     demonstrativo: 250149,
     cliente: "INNOVA - Videolar",
@@ -40,6 +45,7 @@ export const OrdensDeVenda: OrdemDeVenda[] = [
     status: "Enviado com Sucesso!",
   },
   {
+    uuid: uuid(),
     tag: "506FQ04_1.PV",
     demonstrativo: 250150,
     cliente: "ARLANXEO TSR (ELAST)",
@@ -53,6 +59,7 @@ export const OrdensDeVenda: OrdemDeVenda[] = [
     status: "Enviado com Sucesso!",
   },
   {
+    uuid: uuid(),
     tag: "514FQ01_1.PV",
     demonstrativo: 250151,
     cliente: "ARLANXEO HPE (DSM)",
@@ -66,6 +73,7 @@ export const OrdensDeVenda: OrdemDeVenda[] = [
     status: "Enviado com Sucesso!",
   },
   {
+    uuid: uuid(),
     tag: "514FQ02_1.PV",
     demonstrativo: 250152,
     cliente: "ARLANXEO HPE (DSM)",
@@ -79,6 +87,7 @@ export const OrdensDeVenda: OrdemDeVenda[] = [
     status: "Enviado com Sucesso!",
   },
   {
+    uuid: uuid(),
     tag: "210FQI005B_1.PV",
     demonstrativo: 250153,
     cliente: "UNIB 2 RS OV",
@@ -92,6 +101,7 @@ export const OrdensDeVenda: OrdemDeVenda[] = [
     status: "Enviado com Sucesso!",
   },
   {
+    uuid: uuid(),
     tag: "211FQI340_1.PV",
     demonstrativo: 250154,
     cliente: "UNIB 2 RS OV",
@@ -105,6 +115,7 @@ export const OrdensDeVenda: OrdemDeVenda[] = [
     status: "",
   },
   {
+    uuid: uuid(),
     tag: "212FQI035_013.PV",
     demonstrativo: 250155,
     cliente: "UNIB 2 RS OV",
@@ -118,6 +129,7 @@ export const OrdensDeVenda: OrdemDeVenda[] = [
     status: "",
   },
   {
+    uuid: uuid(),
     tag: "502FQ028_1.PV",
     demonstrativo: 250160,
     cliente: "BRASKEM PE4 OV",
@@ -131,6 +143,7 @@ export const OrdensDeVenda: OrdemDeVenda[] = [
     status: "",
   },
   {
+    uuid: uuid(),
     tag: "507FQ01_V1.PV",
     demonstrativo: 250272,
     cliente: "BRASKEM PP2/PE5 OV",
@@ -144,6 +157,7 @@ export const OrdensDeVenda: OrdemDeVenda[] = [
     status: "",
   },
   {
+    uuid: uuid(),
     tag: "505FQ01_1.PV",
     demonstrativo: 250273,
     cliente: "INNOVA - Videolar",
@@ -157,6 +171,7 @@ export const OrdensDeVenda: OrdemDeVenda[] = [
     status: "Enviado com Sucesso!",
   },
   {
+    uuid: uuid(),
     tag: "505FQ05_1.PV",
     demonstrativo: 250274,
     cliente: "INNOVA - Videolar",
@@ -170,6 +185,7 @@ export const OrdensDeVenda: OrdemDeVenda[] = [
     status: "Enviado com Sucesso!",
   },
   {
+    uuid: uuid(),
     tag: "506FQ04_1.PV",
     demonstrativo: 250275,
     cliente: "ARLANXEO TSR (ELAST)",
@@ -183,6 +199,7 @@ export const OrdensDeVenda: OrdemDeVenda[] = [
     status: "Enviado com Sucesso!",
   },
   {
+    uuid: uuid(),
     tag: "514FQ01_1.PV",
     demonstrativo: 250276,
     cliente: "ARLANXEO HPE (DSM)",
@@ -196,6 +213,7 @@ export const OrdensDeVenda: OrdemDeVenda[] = [
     status: "Enviado com Sucesso!",
   },
   {
+    uuid: uuid(),
     tag: "514FQ02_1.PV",
     demonstrativo: 250277,
     cliente: "ARLANXEO HPE (DSM)",
@@ -209,6 +227,7 @@ export const OrdensDeVenda: OrdemDeVenda[] = [
     status: "Enviado com Sucesso!",
   },
   {
+    uuid: uuid(),
     tag: "210FQI005B_1.PV",
     demonstrativo: 250280,
     cliente: "UNIB 2 RS OV",
