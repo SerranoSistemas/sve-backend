@@ -5,7 +5,7 @@ import { FundoEscala, GenerateFundoEscala } from "../Data/FundoEscala";
 const Router = express.Router();
 
 Router.get("/", (REQ: Request, RES: Response) => {
-  const mesAnoParam = REQ.query.mesAno as string;
+  const mesAnoParam = REQ.query.data as string;
   if (!mesAnoParam) {
     return RES.status(400).json({ sucesso: false, mensagem: "Parâmetro 'minMes' é obrigatório" });
   }

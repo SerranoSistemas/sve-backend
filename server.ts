@@ -48,7 +48,7 @@ APP.use("/cliente", ClientesRoutes);
 APP.use("/medidor", MedidorRoutes);
 
 //Movimentação
-APP.use("/fundoEscala", FundoEscalaRoutes);
+APP.use("/fundodeescala", FundoEscalaRoutes);
 APP.use("/medicao", MedicaoRoutes);
 APP.use("/automacao-pims", AutomacaoPimsRoutes);
 
