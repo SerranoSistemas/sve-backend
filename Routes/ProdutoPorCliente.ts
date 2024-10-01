@@ -46,7 +46,7 @@ Router.get("/select", (REQ: Request, RES: Response) => {
     };
   });
 
-  const Response = GetResponse(GetList(NewData));
+  const Response = GetResponse(GetList(Produtos));
   return RES.status(200).json(Response);
 });
 
