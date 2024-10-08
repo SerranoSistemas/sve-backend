@@ -34,6 +34,7 @@ Router.get("/", (REQ: Request, RES: Response) => {
 });
 
 Router.get("/select", (REQ: Request, RES: Response) => {
+  console.log(REQ.query?.cliente)
   const Cliente = REQ.query?.cliente?.toString() || "";
   const FiltreredData1 = FilterByKey(ProdutosPorCliente, "cliente", Cliente);
 
