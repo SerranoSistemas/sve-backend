@@ -12,7 +12,7 @@ Router.get("/", (REQ: Request, RES: Response) => {
   //FILTROS E PAGINAÇÂO
   const Pagination = GetPagination(REQ);
   const Text = REQ.query?.text?.toString() || "";
-  const Planta = REQ.query?.planta?.toString() || "";
+  const Planta = REQ.query?.plantas?.toString() || "";
 
   const FilteredJoins = FilterByKey(DATA, "planta", Planta);
   const JoinedData = InnerJoins(FilteredJoins, "Areas");

@@ -13,8 +13,8 @@ Router.get("/", (REQ: Request, RES: Response) => {
   //FILTROS E PAGINAÇÂO
   const Pagination = GetPagination(REQ);
   const Text = REQ.query?.text?.toString() || "";
-  const Cliente = REQ.query?.cliente?.toString() || "";
-  const Produto = REQ.query?.produto?.toString() || "";
+  const Cliente = REQ.query?.clientes || "";
+  const Produto = REQ.query?.produtos || "";
   const DepositoDeOrigem = REQ.query?.depositoDeOrigem?.toString() || "";
   const DepositoDeDestino = REQ.query?.depositoDeDestino?.toString() || "";
   const DepositoDeDestino2 = REQ.query?.depositoDeDestino2?.toString() || "";
@@ -34,8 +34,7 @@ Router.get("/", (REQ: Request, RES: Response) => {
 });
 
 Router.get("/select", (REQ: Request, RES: Response) => {
-  console.log(REQ.query?.cliente)
-  const Cliente = REQ.query?.cliente?.toString() || "";
+  const Cliente = REQ.query?.clientes || "";
   const FiltreredData1 = FilterByKey(ProdutosPorCliente, "cliente", Cliente);
 
   const NewData = FiltreredData1.map((Item) => {
@@ -47,7 +46,7 @@ Router.get("/select", (REQ: Request, RES: Response) => {
     };
   });
 
-  const Response = GetResponse(GetList(Produtos));
+  const Response = GetResponse(GetList(NewData));
   return RES.status(200).json(Response);
 });
 

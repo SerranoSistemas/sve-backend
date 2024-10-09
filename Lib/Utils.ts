@@ -111,6 +111,23 @@ export const Filter = (data, text, type?: string) => {
 
 export const FilterByKey = (data, key, value) => {
   if (!value) return data;
+
+  // Caso especial para '##VAZIO##', filtra por null ou string vazia
+  if (value === "##VAZIO##") {
+    return data.filter((item) => item[key] === null || item[key] === "");
+  }
+
+  // Se o value for uma string contendo vírgulas, converte em array
+  if (typeof value === "string" && value.includes(",")) {
+    value = value.split(",").map((v) => v.trim()); // Divide e remove espaços extras
+  }
+
+  // Verifica se o value é um array de strings
+  if (Array.isArray(value)) {
+    return data.filter((item) => value.includes(item[key]));
+  }
+
+  // Caso seja uma string simples, mantém o comportamento original
   return data.filter((item) => item[key] === value);
 };
 
@@ -173,7 +190,7 @@ export const InnerJoins = (data: any[], type: string) => {
 
   if (type === "ProdutosPorCliente") {
     NewData = NewData.map((Item) => {
-      const cliente = Clientes.find((item) => item.uuid === Item.cliente); 
+      const cliente = Clientes.find((item) => item.uuid === Item.cliente);
       const produto = Produtos.find((item) => item.uuid === Item.produto);
       const depositoDeOrigem = DepositosSAP.find((item) => item.uuid === Item.depositoDeOrigem);
       const depositoDeDestino = DepositosSAP.find((item) => item.uuid === Item.depositoDeDestino);

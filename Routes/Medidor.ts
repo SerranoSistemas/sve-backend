@@ -20,12 +20,12 @@ Router.get("/", (REQ: Request, RES: Response) => {
   const unidadeDeMedidaPims = REQ.query?.unidadeDeMedidaPims?.toString();
   const unidadeDeMedidaSAP = REQ.query?.unidadeDeMedidaSAP?.toString();
   const unidadeDeMedidaSVE = REQ.query?.unidadeDeMedidaSVE?.toString();
-  const area = REQ.query?.area?.toString();
-  const produto = REQ.query?.produto?.toString();
-  const estacaoDeMedicao = REQ.query?.estacaoDeMedicao?.toString();
+  const area = REQ.query?.areas;
+  const produto = REQ.query?.produtos;
+  const estacaoDeMedicao = REQ.query?.estacoesDeMedicao;
   const servidorPims = REQ.query?.servidorPims?.toString();
   const depositoSAP = REQ.query?.depositoSAP?.toString();
-  const cliente = REQ.query?.cliente?.toString();
+  const cliente = REQ.query?.clientes;
   const medidorParceiro = REQ.query?.medidorParceiro?.toString();
 
   const FiltreredData1 = FilterByKey(DATA, "unidadeDeMedidaPims", unidadeDeMedidaPims);
