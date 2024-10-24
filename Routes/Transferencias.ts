@@ -1,14 +1,13 @@
 import express, { Request, Response } from "express";
 import { GetResponse } from "../Lib/Utils";
-import { Estornos } from "../Data/Estornos";
 import { ResponseType } from "../Data/Types";
-import { Transferencias } from "../Data/Transferencias";
-
-const DATA = Transferencias;
+import { GenerateTransferencias } from "../Data/Transferencias";
 
 const Router = express.Router();
 
 Router.get("/", (REQ: Request, RES: Response) => {
+  const DATA = GenerateTransferencias();
+
   const Response = GetResponse(DATA);
   return RES.status(200).json(Response);
 });

@@ -1,13 +1,13 @@
 import express, { Request, Response } from "express";
 import { GetResponse } from "../Lib/Utils";
-import { Estornos } from "../Data/Estornos";
 import { ResponseType } from "../Data/Types";
-
-const DATA = Estornos;
+import { GenerateEstornos } from "../Data/Estornos";
 
 const Router = express.Router();
 
 Router.get("/", (REQ: Request, RES: Response) => {
+  const DATA = GenerateEstornos();
+
   const Response = GetResponse(DATA);
   return RES.status(200).json(Response);
 });
@@ -20,7 +20,7 @@ Router.post("/", (REQ: Request, RES: Response) => {
     page: null,
   };
 
-  RES.status(200).json(response); 
+  RES.status(200).json(response);
 });
 
 Router.put("/", (REQ: Request, RES: Response) => {
@@ -29,7 +29,7 @@ Router.put("/", (REQ: Request, RES: Response) => {
     sucesso: true,
     mensagem: "Dados Recebidos",
     page: null,
-  }; 
+  };
 
   RES.status(200).json(response);
 });

@@ -242,3 +242,9 @@ export const GetResponse = (PaginatedNada: any) => {
 
   return Response;
 };
+
+export function getRandomSapStatus(): string {
+  const statuses = ["S", "P", "E", "A"]; // Sucesso, Pendente, Erro, Aguardando
+  const randomIndex = Math.floor(Math.random() * statuses.length); // Gera um índice aleatório
+  return statuses[randomIndex]; // Retorna o status correspondente ao índice aleatório
+}
