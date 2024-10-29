@@ -146,6 +146,7 @@ export type Medicao = {
   diferenca: number;
   medicaoLiberada: number;
   situacao: "L" | "P";
+  pendenciasMes?: boolean;
 };
 
 //Detalhamentos de Medição
@@ -188,4 +189,24 @@ export type Detalhamento = {
   multaFundoDeEscala: number; //Se mostrarFundoDeEscala for TRUE, gerar numero aleatorio entre 10,000 e 100,000
   multaFundoDeEscalaMensal: number; //Se mostrarFundoDeEscala for TRUE, gerar numero aleatorio entre 1,000 e 20,000
   mostrarFundoDeEscala: boolean; //TRUE se dia for '10', '20' ou o ultimo dia do Mês
+};
+
+
+
+
+export type Automacao = {
+  uuid: string; //uuid aleatório usando a uuid() v4
+  cliente: string; //Item aleatório da Lista da lista de Clientes (array chamado 'Clientes', propriedade 'descricao')
+  tagSVE: string; //Item aleatório da Lista da lista de Medidores (array chamado 'Medidores', propriedade 'tagDeLiberacao')
+  totalizadorPrimario: string; //Mesmo valor do tagSVE
+  totalizadorSecundario: string; //50% de change de vir vazio, senão seleciona um Item aleatório da Lista da lista de Medidores (array chamado 'Medidores', propriedade 'tagDeLiberacao')
+  liberarMedidorSemAvaliacao: boolean; //true ou false aleatório 50% de chance
+  toleranciaDeContrato: number; //valor aleatório entre 0 e 100 com duas casas decimais
+  toleranciaDesvioPercentual: number; //valor aleatório entre 0 e 100 com duas casas decimais
+  usarMedicaoParceiroOuBraskem: boolean; //true ou false aleatório 50% de chance
+  limiteDeMedicaoRuido: number; //valor aleatório entre 0 e 10 com duas casas decimais
+  comentarios: string; //50% de chance de vir vazio, se não vem escrito 'Comentário de Teste'
+  realizarLiberacao: boolean; //true ou false aleatório 50% de chance
+  dataDeCalibracao: Date; //Data aleatoria formao dd/mm/yyyy depois de 01/01/2024
+  dataDeFechamento: Date; //Data aleatoria formao dd/mm/yyyy depois de 01/01/2024
 };

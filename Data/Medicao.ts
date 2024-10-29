@@ -13,6 +13,7 @@ export const Medicoes: Medicao[] = [
     diferenca: -0.12,
     medicaoLiberada: 260688,
     situacao: Math.random() < 0.5 ? "L" : "P",
+    pendenciasMes: Math.random() < 0.5,
   },
   {
     medidor: {
@@ -26,6 +27,7 @@ export const Medicoes: Medicao[] = [
     diferenca: 0.0,
     medicaoLiberada: 1404,
     situacao: Math.random() < 0.5 ? "L" : "P",
+    pendenciasMes: Math.random() < 0.5,
   },
   {
     medidor: {
@@ -39,6 +41,7 @@ export const Medicoes: Medicao[] = [
     diferenca: 0.0,
     medicaoLiberada: 8332,
     situacao: Math.random() < 0.5 ? "L" : "P",
+    pendenciasMes: Math.random() < 0.5,
   },
   {
     medidor: {
@@ -52,6 +55,7 @@ export const Medicoes: Medicao[] = [
     diferenca: 0.0,
     medicaoLiberada: 0,
     situacao: Math.random() < 0.5 ? "L" : "P",
+    pendenciasMes: Math.random() < 0.5,
   },
   {
     medidor: {
@@ -65,6 +69,7 @@ export const Medicoes: Medicao[] = [
     diferenca: 0.0,
     medicaoLiberada: 73953,
     situacao: Math.random() < 0.5 ? "L" : "P",
+    pendenciasMes: Math.random() < 0.5,
   },
   {
     medidor: {
@@ -78,6 +83,7 @@ export const Medicoes: Medicao[] = [
     diferenca: 0.0,
     medicaoLiberada: 738250,
     situacao: Math.random() < 0.5 ? "L" : "P",
+    pendenciasMes: Math.random() < 0.5,
   },
   {
     medidor: {
@@ -91,6 +97,7 @@ export const Medicoes: Medicao[] = [
     diferenca: 0.0,
     medicaoLiberada: 54078,
     situacao: Math.random() < 0.5 ? "L" : "P",
+    pendenciasMes: Math.random() < 0.5,
   },
   {
     medidor: {
@@ -104,6 +111,7 @@ export const Medicoes: Medicao[] = [
     diferenca: 0.0,
     medicaoLiberada: 0,
     situacao: Math.random() < 0.5 ? "L" : "P",
+    pendenciasMes: Math.random() < 0.5,
   },
   {
     medidor: {
@@ -117,5 +125,6 @@ export const Medicoes: Medicao[] = [
     diferenca: 0.0,
     medicaoLiberada: 0,
     situacao: Math.random() < 0.5 ? "L" : "P",
+    pendenciasMes: Math.random() < 0.5,
   },
 ];

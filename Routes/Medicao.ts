@@ -8,7 +8,7 @@ const Router = express.Router();
 Router.get("/listar-medidores", (REQ: Request, RES: Response) => {
   const Response: ResponseType = {
     data: Medicoes,
-    sucesso: true,
+    sucesso: true, 
     mensagem: "Dados processados com sucesso",
     page: null,
   };

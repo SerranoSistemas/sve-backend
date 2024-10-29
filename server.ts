@@ -16,6 +16,7 @@ import { Router as FundoEscalaRoutes } from "./Routes/FundoEscala";
 import { Router as MedicaoRoutes } from "./Routes/Medicao";
 import { Router as MedidorRoutes } from "./Routes/Medidor";
 import { Router as AutomacaoPimsRoutes } from "./Routes/AutomacaoPims";
+import { Router as AutomacoesRoutes } from "./Routes/Automacoes";
 import { Router as EvidenciasRoutes } from "./Routes/Evidencias";
 import { Router as PermissaoRoutes } from "./Routes/Permissao";
 import { Router as ProdutoPorClienteRoutes } from "./Routes/ProdutoPorCliente";
@@ -51,6 +52,7 @@ APP.use("/medidor", MedidorRoutes);
 APP.use("/fundodeescala", FundoEscalaRoutes);
 APP.use("/medicao", MedicaoRoutes);
 APP.use("/automacao-pims", AutomacaoPimsRoutes);
+APP.use("/automacoes", AutomacoesRoutes);
 
 //Geral
 APP.use("/sistema", SistemaRoutes);

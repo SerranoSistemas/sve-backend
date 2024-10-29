@@ -7,7 +7,8 @@ export type FundoEscala = {
   dia: string; //STRING
   multa: number; //FLOAT
   valorMedicao: number; //FLOAT
-  situacao: "L" | "P"; //Liberada ou Pendente
+  situacao: "L" | "P"; //Liberada ou Pendente,
+  unidadeDeMedida: string;
 };
 
 export const GenerateFundoEscala = (date: Date, previousValueMedicao: number | null): FundoEscala => {
@@ -17,6 +18,7 @@ export const GenerateFundoEscala = (date: Date, previousValueMedicao: number | n
   const valorMedicao = previousValueMedicao ? previousValueMedicao + 1812 : GenerateRandomValue(4000, 15000);
   const multa = minMes > 0 ? valorMedicao / minMes : 0; // Calcula a multa apenas se minMes for maior que 0
   const situacao = Math.random() < 0.85 ? "L" : "P";
+  const unidadeDeMedida = "Ton";
 
   return {
     uuid,
@@ -25,5 +27,6 @@ export const GenerateFundoEscala = (date: Date, previousValueMedicao: number | n
     multa,
     valorMedicao,
     situacao,
+    unidadeDeMedida,
   };
 };
