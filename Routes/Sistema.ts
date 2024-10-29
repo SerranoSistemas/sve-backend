@@ -58,6 +58,7 @@ Router.get("/inicio", (REQ: Request, RES: Response) => {
       { chave: "3.1", valor: ESCRITA }, 
       { chave: "3.2", valor: ESCRITA },
       { chave: "3.3", valor: ESCRITA },
+      { chave: "3.4", valor: ESCRITA },
 
       //MODULO DE CADASTRO
       // { chave: "4", valor: ESCRITA },
