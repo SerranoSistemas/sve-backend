@@ -2,12 +2,14 @@ import express, { Request, Response } from "express";
 import { ResponseType } from "../Data/Types";
 import { FundoEscala, GenerateFundoEscala } from "../Data/FundoEscala";
 import { FilterByKey, GetList, GetResponse } from "../Lib/Utils";
-import { ProdutosPorCliente } from "../Data/ProdutosPorCliente";
+import { GetProdutosPorCliente } from "../Data/ProdutosPorCliente";
 import { Produtos } from "../Data/Produto";
 import { Medidores } from "../Data/Medidores";
 import { Clientes } from "../Data/Clientes";
 
 const Router = express.Router();
+
+const ProdutosPorCliente = GetProdutosPorCliente();
 
 Router.get("/detalhes", (REQ: Request, RES: Response) => {
   const mesAnoParam = REQ.query.data as string;

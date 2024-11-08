@@ -1,7 +1,7 @@
 import express, { Request, Response } from "express";
 import { Filter, FilterByKey, GetElementByID, GetList, GetResponse, InnerJoins, PaginateAndSort } from "../Lib/Utils";
 import { Produtos } from "../Data/Produto";
-import { ProdutosPorCliente } from "../Data/ProdutosPorCliente";
+import { GetProdutosPorCliente } from "../Data/ProdutosPorCliente";
 import { GetPagination } from "../Data/Pagination";
 import { CadastroDELETEResponse, CadastroPOSTResponse, CadastroPUTResponse } from "../Lib/Responses";
 
@@ -19,6 +19,8 @@ Router.get("/", (REQ: Request, RES: Response) => {
   const DepositoDeDestino = REQ.query?.depositoDeDestino?.toString() || "";
   const DepositoDeDestino2 = REQ.query?.depositoDeDestino2?.toString() || "";
 
+  const ProdutosPorCliente = GetProdutosPorCliente();
+
   const FiltreredData1 = FilterByKey(ProdutosPorCliente, "cliente", Cliente);
   const FiltreredData2 = FilterByKey(FiltreredData1, "produto", Produto);
   const FiltreredData3 = FilterByKey(FiltreredData2, "depositoDeOrigem", DepositoDeOrigem);
@@ -34,6 +36,8 @@ Router.get("/", (REQ: Request, RES: Response) => {
 });
 
 Router.get("/select", (REQ: Request, RES: Response) => {
+  const ProdutosPorCliente = GetProdutosPorCliente();
+
   const Cliente = REQ.query?.clientes || "";
   const FiltreredData1 = FilterByKey(ProdutosPorCliente, "cliente", Cliente);
 
@@ -51,6 +55,8 @@ Router.get("/select", (REQ: Request, RES: Response) => {
 });
 
 Router.get("/:id", (REQ: Request, RES: Response) => {
+  const ProdutosPorCliente = GetProdutosPorCliente();
+
   const data = GetElementByID(ProdutosPorCliente, REQ.params.id);
 
   RES.status(200).json({

@@ -2,6 +2,7 @@ import { Clientes } from "./Clientes";
 import { Medidores } from "./Medidores";
 import { v4 as uuidv4 } from "uuid";
 import { Automacao } from "./Types";
+import { Produtos } from "./Produto";
 
 export const generateFakeAutomacoes = (): any[] => {
   const randomBool = (): boolean => Math.random() < 0.5;
@@ -21,6 +22,7 @@ export const generateFakeAutomacoes = (): any[] => {
 
   return Array.from({ length: resultsCount }, () => {
     const cliente = Clientes[Math.floor(Math.random() * Clientes.length)].descricao;
+    const produto = Produtos[Math.floor(Math.random() * Produtos.length)].descricao;
     const tagSVE = Medidores[Math.floor(Math.random() * Medidores.length)].tagDeLiberacao;
     const totalizadorSecundario = randomBool()
       ? ""
@@ -30,6 +32,7 @@ export const generateFakeAutomacoes = (): any[] => {
     return {
       uuid: uuidv4(),
       cliente,
+      produto,
       tagSVE,
       totalizadorPrimario: tagSVE,
       totalizadorSecundario,
@@ -42,6 +45,8 @@ export const generateFakeAutomacoes = (): any[] => {
       realizarLiberacao: randomBool(),
       dataDeCalibracao: randomDate(startDate, new Date()),
       dataDeFechamento: randomDate(startDate, new Date()),
+      executarTransferenciaEntreCentros: randomBool(),
+      // MedicaoPrimariaOuSecundariaLiberacao: randomBool() ? "S" : "P",
     };
   });
 };
