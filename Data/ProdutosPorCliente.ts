@@ -1,19 +1,4 @@
-const randomFloat = (min: number, max: number, decimals: number = 2): number =>
-  parseFloat((Math.random() * (max - min) + min).toFixed(decimals));
-
-const randomDate = (start: Date, end: Date): string => {
-  const date = new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
-  const day = String(date.getDate()).padStart(2, "0");
-  const month = String(date.getMonth() + 1).padStart(2, "0"); // Months are 0-based
-  const year = date.getFullYear();
-  return `${day}/${month}/${year}`;
-};
-
-const randomBool = (): boolean => Math.random() < 0.5;
-
 export const GetProdutosPorCliente = () => {
-  const startDate = new Date("2023-01-01");
-
   const ProdutosPorCliente = [
     {
       cotaMinimaDoDia: "",
@@ -34,11 +19,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "846f4f9507b04d81ad3c932c24544736",
       depositoDeDestino: "",
       depositoDeDestino2: "",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -59,11 +39,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "846f4f9507b04d81ad3c932c24544736",
       depositoDeDestino: "",
       depositoDeDestino2: "",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -84,11 +59,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "846f4f9507b04d81ad3c932c24544736",
       depositoDeDestino: "",
       depositoDeDestino2: "",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -109,11 +79,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "846f4f9507b04d81ad3c932c24544736",
       depositoDeDestino: "",
       depositoDeDestino2: "",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -134,11 +99,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "81e72170cc4b4cdeae8124d32e7d7961",
       depositoDeDestino: "",
       depositoDeDestino2: "",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -159,11 +119,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "846f4f9507b04d81ad3c932c24544736",
       depositoDeDestino: "",
       depositoDeDestino2: "",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -184,11 +139,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "846f4f9507b04d81ad3c932c24544736",
       depositoDeDestino: "",
       depositoDeDestino2: "",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -209,11 +159,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "846f4f9507b04d81ad3c932c24544736",
       depositoDeDestino: "",
       depositoDeDestino2: "",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -234,11 +179,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "81e72170cc4b4cdeae8124d32e7d7961",
       depositoDeDestino: "",
       depositoDeDestino2: "",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -259,11 +199,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "846f4f9507b04d81ad3c932c24544736",
       depositoDeDestino: "",
       depositoDeDestino2: "",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -284,11 +219,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "846f4f9507b04d81ad3c932c24544736",
       depositoDeDestino: "",
       depositoDeDestino2: "",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -309,11 +239,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "846f4f9507b04d81ad3c932c24544736",
       depositoDeDestino: "",
       depositoDeDestino2: "",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -334,11 +259,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "846f4f9507b04d81ad3c932c24544736",
       depositoDeDestino: "",
       depositoDeDestino2: "",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -359,11 +279,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "81e72170cc4b4cdeae8124d32e7d7961",
       depositoDeDestino: "",
       depositoDeDestino2: "",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -384,11 +299,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "846f4f9507b04d81ad3c932c24544736",
       depositoDeDestino: "",
       depositoDeDestino2: "",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -409,11 +319,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "846f4f9507b04d81ad3c932c24544736",
       depositoDeDestino: "",
       depositoDeDestino2: "",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -434,11 +339,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "81e72170cc4b4cdeae8124d32e7d7961",
       depositoDeDestino: "",
       depositoDeDestino2: "",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -459,11 +359,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "846f4f9507b04d81ad3c932c24544736",
       depositoDeDestino: "",
       depositoDeDestino2: "",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -484,11 +379,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "81e72170cc4b4cdeae8124d32e7d7961",
       depositoDeDestino: "",
       depositoDeDestino2: "",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -509,11 +399,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "846f4f9507b04d81ad3c932c24544736",
       depositoDeDestino: "",
       depositoDeDestino2: "",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -534,11 +419,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "846f4f9507b04d81ad3c932c24544736",
       depositoDeDestino: "",
       depositoDeDestino2: "",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -559,11 +439,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "846f4f9507b04d81ad3c932c24544736",
       depositoDeDestino: "",
       depositoDeDestino2: "",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -584,11 +459,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "846f4f9507b04d81ad3c932c24544736",
       depositoDeDestino: "",
       depositoDeDestino2: "",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -609,11 +479,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "81e72170cc4b4cdeae8124d32e7d7961",
       depositoDeDestino: "",
       depositoDeDestino2: "",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -634,11 +499,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "846f4f9507b04d81ad3c932c24544736",
       depositoDeDestino: "",
       depositoDeDestino2: "",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -659,11 +519,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "846f4f9507b04d81ad3c932c24544736",
       depositoDeDestino: "",
       depositoDeDestino2: "",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -684,11 +539,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "846f4f9507b04d81ad3c932c24544736",
       depositoDeDestino: "",
       depositoDeDestino2: "",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -709,11 +559,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "846f4f9507b04d81ad3c932c24544736",
       depositoDeDestino: "",
       depositoDeDestino2: "",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -734,11 +579,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "81e72170cc4b4cdeae8124d32e7d7961",
       depositoDeDestino: "",
       depositoDeDestino2: "",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -759,11 +599,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "81e72170cc4b4cdeae8124d32e7d7961",
       depositoDeDestino: "",
       depositoDeDestino2: "",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -784,11 +619,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "846f4f9507b04d81ad3c932c24544736",
       depositoDeDestino: "",
       depositoDeDestino2: "",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -809,11 +639,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "846f4f9507b04d81ad3c932c24544736",
       depositoDeDestino: "",
       depositoDeDestino2: "",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -834,11 +659,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "846f4f9507b04d81ad3c932c24544736",
       depositoDeDestino: "22cd8dde72d247679d617688cb7a2831",
       depositoDeDestino2: "",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -859,11 +679,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "846f4f9507b04d81ad3c932c24544736",
       depositoDeDestino: "22cd8dde72d247679d617688cb7a2831",
       depositoDeDestino2: "",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -884,11 +699,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "846f4f9507b04d81ad3c932c24544736",
       depositoDeDestino: "22cd8dde72d247679d617688cb7a2831",
       depositoDeDestino2: "",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -909,11 +719,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "846f4f9507b04d81ad3c932c24544736",
       depositoDeDestino: "22cd8dde72d247679d617688cb7a2831",
       depositoDeDestino2: "",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -934,11 +739,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "846f4f9507b04d81ad3c932c24544736",
       depositoDeDestino: "22cd8dde72d247679d617688cb7a2831",
       depositoDeDestino2: "",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -959,11 +759,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "81e72170cc4b4cdeae8124d32e7d7961",
       depositoDeDestino: "22cd8dde72d247679d617688cb7a2831",
       depositoDeDestino2: "",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -984,11 +779,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "846f4f9507b04d81ad3c932c24544736",
       depositoDeDestino: "22cd8dde72d247679d617688cb7a2831",
       depositoDeDestino2: "",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -1009,11 +799,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "846f4f9507b04d81ad3c932c24544736",
       depositoDeDestino: "0e4afb6bba0e4a4ab6834558c1e64b6e",
       depositoDeDestino2: "",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -1034,11 +819,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "846f4f9507b04d81ad3c932c24544736",
       depositoDeDestino: "0e4afb6bba0e4a4ab6834558c1e64b6e",
       depositoDeDestino2: "",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -1059,11 +839,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "846f4f9507b04d81ad3c932c24544736",
       depositoDeDestino: "0e4afb6bba0e4a4ab6834558c1e64b6e",
       depositoDeDestino2: "",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -1084,11 +859,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "846f4f9507b04d81ad3c932c24544736",
       depositoDeDestino: "0e4afb6bba0e4a4ab6834558c1e64b6e",
       depositoDeDestino2: "",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -1109,11 +879,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "846f4f9507b04d81ad3c932c24544736",
       depositoDeDestino: "0e4afb6bba0e4a4ab6834558c1e64b6e",
       depositoDeDestino2: "",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -1134,11 +899,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "846f4f9507b04d81ad3c932c24544736",
       depositoDeDestino: "0e4afb6bba0e4a4ab6834558c1e64b6e",
       depositoDeDestino2: "",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -1159,11 +919,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "81e72170cc4b4cdeae8124d32e7d7961",
       depositoDeDestino: "0e4afb6bba0e4a4ab6834558c1e64b6e",
       depositoDeDestino2: "",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -1184,11 +939,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "846f4f9507b04d81ad3c932c24544736",
       depositoDeDestino: "0e4afb6bba0e4a4ab6834558c1e64b6e",
       depositoDeDestino2: "",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -1209,11 +959,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "846f4f9507b04d81ad3c932c24544736",
       depositoDeDestino: "0e4afb6bba0e4a4ab6834558c1e64b6e",
       depositoDeDestino2: "",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -1234,11 +979,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "846f4f9507b04d81ad3c932c24544736",
       depositoDeDestino: "0e4afb6bba0e4a4ab6834558c1e64b6e",
       depositoDeDestino2: "",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -1259,11 +999,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "846f4f9507b04d81ad3c932c24544736",
       depositoDeDestino: "9867815cdb024a9eb188cd050a84ed88",
       depositoDeDestino2: "",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -1284,11 +1019,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "846f4f9507b04d81ad3c932c24544736",
       depositoDeDestino: "9867815cdb024a9eb188cd050a84ed88",
       depositoDeDestino2: "",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -1309,11 +1039,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "81e72170cc4b4cdeae8124d32e7d7961",
       depositoDeDestino: "9867815cdb024a9eb188cd050a84ed88",
       depositoDeDestino2: "",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -1334,11 +1059,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "846f4f9507b04d81ad3c932c24544736",
       depositoDeDestino: "9867815cdb024a9eb188cd050a84ed88",
       depositoDeDestino2: "",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -1359,11 +1079,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "846f4f9507b04d81ad3c932c24544736",
       depositoDeDestino: "9867815cdb024a9eb188cd050a84ed88",
       depositoDeDestino2: "",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -1384,11 +1099,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "846f4f9507b04d81ad3c932c24544736",
       depositoDeDestino: "9867815cdb024a9eb188cd050a84ed88",
       depositoDeDestino2: "",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -1409,11 +1119,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "846f4f9507b04d81ad3c932c24544736",
       depositoDeDestino: "9867815cdb024a9eb188cd050a84ed88",
       depositoDeDestino2: "",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -1434,11 +1139,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "846f4f9507b04d81ad3c932c24544736",
       depositoDeDestino: "9867815cdb024a9eb188cd050a84ed88",
       depositoDeDestino2: "",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -1459,11 +1159,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "81e72170cc4b4cdeae8124d32e7d7961",
       depositoDeDestino: "9867815cdb024a9eb188cd050a84ed88",
       depositoDeDestino2: "",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -1484,11 +1179,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "846f4f9507b04d81ad3c932c24544736",
       depositoDeDestino: "9867815cdb024a9eb188cd050a84ed88",
       depositoDeDestino2: "",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -1509,11 +1199,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "846f4f9507b04d81ad3c932c24544736",
       depositoDeDestino: "7a950a026e334b5c993624d11bca3610",
       depositoDeDestino2: "e6e40840998e4654b756bd073a02e18d",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -1534,11 +1219,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "846f4f9507b04d81ad3c932c24544736",
       depositoDeDestino: "e6e40840998e4654b756bd073a02e18d",
       depositoDeDestino2: "",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -1559,11 +1239,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "846f4f9507b04d81ad3c932c24544736",
       depositoDeDestino: "7a950a026e334b5c993624d11bca3610",
       depositoDeDestino2: "729f5ec4181348ceb63ab9ccde3b65e0",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -1584,11 +1259,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "846f4f9507b04d81ad3c932c24544736",
       depositoDeDestino: "7a950a026e334b5c993624d11bca3610",
       depositoDeDestino2: "e6e40840998e4654b756bd073a02e18d",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -1609,11 +1279,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "846f4f9507b04d81ad3c932c24544736",
       depositoDeDestino: "7f3c1d6488104db3bee27c0abc385606",
       depositoDeDestino2: "",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -1634,11 +1299,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "846f4f9507b04d81ad3c932c24544736",
       depositoDeDestino: "7a950a026e334b5c993624d11bca3610",
       depositoDeDestino2: "e6e40840998e4654b756bd073a02e18d",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -1659,11 +1319,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "81e72170cc4b4cdeae8124d32e7d7961",
       depositoDeDestino: "7a950a026e334b5c993624d11bca3610",
       depositoDeDestino2: "e6e40840998e4654b756bd073a02e18d",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -1684,11 +1339,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "846f4f9507b04d81ad3c932c24544736",
       depositoDeDestino: "7a950a026e334b5c993624d11bca3610",
       depositoDeDestino2: "e6e40840998e4654b756bd073a02e18d",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -1709,11 +1359,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "846f4f9507b04d81ad3c932c24544736",
       depositoDeDestino: "7a950a026e334b5c993624d11bca3610",
       depositoDeDestino2: "e6e40840998e4654b756bd073a02e18d",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -1734,11 +1379,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "846f4f9507b04d81ad3c932c24544736",
       depositoDeDestino: "7a950a026e334b5c993624d11bca3610",
       depositoDeDestino2: "e6e40840998e4654b756bd073a02e18d",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: 0,
@@ -1759,11 +1399,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "846f4f9507b04d81ad3c932c24544736",
       depositoDeDestino: "",
       depositoDeDestino2: "",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: 0,
@@ -1784,11 +1419,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "846f4f9507b04d81ad3c932c24544736",
       depositoDeDestino: "",
       depositoDeDestino2: "",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: 0,
@@ -1809,11 +1439,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "81e72170cc4b4cdeae8124d32e7d7961",
       depositoDeDestino: "",
       depositoDeDestino2: "",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: 0,
@@ -1834,11 +1459,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "846f4f9507b04d81ad3c932c24544736",
       depositoDeDestino: "",
       depositoDeDestino2: "",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
     {
       cotaMinimaDoDia: "",
@@ -1859,11 +1479,6 @@ export const GetProdutosPorCliente = () => {
       depositoDeOrigem: "81e72170cc4b4cdeae8124d32e7d7961",
       depositoDeDestino: "",
       depositoDeDestino2: "",
-
-      dataDeFechamento: randomDate(startDate, new Date()),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDeDesvioPercentual: randomFloat(0, 100),
-      executarTransferenciaEntreCentros: randomBool(),
     },
   ];
 
