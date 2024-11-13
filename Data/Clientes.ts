@@ -15,7 +15,7 @@ export const Clientes = [
     alteradoPor: null,
     excluidoPor: null,
     tipo: randomType(),
-    permitirTransferencias: randomBool(),
+    permitirTransferencia: randomBool(),
   },
   {
     uuid: "dc31af3b48b1440abf202b925c877d84",
@@ -30,7 +30,7 @@ export const Clientes = [
     alteradoPor: null,
     excluidoPor: null,
     tipo: randomType(),
-    permitirTransferencias: randomBool(),
+    permitirTransferencia: randomBool(),
   },
   {
     uuid: "c931d341b80b4b46a30b8ed4296495b2",
@@ -45,7 +45,7 @@ export const Clientes = [
     alteradoPor: null,
     excluidoPor: null,
     tipo: randomType(),
-    permitirTransferencias: randomBool(),
+    permitirTransferencia: randomBool(),
   },
   {
     uuid: "d5361ebce04a4e398d3be0b5ebb47d8e",
@@ -60,7 +60,7 @@ export const Clientes = [
     alteradoPor: null,
     excluidoPor: null,
     tipo: randomType(),
-    permitirTransferencias: randomBool(),
+    permitirTransferencia: randomBool(),
   },
   {
     uuid: "794608e1e0fd40ec8b4d33490939ea6f",
@@ -75,7 +75,7 @@ export const Clientes = [
     alteradoPor: null,
     excluidoPor: null,
     tipo: randomType(),
-    permitirTransferencias: randomBool(),
+    permitirTransferencia: randomBool(),
   },
   {
     uuid: "881491a693ed4059854e06d706a1636a",
@@ -90,7 +90,7 @@ export const Clientes = [
     alteradoPor: null,
     excluidoPor: null,
     tipo: randomType(),
-    permitirTransferencias: randomBool(),
+    permitirTransferencia: randomBool(),
   },
   {
     uuid: "777f7b3ce51d48ea99dd53991d5e6f05",
@@ -105,7 +105,7 @@ export const Clientes = [
     alteradoPor: null,
     excluidoPor: null,
     tipo: randomType(),
-    permitirTransferencias: randomBool(),
+    permitirTransferencia: randomBool(),
   },
   {
     uuid: "5b182e0c9d51439d91e5716b2700f775",
@@ -120,7 +120,7 @@ export const Clientes = [
     alteradoPor: null,
     excluidoPor: null,
     tipo: randomType(),
-    permitirTransferencias: randomBool(),
+    permitirTransferencia: randomBool(),
   },
   {
     uuid: "61fb0643bf084232a741f14cab93ae2e",
@@ -135,7 +135,7 @@ export const Clientes = [
     alteradoPor: null,
     excluidoPor: null,
     tipo: randomType(),
-    permitirTransferencias: randomBool(),
+    permitirTransferencia: randomBool(),
   },
   {
     uuid: "c3119d62a5414483b8414b8fba49fe61",
@@ -150,7 +150,7 @@ export const Clientes = [
     alteradoPor: null,
     excluidoPor: null,
     tipo: randomType(),
-    permitirTransferencias: randomBool(),
+    permitirTransferencia: randomBool(),
   },
   {
     uuid: "2d2115c5504542b6bf6bb4d5e11771bf",
@@ -165,7 +165,7 @@ export const Clientes = [
     alteradoPor: null,
     excluidoPor: null,
     tipo: randomType(),
-    permitirTransferencias: randomBool(),
+    permitirTransferencia: randomBool(),
   },
   {
     uuid: "51d5675d88b1455581e2149b72cdd8d6",
@@ -180,7 +180,7 @@ export const Clientes = [
     alteradoPor: null,
     excluidoPor: null,
     tipo: randomType(),
-    permitirTransferencias: randomBool(),
+    permitirTransferencia: randomBool(),
   },
   {
     uuid: "79971344f65547219e52763f85f9e90a",
@@ -196,7 +196,7 @@ export const Clientes = [
     alteradoPor: null,
     excluidoPor: null,
     tipo: randomType(),
-    permitirTransferencias: randomBool(),
+    permitirTransferencia: randomBool(),
   },
   {
     uuid: "af5d99f5c76b4cd1839f0d78647da25d",
@@ -211,7 +211,7 @@ export const Clientes = [
     alteradoPor: null,
     excluidoPor: null,
     tipo: randomType(),
-    permitirTransferencias: randomBool(),
+    permitirTransferencia: randomBool(),
   },
   {
     uuid: "8b2c7746465648bb93f10cbcfb792000",
@@ -226,7 +226,7 @@ export const Clientes = [
     alteradoPor: null,
     excluidoPor: null,
     tipo: randomType(),
-    permitirTransferencias: randomBool(),
+    permitirTransferencia: randomBool(),
   },
   {
     uuid: "d287624ee06a459d89999e51984aff94",
@@ -241,7 +241,7 @@ export const Clientes = [
     alteradoPor: null,
     excluidoPor: null,
     tipo: randomType(),
-    permitirTransferencias: randomBool(),
+    permitirTransferencia: randomBool(),
   },
   {
     uuid: "b2853ba08a1c4823a9ddb163ad2ca2b3",
@@ -256,6 +256,6 @@ export const Clientes = [
     alteradoPor: null,
     excluidoPor: null,
     tipo: randomType(),
-    permitirTransferencias: randomBool(),
+    permitirTransferencia: randomBool(),
   },
 ];

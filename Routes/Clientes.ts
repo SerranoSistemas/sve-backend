@@ -26,7 +26,7 @@ Router.get("/", (REQ: Request, RES: Response) => {
 });
 
 Router.get("/select", (REQ: Request, RES: Response) => {
-  const Response = GetResponse(GetList(DATA));
+  const Response = GetResponse(GetList(DATA, true));
   return RES.status(200).json(Response);
 });
 

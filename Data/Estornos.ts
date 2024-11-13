@@ -109,5 +109,26 @@ export const GenerateEstornos = () => {
     },
   ];
 
-  return Estornos;
+  return Estornos.map((ordem) => ({
+    codigoExportacao: ordem.uuid,
+    demonstrativo: ordem.demonstrativo,
+    contrato: ordem.contrato,
+    medidor: {
+      identificador: ordem.tag,
+    },
+    cliente: {
+      nome: ordem.cliente,
+    },
+    produto: {
+      descricao: ordem.produto,
+    },
+    tipo: Math.floor(Math.random() * 3) + 1,
+    periodicidade: ordem.periodicidade,
+    quantidadeConsumida: Math.floor(Math.random() * (ordem.quantidadeTransferida / 2)), // Exemplo de quantidade consumida gerada aleatoriamente
+    quantidadeTransferida: ordem.quantidadeTransferida,
+    diferencaParaConferencia: ordem.diferencaParaConferencia || 0,
+    dataDeMovimento: ordem.data,
+    statusSap: ordem.status,
+    statusErro: ordem.statusErro || "",
+  }));
 };

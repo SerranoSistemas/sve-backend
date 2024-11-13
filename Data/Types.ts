@@ -189,6 +189,9 @@ export type Detalhamento = {
   multaFundoDeEscala: number; //Se mostrarFundoDeEscala for TRUE, gerar numero aleatorio entre 10,000 e 100,000
   multaFundoDeEscalaMensal: number; //Se mostrarFundoDeEscala for TRUE, gerar numero aleatorio entre 1,000 e 20,000
   mostrarFundoDeEscala: boolean; //TRUE se dia for '10', '20' ou o ultimo dia do Mês
+
+  statusTagLiberacao: string // 'L' é Liberada, qualquer outra coisa não
+	dataStatusTagLiberacao: string
 };
 
 
@@ -203,10 +206,10 @@ export type Automacao = {
   liberarMedidorSemAvaliacao: boolean; //true ou false aleatório 50% de chance
   toleranciaDeContrato: number; //valor aleatório entre 0 e 100 com duas casas decimais
   toleranciaDesvioPercentual: number; //valor aleatório entre 0 e 100 com duas casas decimais
-  usarMedicaoParceiroOuBraskem: boolean; //true ou false aleatório 50% de chance
+  medicaoPrimariaOuSecundariaLiberacao: boolean; //true ou false aleatório 50% de chance
   limiteDeMedicaoRuido: number; //valor aleatório entre 0 e 10 com duas casas decimais
   comentarios: string; //50% de chance de vir vazio, se não vem escrito 'Comentário de Teste'
-  realizarLiberacao: boolean; //true ou false aleatório 50% de chance
+  executarLiberacaoAutomatica: boolean; //true ou false aleatório 50% de chance
   dataDeCalibracao: Date; //Data aleatoria formao dd/mm/yyyy depois de 01/01/2024
   dataDeFechamento: Date; //Data aleatoria formao dd/mm/yyyy depois de 01/01/2024
 };

@@ -88,6 +88,14 @@ export const DetalhamentoDeMedicao: Detalhamento[] = [
   // },
 ];
 
+const randomDate = (start: Date, end: Date): string => {
+  const date = new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
+  const day = String(date.getDate()).padStart(2, "0");
+  const month = String(date.getMonth() + 1).padStart(2, "0"); // Months are 0-based
+  const year = date.getFullYear();
+  return `${day}/${month}/${year}`;
+};
+
 function gerarNumeroAleatorio(min: number, max: number): number {
   return Math.random() * (max - min) + min;
 }
@@ -95,6 +103,8 @@ function gerarNumeroAleatorio(min: number, max: number): number {
 function generateRandomNumber(min: number, max: number): number {
   return Math.random() * (max - min + 1) + min;
 }
+
+const startDate = new Date("2024-01-01");
 
 export function gerarDetalhamentos(data: string): Detalhamento[] {
   const [mes, ano] = data.split("/");
@@ -135,6 +145,8 @@ export function gerarDetalhamentos(data: string): Detalhamento[] {
     multaFundoDeEscala: 0,
     multaFundoDeEscalaMensal: 0,
     mostrarFundoDeEscala: false,
+    statusTagLiberacao: "L",
+    dataStatusTagLiberacao: "01/01/1970",
   });
 
   var TemFundoEscala = Math.random() > 0.6;
@@ -177,6 +189,8 @@ export function gerarDetalhamentos(data: string): Detalhamento[] {
       multaFundoDeEscala: TemFundoEscala ? generateRandomNumber(1, 100) : 0,
       multaFundoDeEscalaMensal: dia === diasNoMes && TemFundoEscala ? generateRandomNumber(2, 20) : 0,
       mostrarFundoDeEscala: dia === 10 || dia === 20 || dia === diasNoMes,
+      statusTagLiberacao: Math.random() > 0.15 ? "L" : "P", // 'L' é Liberada, qualquer outra coisa não
+      dataStatusTagLiberacao: randomDate(startDate, new Date()),
     });
   }
 

@@ -10,7 +10,7 @@ const DatesInfo = {
   incluidoPor: null,
   alteradoPor: null,
   excluidoPor: null,
-  permitirTransferencias: randomBool(),
+  permitirTransferencia: randomBool(),
 };
 
 export const Produtos = [
@@ -24,7 +24,7 @@ export const Produtos = [
     incluidoPor: "BRASKEM\\ISABEC05",
     alteradoPor: null,
     excluidoPor: null,
-    permitirTransferencias: randomBool(),
+    permitirTransferencia: randomBool(),
   },
   {
     uuid: "826daaf317304a3e91b387e00b1078ea",
@@ -36,7 +36,7 @@ export const Produtos = [
     incluidoPor: "BRASKEM\\ISABEC05",
     alteradoPor: null,
     excluidoPor: null,
-    permitirTransferencias: randomBool(),
+    permitirTransferencia: randomBool(),
   },
   {
     uuid: "219376befc1844a98e06da050ef57077",
@@ -48,7 +48,7 @@ export const Produtos = [
     incluidoPor: "CARGA",
     alteradoPor: null,
     excluidoPor: null,
-    permitirTransferencias: randomBool(),
+    permitirTransferencia: randomBool(),
   },
   {
     uuid: "cd48cc56cd7642ec921eaa2af39f8507",
@@ -60,7 +60,7 @@ export const Produtos = [
     incluidoPor: "CARGA",
     alteradoPor: null,
     excluidoPor: null,
-    permitirTransferencias: randomBool(),
+    permitirTransferencia: randomBool(),
   },
   {
     uuid: "665164e5ac5a4f9a831388a7528cc1fd",
@@ -72,7 +72,7 @@ export const Produtos = [
     incluidoPor: "CARGA",
     alteradoPor: null,
     excluidoPor: null,
-    permitirTransferencias: randomBool(),
+    permitirTransferencia: randomBool(),
   },
   {
     uuid: "4cfae4bcddf6471f8860c336428a5ea2",
@@ -84,7 +84,7 @@ export const Produtos = [
     incluidoPor: "CARGA",
     alteradoPor: null,
     excluidoPor: null,
-    permitirTransferencias: randomBool(),
+    permitirTransferencia: randomBool(),
   },
   {
     uuid: "65ce918365a24534982962961449a50e",
@@ -96,7 +96,7 @@ export const Produtos = [
     incluidoPor: "CARGA",
     alteradoPor: null,
     excluidoPor: null,
-    permitirTransferencias: randomBool(),
+    permitirTransferencia: randomBool(),
   },
   {
     uuid: "6a79dd581e844d0c91e421e2f2a709ff",
@@ -108,7 +108,7 @@ export const Produtos = [
     incluidoPor: "BRASKEM\\ISABEC05",
     alteradoPor: null,
     excluidoPor: null,
-    permitirTransferencias: randomBool(),
+    permitirTransferencia: randomBool(),
   },
   {
     uuid: "1270cc56722047ecacc1681a3655f9f6",
@@ -120,7 +120,7 @@ export const Produtos = [
     incluidoPor: "CARGA",
     alteradoPor: null,
     excluidoPor: null,
-    permitirTransferencias: randomBool(),
+    permitirTransferencia: randomBool(),
   },
   {
     uuid: "f48517e2c417495399dd2fed76164d8a",
@@ -132,7 +132,7 @@ export const Produtos = [
     incluidoPor: "BRASKEM\\ISABEC05",
     alteradoPor: null,
     excluidoPor: null,
-    permitirTransferencias: randomBool(),
+    permitirTransferencia: randomBool(),
   },
   {
     uuid: "aa9fec1b4d1549b6b35540ceb9b95154",
@@ -144,7 +144,7 @@ export const Produtos = [
     incluidoPor: "BRASKEM\\WENDLS01",
     alteradoPor: null,
     excluidoPor: null,
-    permitirTransferencias: randomBool(),
+    permitirTransferencia: randomBool(),
   },
   {
     uuid: "f6d72559ea1e490d8402a66ac65912cb",
@@ -156,7 +156,7 @@ export const Produtos = [
     incluidoPor: "CARGA",
     alteradoPor: null,
     excluidoPor: null,
-    permitirTransferencias: randomBool(),
+    permitirTransferencia: randomBool(),
   },
   {
     uuid: "f04930477c654be495bd3332be204252",
@@ -168,7 +168,7 @@ export const Produtos = [
     incluidoPor: "CARGA",
     alteradoPor: null,
     excluidoPor: null,
-    permitirTransferencias: randomBool(),
+    permitirTransferencia: randomBool(),
   },
   {
     uuid: "b3feab5f6205446c89bdb8ee7548676a",
@@ -180,7 +180,7 @@ export const Produtos = [
     incluidoPor: "CARGA",
     alteradoPor: null,
     excluidoPor: null,
-    permitirTransferencias: randomBool(),
+    permitirTransferencia: randomBool(),
   },
   {
     uuid: "a03fceeefe2c48d087ce1643ede45069",
@@ -192,7 +192,7 @@ export const Produtos = [
     incluidoPor: "BRASKEM\\WENDLS01",
     alteradoPor: null,
     excluidoPor: null,
-    permitirTransferencias: randomBool(),
+    permitirTransferencia: randomBool(),
   },
   {
     uuid: "5cf30f2d7e9b410ea155c315f13eca3b",
@@ -204,7 +204,7 @@ export const Produtos = [
     incluidoPor: "BRASKEM\\WENDLS01",
     alteradoPor: null,
     excluidoPor: null,
-    permitirTransferencias: randomBool(),
+    permitirTransferencia: randomBool(),
   },
   {
     uuid: "61999e3cfb6d434da509e11b2db70819",
@@ -216,7 +216,7 @@ export const Produtos = [
     incluidoPor: "CARGA",
     alteradoPor: null,
     excluidoPor: null,
-    permitirTransferencias: randomBool(),
+    permitirTransferencia: randomBool(),
   },
   {
     uuid: "ac8973b71afc453fbd64f2a2d8dc0649",
@@ -228,7 +228,7 @@ export const Produtos = [
     incluidoPor: "CARGA",
     alteradoPor: null,
     excluidoPor: null,
-    permitirTransferencias: randomBool(),
+    permitirTransferencia: randomBool(),
   },
   {
     uuid: "c446888fb2464b1cbee02befa8d1d168",
@@ -240,7 +240,7 @@ export const Produtos = [
     incluidoPor: "CARGA",
     alteradoPor: null,
     excluidoPor: null,
-    permitirTransferencias: randomBool(),
+    permitirTransferencia: randomBool(),
   },
   {
     uuid: "0ad99b68ccab47319466dbac528650bc",
@@ -252,7 +252,7 @@ export const Produtos = [
     incluidoPor: "CARGA",
     alteradoPor: null,
     excluidoPor: null,
-    permitirTransferencias: randomBool(),
+    permitirTransferencia: randomBool(),
   },
   {
     uuid: "617bb18ad2664595b2e036b67b62d934",
@@ -264,7 +264,7 @@ export const Produtos = [
     incluidoPor: "CARGA",
     alteradoPor: null,
     excluidoPor: null,
-    permitirTransferencias: randomBool(),
+    permitirTransferencia: randomBool(),
   },
   {
     uuid: "829a94683ebe479690664ebe233aa99b",
@@ -276,7 +276,7 @@ export const Produtos = [
     incluidoPor: "CARGA",
     alteradoPor: null,
     excluidoPor: null,
-    permitirTransferencias: randomBool(),
+    permitirTransferencia: randomBool(),
   },
   {
     uuid: "35e416d0706c42418a15c77dadf625d8",
@@ -288,7 +288,7 @@ export const Produtos = [
     incluidoPor: "BRASKEM\\WENDLS01",
     alteradoPor: null,
     excluidoPor: null,
-    permitirTransferencias: randomBool(),
+    permitirTransferencia: randomBool(),
   },
   {
     uuid: "d6cd6a6b34b24b3f83e610940148d4f0",
@@ -300,7 +300,7 @@ export const Produtos = [
     incluidoPor: "CARGA",
     alteradoPor: null,
     excluidoPor: null,
-    permitirTransferencias: randomBool(),
+    permitirTransferencia: randomBool(),
   },
   {
     uuid: "300af31e71ae45259b508b1b0c3e809d",
@@ -312,7 +312,7 @@ export const Produtos = [
     incluidoPor: "CARGA",
     alteradoPor: null,
     excluidoPor: null,
-    permitirTransferencias: randomBool(),
+    permitirTransferencia: randomBool(),
   },
   {
     uuid: "3e803ccd5ba0496d8db711da22ae9154",
@@ -324,7 +324,7 @@ export const Produtos = [
     incluidoPor: "CARGA",
     alteradoPor: null,
     excluidoPor: null,
-    permitirTransferencias: randomBool(),
+    permitirTransferencia: randomBool(),
   },
   {
     uuid: "894856d72883415b9901aeab2b842abf",
@@ -336,7 +336,7 @@ export const Produtos = [
     incluidoPor: "CARGA",
     alteradoPor: null,
     excluidoPor: null,
-    permitirTransferencias: randomBool(),
+    permitirTransferencia: randomBool(),
   },
   {
     uuid: "ffa20eb53b2844bcbdbb56e3490174b2",
@@ -348,7 +348,7 @@ export const Produtos = [
     incluidoPor: "BRASKEM\\WENDLS01",
     alteradoPor: null,
     excluidoPor: null,
-    permitirTransferencias: randomBool(),
+    permitirTransferencia: randomBool(),
   },
   {
     uuid: "0c9c89bc7fd442359dd2af43159ed96c",
@@ -360,7 +360,7 @@ export const Produtos = [
     incluidoPor: "CARGA",
     alteradoPor: null,
     excluidoPor: null,
-    permitirTransferencias: randomBool(),
+    permitirTransferencia: randomBool(),
   },
   {
     uuid: "83d6c242533b4a0abbde1e06e8f50b4f",
@@ -372,7 +372,7 @@ export const Produtos = [
     incluidoPor: "CARGA",
     alteradoPor: null,
     excluidoPor: null,
-    permitirTransferencias: randomBool(),
+    permitirTransferencia: randomBool(),
   },
 ];
 

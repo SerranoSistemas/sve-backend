@@ -275,5 +275,25 @@ export const GenerateTransferencias = () => {
     },
   ];
 
-  return Transferencias;
+  return Transferencias.map((ordem) => ({
+    codigoExportacao: ordem.uuid,
+    demonstrativo: ordem.demonstrativo,
+    contrato: ordem.contrato,
+    medidor: {
+      identificador: ordem.tag,
+    },
+    cliente: {
+      nome: ordem.cliente,
+    },
+    produto: {
+      descricao: ordem.produto,
+    },
+    desconto: ordem.desconto,
+    quantidadeConsumida: Math.floor(Math.random() * (ordem.quantidadeTransferida / 2)), // Exemplo de quantidade consumida gerada aleatoriamente
+    quantidadeTransferida: ordem.quantidadeTransferida,
+    diferencaParaConferencia: ordem.diferencaParaConferencia || 0,
+    dataDeMovimento: ordem.data,
+    statusSap: ordem.status,
+    statusErro: ordem.statusErro || "",
+  }));
 };

@@ -29,7 +29,8 @@ Router.get("/", (REQ: Request, RES: Response) => {
 });
 
 Router.get("/select", (REQ: Request, RES: Response) => {
-  const Response = GetResponse(GetList(Produtos));
+  const Response = GetResponse(GetList(Produtos, true));
+
   return RES.status(200).json(Response);
 });
 

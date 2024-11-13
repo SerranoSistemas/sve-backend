@@ -131,15 +131,24 @@ export const FilterByKey = (data, key, value) => {
   return data.filter((item) => item[key] === value);
 };
 
-export const GetList = (Data) => {
+export const GetList = (Data, AddInformacaoAdicionao: boolean = false) => {
   return Data.map((Item) => {
     var Label = `${Item?.identificador ? Item?.identificador + " - " : ""}  ${Item?.descricao}`;
     Label = Label.trimStart().trim();
 
-    return {
-      descricao: Label,
-      uuid: Item.uuid,
-    };
+    if (AddInformacaoAdicionao) {
+      return {
+        descricao: Label,
+        uuid: Item.uuid,
+        informacaoAdicional: Math.random() < 0.6,
+      };
+    } else {
+      return {
+        descricao: Label,
+        uuid: Item.uuid,
+        informacaoAdicional: null,
+      };
+    }
   });
 };
 
@@ -244,7 +253,7 @@ export const GetResponse = (PaginatedNada: any) => {
 };
 
 export function getRandomSapStatus(): string {
-  const statuses = ["S", "P", "E", "A"]; // Sucesso, Pendente, Erro, Aguardando
+  const statuses = ["S", "P", "E", "A", "R"]; // Sucesso, Pendente, Erro, Aguardando
   const randomIndex = Math.floor(Math.random() * statuses.length); // Gera um índice aleatório
   return statuses[randomIndex]; // Retorna o status correspondente ao índice aleatório
 }

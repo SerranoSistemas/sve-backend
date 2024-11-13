@@ -15,7 +15,32 @@ type OrdemDeVenda = {
   parcial: number;
   status: string;
   statusErro?: string;
-}; 
+};
+
+export type NewOrdemDeVenda = {
+  codigoExportacao: string; //antigo uuid
+  demonstrativo: number; //Manter igual
+  contrato: string; //Manter igual
+  medidor: {
+    identificador: string; //antiga 'tag'
+  };
+  cliente: {
+    nome: string; //Antigo 'cliente'
+  };
+  produto: {
+    descricao: string; //Antigo 'produto'
+  };
+  depositoDeDestino: {
+    identificador: string; //Antigo 'deposito'
+  };
+  quantidadeConsumida: number; //Adicionar
+  quantidadeTransferida: number; //Manter igual
+  diferencaParaConferencia: number; //Valor de Totalização={diferencaParaConferencia} 3
+  desconto: number; //Manter igual
+  dataDeMovimento: string; //Antiga 'data'
+  statusSap: string; //Antigo 'status'
+  statusErro: string; //Manter igual
+};
 
 export const GenerateOrdensDeVenda = () => {
   const OrdensDeVenda: OrdemDeVenda[] = [
@@ -277,5 +302,28 @@ export const GenerateOrdensDeVenda = () => {
     },
   ];
 
-  return OrdensDeVenda;
+  return OrdensDeVenda.map((ordem) => ({
+    codigoExportacao: ordem.uuid,
+    demonstrativo: ordem.demonstrativo,
+    contrato: ordem.contrato,
+    medidor: {
+      identificador: ordem.tag,
+    },
+    cliente: {
+      nome: ordem.cliente,
+    },
+    produto: {
+      descricao: ordem.produto,
+    },
+    depositoDeDestino: {
+      identificador: ordem.deposito,
+    },
+    quantidadeConsumida: Math.floor(Math.random() * (ordem.quantidadeTransferida / 2)), // Exemplo de quantidade consumida gerada aleatoriamente
+    quantidadeTransferida: ordem.quantidadeTransferida,
+    diferencaParaConferencia: ordem.diferencaParaConferencia || 0,
+    desconto: ordem.desconto,
+    dataDeMovimento: ordem.data,
+    statusSap: ordem.status,
+    statusErro: ordem.statusErro || "",
+  }));
 };

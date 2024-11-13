@@ -21,9 +21,11 @@ export const generateFakeAutomacoes = (): any[] => {
   const startDate = new Date("2024-01-01");
 
   return Array.from({ length: resultsCount }, () => {
-    const cliente = Clientes[Math.floor(Math.random() * Clientes.length)].descricao;
-    const produto = Produtos[Math.floor(Math.random() * Produtos.length)].descricao;
+    const cliente = Clientes[Math.floor(Math.random() * Clientes.length)];
+    const produto = Produtos[Math.floor(Math.random() * Produtos.length)];
     const tagSVE = Medidores[Math.floor(Math.random() * Medidores.length)].tagDeLiberacao;
+    const tagSVE2 = Medidores[Math.floor(Math.random() * Medidores.length)].tagDeLiberacao;
+
     const totalizadorSecundario = randomBool()
       ? ""
       : Medidores[Math.floor(Math.random() * Medidores.length)].tagDeLiberacao;
@@ -31,22 +33,35 @@ export const generateFakeAutomacoes = (): any[] => {
 
     return {
       uuid: uuidv4(),
-      cliente,
-      produto,
-      tagSVE,
-      totalizadorPrimario: tagSVE,
-      totalizadorSecundario,
-      liberarMedidorSemAvaliacao: randomBool(),
-      toleranciaDeContrato: randomFloat(0, 100),
-      toleranciaDesvioPercentual: randomFloat(0, 100),
-      usarMedicaoParceiroOuBraskem: randomBool(),
-      limiteDeMedicaoRuido: randomFloat(0, 10),
-      comentarios,
-      realizarLiberacao: randomBool(),
-      dataDeCalibracao: randomDate(startDate, new Date()),
-      dataDeFechamento: randomDate(startDate, new Date()),
-      executarTransferenciaEntreCentros: randomBool(),
-      // MedicaoPrimariaOuSecundariaLiberacao: randomBool() ? "S" : "P",
+
+      cliente: {
+        uuid: cliente.uuid,
+        nome: cliente.descricao,
+        permitirTransferencia: cliente.permitirTransferencia,
+      },
+      produto: {
+        uuid: produto.uuid,
+        descricao: produto.descricao,
+        permitirTransferencia: produto.permitirTransferencia,
+      },
+
+      medidor: {
+        identificador: tagSVE, // TAG SVE
+        toleranciaDeContrato: randomFloat(0, 100),
+        toleranciaDesvioPercentual: randomFloat(0, 100),
+        dataDeCalibracao: randomDate(startDate, new Date()),
+        dataDeFechamento: randomDate(startDate, new Date()),
+        liberarMedicaoSemAvaliacao: randomBool(),
+        limiteDeMedicaoRuido: randomFloat(0, 10),
+        medicaoPrimariaOuSecundariaLiberacao: randomBool() ? "S" : "P",
+        comentarioDeLiberacao: randomBool() ? "" : "Comentário de Teste",
+        executarLiberacaoAutomatica: randomBool(),
+        executarTransferenciaEntreCentros: randomBool(),
+        medidorOficialPrimario: randomBool(),
+        medidorParceiro: {
+          identificador: tagSVE2,
+        },
+      },
     };
   });
 };
