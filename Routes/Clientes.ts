@@ -30,6 +30,14 @@ Router.get("/select", (REQ: Request, RES: Response) => {
   return RES.status(200).json(Response);
 });
 
+Router.get("/email", (REQ: Request, RES: Response) => {
+  const User = REQ.query?.usuario?.toString() || "";
+
+  return RES.status(200).json({
+    data: Math.random() > 0.2 ? `${User}@sve2.com` : null,
+  });
+});
+
 Router.get("/:id", (REQ: Request, RES: Response) => {
   const data = GetElementByID(DATA, REQ.params.id);
   const Response = GetElementByIDResponse(data);

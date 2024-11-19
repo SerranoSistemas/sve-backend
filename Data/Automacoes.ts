@@ -31,6 +31,8 @@ export const generateFakeAutomacoes = (): any[] => {
       : Medidores[Math.floor(Math.random() * Medidores.length)].tagDeLiberacao;
     const comentarios = randomBool() ? "" : "Comentário de Teste";
 
+    const AllowAutomations = cliente.permitirTransferencia && produto.permitirTransferencia;
+
     return {
       uuid: uuidv4(),
 
@@ -51,12 +53,12 @@ export const generateFakeAutomacoes = (): any[] => {
         toleranciaDesvioPercentual: randomFloat(0, 100),
         dataDeCalibracao: randomDate(startDate, new Date()),
         dataDeFechamento: randomDate(startDate, new Date()),
-        liberarMedicaoSemAvaliacao: randomBool(),
+        liberarMedicaoSemAvaliacao: AllowAutomations ? Math.random() < 0.8 : false,
         limiteDeMedicaoRuido: randomFloat(0, 10),
         medicaoPrimariaOuSecundariaLiberacao: randomBool() ? "S" : "P",
         comentarioDeLiberacao: randomBool() ? "" : "Comentário de Teste",
-        executarLiberacaoAutomatica: randomBool(),
-        executarTransferenciaEntreCentros: randomBool(),
+        executarLiberacaoAutomatica: AllowAutomations ? Math.random() < 0.8 : false,
+        executarTransferenciaEntreCentros: AllowAutomations ? Math.random() < 0.8 : false,
         medidorOficialPrimario: randomBool(),
         medidorParceiro: {
           identificador: tagSVE2,

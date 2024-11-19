@@ -1,4 +1,4 @@
-const randomBool = () => Math.random() < 0.5;
+const randomBool = () => Math.random() < 0.8;
 const randomType = () => (Math.random() < 0.5 ? 1 : 2);
 
 export const Clientes = [

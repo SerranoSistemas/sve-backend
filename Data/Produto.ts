@@ -1,7 +1,7 @@
 import moment from "moment";
 import { Copy } from "../Lib/Utils";
 
-const randomBool = () => Math.random() < 0.5;
+const randomBool = () => Math.random() < 0.75;
 
 const DatesInfo = {
   incluidoEm: moment(new Date()).unix(),
