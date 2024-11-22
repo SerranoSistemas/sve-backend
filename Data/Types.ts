@@ -183,8 +183,8 @@ export type Detalhamento = {
   indicadorDeAfericao: "A" | "M"; //70% de chance de vir 'A' e 40% de 'M'
   status: string; //Trazer string 'Good' por enquanto
   statusGood: boolean; //10% de Chance de vir TRUE, 90% de vir FALSE
-  oberservacaoFundoDeEscala: string; //20% de Chance de Vir 'Observação Fundo Escala Backend' e 80% de vir vazia ''
-  medidorOficialPrimario: boolean; //SE TRUE coloca oberservacaoFundoDeEscala no medicaoPrimariaDigitada se for FALSE coloca no medicaoSecundariaDigitada
+  observacaoFundoDeEscala: string; //20% de Chance de Vir 'Observação Fundo Escala Backend' e 80% de vir vazia ''
+  medidorOficialPrimario: boolean; //SE TRUE coloca observacaoFundoDeEscala no medicaoPrimariaDigitada se for FALSE coloca no medicaoSecundariaDigitada
   statusSap: "P" | "I" | "E"; //40% de Chance de Vir 'I', 40% de vir 'I' e 20% de vir 'E'
   multaFundoDeEscala: number; //Se mostrarFundoDeEscala for TRUE, gerar numero aleatorio entre 10,000 e 100,000
   multaFundoDeEscalaMensal: number; //Se mostrarFundoDeEscala for TRUE, gerar numero aleatorio entre 1,000 e 20,000

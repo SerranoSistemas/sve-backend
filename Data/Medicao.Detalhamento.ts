@@ -20,7 +20,7 @@ export const DetalhamentoDeMedicao: Detalhamento[] = [
   //   situacao: Math.random() < 0.5 ? "L" : "P",
   //   indicadorDeAfericao: Math.random() < 0.5 ? "A" : "M",
   //   status: Math.random() < 0.5 ? "Status" : "",
-  //   oberservacaoFundoDeEscala: "",
+  //   observacaoFundoDeEscala: "",
   //   medidorOficialPrimario: false,
   // },
   // {
@@ -41,8 +41,8 @@ export const DetalhamentoDeMedicao: Detalhamento[] = [
   //   situacao: Math.random() < 0.5 ? "L" : "P",
   //   indicadorDeAfericao: Math.random() < 0.5 ? "A" : "M",
   //   status: Math.random() < 0.5 ? "Status" : "", //Aparece junto com o totalizadorPrimarioDigitado
-  //   oberservacaoFundoDeEscala: Math.random() < 0.3 ? "Observação Fundo de Escala" : "",
-  //   medidorOficialPrimario: Math.random() < 0.5 ? true : false, //SE TRUE coloca oberservacaoFundoDeEscala no medicaoPrimariaDigitada se for FALSE coloca no medicaoSecundariaDigitada
+  //   observacaoFundoDeEscala: Math.random() < 0.3 ? "Observação Fundo de Escala" : "",
+  //   medidorOficialPrimario: Math.random() < 0.5 ? true : false, //SE TRUE coloca observacaoFundoDeEscala no medicaoPrimariaDigitada se for FALSE coloca no medicaoSecundariaDigitada
   // },
   // {
   //   uuid: uuid(),
@@ -62,8 +62,8 @@ export const DetalhamentoDeMedicao: Detalhamento[] = [
   //   situacao: Math.random() < 0.5 ? "L" : "P",
   //   indicadorDeAfericao: Math.random() < 0.5 ? "A" : "M",
   //   status: Math.random() < 0.5 ? "Status" : "", //Aparece junto com o totalizadorPrimarioDigitado
-  //   oberservacaoFundoDeEscala: Math.random() < 0.3 ? "Observação Fundo de Escala" : "",
-  //   medidorOficialPrimario: Math.random() < 0.5 ? true : false, //SE TRUE coloca oberservacaoFundoDeEscala no medicaoPrimariaDigitada se for FALSE coloca no medicaoSecundariaDigitada
+  //   observacaoFundoDeEscala: Math.random() < 0.3 ? "Observação Fundo de Escala" : "",
+  //   medidorOficialPrimario: Math.random() < 0.5 ? true : false, //SE TRUE coloca observacaoFundoDeEscala no medicaoPrimariaDigitada se for FALSE coloca no medicaoSecundariaDigitada
   // },
   // {
   //   uuid: uuid(),
@@ -83,8 +83,8 @@ export const DetalhamentoDeMedicao: Detalhamento[] = [
   //   situacao: Math.random() < 0.5 ? "L" : "P",
   //   indicadorDeAfericao: Math.random() < 0.5 ? "A" : "M",
   //   status: Math.random() < 0.5 ? "Status" : "", //Aparece junto com o totalizadorPrimarioDigitado
-  //   oberservacaoFundoDeEscala: Math.random() < 0.3 ? "Observação Fundo de Escala" : "",
-  //   medidorOficialPrimario: Math.random() < 0.5 ? true : false, //SE TRUE coloca oberservacaoFundoDeEscala no medicaoPrimariaDigitada se for FALSE coloca no medicaoSecundariaDigitada
+  //   observacaoFundoDeEscala: Math.random() < 0.3 ? "Observação Fundo de Escala" : "",
+  //   medidorOficialPrimario: Math.random() < 0.5 ? true : false, //SE TRUE coloca observacaoFundoDeEscala no medicaoPrimariaDigitada se for FALSE coloca no medicaoSecundariaDigitada
   // },
 ];
 
@@ -139,7 +139,7 @@ export function gerarDetalhamentos(data: string): Detalhamento[] {
     indicadorDeAfericao: "A",
     status: "Good",
     statusGood: true,
-    oberservacaoFundoDeEscala: "",
+    observacaoFundoDeEscala: "",
     medidorOficialPrimario: false,
     statusSap: "I",
     multaFundoDeEscala: 0,
@@ -183,7 +183,7 @@ export function gerarDetalhamentos(data: string): Detalhamento[] {
       indicadorDeAfericao: Math.random() < 0.7 ? "A" : "M",
       status: "Good",
       statusGood: Math.random() > 0.1,
-      oberservacaoFundoDeEscala: Math.random() < 0.2 ? "Observação Fundo Escala Backend" : "",
+      observacaoFundoDeEscala: Math.random() < 0.4 ? "Observação Fundo Escala Backend" : "",
       medidorOficialPrimario: ValuemedidorOficialPrimario,
       statusSap: Math.random() < 0.4 ? "I" : Math.random() < 0.5 ? "P" : "E",
       multaFundoDeEscala: TemFundoEscala ? generateRandomNumber(1, 100) : 0,
