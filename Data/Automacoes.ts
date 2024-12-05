@@ -60,9 +60,7 @@ export const generateFakeAutomacoes = (): any[] => {
         executarLiberacaoAutomatica: AllowAutomations ? Math.random() < 0.8 : false,
         executarTransferenciaEntreCentros: AllowAutomations ? Math.random() < 0.8 : false,
         medidorOficialPrimario: randomBool(),
-        medidorParceiro: {
-          identificador: tagSVE2,
-        },
+        medidorParceiro: tagSVE2,
       },
     };
   });

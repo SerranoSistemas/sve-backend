@@ -23,7 +23,9 @@ import { Router as ProdutoPorClienteRoutes } from "./Routes/ProdutoPorCliente";
 import { Router as EstornoRoutes } from "./Routes/Estorno";
 import { Router as TransferenciasRoutes } from "./Routes/Transferencias";
 import { Router as OrdensDeVendaRoutes } from "./Routes/OrdensDeVenda";
+import { Router as RelatoriosRoutes } from "./Routes/Relatorios";
 import { Middleware } from "./Lib/Utils";
+import { GerarRelatorioComparativo } from "./Data/RelatorioComparativo";
 
 const PORT = process.env.PORT || 3000;
 
@@ -66,6 +68,9 @@ APP.use("/produtoPorCliente", ProdutoPorClienteRoutes);
 APP.use("/estorno", EstornoRoutes);
 APP.use("/transferencias", TransferenciasRoutes);
 APP.use("/ordensDeVenda", OrdensDeVendaRoutes);
+
+//relatorios
+APP.use("/relatorio", RelatoriosRoutes);
 
 APP.use((req: Request, res: Response, next: Function) => {
   res.status(404).send("Rota não encontrada");

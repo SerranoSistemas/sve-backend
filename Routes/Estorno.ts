@@ -8,6 +8,8 @@ const Router = express.Router();
 Router.get("/", (REQ: Request, RES: Response) => {
   const DATA = GenerateEstornos();
 
+
+
   const Response = GetResponse(DATA);
   return RES.status(200).json(Response);
 });
