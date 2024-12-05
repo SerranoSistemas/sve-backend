@@ -50,7 +50,7 @@ export const generateFakeAutomacoes = (): any[] => {
       medidor: {
         identificador: tagSVE, // TAG SVE
         toleranciaDeContrato: randomFloat(0, 100),
-        toleranciaDesvioPercentual: randomFloat(0, 100),
+        toleranciaDeDesvioPercentual: randomFloat(0, 100),
         dataDeCalibracao: randomDate(startDate, new Date()),
         dataDeFechamento: randomDate(startDate, new Date()),
         liberarMedicaoSemAvaliacao: AllowAutomations ? Math.random() < 0.8 : false,

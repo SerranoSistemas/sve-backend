@@ -205,7 +205,7 @@ export type Automacao = {
   totalizadorSecundario: string; //50% de change de vir vazio, senão seleciona um Item aleatório da Lista da lista de Medidores (array chamado 'Medidores', propriedade 'tagDeLiberacao')
   liberarMedidorSemAvaliacao: boolean; //true ou false aleatório 50% de chance
   toleranciaDeContrato: number; //valor aleatório entre 0 e 100 com duas casas decimais
-  toleranciaDesvioPercentual: number; //valor aleatório entre 0 e 100 com duas casas decimais
+  toleranciaDeDesvioPercentual: number; //valor aleatório entre 0 e 100 com duas casas decimais
   medicaoPrimariaOuSecundariaLiberacao: boolean; //true ou false aleatório 50% de chance
   limiteDeMedicaoRuido: number; //valor aleatório entre 0 e 10 com duas casas decimais
   comentarios: string; //50% de chance de vir vazio, se não vem escrito 'Comentário de Teste'
