@@ -66,8 +66,8 @@ APP.use("/permissao", PermissaoRoutes);
 //SAP
 APP.use("/produtoPorCliente", ProdutoPorClienteRoutes);
 APP.use("/estorno", EstornoRoutes);
-APP.use("/transferencias", TransferenciasRoutes);
-APP.use("/ordensDeVenda", OrdensDeVendaRoutes);
+APP.use("/transferencia", TransferenciasRoutes);
+APP.use("/ordemDeVenda", OrdensDeVendaRoutes);
 
 //relatorios
 APP.use("/relatorio", RelatoriosRoutes);
