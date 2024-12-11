@@ -293,7 +293,8 @@ export const GenerateTransferencias = () => {
     quantidadeTransferida: ordem.quantidadeTransferida,
     diferencaParaConferencia: ordem.diferencaParaConferencia || 0,
     dataDeMovimento: ordem.data,
-    statusSap: ordem.status,
+    statusSap: ordem.status === "Enviado com Sucesso!" ? "S" : "P",
+    mensagemSap: ordem.status,
     statusErro: ordem.statusErro || "",
   }));
 };

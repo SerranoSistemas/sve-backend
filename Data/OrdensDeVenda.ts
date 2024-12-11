@@ -323,7 +323,8 @@ export const GenerateOrdensDeVenda = () => {
     diferencaParaConferencia: ordem.diferencaParaConferencia || 0,
     desconto: ordem.desconto,
     dataDeMovimento: ordem.data,
-    statusSap: ordem.status,
+    statusSap: ordem.status === "Enviado com Sucesso!" ? "S" : "P",
+    mensagemSap: ordem.status,
     statusErro: ordem.statusErro || "",
   }));
 };
