@@ -45,11 +45,9 @@ export const GerarRelatorioComparativo = (
   const Dados = ArrayDeDatas.map((Dia) => {
     return {
       data: Dia,
-      dados: [
-        Agrupadores.map(() => {
-          return [2999999.999, 0, 999.999, 0, 100, 999.999, 0, 100];
-        }),
-      ],
+      dados: Agrupadores.map((_, index) => {
+        return [2999999.999, index, 999.999, 0, (index + 1) * 100, 999.999, 0, (index + 1) * 100];
+      }),
     };
   });
 
