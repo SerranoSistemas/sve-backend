@@ -131,7 +131,7 @@ export const FilterByKey = (data, key, value) => {
   return data.filter((item) => item[key] === value);
 };
 
-export const GetList = (Data, AddInformacaoAdicionao: boolean = false) => {
+export const GetList = (Data, AddInformacaoAdicionao: boolean = false, addTipo = false) => {
   return Data.map((Item) => {
     var Label = `${Item?.identificador ? Item?.identificador + " - " : ""}  ${Item?.descricao}`;
     Label = Label.trimStart().trim();
@@ -140,13 +140,14 @@ export const GetList = (Data, AddInformacaoAdicionao: boolean = false) => {
       return {
         descricao: Label,
         uuid: Item.uuid,
-        informacaoAdicional: Math.random() < 0.6,
+        permitirTransferencia: Math.random() < 0.6,
+        tipo: Math.random() < 0.5 ? 1 : 2,
       };
     } else {
       return {
         descricao: Label,
         uuid: Item.uuid,
-        informacaoAdicional: null,
+        permitirTransferencia: null,
       };
     }
   });
