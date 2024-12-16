@@ -60,7 +60,7 @@ APP.use("/automacoes", AutomacoesRoutes);
 APP.use("/sistema", SistemaRoutes);
 APP.use("/grupoderede", GruposDeRedeRoutes);
 APP.use("/configuracao", ConfiguracaoRoutes);
-APP.use("/evidencias", EvidenciasRoutes);
+APP.use("/evidencia", EvidenciasRoutes);
 APP.use("/permissao", PermissaoRoutes);
 
 //SAP
