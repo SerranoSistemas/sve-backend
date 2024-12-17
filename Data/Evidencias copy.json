@@ -1,4 +1,4 @@
-export const Evidencias = [
+[
   {
     identificador: "MEDICOESIP21",
     chavePrimaria: "505913",
@@ -24918,5 +24918,5 @@ export const Evidencias = [
     tipo: "Inclusão",
     dataHora: "8/26/24 2:00",
     usuario: "Carga",
-  },
+  }
 ];
