@@ -8,6 +8,7 @@ import { Router as Router_Medicoes } from "./Routes/Medicoes";
 import { Router as Router_UnidadesDeMedida } from "./Routes/UnidadesDeMedida";
 import { Router as Router_Produto } from "./Routes/Produto";
 import { Router as SistemaRoutes } from "./Routes/Sistema";
+import { Router as ArquivoRoutes } from "./Routes/Arquivo";
 import { Router as GruposDeRedeRoutes } from "./Routes/GruposDeRede";
 import { Router as ConfiguracaoRoutes } from "./Routes/Configuracao";
 import { Router as DepositosRoutes } from "./Routes/DepositosSAP";
@@ -58,6 +59,7 @@ APP.use("/automacoes", AutomacoesRoutes);
 
 //Geral
 APP.use("/sistema", SistemaRoutes);
+APP.use("/arquivo", ArquivoRoutes);
 APP.use("/grupoderede", GruposDeRedeRoutes);
 APP.use("/configuracao", ConfiguracaoRoutes);
 APP.use("/evidencia", EvidenciasRoutes);

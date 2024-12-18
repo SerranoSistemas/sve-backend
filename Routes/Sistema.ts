@@ -89,4 +89,8 @@ Router.get("/inicio", (REQ: Request, RES: Response) => {
   return RES.status(200).json(Response);
 });
 
+Router.get("/pdf", (REQ: Request, RES: Response) => {
+  return RES.status(200).send("TestePDF.pdf");
+});
+
 export { Router };
