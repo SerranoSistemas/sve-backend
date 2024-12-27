@@ -5,6 +5,8 @@ import { GerarRelatorioEntregas } from "../Data/RelatorioEntregas";
 
 const Router = express.Router();
 
+
+
 Router.get("/comparativo", (REQ: Request, RES: Response) => {
   //Parametros
   const DataInicial = REQ.query?.dataInicial;
@@ -24,6 +26,11 @@ Router.get("/comparativo", (REQ: Request, RES: Response) => {
   return RES.status(200).json(Response);
 });
 
+Router.get("/comparativo/pdf", (REQ: Request, RES: Response) => {
+  return RES.status(200).send("comparativo.pdf");
+});
+
+
 Router.get("/entregas", (REQ: Request, RES: Response) => {
   //Parametros
   const DataInicial = REQ.query?.dataInicial;
@@ -40,6 +47,10 @@ Router.get("/entregas", (REQ: Request, RES: Response) => {
 
   const Response = GerarRelatorioEntregas(DataInicial, DataFinal, Cliente, Produtos, DiaADia, Subtotal, Total);
   return RES.status(200).json(Response);
+});
+
+Router.get("/entregas/pdf", (REQ: Request, RES: Response) => {
+  return RES.status(200).send("comparativo.pdf");
 });
 
 export { Router };

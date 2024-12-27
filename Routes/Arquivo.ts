@@ -1,5 +1,4 @@
 import express, { Request, Response } from "express";
-import { Base64 } from "../Data/Logotipo";
 import { PDFBase64 } from "../Data/PDF";
 
 const Router = express.Router();
