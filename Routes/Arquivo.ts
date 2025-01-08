@@ -7,4 +7,8 @@ Router.get("/ler-pdf", (REQ: Request, RES: Response) => {
   return RES.status(200).send(PDFBase64);
 });
 
+Router.post("/enviar", (REQ: Request, RES: Response) => {
+  return RES.status(200).send(PDFBase64);
+});
+
 export { Router };
