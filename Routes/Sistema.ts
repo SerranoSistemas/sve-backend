@@ -24,6 +24,7 @@ Router.get("/inicio", (REQ: Request, RES: Response) => {
 
   const Data = {
     nomeDoUsuario: "Usuário",
+    email: "usuario@sve2.com",
     nomeDoSistema: "Q 2 RS",
     idiomaPrimario: {
       pt: "Primario",
