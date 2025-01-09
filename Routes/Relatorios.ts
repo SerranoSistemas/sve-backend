@@ -50,7 +50,7 @@ Router.get("/entregas", (REQ: Request, RES: Response) => {
 });
 
 Router.get("/entregas/pdf", (REQ: Request, RES: Response) => {
-  return RES.status(200).send("comparativo.pdf");
+  return RES.status(200).send("entregas.pdf");
 });
 
 export { Router };
