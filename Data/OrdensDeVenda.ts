@@ -15,6 +15,7 @@ type OrdemDeVenda = {
   parcial: number;
   status: string;
   statusErro?: string;
+  observacoes: string;
 };
 
 export type NewOrdemDeVenda = {
@@ -59,6 +60,7 @@ export const GenerateOrdensDeVenda = () => {
       parcial: 0,
       status: Math.random() > 0.7 ? "Enviado com Sucesso!" : "",
       statusErro: Math.random() > 0.85 ? "Mensagem de Erro" : "",
+      observacoes: Math.random() > 0.55 ? "Observações do backend" : "",
     },
     {
       uuid: uuid(),
@@ -75,6 +77,7 @@ export const GenerateOrdensDeVenda = () => {
       parcial: 0,
       status: Math.random() > 0.7 ? "Enviado com Sucesso!" : "",
       statusErro: Math.random() > 0.85 ? "Mensagem de Erro" : "",
+      observacoes: Math.random() > 0.55 ? "Observações do backend" : "",
     },
     {
       uuid: uuid(),
@@ -91,6 +94,7 @@ export const GenerateOrdensDeVenda = () => {
       parcial: 0,
       status: Math.random() > 0.7 ? "Enviado com Sucesso!" : "",
       statusErro: Math.random() > 0.85 ? "Mensagem de Erro" : "",
+      observacoes: Math.random() > 0.55 ? "Observações do backend" : "",
     },
     {
       uuid: uuid(),
@@ -107,6 +111,7 @@ export const GenerateOrdensDeVenda = () => {
       parcial: 0,
       status: Math.random() > 0.7 ? "Enviado com Sucesso!" : "",
       statusErro: Math.random() > 0.85 ? "Mensagem de Erro" : "",
+      observacoes: Math.random() > 0.55 ? "Observações do backend" : "",
     },
     {
       uuid: uuid(),
@@ -123,6 +128,7 @@ export const GenerateOrdensDeVenda = () => {
       parcial: 0,
       status: Math.random() > 0.7 ? "Enviado com Sucesso!" : "",
       statusErro: Math.random() > 0.85 ? "Mensagem de Erro" : "",
+      observacoes: Math.random() > 0.55 ? "Observações do backend" : "",
     },
     {
       uuid: uuid(),
@@ -139,6 +145,7 @@ export const GenerateOrdensDeVenda = () => {
       parcial: 0,
       status: Math.random() > 0.7 ? "Enviado com Sucesso!" : "",
       statusErro: Math.random() > 0.85 ? "Mensagem de Erro" : "",
+      observacoes: Math.random() > 0.55 ? "Observações do backend" : "",
     },
     {
       uuid: uuid(),
@@ -155,6 +162,7 @@ export const GenerateOrdensDeVenda = () => {
       parcial: 0,
       status: Math.random() > 0.7 ? "Enviado com Sucesso!" : "",
       statusErro: Math.random() > 0.85 ? "Mensagem de Erro" : "",
+      observacoes: Math.random() > 0.55 ? "Observações do backend" : "",
     },
     {
       uuid: uuid(),
@@ -171,6 +179,7 @@ export const GenerateOrdensDeVenda = () => {
       parcial: 0,
       status: Math.random() > 0.7 ? "Enviado com Sucesso!" : "",
       statusErro: Math.random() > 0.85 ? "Mensagem de Erro" : "",
+      observacoes: Math.random() > 0.55 ? "Observações do backend" : "",
     },
     {
       uuid: uuid(),
@@ -187,6 +196,7 @@ export const GenerateOrdensDeVenda = () => {
       parcial: 0,
       status: Math.random() > 0.7 ? "Enviado com Sucesso!" : "",
       statusErro: Math.random() > 0.85 ? "Mensagem de Erro" : "",
+      observacoes: Math.random() > 0.55 ? "Observações do backend" : "",
     },
     {
       uuid: uuid(),
@@ -203,6 +213,7 @@ export const GenerateOrdensDeVenda = () => {
       parcial: 0,
       status: Math.random() > 0.7 ? "Enviado com Sucesso!" : "",
       statusErro: Math.random() > 0.85 ? "Mensagem de Erro" : "",
+      observacoes: Math.random() > 0.55 ? "Observações do backend" : "",
     },
     {
       uuid: uuid(),
@@ -219,6 +230,7 @@ export const GenerateOrdensDeVenda = () => {
       parcial: 0,
       status: Math.random() > 0.7 ? "Enviado com Sucesso!" : "",
       statusErro: Math.random() > 0.85 ? "Mensagem de Erro" : "",
+      observacoes: Math.random() > 0.55 ? "Observações do backend" : "",
     },
     {
       uuid: uuid(),
@@ -235,6 +247,7 @@ export const GenerateOrdensDeVenda = () => {
       parcial: 0,
       status: Math.random() > 0.7 ? "Enviado com Sucesso!" : "",
       statusErro: Math.random() > 0.85 ? "Mensagem de Erro" : "",
+      observacoes: Math.random() > 0.55 ? "Observações do backend" : "",
     },
     {
       uuid: uuid(),
@@ -251,6 +264,7 @@ export const GenerateOrdensDeVenda = () => {
       parcial: 0,
       status: Math.random() > 0.7 ? "Enviado com Sucesso!" : "",
       statusErro: Math.random() > 0.85 ? "Mensagem de Erro" : "",
+      observacoes: Math.random() > 0.55 ? "Observações do backend" : "",
     },
     {
       uuid: uuid(),
@@ -267,6 +281,7 @@ export const GenerateOrdensDeVenda = () => {
       parcial: 0,
       status: Math.random() > 0.7 ? "Enviado com Sucesso!" : "",
       statusErro: Math.random() > 0.85 ? "Mensagem de Erro" : "",
+      observacoes: Math.random() > 0.55 ? "Observações do backend" : "",
     },
     {
       uuid: uuid(),
@@ -283,6 +298,7 @@ export const GenerateOrdensDeVenda = () => {
       parcial: 0,
       status: Math.random() > 0.7 ? "Enviado com Sucesso!" : "",
       statusErro: Math.random() > 0.85 ? "Mensagem de Erro" : "",
+      observacoes: Math.random() > 0.55 ? "Observações do backend" : "",
     },
     {
       uuid: uuid(),
@@ -299,6 +315,7 @@ export const GenerateOrdensDeVenda = () => {
       parcial: 0,
       status: Math.random() > 0.7 ? "Enviado com Sucesso!" : "",
       statusErro: Math.random() > 0.85 ? "Mensagem de Erro" : "",
+      observacoes: Math.random() > 0.55 ? "Observações do backend" : "",
     },
   ];
 
@@ -326,5 +343,6 @@ export const GenerateOrdensDeVenda = () => {
     statusSap: ordem.status === "Enviado com Sucesso!" ? "S" : "A",
     mensagemSap: ordem.status,
     statusErro: ordem.statusErro || "",
+    observacoes: ordem.observacoes,
   }));
 };

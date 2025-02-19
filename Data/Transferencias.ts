@@ -15,6 +15,7 @@ type Transferencia = {
   parcial: number;
   status: string;
   statusErro?: string;
+  observacoes: string;
 };
 
 export const GenerateTransferencias = () => {
@@ -34,6 +35,7 @@ export const GenerateTransferencias = () => {
       parcial: 0,
       status: Math.random() > 0.7 ? "Enviado com Sucesso!" : "",
       statusErro: Math.random() > 0.85 ? "Mensagem de Erro" : "",
+      observacoes: Math.random() > 0.55 ? "Observações" : "",
     },
     {
       uuid: uuid(),
@@ -50,6 +52,8 @@ export const GenerateTransferencias = () => {
       parcial: 0,
       status: Math.random() > 0.7 ? "Enviado com Sucesso!" : "",
       statusErro: Math.random() > 0.85 ? "Mensagem de Erro" : "",
+
+      observacoes: Math.random() > 0.55 ? "Observações" : "",
     },
     {
       uuid: uuid(),
@@ -66,6 +70,8 @@ export const GenerateTransferencias = () => {
       parcial: 0,
       status: Math.random() > 0.7 ? "Enviado com Sucesso!" : "",
       statusErro: Math.random() > 0.85 ? "Mensagem de Erro" : "",
+
+      observacoes: Math.random() > 0.55 ? "Observações" : "",
     },
     {
       uuid: uuid(),
@@ -82,6 +88,8 @@ export const GenerateTransferencias = () => {
       parcial: 0,
       status: Math.random() > 0.7 ? "Enviado com Sucesso!" : "",
       statusErro: Math.random() > 0.85 ? "Mensagem de Erro" : "",
+
+      observacoes: Math.random() > 0.55 ? "Observações" : "",
     },
     {
       uuid: uuid(),
@@ -98,6 +106,8 @@ export const GenerateTransferencias = () => {
       parcial: 0,
       status: Math.random() > 0.7 ? "Enviado com Sucesso!" : "",
       statusErro: Math.random() > 0.85 ? "Mensagem de Erro" : "",
+
+      observacoes: Math.random() > 0.55 ? "Observações" : "",
     },
     {
       uuid: uuid(),
@@ -114,6 +124,8 @@ export const GenerateTransferencias = () => {
       parcial: 0,
       status: Math.random() > 0.7 ? "Enviado com Sucesso!" : "",
       statusErro: Math.random() > 0.85 ? "Mensagem de Erro" : "",
+
+      observacoes: Math.random() > 0.55 ? "Observações" : "",
     },
     {
       uuid: uuid(),
@@ -130,6 +142,8 @@ export const GenerateTransferencias = () => {
       parcial: 0,
       status: Math.random() > 0.7 ? "Enviado com Sucesso!" : "",
       statusErro: Math.random() > 0.85 ? "Mensagem de Erro" : "",
+
+      observacoes: Math.random() > 0.55 ? "Observações" : "",
     },
     {
       uuid: uuid(),
@@ -146,6 +160,8 @@ export const GenerateTransferencias = () => {
       parcial: 0,
       status: Math.random() > 0.7 ? "Enviado com Sucesso!" : "",
       statusErro: Math.random() > 0.85 ? "Mensagem de Erro" : "",
+
+      observacoes: Math.random() > 0.55 ? "Observações" : "",
     },
     {
       uuid: uuid(),
@@ -162,6 +178,8 @@ export const GenerateTransferencias = () => {
       parcial: 0,
       status: Math.random() > 0.7 ? "Enviado com Sucesso!" : "",
       statusErro: Math.random() > 0.85 ? "Mensagem de Erro" : "",
+
+      observacoes: Math.random() > 0.55 ? "Observações" : "",
     },
     {
       uuid: uuid(),
@@ -178,6 +196,8 @@ export const GenerateTransferencias = () => {
       parcial: 0,
       status: Math.random() > 0.7 ? "Enviado com Sucesso!" : "",
       statusErro: Math.random() > 0.85 ? "Mensagem de Erro" : "",
+
+      observacoes: Math.random() > 0.55 ? "Observações" : "",
     },
     {
       uuid: uuid(),
@@ -194,6 +214,8 @@ export const GenerateTransferencias = () => {
       parcial: 0,
       status: Math.random() > 0.7 ? "Enviado com Sucesso!" : "",
       statusErro: Math.random() > 0.85 ? "Mensagem de Erro" : "",
+
+      observacoes: Math.random() > 0.55 ? "Observações" : "",
     },
     {
       uuid: uuid(),
@@ -210,6 +232,8 @@ export const GenerateTransferencias = () => {
       parcial: 0,
       status: Math.random() > 0.7 ? "Enviado com Sucesso!" : "",
       statusErro: Math.random() > 0.85 ? "Mensagem de Erro" : "",
+
+      observacoes: Math.random() > 0.55 ? "Observações" : "",
     },
     {
       uuid: uuid(),
@@ -226,6 +250,8 @@ export const GenerateTransferencias = () => {
       parcial: 0,
       status: Math.random() > 0.7 ? "Enviado com Sucesso!" : "",
       statusErro: Math.random() > 0.85 ? "Mensagem de Erro" : "",
+
+      observacoes: Math.random() > 0.55 ? "Observações" : "",
     },
     {
       uuid: uuid(),
@@ -242,6 +268,8 @@ export const GenerateTransferencias = () => {
       parcial: 0,
       status: Math.random() > 0.7 ? "Enviado com Sucesso!" : "",
       statusErro: Math.random() > 0.85 ? "Mensagem de Erro" : "",
+
+      observacoes: Math.random() > 0.55 ? "Observações" : "",
     },
     {
       uuid: uuid(),
@@ -257,6 +285,7 @@ export const GenerateTransferencias = () => {
       data: "19/08/2024",
       parcial: 0,
       status: Math.random() > 0.7 ? "Enviado com Sucesso!" : "",
+      observacoes: Math.random() > 0.55 ? "Observações" : "",
     },
     {
       uuid: uuid(),
@@ -272,6 +301,7 @@ export const GenerateTransferencias = () => {
       data: "19/08/2024",
       parcial: 0,
       status: Math.random() > 0.7 ? "Enviado com Sucesso!" : "",
+      observacoes: Math.random() > 0.55 ? "Observações" : "",
     },
   ];
 
@@ -296,5 +326,6 @@ export const GenerateTransferencias = () => {
     statusSap: ordem.status === "Enviado com Sucesso!" ? "S" : "A",
     mensagemSap: ordem.status,
     statusErro: ordem.statusErro || "",
+    observacoes: ordem.observacoes,
   }));
 };

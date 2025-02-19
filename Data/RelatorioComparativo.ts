@@ -26,7 +26,7 @@ export const GerarRelatorioComparativo = (
   const DiasDiferenca = differenceInDays(DataFinal, DataInicial);
 
   const Produtos = ProdutosDb.filter((item) => ProdutosSelecionados.includes(item.uuid));
-  const Agrupadores = Produtos.map((item) => item.descricao);
+  const Agrupadores = Produtos.map((item) => `${item.descricao} - Teste.pv`);
 
   var ArrayDeDatas = GerarArrayDeDatas(DataInicial, DiasDiferenca);
 
