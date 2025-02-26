@@ -24,7 +24,7 @@ export const generateFakeAutomacoes = (): any[] => {
     const cliente = Clientes[Math.floor(Math.random() * Clientes.length)];
     const produto = Produtos[Math.floor(Math.random() * Produtos.length)];
     const tagSVE = Medidores[Math.floor(Math.random() * Medidores.length)].tagDeLiberacao;
-    const tagSVE2 = Medidores[Math.floor(Math.random() * Medidores.length)].tagDeLiberacao;
+    const tagSVE2 = Math.random() < 0.6 ? Medidores[Math.floor(Math.random() * Medidores.length)].tagDeLiberacao : "";
 
     const totalizadorSecundario = randomBool()
       ? ""
@@ -49,8 +49,8 @@ export const generateFakeAutomacoes = (): any[] => {
 
       medidor: {
         identificador: tagSVE, // TAG SVE
-        toleranciaDeContrato: randomFloat(0, 100),
-        toleranciaDeDesvioPercentual: randomFloat(0, 100),
+        toleranciaDeContrato: Math.random() < 0.3 ? null : randomFloat(0, 100),
+        toleranciaDeDesvioPercentual: Math.random() < 0.3 ? null : randomFloat(0, 100),
         dataDeCalibracao: randomDate(startDate, new Date()),
         dataDeFechamento: randomDate(startDate, new Date()),
         liberarMedicaoSemAvaliacao: AllowAutomations ? Math.random() < 0.8 : false,
