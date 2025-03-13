@@ -1,6 +1,8 @@
 import express, { Request, Response } from "express";
 import { ResponseType } from "../Data/Types";
 import { generateFakeAutomacoes } from "../Data/Automacoes";
+import { GetList, GetResponse } from "../Lib/Utils";
+import { Clientes } from "../Data/Clientes";
 
 const Router = express.Router();
 
@@ -25,6 +27,11 @@ Router.post("/", (REQ: Request, RES: Response) => {
     page: null,
   };
 
+  return RES.status(200).json(Response);
+});
+
+Router.get("/clientePorProduto", (REQ: Request, RES: Response) => {
+  const Response = GetResponse(GetList(Clientes, true));
   return RES.status(200).json(Response);
 });
 
