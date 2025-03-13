@@ -147,6 +147,7 @@ export function gerarDetalhamentos(data: string): Detalhamento[] {
     mostrarFundoDeEscala: false,
     statusTagLiberacao: "L",
     dataStatusTagLiberacao: "01/01/1970",
+    dataRealMedicao: "01/01/1970",
   });
 
   var TemFundoEscala = Math.random() > 0.6;
@@ -159,6 +160,8 @@ export function gerarDetalhamentos(data: string): Detalhamento[] {
 
     medicaoPrimariaDigitada += incrementoPrimario;
     medicaoSecundariaDigitada += incrementoSecundario;
+
+    const date = randomDate(startDate, new Date())
 
     detalhamentos.push({
       uuid: uuid(),
@@ -179,18 +182,19 @@ export function gerarDetalhamentos(data: string): Detalhamento[] {
       acrescimo: 0,
       desconto: 0,
       medicaoLiberada: medicaoSecundariaDigitada,
-      situacao: Math.random() < 0.6 ? "L" : "P",
+      situacao: "P",
       indicadorDeAfericao: Math.random() < 0.7 ? "A" : "M",
       status: "Good",
       statusGood: Math.random() > 0.1,
       observacaoFundoDeEscala: Math.random() < 0.4 ? "Observação Fundo Escala Backend" : "",
       medidorOficialPrimario: ValuemedidorOficialPrimario,
-      statusSap: Math.random() < 0.4 ? "I" : Math.random() < 0.5 ? "P" : "E",
+      statusSap: "",
       multaFundoDeEscala: TemFundoEscala ? generateRandomNumber(1, 100) : 0,
       multaFundoDeEscalaMensal: dia === diasNoMes && TemFundoEscala ? generateRandomNumber(2, 20) : 0,
       mostrarFundoDeEscala: dia === 10 || dia === 20 || dia === diasNoMes,
       statusTagLiberacao: Math.random() > 0.15 ? "L" : "P", // 'L' é Liberada, qualquer outra coisa não
-      dataStatusTagLiberacao: randomDate(startDate, new Date()),
+      dataStatusTagLiberacao: `${dia.toString().padStart(2, "0")}/${mes.toString().padStart(2, "0")}/${ano.toString().padStart(2, "0")}`,
+      dataRealMedicao: `${dia.toString().padStart(2, "0")}/${mes.toString().padStart(2, "0")}/${ano.toString().padStart(2, "0")}`
     });
   }
 

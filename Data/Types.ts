@@ -185,17 +185,15 @@ export type Detalhamento = {
   statusGood: boolean; //10% de Chance de vir TRUE, 90% de vir FALSE
   observacaoFundoDeEscala: string; //20% de Chance de Vir 'Observação Fundo Escala Backend' e 80% de vir vazia ''
   medidorOficialPrimario: boolean; //SE TRUE coloca observacaoFundoDeEscala no medicaoPrimariaDigitada se for FALSE coloca no medicaoSecundariaDigitada
-  statusSap: "P" | "I" | "E"; //40% de Chance de Vir 'I', 40% de vir 'I' e 20% de vir 'E'
+  statusSap: "P" | "I" | "E" | ""; //40% de Chance de Vir 'I', 40% de vir 'I' e 20% de vir 'E'
   multaFundoDeEscala: number; //Se mostrarFundoDeEscala for TRUE, gerar numero aleatorio entre 10,000 e 100,000
   multaFundoDeEscalaMensal: number; //Se mostrarFundoDeEscala for TRUE, gerar numero aleatorio entre 1,000 e 20,000
   mostrarFundoDeEscala: boolean; //TRUE se dia for '10', '20' ou o ultimo dia do Mês
 
-  statusTagLiberacao: string // 'L' é Liberada, qualquer outra coisa não
-	dataStatusTagLiberacao: string
+  statusTagLiberacao: string; // 'L' é Liberada, qualquer outra coisa não
+  dataStatusTagLiberacao: string;
+  dataRealMedicao: string;
 };
-
-
-
 
 export type Automacao = {
   uuid: string; //uuid aleatório usando a uuid() v4
