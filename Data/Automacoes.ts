@@ -33,6 +33,11 @@ export const generateFakeAutomacoes = (): any[] => {
 
     const AllowAutomations = cliente.permitirTransferencia && produto.permitirTransferencia;
 
+    function getRandomMedicaoPrimariaOuSecundariaLiberacao() {
+      const options = ["S", "P", null];
+      return options[Math.floor(Math.random() * options.length)];
+    }
+
     return {
       uuid: uuidv4(),
 
@@ -55,7 +60,7 @@ export const generateFakeAutomacoes = (): any[] => {
         dataDeFechamento: randomDate(startDate, new Date()),
         liberarMedicaoSemAvaliacao: AllowAutomations ? Math.random() < 0.8 : false,
         limiteDeMedicaoRuido: randomFloat(0, 10),
-        medicaoPrimariaOuSecundariaLiberacao: randomBool() ? "S" : "P",
+        medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
         comentarioDeLiberacao: randomBool() ? "" : "Comentário de Teste",
         executarLiberacaoAutomatica: AllowAutomations ? Math.random() < 0.8 : false,
         executarTransferenciaEntreCentros: AllowAutomations ? Math.random() < 0.8 : false,

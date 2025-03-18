@@ -13,10 +13,15 @@ const randomBool = (): boolean => Math.random() < 0.5;
 
 const startDate = new Date("2023-01-01");
 
+function getRandomMedicaoPrimariaOuSecundariaLiberacao() {
+  const options = ["S", "P", null];
+  return options[Math.floor(Math.random() * options.length)];
+}
+
 export const Medidores = [
   {
     uuid: "6a480a46198b455abd525ab3be572015",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "TESTEALTERADO",
     descricao: "AC BRASKEM PE4 - LADO UNIB",
     tagDeLiberacao: "_502FR14.SVE",
@@ -58,7 +63,7 @@ export const Medidores = [
   },
   {
     uuid: "ad6b0c4806894758b52a147a0d07e3dc",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "503FQ14_1.PV",
     descricao: "AC BRASKEM PE6 - LADO UNIB",
     tagDeLiberacao: "_503FI14.SVE",
@@ -100,7 +105,7 @@ export const Medidores = [
   },
   {
     uuid: "2827a2e7bd46436f8eda4f903099df31",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "504FQ14_1.PV",
     descricao: "AC BRASKEM PP1 - LADO UNIB",
     tagDeLiberacao: "_504FR14.SVE",
@@ -142,7 +147,7 @@ export const Medidores = [
   },
   {
     uuid: "3b0c3f8922664588a113177edcd47d31",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "514FQ14_2.PV",
     descricao: "AC DSM - LADO PARCEIRO",
     tagDeLiberacao: "_514FR14.SVE",
@@ -184,7 +189,7 @@ export const Medidores = [
   },
   {
     uuid: "2325e15cc78d4a6581934b4556329ee5",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "514FQ14_1.PV",
     descricao: "AC DSM - LADO UNIB",
     tagDeLiberacao: "_514FR14.SVE",
@@ -226,7 +231,7 @@ export const Medidores = [
   },
   {
     uuid: "3112683324fb4d4eba62eafd43fc7593",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "505FQ14_1.PV",
     descricao: "AC INNOVA - LADO UNIB",
     tagDeLiberacao: "_505FR14.SVE",
@@ -268,7 +273,7 @@ export const Medidores = [
   },
   {
     uuid: "657d0f1a5bcd48d5989a473d983da3e8",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "506FQ14_1.PV",
     descricao: "AC LANXESS - LADO UNIB",
     tagDeLiberacao: "_506FR14.SVE",
@@ -310,7 +315,7 @@ export const Medidores = [
   },
   {
     uuid: "a47888cdb02a4ff8b643fa920e7a0b2d",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "501FQ14_1.PV",
     descricao: "AC OXITENO - LADO UNIB",
     tagDeLiberacao: "_501FR14.SVE",
@@ -352,7 +357,7 @@ export const Medidores = [
   },
   {
     uuid: "406b5aa0105e46cba7fd32db2628de24",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "504FQ14_virtual",
     descricao: "AC PARA BOREALIS (VIRTUAL)",
     tagDeLiberacao: "_504FR14virtual.SVE",
@@ -394,7 +399,7 @@ export const Medidores = [
   },
   {
     uuid: "684dfdce3f764d9ba7610b33a2d52fed",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "507FQ14_2.PV",
     descricao: "AC PP2/PE5 (I) - LADO PARCEIRO",
     tagDeLiberacao: "_507FR14.SVE",
@@ -436,7 +441,7 @@ export const Medidores = [
   },
   {
     uuid: "735b7d76d2ab46a2903d808962e9618c",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "507FQ14_1.PV",
     descricao: "AC PP2/PE5 (I) - LADO UNIB",
     tagDeLiberacao: "_507FR14.SVE",
@@ -478,7 +483,7 @@ export const Medidores = [
   },
   {
     uuid: "473e30f9ebed4bb7b87c5e488ed59982",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "507FQ114_1.PV",
     descricao: "AC PP2/PE5 (II) - LADO UNIB",
     tagDeLiberacao: "_507FR114.SVE",
@@ -520,7 +525,7 @@ export const Medidores = [
   },
   {
     uuid: "54be97f083e8470f92aa9dda0939001d",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "509FQ14_1.PV",
     descricao: "AC WHITE MARTINS - LADO UNIB",
     tagDeLiberacao: "_509FR14.SVE",
@@ -562,7 +567,7 @@ export const Medidores = [
   },
   {
     uuid: "2aae92a94e524af086ce5318c8cf5018",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "502FQ13_1.PV",
     descricao: "AD BRASKEM PE4 - LADO UNIB",
     tagDeLiberacao: "_502FR13.SVE",
@@ -604,7 +609,7 @@ export const Medidores = [
   },
   {
     uuid: "24c79bc652b34e719c7ff1e8ef5fe6cc",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "503FQ13_1.PV",
     descricao: "AD BRASKEM PE6 - LADO UNIB",
     tagDeLiberacao: "_503FR13.SVE",
@@ -646,7 +651,7 @@ export const Medidores = [
   },
   {
     uuid: "2bfff95e3be44537812980b233a8c56a",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "504FQ13_1.PV",
     descricao: "AD BRASKEM PP1 - LADO UNIB",
     tagDeLiberacao: "_504FR13.SVE",
@@ -688,7 +693,7 @@ export const Medidores = [
   },
   {
     uuid: "97d661bf44084017b4e20b8286993b2b",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "514FQ13_2.PV",
     descricao: "AD DSM - LADO PARCEIRO",
     tagDeLiberacao: "_514FR13.SVE",
@@ -730,7 +735,7 @@ export const Medidores = [
   },
   {
     uuid: "c3d0996c201c4d4bbf602fe4712da9e6",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "514FQ13_1.PV",
     descricao: "AD DSM - LADO UNIB",
     tagDeLiberacao: "_514FR13.SVE",
@@ -772,7 +777,7 @@ export const Medidores = [
   },
   {
     uuid: "296e61e965054b2da372232193004556",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "505FQ13_1.PV",
     descricao: "AD INNOVA - LADO UNIB",
     tagDeLiberacao: "_505FR13.SVE",
@@ -814,7 +819,7 @@ export const Medidores = [
   },
   {
     uuid: "98e262117025436887e736eb903a091a",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "506FQ13_1.PV",
     descricao: "AD LANXESS - LADO UNIB",
     tagDeLiberacao: "_506FR13.SVE",
@@ -856,7 +861,7 @@ export const Medidores = [
   },
   {
     uuid: "bb8ff31226bd4c689e6db7d6057d7067",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "501FQ13_1.PV",
     descricao: "AD OXITENO - LADO UNIB",
     tagDeLiberacao: "_501FR13.SVE",
@@ -898,7 +903,7 @@ export const Medidores = [
   },
   {
     uuid: "befaedbdb1584e1d93001220004713d8",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "507FQ13_1.PV",
     descricao: "AD PP2/PE5 (I) - LADO UNIB",
     tagDeLiberacao: "_507FR13.SVE",
@@ -940,7 +945,7 @@ export const Medidores = [
   },
   {
     uuid: "1d363cb9cc144becaa75f0972a7cf79e",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "507FQ113_1.PV",
     descricao: "AD PP2/PE5 (II) - LADO UNIB",
     tagDeLiberacao: "_507FR113.SVE",
@@ -982,7 +987,7 @@ export const Medidores = [
   },
   {
     uuid: "e7fd89e7c3524454ab9d76c4f02fc9a0",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "502FQ15_1.PV",
     descricao: "AP BRASKEM PE4 - LADO UNIB",
     tagDeLiberacao: "_502FR15.SVE",
@@ -1024,7 +1029,7 @@ export const Medidores = [
   },
   {
     uuid: "ad9b325ce50a417d89dd788bccc97178",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "503FQ15_1.PV",
     descricao: "AP BRASKEM PE6 - LADO UNIB",
     tagDeLiberacao: "_503FI15.SVE",
@@ -1066,7 +1071,7 @@ export const Medidores = [
   },
   {
     uuid: "729091d557064d89aca18b9b3f9391ca",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "504FQ15_1.PV",
     descricao: "AP BRASKEM PP1 - LADO UNIB",
     tagDeLiberacao: "_504FR15.SVE",
@@ -1108,7 +1113,7 @@ export const Medidores = [
   },
   {
     uuid: "a57848d0410f44a2884ef8d5e657e4dd",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "514FQ15_2.PV",
     descricao: "AP DSM - LADO PARCEIRO",
     tagDeLiberacao: "_514FR15.SVE",
@@ -1150,7 +1155,7 @@ export const Medidores = [
   },
   {
     uuid: "94e2c2b3ef3a44a3a37fc5d2fbe4ac1a",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "514FQ15_1.PV",
     descricao: "AP DSM - LADO UNIB",
     tagDeLiberacao: "_514FR15.SVE",
@@ -1192,7 +1197,7 @@ export const Medidores = [
   },
   {
     uuid: "f1d1aa632e3c47a381df19e8836f14ed",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "505FQ15_1.PV",
     descricao: "AP INNOVA - LADO UNIB",
     tagDeLiberacao: "_505FR15.SVE",
@@ -1234,7 +1239,7 @@ export const Medidores = [
   },
   {
     uuid: "aa291801e0b44388b8f1d8acfa80db01",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "506FQ15_1.PV",
     descricao: "AP LANXESS - LADO UNIB",
     tagDeLiberacao: "_506FR15.SVE",
@@ -1276,7 +1281,7 @@ export const Medidores = [
   },
   {
     uuid: "21d5c96df4a242ceba12486152754e38",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "501FQ15_1.PV",
     descricao: "AP OXITENO - LADO UNIB",
     tagDeLiberacao: "_501FR15.SVE",
@@ -1318,7 +1323,7 @@ export const Medidores = [
   },
   {
     uuid: "f0ed380ed0e845ef82c436d05ce78320",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "504FQ15_virtual",
     descricao: "AP PARA BOREALIS (VIRTUAL)",
     tagDeLiberacao: "_504FR15virtual.SVE",
@@ -1360,7 +1365,7 @@ export const Medidores = [
   },
   {
     uuid: "3eeeac12f88142678cd83c919ba7bcc6",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "507FQ15_1.PV",
     descricao: "AP PP2/PE5 (I) - LADO UNIB",
     tagDeLiberacao: "_507FR15.SVE",
@@ -1402,7 +1407,7 @@ export const Medidores = [
   },
   {
     uuid: "a5611321d6ef49f1829279d20681edda",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "507FQ115_1.PV",
     descricao: "AP PP2/PE5 (II) - LADO UNIB",
     tagDeLiberacao: "_507FR115.SVE",
@@ -1444,7 +1449,7 @@ export const Medidores = [
   },
   {
     uuid: "4693524aac6c427f95965e26bc7bc0d7",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "509FQ15_1.PV",
     descricao: "AP WHITE MARTINS - LADO UNIB",
     tagDeLiberacao: "_509FR15.SVE",
@@ -1486,7 +1491,7 @@ export const Medidores = [
   },
   {
     uuid: "24fa6b3618ce4beba55b76b874f2ee57",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "516FQ33_01.PV",
     descricao: "AR DE INSTRUMENTO",
     tagDeLiberacao: "_516FR33.SVE",
@@ -1528,7 +1533,7 @@ export const Medidores = [
   },
   {
     uuid: "dc3c7d356a47420abd0fc7dd385c20e3",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "516FQ32_01.PV",
     descricao: "AR DE SERVIÇO",
     tagDeLiberacao: "_516FR32.SVE",
@@ -1570,7 +1575,7 @@ export const Medidores = [
   },
   {
     uuid: "fda32ab876034b81bc178373af3c7aad",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "505FQ05_2.PV",
     descricao: "BENZENO INNOVA - LADO PARCEIRO",
     tagDeLiberacao: "_505FR05.SVE",
@@ -1612,7 +1617,7 @@ export const Medidores = [
   },
   {
     uuid: "2bc7c4707f654289be9b4c537cf42002",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "505FQ05_1.PV",
     descricao: "BENZENO INNOVA - LADO UNIB",
     tagDeLiberacao: "_505FR05.SVE",
@@ -1654,7 +1659,7 @@ export const Medidores = [
   },
   {
     uuid: "4fd65f277017492e89cd9dded2648ba8",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "506FQ04_2.PV",
     descricao: "BUTADIENO LANXESS - LADO PARCEIRO",
     tagDeLiberacao: "_506FR04.SVE",
@@ -1696,7 +1701,7 @@ export const Medidores = [
   },
   {
     uuid: "fb53d7ed41644978addfb9e987a51c45",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "506FQ04_1.PV",
     descricao: "BUTADIENO LANXESS - LADO UNIB",
     tagDeLiberacao: "_506FR04.SVE",
@@ -1738,7 +1743,7 @@ export const Medidores = [
   },
   {
     uuid: "428aced3e7ad42fa835242625471d94b",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "502FQ10_2.PV",
     descricao: "BUTENO BRASKEM PE4 - LADO PARCEIRO",
     tagDeLiberacao: "_502FR10.SVE",
@@ -1780,7 +1785,7 @@ export const Medidores = [
   },
   {
     uuid: "918034e468734d7f87271da24d8668d7",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "502FQ10_1.PV",
     descricao: "BUTENO BRASKEM PE4 - LADO UNIB",
     tagDeLiberacao: "_502FR10.SVE",
@@ -1822,7 +1827,7 @@ export const Medidores = [
   },
   {
     uuid: "7bf0e6615ec046b5b0aa5409a837fc8b",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "504FQ10_2.PV",
     descricao: "BUTENO BRASKEM PP1 - LADO PARCEIRO",
     tagDeLiberacao: "_504FR10.SVE",
@@ -1864,7 +1869,7 @@ export const Medidores = [
   },
   {
     uuid: "f9aed51fd4fb457d9e64812267ccc639",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "504FQ10_1.PV",
     descricao: "BUTENO BRASKEM PP1 - LADO UNIB",
     tagDeLiberacao: "_504FR10.SVE",
@@ -1906,7 +1911,7 @@ export const Medidores = [
   },
   {
     uuid: "b3a0ea9063fb4ef3a43f823414b7d8e4",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "507FQ10_2.PV",
     descricao: "BUTENO-1 PP2/PE5 (I) - LADO PARCEIRO",
     tagDeLiberacao: "_507FR10.SVE",
@@ -1948,7 +1953,7 @@ export const Medidores = [
   },
   {
     uuid: "fc3ba57b288e4d5ba3106643b4cddbea",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "507FQ10_1.PV",
     descricao: "BUTENO-1 PP2/PE5 (I) - LADO UNIB",
     tagDeLiberacao: "_507FR10.SVE",
@@ -1990,7 +1995,7 @@ export const Medidores = [
   },
   {
     uuid: "0511d78d51c94b07b1ce92d65e2e70d6",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "501FQ29_2.PV",
     descricao: "BUTENOS EXAUTOS OXITENO - LADO PARCEIRO",
     tagDeLiberacao: "_501FR29.SVE",
@@ -2032,7 +2037,7 @@ export const Medidores = [
   },
   {
     uuid: "9f523a89670941edb38f863034ee3668",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "501FQ29_1.PV",
     descricao: "BUTENOS EXAUTOS OXITENO - LADO UNIB",
     tagDeLiberacao: "_501FR29.SVE",
@@ -2074,7 +2079,7 @@ export const Medidores = [
   },
   {
     uuid: "a86023c17a964ffa92a3419a6e91f47f",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "501FQ21_2.PV",
     descricao: "C4 PESADO OXITENO - LADO PARCEIRO",
     tagDeLiberacao: "_501FR21.SVE",
@@ -2116,7 +2121,7 @@ export const Medidores = [
   },
   {
     uuid: "591a5163912542c593be240c4355a52e",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "501FQ21_1.PV",
     descricao: "C4 PESADO OXITENO - LADO UNIB",
     tagDeLiberacao: "_501FR21.SVE",
@@ -2158,7 +2163,7 @@ export const Medidores = [
   },
   {
     uuid: "4022483f426b4732828e5d63e304811a",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "516FQ30_01.PV",
     descricao: "CONDENSADO DE VAPOR",
     tagDeLiberacao: "_516FR30.SVE",
@@ -2200,7 +2205,7 @@ export const Medidores = [
   },
   {
     uuid: "d41322e7525b47699fed692b4ca48065",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "516FQ31_01.PV",
     descricao: "ENERGIA ELÉTRICA",
     tagDeLiberacao: "_516FR31.SVE",
@@ -2242,7 +2247,7 @@ export const Medidores = [
   },
   {
     uuid: "7f529e2d48eb418eac5d87ff3efb1c91",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "502FQ01_2.PV",
     descricao: "ETENO FÓSSIL BRASKEM PE4 - LADO PARCEIRO",
     tagDeLiberacao: "_502FR01.SVE",
@@ -2284,7 +2289,7 @@ export const Medidores = [
   },
   {
     uuid: "fb59eec0051f4680a415b8574e70a44c",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "502FQ01_1.PV",
     descricao: "ETENO FÓSSIL BRASKEM PE4 - LADO UNIB",
     tagDeLiberacao: "_502FR01.SVE",
@@ -2326,7 +2331,7 @@ export const Medidores = [
   },
   {
     uuid: "7d9f00505b6a4e75acb47d305c86c5f0",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "503FQ01_2.PV",
     descricao: "ETENO FÓSSIL BRASKEM PE6 - LADO PARCEIRO",
     tagDeLiberacao: "_503FR01.SVE",
@@ -2368,7 +2373,7 @@ export const Medidores = [
   },
   {
     uuid: "b9319508d4a64573be27a2510a235f06",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "503FQ01_1.PV",
     descricao: "ETENO FÓSSIL BRASKEM PE6 - LADO PARCEIRO",
     tagDeLiberacao: "_503FR01.SVE",
@@ -2410,7 +2415,7 @@ export const Medidores = [
   },
   {
     uuid: "304894b090d148bb8a1717b771c39f16",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "504FQ01_2.PV",
     descricao: "ETENO FÓSSIL BRASKEM PP1 - LADO PARCEIRO",
     tagDeLiberacao: "_504FR01.SVE",
@@ -2452,7 +2457,7 @@ export const Medidores = [
   },
   {
     uuid: "8faf760811bb4e27b5c41d3cce083e1c",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "504FQ01_1.PV",
     descricao: "ETENO FÓSSIL BRASKEM PP1 - LADO UNIB",
     tagDeLiberacao: "_504FR01.SVE",
@@ -2494,7 +2499,7 @@ export const Medidores = [
   },
   {
     uuid: "5f0b9e5ecf3e4355a018dfb553b47953",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "514FQ01_2.PV",
     descricao: "ETENO FÓSSIL DSM - LADO PARCEIRO",
     tagDeLiberacao: "_514FR01.SVE",
@@ -2536,7 +2541,7 @@ export const Medidores = [
   },
   {
     uuid: "3537d6f907464bb3857e8463961374e0",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "514FQ01_1.PV",
     descricao: "ETENO FÓSSIL DSM - LADO UNIB",
     tagDeLiberacao: "_514FR01.SVE",
@@ -2578,7 +2583,7 @@ export const Medidores = [
   },
   {
     uuid: "78f95137513d474dbb663860e87e6d62",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "505FQ01_2.PV",
     descricao: "ETENO FÓSSIL INNOVA - LADO PARCEIRO",
     tagDeLiberacao: "_505FR01.SVE",
@@ -2620,7 +2625,7 @@ export const Medidores = [
   },
   {
     uuid: "3b5011ab785e43529ad84b36ee6bdf7c",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "505FQ01_1.PV",
     descricao: "ETENO FÓSSIL INNOVA - LADO UNIB",
     tagDeLiberacao: "_505FR01.SVE",
@@ -2662,7 +2667,7 @@ export const Medidores = [
   },
   {
     uuid: "3fe93854f61f473a88e5f58dd91673a6",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "507FQ01_2.PV",
     descricao: "ETENO FÓSSIL PP2/PE5 (I) - LADO PARCEIRO",
     tagDeLiberacao: "_507FR01.SVE",
@@ -2704,7 +2709,7 @@ export const Medidores = [
   },
   {
     uuid: "71716fb44bb245a98268a230c0251631",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "507FQ01_1.PV",
     descricao: "ETENO FÓSSIL PP2/PE5 (I) - LADO UNIB",
     tagDeLiberacao: "_507FR01.SVE",
@@ -2746,7 +2751,7 @@ export const Medidores = [
   },
   {
     uuid: "23199c8aad2641e3980de0ccf57d8290",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "507FQ101_F2.pv",
     descricao: "ETENO FÓSSIL PP2/PE5 (II) - LADO PARCEIRO",
     tagDeLiberacao: "_507FR101.SVE",
@@ -2788,7 +2793,7 @@ export const Medidores = [
   },
   {
     uuid: "d0a877c8fbf54ad081745db74f023d8b",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "507FQ101_F1.pv",
     descricao: "ETENO FÓSSIL PP2/PE5 (II) - LADO UNIB",
     tagDeLiberacao: "_507FR101.SVE",
@@ -2830,7 +2835,7 @@ export const Medidores = [
   },
   {
     uuid: "b55a4a134d334c50847ffc646560fc96",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "507FQ201_1.PV",
     descricao: "ETENO FÓSSIL PP2/PE5 (III) - LADO UNIB",
     tagDeLiberacao: "_507FR201.SVE",
@@ -2872,7 +2877,7 @@ export const Medidores = [
   },
   {
     uuid: "7093ec6818ee449ebc3014a3107c3809",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "502FQ09_2.PV",
     descricao: "ETENO RETORNO BRASKEM PE4 - LADO PARCEIRO",
     tagDeLiberacao: "_502FR09.SVE",
@@ -2914,7 +2919,7 @@ export const Medidores = [
   },
   {
     uuid: "be27027bc5594fcb9cbf01061bd11185",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "502FQ09_1.PV",
     descricao: "ETENO RETORNO BRASKEM PE4 - LADO UNIB",
     tagDeLiberacao: "_502FR09.SVE",
@@ -2956,7 +2961,7 @@ export const Medidores = [
   },
   {
     uuid: "d20fa33ba84d4f918b7d9028b14a8a53",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "503FQ09_virtual",
     descricao: "ETENO RETORNO BRASKEM PE6 (VIRTUAL)",
     tagDeLiberacao: "_503FR09.SVE",
@@ -2998,7 +3003,7 @@ export const Medidores = [
   },
   {
     uuid: "1579b6f75a5940e2bc105fe9f95e96c9",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "503FQ09_2.PV",
     descricao: "ETENO RETORNO BRASKEM PE6 - LADO PARCEIRO",
     tagDeLiberacao: "_503FR09.SVE",
@@ -3040,7 +3045,7 @@ export const Medidores = [
   },
   {
     uuid: "f4eddbfd4fe24f01a6c1c973bea017ec",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "503FQ28_1.PV",
     descricao: "ETENO VERDE BRASKEM PE6 - LADO Q2",
     tagDeLiberacao: "_503FR28.SVE",
@@ -3082,7 +3087,7 @@ export const Medidores = [
   },
   {
     uuid: "a84d8de14a2044bc8f0191ef744df7fd",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "514FQ01_V2.PV",
     descricao: "ETENO VERDE DSM - LADO PARCEIRO",
     tagDeLiberacao: "_514FR01_V1.SVE",
@@ -3124,7 +3129,7 @@ export const Medidores = [
   },
   {
     uuid: "9f4fde9d1c0c420e9ccfb609a2836567",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "514FQ01_V1.PV",
     descricao: "ETENO VERDE DSM - LADO UNIB",
     tagDeLiberacao: "_514FR01_V1.SVE",
@@ -3166,7 +3171,7 @@ export const Medidores = [
   },
   {
     uuid: "a9ccc673bf75432bac786d97ad28a830",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "502FQ28_1.PV",
     descricao: "ETENO VERDE PE4 - LADO UNIB",
     tagDeLiberacao: "_502FR28.SVE",
@@ -3208,7 +3213,7 @@ export const Medidores = [
   },
   {
     uuid: "c284fa922bff4344a9b07c5560e1203e",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "507FQ01_V1.PV",
     descricao: "ETENO VERDE PP2/PE5 (I) - LADO UNIB",
     tagDeLiberacao: "_507FR01_V1.SVE",
@@ -3250,7 +3255,7 @@ export const Medidores = [
   },
   {
     uuid: "5cd0482295264500a4086f8dac6e3052",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "507FQ101_V2.PV",
     descricao: "ETENO VERDE PP2/PE5 (II) - LADO PARCEIRO",
     tagDeLiberacao: "_507FR101_V1.SVE",
@@ -3292,7 +3297,7 @@ export const Medidores = [
   },
   {
     uuid: "e2c24012cfd34a57aad0b39086554e5e",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "507FQ101_V1.PV",
     descricao: "ETENO VERDE PP2/PE5 (II) - LADO UNIB",
     tagDeLiberacao: "_507FR101_V1.SVE",
@@ -3334,7 +3339,7 @@ export const Medidores = [
   },
   {
     uuid: "05b12286e671410686ec6010b77bd288",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "212FQI035_013.PV",
     descricao: "ETENO VERDE RETORNO",
     tagDeLiberacao: "_212FQI035_013.PV",
@@ -3376,7 +3381,7 @@ export const Medidores = [
   },
   {
     uuid: "e401bd8607154f20a22a0a41bc5aaa94",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "502FQ03_1.PV",
     descricao: "HIDROGÊNIO BRASKEM PE4 - LADO UNIB",
     tagDeLiberacao: "_502FR03.SVE",
@@ -3418,7 +3423,7 @@ export const Medidores = [
   },
   {
     uuid: "05e2f40fcb2d49aa8b4537ceb710cef1",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "504FQ03_1.PV",
     descricao: "HIDROGÊNIO BRASKEM PP1 - LADO UNIB",
     tagDeLiberacao: "_504FR03.SVE",
@@ -3460,7 +3465,7 @@ export const Medidores = [
   },
   {
     uuid: "91ab09a93db74046b6146f0f504f75e4",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "514FQ03_1.PV",
     descricao: "HIDROGÊNIO DSM - LADO UNIB",
     tagDeLiberacao: "_514FR03.SVE",
@@ -3502,7 +3507,7 @@ export const Medidores = [
   },
   {
     uuid: "13458a4d3ba24a2fbd77748aade83bb8",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "507FQ03_2.PV",
     descricao: "HIDROGÊNIO PP2/PE5 (I) - LADO PARCEIRO",
     tagDeLiberacao: "_507FR03.SVE",
@@ -3544,7 +3549,7 @@ export const Medidores = [
   },
   {
     uuid: "0d2bd4986d35478d920c4bf86e0e685d",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "507FQ03_1.PV",
     descricao: "HIDROGÊNIO PP2/PE5 (I) - LADO UNIB",
     tagDeLiberacao: "_507FR03.SVE",
@@ -3586,7 +3591,7 @@ export const Medidores = [
   },
   {
     uuid: "382aa387af0d414d91ecf5286c668059",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "507FQ103_1.PV",
     descricao: "HIDROGÊNIO PP2/PE5 (II) - LADO UNIB",
     tagDeLiberacao: "_507FR103.SVE",
@@ -3628,7 +3633,7 @@ export const Medidores = [
   },
   {
     uuid: "b50871590d1d42a3b30b899f9a21886f",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "509FQ16_2.PV",
     descricao: "NITROGÊNIO 1 WHITE MARTINS - LADO PARCEIRO",
     tagDeLiberacao: "_509FR16.SVE",
@@ -3670,7 +3675,7 @@ export const Medidores = [
   },
   {
     uuid: "467ded00c8384a6a9642d4e3e8103f58",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "509FQ16_1.PV",
     descricao: "NITROGÊNIO 1 WHITE MARTINS - LADO UNIB",
     tagDeLiberacao: "_509FR16.SVE",
@@ -3712,7 +3717,7 @@ export const Medidores = [
   },
   {
     uuid: "e7516189ab154922bc44b36b8ad72d2d",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "509FQ116_2.PV",
     descricao: "NITROGÊNIO 2 WHITE MARTINS - LADO PARCEIRO",
     tagDeLiberacao: "_509FR116.SVE",
@@ -3754,7 +3759,7 @@ export const Medidores = [
   },
   {
     uuid: "aad96eac89274598a8557205b562051a",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "509FQ116_1.PV",
     descricao: "NITROGÊNIO 2 WHITE MARTINS - LADO UNIB",
     tagDeLiberacao: "_509FR116.SVE",
@@ -3796,7 +3801,7 @@ export const Medidores = [
   },
   {
     uuid: "a74643f04dfe4553853fe3f4073d7dcf",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "502FQ16_1.PV",
     descricao: "NITROGÊNIO BRASKEM PE4 - LADO UNIB",
     tagDeLiberacao: "_502FR16.SVE",
@@ -3838,7 +3843,7 @@ export const Medidores = [
   },
   {
     uuid: "2f1393a71d124bf9bacf53c2e9a80683",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "503FQ16_1.PV",
     descricao: "NITROGÊNIO BRASKEM PE6 - LADO UNIB",
     tagDeLiberacao: "_503FR16.SVE",
@@ -3880,7 +3885,7 @@ export const Medidores = [
   },
   {
     uuid: "158ced4915be4d26ac3d916574e34571",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "504FQ16_1.PV",
     descricao: "NITROGÊNIO BRASKEM PP1 - LADO UNIB",
     tagDeLiberacao: "_504FR16.SVE",
@@ -3922,7 +3927,7 @@ export const Medidores = [
   },
   {
     uuid: "026eb6c571c44971b3cabaa04778a036",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "514FQ16_2.PV",
     descricao: "NITROGÊNIO DSM - LADO PARCEIRO",
     tagDeLiberacao: "_514FR16.SVE",
@@ -3964,7 +3969,7 @@ export const Medidores = [
   },
   {
     uuid: "d70b3717f5784fb5b922cc09aecfce35",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "514FQ16_1.PV",
     descricao: "NITROGÊNIO DSM - LADO UNIB",
     tagDeLiberacao: "_514FR16.SVE",
@@ -4006,7 +4011,7 @@ export const Medidores = [
   },
   {
     uuid: "d9c6ec8426a64a1ba1d36ccca4b00d7d",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "505FQ16_2.PV",
     descricao: "NITROGÊNIO INNOVA - LADO PARCEIRO",
     tagDeLiberacao: "_505FR16.SVE",
@@ -4048,7 +4053,7 @@ export const Medidores = [
   },
   {
     uuid: "5ebd914e27684ffaba3cb86a5f2f3d74",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "505FQ16_1.PV",
     descricao: "NITROGÊNIO INNOVA - LADO UNIB",
     tagDeLiberacao: "_505FR16.SVE",
@@ -4090,7 +4095,7 @@ export const Medidores = [
   },
   {
     uuid: "17af1b456f034ab39eeaa13388a9b7f2",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "506FQ16_1.PV",
     descricao: "NITROGÊNIO LANXESS - LADO UNIB",
     tagDeLiberacao: "_506FR16.SVE",
@@ -4132,7 +4137,7 @@ export const Medidores = [
   },
   {
     uuid: "41575ac07d7b4c65897b1b6d8c3bb9e6",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "501FQ16_1.PV",
     descricao: "NITROGÊNIO OXITENO - LADO UNIB",
     tagDeLiberacao: "_501FR16.SVE",
@@ -4174,7 +4179,7 @@ export const Medidores = [
   },
   {
     uuid: "bce01dea4d51426eb3a2f757a20e8053",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "507FQ16_2.PV",
     descricao: "NITROGÊNIO PP2/PE5 (I) - LADO PARCEIRO",
     tagDeLiberacao: "_507FR16.SVE",
@@ -4216,7 +4221,7 @@ export const Medidores = [
   },
   {
     uuid: "899d1168c4144c6a95fb05a4db39b338",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "507FQ16_1.PV",
     descricao: "NITROGÊNIO PP2/PE5 (I) - LADO UNIB",
     tagDeLiberacao: "_507FR16.SVE",
@@ -4258,7 +4263,7 @@ export const Medidores = [
   },
   {
     uuid: "72fb34d25e2343339003d1dc8fa1c83a",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "507FQ116_2.PV",
     descricao: "NITROGÊNIO PP2/PE5 (II) - LADO PARCEIRO",
     tagDeLiberacao: "_507FR116.SVE",
@@ -4300,7 +4305,7 @@ export const Medidores = [
   },
   {
     uuid: "a870aea600644638b35fc7a8ab468767",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "507FQ116_1.PV",
     descricao: "NITROGÊNIO PP2/PE5 (II) - LADO UNIB",
     tagDeLiberacao: "_507FR116.SVE",
@@ -4342,7 +4347,7 @@ export const Medidores = [
   },
   {
     uuid: "bfae2493a06144c2a3dd35223a8de2b4",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "502FQ25_2.PV",
     descricao: "OFF GAS BRASKEM PE4 - LADO PARCEIRO",
     tagDeLiberacao: "_502FR25.SVE",
@@ -4384,7 +4389,7 @@ export const Medidores = [
   },
   {
     uuid: "1d928e347f3e4639b449695b1218d7ef",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "502FQ25_1.PV",
     descricao: "OFF GAS BRASKEM PE4 - LADO UNIB",
     tagDeLiberacao: "_502FR25.SVE",
@@ -4426,7 +4431,7 @@ export const Medidores = [
   },
   {
     uuid: "cc4d982996b547bc8758f28c00eeecea",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "504FQ25_2.PV",
     descricao: "OFF GAS BRASKEM PP1 - LADO PARCEIRO",
     tagDeLiberacao: "_504FR25.SVE",
@@ -4468,7 +4473,7 @@ export const Medidores = [
   },
   {
     uuid: "ca18aee7167d45dcadfa3261e1ce888e",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "504FQ25_1.PV",
     descricao: "OFF GAS BRASKEM PP1 - LADO UNIB",
     tagDeLiberacao: "_504FR25.SVE",
@@ -4510,7 +4515,7 @@ export const Medidores = [
   },
   {
     uuid: "e945afc592fb447fa3e4805380f9f851",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "507FQ125_2.PV",
     descricao: "OFF GAS PP2/PE5 (I) - LADO PARCEIRO",
     tagDeLiberacao: "_507FR125.SVE",
@@ -4552,7 +4557,7 @@ export const Medidores = [
   },
   {
     uuid: "3b55fd8bcb75486883efe98642f6649e",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "507FQ125_1.PV",
     descricao: "OFF GAS PP2/PE5 (I) - LADO UNIB",
     tagDeLiberacao: "_507FR125.SVE",
@@ -4594,7 +4599,7 @@ export const Medidores = [
   },
   {
     uuid: "27b5074ae4ab46389303864f5bb77dc6",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "507FQ25_2.PV",
     descricao: "OFF GAS PP2/PE5 (II) - LADO PARCEIRO",
     tagDeLiberacao: "_507FR25.SVE",
@@ -4636,7 +4641,7 @@ export const Medidores = [
   },
   {
     uuid: "be1e3fccee32496d90e698a51d9880ac",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "507FQ25_1.PV",
     descricao: "OFF GAS PP2/PE5 (II) - LADO UNIB",
     tagDeLiberacao: "_507FR25.SVE",
@@ -4678,7 +4683,7 @@ export const Medidores = [
   },
   {
     uuid: "43be07fed8804075bf16a63f0961376f",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "502FQ19_2.PV",
     descricao: "PROPANO BRASKEM PE4 - LADO PARCEIRO",
     tagDeLiberacao: "_502FR19.SVE",
@@ -4720,7 +4725,7 @@ export const Medidores = [
   },
   {
     uuid: "0f394bac40db401db3db4c1f7865150b",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "502FQ19_1.PV",
     descricao: "PROPANO BRASKEM PE4 - LADO PARCEIRO",
     tagDeLiberacao: "_502FR19.SVE",
@@ -4762,7 +4767,7 @@ export const Medidores = [
   },
   {
     uuid: "30fb3136f03140088329ec2c5496a844",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "504FQ19_2.PV",
     descricao: "PROPANO BRASKEM PP1 - LADO PARCEIRO",
     tagDeLiberacao: "_504FR19.SVE",
@@ -4804,7 +4809,7 @@ export const Medidores = [
   },
   {
     uuid: "9fa6fe81ec194616a82fb062e52bfd74",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "504FQ19_1.PV",
     descricao: "PROPANO BRASKEM PP1 - LADO UNIB",
     tagDeLiberacao: "_504FR19.SVE",
@@ -4846,7 +4851,7 @@ export const Medidores = [
   },
   {
     uuid: "e87ac072c5304d31a2d52ccf5080cd33",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "507FQ19_2.PV",
     descricao: "PROPANO PP2/PE5 (I) - LADO PARCEIRO",
     tagDeLiberacao: "_507FR19.SVE",
@@ -4888,7 +4893,7 @@ export const Medidores = [
   },
   {
     uuid: "68b609d6d38640c4be30f91f006bb83b",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "507FQ19_1.PV",
     descricao: "PROPANO PP2/PE5 (I) - LADO UNIB",
     tagDeLiberacao: "_507FR19.SVE",
@@ -4930,7 +4935,7 @@ export const Medidores = [
   },
   {
     uuid: "1226de67bd27468e8115b01acecffff9",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "502FQ02_2.PV",
     descricao: "PROPENO GP BRASKEM PE4 - LADO PARCEIRO",
     tagDeLiberacao: "_502FR02.SVE",
@@ -4972,7 +4977,7 @@ export const Medidores = [
   },
   {
     uuid: "349f019b52fb4f7884fbc28bb3b3592e",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "502FQ02_1.PV",
     descricao: "PROPENO GP BRASKEM PE4 - LADO UNIB",
     tagDeLiberacao: "_502FR02.SVE",
@@ -5014,7 +5019,7 @@ export const Medidores = [
   },
   {
     uuid: "5ee65bf6c14a4012a0888fa45c1589c6",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "503FQ02_1.PV",
     descricao: "PROPENO GP BRASKEM PE6 - LADO UNIB",
     tagDeLiberacao: "_503FR02.SVE",
@@ -5056,7 +5061,7 @@ export const Medidores = [
   },
   {
     uuid: "f325fe2f22454b0aa936c10d9dd1dfb3",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "504FQ02_2.PV",
     descricao: "PROPENO GP BRASKEM PP1 - LADO PARCEIRO",
     tagDeLiberacao: "_504FR02.SVE",
@@ -5098,7 +5103,7 @@ export const Medidores = [
   },
   {
     uuid: "77778b8636ce4f6abaa0c4dcaf05adb7",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "504FQ02_1.PV",
     descricao: "PROPENO GP BRASKEM PP1 - LADO UNIB",
     tagDeLiberacao: "_504FR02.SVE",
@@ -5140,7 +5145,7 @@ export const Medidores = [
   },
   {
     uuid: "051fed95ccda4da8b2369beb664cb73c",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "514FQ02_2.PV",
     descricao: "PROPENO GP DSM - LADO PARCEIRO",
     tagDeLiberacao: "_514FR02.SVE",
@@ -5182,7 +5187,7 @@ export const Medidores = [
   },
   {
     uuid: "17f7dd30b7f249bdafef1450131e8624",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "514FQ02_1.PV",
     descricao: "PROPENO GP DSM - LADO UNIB",
     tagDeLiberacao: "_514FR02.SVE",
@@ -5224,7 +5229,7 @@ export const Medidores = [
   },
   {
     uuid: "26455b839eb344b4ae9bb8158ff87447",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "507FQ02_2.PV",
     descricao: "PROPENO GP PP2/PE5 (I) - LADO PARCEIRO",
     tagDeLiberacao: "_507FR02.SVE",
@@ -5266,7 +5271,7 @@ export const Medidores = [
   },
   {
     uuid: "ae23a1be2d38488bbb49ed3a1725fe27",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "507FQ02_1.PV",
     descricao: "PROPENO GP PP2/PE5 (I) - LADO UNIB",
     tagDeLiberacao: "_507FR02.SVE",
@@ -5308,7 +5313,7 @@ export const Medidores = [
   },
   {
     uuid: "b9f19b9a57264ff6b4f76f674637ea6b",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "507FQ102_2.PV",
     descricao: "PROPENO GP PP2/PE5 (II) - LADO PARCEIRO",
     tagDeLiberacao: "_507FR102.SVE",
@@ -5350,7 +5355,7 @@ export const Medidores = [
   },
   {
     uuid: "54511b13c96c44ceba256d6d4348beda",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "507FQ102_1.PV",
     descricao: "PROPENO GP PP2/PE5 (II) - LADO UNIB",
     tagDeLiberacao: "_507FR102.SVE",
@@ -5392,7 +5397,7 @@ export const Medidores = [
   },
   {
     uuid: "2090f7606086430d9b8d629174629ba8",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "504FQ07_2.PV",
     descricao: "PROPENO GQ BRASKEM PP1 - LADO PARCEIRO",
     tagDeLiberacao: "_504FR07.SVE",
@@ -5434,7 +5439,7 @@ export const Medidores = [
   },
   {
     uuid: "3d730333b7584f88bab318272b9ea308",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "504FR07_1.PV",
     descricao: "PROPENO GQ BRASKEM PP1 - LADO UNIB",
     tagDeLiberacao: "_504FR07.SVE",
@@ -5476,7 +5481,7 @@ export const Medidores = [
   },
   {
     uuid: "ccf2fb53c25c4ebca1ff9bcd13d5dd13",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "504FQ27_2.PV",
     descricao: "PROPENO RETORNO BRASKEM PP1 - LADO PARCEIRO",
     tagDeLiberacao: "_504FR27.SVE",
@@ -5518,7 +5523,7 @@ export const Medidores = [
   },
   {
     uuid: "6b3d04f7e38e4f409323f0da9b0bf5ce",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "504FQ27_1.PV",
     descricao: "PROPENO RETORNO BRASKEM PP1 - LADO UNIB",
     tagDeLiberacao: "_504FR27.SVE",
@@ -5560,7 +5565,7 @@ export const Medidores = [
   },
   {
     uuid: "8cd9cc5af1b34318a4e7f6795722c1df",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "507FQ27_2.PV",
     descricao: "PROPENO RETORNO PP2/PE5 (I) - LADO PARCEIRO",
     tagDeLiberacao: "_507FR27.SVE",
@@ -5602,7 +5607,7 @@ export const Medidores = [
   },
   {
     uuid: "6d2403fea20448a891860ae8f03d2e19",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "507FQ27_1.PV",
     descricao: "PROPENO RETORNO PP2/PE5 (I) - LADO UNIB",
     tagDeLiberacao: "_507FR27.SVE",
@@ -5644,7 +5649,7 @@ export const Medidores = [
   },
   {
     uuid: "94f3d4607fbe4f97a41a50bc4aa7eea1",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "teste",
     descricao: "teste",
     tagDeLiberacao: "teste",
@@ -5686,7 +5691,7 @@ export const Medidores = [
   },
   {
     uuid: "80cc866d9536479390ce94331f23c91b",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "TESTE",
     descricao: "TESTE",
     tagDeLiberacao: "TESTE",
@@ -5728,7 +5733,7 @@ export const Medidores = [
   },
   {
     uuid: "6f94aa72d5cf4eb3a08a66e61ee72318",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "210FQI016_NM3.CALC",
     descricao: "TOTALIZAÇÃO - AR DE INSTRUMENTO",
     tagDeLiberacao: "_210FQI016_NM3.CALC",
@@ -5770,7 +5775,7 @@ export const Medidores = [
   },
   {
     uuid: "d791b7c756ea48a1b8bf8d1d403f0d55",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "210FQI015_NM3.CALC",
     descricao: "TOTALIZAÇÃO - AR DE SERVIÇO",
     tagDeLiberacao: "_210FQI015_NM3.CALC",
@@ -5812,7 +5817,7 @@ export const Medidores = [
   },
   {
     uuid: "b0c6ec09e7c7434187a9ae454eff9db1",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "211FQI340_1.PV",
     descricao: "TOTALIZAÇÃO - CONDENSADO VAPOR",
     tagDeLiberacao: "_211FQI340.PV",
@@ -5854,7 +5859,7 @@ export const Medidores = [
   },
   {
     uuid: "d3ddda77b0c840eabb0eab1f4ec7555f",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "210FQI251_1.PV",
     descricao: "TOTALIZAÇÃO - ENERGIA ELÉTRICA",
     tagDeLiberacao: "_210FQI251_1.PV",
@@ -5896,7 +5901,7 @@ export const Medidores = [
   },
   {
     uuid: "b1122156c4434a10becb9bb6a90af931",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "210FQI017_1.PV",
     descricao: "TOTALIZAÇÃO - GC",
     tagDeLiberacao: "_210FQI017.PV",
@@ -5938,7 +5943,7 @@ export const Medidores = [
   },
   {
     uuid: "1484c8b3898b4802ad9112c64c42f9ff",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "210FQI003_1.PV",
     descricao: "TOTALIZAÇÃO - NITROGÊNIO",
     tagDeLiberacao: "_210FQI003_1.PV",
@@ -5980,7 +5985,7 @@ export const Medidores = [
   },
   {
     uuid: "2629cb28760e443a90f54816ee928ea2",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "210FQI012_1.PV",
     descricao: "TOTALIZAÇÃO - PROPENO",
     tagDeLiberacao: "_210FQI012.PV",
@@ -6022,7 +6027,7 @@ export const Medidores = [
   },
   {
     uuid: "b7403f4a22c04bb39f614f2e9df5c60c",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "210FQI014_1.PV",
     descricao: "TOTALIZAÇÃO - PROPENO RET",
     tagDeLiberacao: "_210FQI014.PV",
@@ -6064,7 +6069,7 @@ export const Medidores = [
   },
   {
     uuid: "7af67e872347462aba3d44e33d797c51",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "SODAEV_1.PV",
     descricao: "TOTALIZAÇÃO - SODA FRESCA",
     tagDeLiberacao: "_SODAEV_1.PV",
@@ -6106,7 +6111,7 @@ export const Medidores = [
   },
   {
     uuid: "7eacec51523148098007753c197cb176",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "211FQI305.PV",
     descricao: "TOTALIZAÇÃO - SODA GASTA",
     tagDeLiberacao: "_211FQI305.PV",
@@ -6148,7 +6153,7 @@ export const Medidores = [
   },
   {
     uuid: "0049d19d6e0744058d0a31550a401a03",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "210FQI005A_1.PV",
     descricao: "TOTALIZAÇÃO - VAPOR DE BAIXA",
     tagDeLiberacao: "_210FQI005A.PV",
@@ -6190,7 +6195,7 @@ export const Medidores = [
   },
   {
     uuid: "d0232ffc8bcc49c09eb07b88c181c349",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "210FQI005B_1.PV",
     descricao: "TOTALIZAÇÃO - VAPOR DE BAIXA RET",
     tagDeLiberacao: "_210FQI005B.PV",
@@ -6232,7 +6237,7 @@ export const Medidores = [
   },
   {
     uuid: "9428bc93f7db4a76bcf7ed7f90a3984a",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "210FQI006_1.PV",
     descricao: "TOTALIZAÇÃO - VAPOR DE MÉDIA",
     tagDeLiberacao: "_210FQI006.PV",
@@ -6274,7 +6279,7 @@ export const Medidores = [
   },
   {
     uuid: "5a779ed525d64c75980ce824932ae90e",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "210FQI008_1.PV",
     descricao: "TOTALIZAÇÃO - ÁGUA CLARIFICADA",
     tagDeLiberacao: "_210FQI008_1.PV",
@@ -6316,7 +6321,7 @@ export const Medidores = [
   },
   {
     uuid: "30b2002554074227bf75dabac12269c0",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "210FQI021_1.PV",
     descricao: "TOTALIZAÇÃO - ÁGUA DESMI MP",
     tagDeLiberacao: "_210FQI021.PV",
@@ -6358,7 +6363,7 @@ export const Medidores = [
   },
   {
     uuid: "60a77c9ecd804c6b93545f338db7a957",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "210FQI009_1.PV",
     descricao: "TOTALIZAÇÃO - ÁGUA POTÁVEL",
     tagDeLiberacao: "_210FQI009_1.PV",
@@ -6400,7 +6405,7 @@ export const Medidores = [
   },
   {
     uuid: "71f9b6ebb2804896a46505d1dd4521aa",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "502FQ11_2.PV",
     descricao: "VA BRASKEM PE4 - LADO PARCEIRO",
     tagDeLiberacao: "_502FR11.SVE",
@@ -6442,7 +6447,7 @@ export const Medidores = [
   },
   {
     uuid: "3d00337723a2444790324312f92f1775",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "502FQ11_1.PV",
     descricao: "VA BRASKEM PE4 - LADO UNIB",
     tagDeLiberacao: "_502FR11.SVE",
@@ -6484,7 +6489,7 @@ export const Medidores = [
   },
   {
     uuid: "e6998c400d7b4c3b8797bb39b32a753f",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "503FQ11_2.PV",
     descricao: "VA BRASKEM PE6 - LADO PARCEIRO",
     tagDeLiberacao: "_503FR11.SVE",
@@ -6526,7 +6531,7 @@ export const Medidores = [
   },
   {
     uuid: "349ddfba92a341d9b220321377d4aa2c",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "503FQ11_1.PV",
     descricao: "VA BRASKEM PE6 - LADO UNIB",
     tagDeLiberacao: "_503FR11.SVE",
@@ -6568,7 +6573,7 @@ export const Medidores = [
   },
   {
     uuid: "4c789475c16a43fc98233e508f2a380a",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "504FQ11_2.PV",
     descricao: "VA BRASKEM PP1 - LADO PARCEIRO",
     tagDeLiberacao: "_504FR11.SVE",
@@ -6610,7 +6615,7 @@ export const Medidores = [
   },
   {
     uuid: "ce5afc43a2264ef8be30a0f1bf6fe17e",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "504FQ11_1.PV",
     descricao: "VA BRASKEM PP1 - LADO UNIB",
     tagDeLiberacao: "_504FR11.SVE",
@@ -6652,7 +6657,7 @@ export const Medidores = [
   },
   {
     uuid: "dfc296b50f934e59be5907ba61e6cb36",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "505FQ11_2.PV",
     descricao: "VA INNOVA - LADO PARCEIRO",
     tagDeLiberacao: "_505FR11.SVE",
@@ -6694,7 +6699,7 @@ export const Medidores = [
   },
   {
     uuid: "6e265344e9a047969c9b7faadbec4056",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "505FQ11_1.PV",
     descricao: "VA INNOVA - LADO UNIB",
     tagDeLiberacao: "_505FR11.SVE",
@@ -6736,7 +6741,7 @@ export const Medidores = [
   },
   {
     uuid: "db81bf1d11ac4f5e8438203137a47c95",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "501FQ11_2.PV",
     descricao: "VA OXITENO - LADO PARCEIRO",
     tagDeLiberacao: "_501FR11.SVE",
@@ -6778,7 +6783,7 @@ export const Medidores = [
   },
   {
     uuid: "aea0ad0506d748d2bb886c4f17cb3917",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "501FQ11_1.PV",
     descricao: "VA OXITENO - LADO UNIB",
     tagDeLiberacao: "_501FR11.SVE",
@@ -6820,7 +6825,7 @@ export const Medidores = [
   },
   {
     uuid: "7e82d2e329d647da9220dda9c1c68d34",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "504FQ11_virtual",
     descricao: "VA PARA BOREALIS (VIRTUAL)",
     tagDeLiberacao: "_504FR11virtual.SVE",
@@ -6862,7 +6867,7 @@ export const Medidores = [
   },
   {
     uuid: "4dc91469833d4ee9b4a12c03d4b48699",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "507FQ11_2.PV",
     descricao: "VA PP2/PE5 (I) - LADO PARCEIRO",
     tagDeLiberacao: "_507FR11.SVE",
@@ -6904,7 +6909,7 @@ export const Medidores = [
   },
   {
     uuid: "8a46bd017cb746eaa51bbe2f3ca9bf43",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "507FQ11_1.PV",
     descricao: "VA PP2/PE5 (I) - LADO UNIB",
     tagDeLiberacao: "_507FR11.SVE",
@@ -6946,7 +6951,7 @@ export const Medidores = [
   },
   {
     uuid: "9921a314d04f4f608aa91cf47cc7d003",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "507FQ111_2.PV",
     descricao: "VA PP2/PE5 (II) - LADO PARCEIRO",
     tagDeLiberacao: "_507FR111.SVE",
@@ -6988,7 +6993,7 @@ export const Medidores = [
   },
   {
     uuid: "2d0d34816bb048c6a708f47f4ee3fdee",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "507FQ111_1.PV",
     descricao: "VA PP2/PE5 (II) - LADO UNIB",
     tagDeLiberacao: "_507FR111.SVE",
@@ -7030,7 +7035,7 @@ export const Medidores = [
   },
   {
     uuid: "42949cf88f9c4fe283ec0afceb641601",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "516FQ18_01.PV",
     descricao: "VAPOR DE BAIXA",
     tagDeLiberacao: "_516FR18.SVE",
@@ -7072,7 +7077,7 @@ export const Medidores = [
   },
   {
     uuid: "72a6d567c66d4a9a8c3295e4db520251",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "505FQ18_2.PV",
     descricao: "VB INNOVA - LADO PARCEIRO",
     tagDeLiberacao: "_505FR18.SVE",
@@ -7114,7 +7119,7 @@ export const Medidores = [
   },
   {
     uuid: "82bf1c360b76475f9cc14ca2a066addc",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "505FQ18_1.PV",
     descricao: "VB INNOVA - LADO UNIB",
     tagDeLiberacao: "_505FR18.SVE",
@@ -7156,7 +7161,7 @@ export const Medidores = [
   },
   {
     uuid: "34df42e62387419f82498585a38bc88c",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "504FQ12_2.PV",
     descricao: "VM BRASKEM PP1 - LADO PARCEIRO",
     tagDeLiberacao: "_504FR12.SVE",
@@ -7198,7 +7203,7 @@ export const Medidores = [
   },
   {
     uuid: "a73f41ea80a54602989ea0277c24dfeb",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "504FQ12_1.PV",
     descricao: "VM BRASKEM PP1 - LADO UNIB",
     tagDeLiberacao: "_504FR12.SVE",
@@ -7240,7 +7245,7 @@ export const Medidores = [
   },
   {
     uuid: "8bb98b06180f429586f3de5601e04c5b",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "514FQ12_2.PV",
     descricao: "VM DSM - LADO PARCEIRO",
     tagDeLiberacao: "_514FR12.SVE",
@@ -7282,7 +7287,7 @@ export const Medidores = [
   },
   {
     uuid: "17ece36a9dbc45819cafb215cb7bcc6d",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "514FQ12_1.PV",
     descricao: "VM DSM - LADO UNIB",
     tagDeLiberacao: "_514FR12.SVE",
@@ -7324,7 +7329,7 @@ export const Medidores = [
   },
   {
     uuid: "38c9706b037747b18540eeac9c58e577",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "506FQ12_2.PV",
     descricao: "VM LANXESS - LADO PARCEIRO",
     tagDeLiberacao: "_506FR12.SVE",
@@ -7366,7 +7371,7 @@ export const Medidores = [
   },
   {
     uuid: "5668d39a36ca436b85e789343129c0e5",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "506FQ112_2.PV",
     descricao: "VM LANXESS - LADO PARCEIRO (RED P/ VB)",
     tagDeLiberacao: "_506FR112.SVE",
@@ -7408,7 +7413,7 @@ export const Medidores = [
   },
   {
     uuid: "2e0a1d79cdc34ed6bece3fd97e9ad6be",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "506FQ12_1.PV",
     descricao: "VM LANXESS - LADO UNIB",
     tagDeLiberacao: "_506FR12.SVE",
@@ -7450,7 +7455,7 @@ export const Medidores = [
   },
   {
     uuid: "6eab7f1b11d74afb8c9da77bb90d61cd",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "506FQ112_1.PV",
     descricao: "VM LANXESS - LADO UNIB (RED P/ VB)",
     tagDeLiberacao: "_506FR112.SVE",
@@ -7492,7 +7497,7 @@ export const Medidores = [
   },
   {
     uuid: "3b6a1d7ad4ec4e22913d8006e9382631",
-    MedicaoPrimariaOuSecundariaLiberacao: Math.random() > 0.5 ? "S" : "P",
+    medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
     identificador: "509FQ12_1.PV",
     descricao: "VM WHITE MARTINS - LADO UNIB",
     tagDeLiberacao: "_509FR12.SVE",
