@@ -209,7 +209,7 @@ export const Produtos = [
   {
     uuid: "61999e3cfb6d434da509e11b2db70819",
     identificador: "P145",
-    descricao: "HIDROGÊNIO",
+    descricao: "HIDROGÊ.NIO",
     incluidoEm: "14/12/2011",
     alteradoEm: null,
     excluidoEm: null,

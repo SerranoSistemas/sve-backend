@@ -10,4 +10,8 @@ Router.post("/escrita", (REQ: Request, RES: Response) => {
   RES.status(200).json({});
 });
 
+Router.post("/transferencia", (REQ: Request, RES: Response) => {
+  RES.status(200).json({});
+});
+
 export { Router };
