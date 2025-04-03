@@ -49,6 +49,7 @@ export const GerarRelatorioEntregas = (
   const Dados = ArrayDeDatas.map((Dia) => {
     return {
       data: Dia,
+      soma: 999,
       dados: Agrupadores.map((_, index) => {
         const i = index + 1;
         return [i, i * 10, i * 100, i * 1000, i * 1000, i * 1000, i * 1000, i * 1000, i * 1000, i * 1000, i * 1000];

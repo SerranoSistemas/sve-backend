@@ -45,11 +45,14 @@ export const GerarRelatorioComparativo = (
   const Dados = ArrayDeDatas.map((Dia) => {
     return {
       data: Dia,
+      soma: 999,
       dados: Agrupadores.map((_, index) => {
-        return [2999999.999, index, 999.999, 0, (index + 1) * 100, 999.999, 0, (index + 1) * 100];
+        return [2999999.999, index, 999.999, 0, (index + 1) * 100, 999.999, 0, (index + 1) * 100, index % 2 === 0];
       }),
     };
   });
+
+  // Agrupadores.push('Valor')
 
   return {
     colunas: [
@@ -61,6 +64,7 @@ export const GerarRelatorioComparativo = (
       "AcumUnib",
       "AcumParceiro",
       "DifAcum",
+      "medidorOficialPrimario",
     ],
     agrupadores: Agrupadores,
     dados: Dados,
