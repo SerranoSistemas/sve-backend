@@ -1,6 +1,6 @@
-import moment from "moment";
+import { PlantaCodigoGenerator, PlantaDescGenerator } from "../Lib/MockDataGenerator";
 
-export const Plantas = [
+export const PlantasArray = [
   {
     uuid: "31627ac5df9a4f149bcac118d5e42cef",
     identificador: "TESTE",
@@ -68,3 +68,11 @@ export const Plantas = [
     excluidoPor: null,
   },
 ];
+
+export const Plantas = PlantasArray.map((item) => {
+  return {
+    ...item,
+    identificador: PlantaCodigoGenerator(),
+    descricao: PlantaDescGenerator(),
+  };
+});

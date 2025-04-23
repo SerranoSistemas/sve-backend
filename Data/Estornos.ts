@@ -1,4 +1,10 @@
 import { getRandomSapStatus } from "../Lib/Utils";
+import {
+  ClientNameGenerator,
+  DemonstrativoGenerator,
+  ProductDescGenerator,
+  TagGenerator,
+} from "../Lib/MockDataGenerator";
 
 export const GenerateEstornos = () => {
   const Estornos = [
@@ -111,16 +117,19 @@ export const GenerateEstornos = () => {
 
   return Estornos.map((ordem) => ({
     codigoExportacao: ordem.uuid,
-    demonstrativo: ordem.demonstrativo,
+    demonstrativo: DemonstrativoGenerator(),
     contrato: ordem.contrato,
     medidor: {
-      identificador: ordem.tag,
+      //identificador: ordem.tag,
+      identificador: TagGenerator(),
     },
     cliente: {
-      nome: ordem.cliente,
+      //nome: ordem.cliente,
+      nome: ClientNameGenerator(),
     },
     produto: {
-      descricao: ordem.produto,
+      // descricao: ordem.produto,
+      descricao: ProductDescGenerator(),
     },
     tipo: Math.floor(Math.random() * 3) + 1,
     periodicidade: ordem.periodicidade,

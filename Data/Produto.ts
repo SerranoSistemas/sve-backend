@@ -1,5 +1,7 @@
 import moment from "moment";
 import { Copy } from "../Lib/Utils";
+import { fa, faker } from "@faker-js/faker";
+import { IdentificadorGenerator, ProductDescGenerator } from "../Lib/MockDataGenerator";
 
 const randomBool = () => Math.random() < 0.75;
 
@@ -13,7 +15,7 @@ const DatesInfo = {
   permitirTransferencia: randomBool(),
 };
 
-export const Produtos = [
+export const ProdutosArray = [
   {
     uuid: "e23d9e945b094255bc73277001708ae0",
     identificador: "U065",
@@ -405,3 +407,11 @@ export const FilterProdutoText = (data: any[], text: string | null) => {
 
   return NewData;
 };
+
+export const Produtos = ProdutosArray.map((item) => {
+  return {
+    ...item,
+    identificador: IdentificadorGenerator(),
+    descricao: ProductDescGenerator(),
+  };
+});

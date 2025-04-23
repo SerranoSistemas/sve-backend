@@ -1,3 +1,5 @@
+import { MedidorDescGenerator, TagGenerator } from "../Lib/MockDataGenerator";
+
 const randomFloat = (min: number, max: number, decimals: number = 2): number =>
   parseFloat((Math.random() * (max - min) + min).toFixed(decimals));
 
@@ -18,7 +20,7 @@ function getRandomMedicaoPrimariaOuSecundariaLiberacao() {
   return options[Math.floor(Math.random() * options.length)];
 }
 
-export const Medidores = [
+export const MedidoresArray = [
   {
     uuid: "6a480a46198b455abd525ab3be572015",
     medicaoPrimariaOuSecundariaLiberacao: getRandomMedicaoPrimariaOuSecundariaLiberacao(),
@@ -7538,3 +7540,11 @@ export const Medidores = [
     executarTransferenciaEntreCentros: randomBool(),
   },
 ];
+
+export const Medidores = MedidoresArray.map((item) => {
+  return {
+    ...item,
+    identificador: TagGenerator(),
+    descricao: MedidorDescGenerator(),
+  };
+});

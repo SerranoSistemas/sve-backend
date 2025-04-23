@@ -63,7 +63,7 @@ export const GerarRelatorioComparativo = (
       "DifPercent",
       "AcumUnib",
       "AcumParceiro",
-      "DifAcum",
+      "DifAcum", 
       "medidorOficialPrimario",
     ],
     agrupadores: Agrupadores,

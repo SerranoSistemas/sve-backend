@@ -1,4 +1,10 @@
 import { v4 as uuid } from "uuid";
+import {
+  ClientNameGenerator,
+  DemonstrativoGenerator,
+  ProductDescGenerator,
+  TagGenerator,
+} from "../Lib/MockDataGenerator";
 
 type Transferencia = {
   uuid: string;
@@ -307,16 +313,16 @@ export const GenerateTransferencias = () => {
 
   return Transferencias.map((ordem) => ({
     codigoExportacao: ordem.uuid,
-    demonstrativo: ordem.demonstrativo,
+    demonstrativo: DemonstrativoGenerator(),
     contrato: ordem.contrato,
     medidor: {
-      identificador: ordem.tag,
+      identificador: TagGenerator(),
     },
     cliente: {
-      nome: ordem.cliente,
+      nome: ClientNameGenerator(),
     },
     produto: {
-      descricao: ordem.produto,
+      descricao: ProductDescGenerator(),
     },
     desconto: ordem.desconto,
     quantidadeConsumida: Math.floor(Math.random() * (ordem.quantidadeTransferida / 2)), // Exemplo de quantidade consumida gerada aleatoriamente

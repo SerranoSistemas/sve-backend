@@ -1,15 +1,7 @@
+import { AreaCodigoGenerator, AreaDescGenerator } from "../Lib/MockDataGenerator";
 import { Copy } from "../Lib/Utils";
 
-const DatesInfo = {
-  incluidoEm: new Date("2024-08-03T10:00:00Z"),
-  alteradoEm: new Date("2024-08-03T10:00:00Z"),
-  excluidoEm: null,
-  incluidoPor: null,
-  alteradoPor: null,
-  excluidoPor: null,
-};
-
-export const Areas = [
+export const AreasArray = [
   {
     uuid: "56bf360050754907af13181603f55995",
     identificador: "TESTEALTERADO",
@@ -648,7 +640,7 @@ export const Areas = [
   },
 ];
 
-export const AreasDropdown = Areas.map((Area) => {
+export const AreasDropdown = AreasArray.map((Area) => {
   return {
     label: Area.descricao,
     value: Area.uuid,
@@ -684,3 +676,11 @@ export const FilterAreaText = (data: any[], text: string | null) => {
 
   return NewData;
 };
+
+export const Areas = AreasArray.map((item) => {
+  return {
+    ...item,
+    descricao: AreaDescGenerator(),
+    identificador: AreaCodigoGenerator(),
+  };
+});

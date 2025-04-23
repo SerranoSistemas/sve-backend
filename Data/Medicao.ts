@@ -1,6 +1,7 @@
+import { ProductDescGenerator, TagGenerator } from "../Lib/MockDataGenerator";
 import { Medicao } from "./Types";
 
-export const Medicoes: Medicao[] = [
+export const MedicoesArray: Medicao[] = [
   {
     medidor: {
       uuid: "3b6a1d7ad4ec4e22913d8006e9382631",
@@ -128,3 +129,14 @@ export const Medicoes: Medicao[] = [
     pendenciasMes: Math.random() < 0.5,
   },
 ];
+
+export const Medicoes = MedicoesArray.map((item) => {
+  return {
+    ...item,
+    produto: ProductDescGenerator(),
+    medidor: {
+      uuid: item.medidor.uuid,
+      identificador: TagGenerator(),
+    },
+  };
+});

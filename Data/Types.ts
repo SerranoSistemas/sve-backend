@@ -23,7 +23,7 @@ export type DefaultClass = {
   incluidoPor?: string;
   alteradoPor?: string;
   excluidoPor?: string;
-};
+}; 
 
 //Objeto mínimo por enquanto
 export type ServersPIMS = {

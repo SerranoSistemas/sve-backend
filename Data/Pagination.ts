@@ -5,7 +5,7 @@ export const DefaultPagination: Pagination = {
   page: 1,
   rows: 20,
 };
-
+ 
 export const PaginaNationGetPage = (queryValue: any): number => {
   const value = Array.isArray(queryValue) ? queryValue[0] : queryValue;
   return value !== undefined ? parseInt(value as string, 10) : DefaultPagination.page;

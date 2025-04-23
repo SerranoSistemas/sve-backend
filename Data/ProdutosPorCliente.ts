@@ -1,3 +1,5 @@
+import { DepositoGenerator, TransacaoGenerator } from "../Lib/MockDataGenerator";
+
 export const GetProdutosPorCliente = () => {
   const ProdutosPorCliente = [
     {
@@ -1482,5 +1484,11 @@ export const GetProdutosPorCliente = () => {
     },
   ];
 
-  return ProdutosPorCliente;
+  return ProdutosPorCliente.map((item) => {
+    return {
+      ...item,
+      transacaoDoDia: TransacaoGenerator(),
+      transacaoDoDiaAnterior: TransacaoGenerator(),
+    };
+  });
 };

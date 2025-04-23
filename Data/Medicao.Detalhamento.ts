@@ -1,5 +1,5 @@
 import { v4 as uuid } from "uuid";
-import { Detalhamento } from "./Types";
+import { Detalhamento } from "./Types"; 
 
 export const DetalhamentoDeMedicao: Detalhamento[] = [
   // {

@@ -1,4 +1,6 @@
-export const EstacoesDeMedicao = [
+import { EstacaoMedicaoCodigoGenerator, EstacaoMedicaoDescGenerator } from "../Lib/MockDataGenerator";
+
+export const EstacoesDeMedicaoArray = [
   {
     uuid: "dbe43c620615453f81cf47c46e6a4d57",
     identificador: "BRASKEM GREEN",
@@ -110,3 +112,7 @@ export const EstacoesDeMedicao = [
     excluidoPor: null,
   },
 ];
+
+export const EstacoesDeMedicao = EstacoesDeMedicaoArray.map((item) => {
+  return { ...item, descricao: EstacaoMedicaoDescGenerator(), identificador: EstacaoMedicaoCodigoGenerator() };
+});

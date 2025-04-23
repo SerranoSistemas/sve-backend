@@ -1,4 +1,6 @@
-export const DepositosSAP = [
+import { DepositoGenerator } from "../Lib/MockDataGenerator";
+
+export const DepositosSAPArray = [
   {
     uuid: "7f3c1d6488104db3bee27c0abc385606",
     identificador: "INMP",
@@ -99,3 +101,11 @@ export const DepositosSAP = [
     excluidoPor: null,
   },
 ];
+
+export const DepositosSAP = DepositosSAPArray.map((item) => {
+  return {
+    ...item,
+    identificador: DepositoGenerator(),
+    descricao: DepositoGenerator(),
+  };
+});

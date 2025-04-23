@@ -1,4 +1,10 @@
 import { v4 as uuid } from "uuid";
+import {
+  ClientNameGenerator,
+  DemonstrativoGenerator,
+  ProductDescGenerator,
+  TagGenerator,
+} from "../Lib/MockDataGenerator";
 
 type OrdemDeVenda = {
   uuid: string;
@@ -321,16 +327,16 @@ export const GenerateOrdensDeVenda = () => {
 
   return OrdensDeVenda.map((ordem) => ({
     codigoExportacao: ordem.uuid,
-    demonstrativo: ordem.demonstrativo,
+    demonstrativo: DemonstrativoGenerator(),
     contrato: ordem.contrato,
     medidor: {
-      identificador: ordem.tag,
+      identificador: TagGenerator(),
     },
     cliente: {
-      nome: ordem.cliente,
+      nome: ClientNameGenerator(),
     },
     produto: {
-      descricao: ordem.produto,
+      descricao: ProductDescGenerator(),
     },
     depositoDeDestino: {
       identificador: ordem.deposito,

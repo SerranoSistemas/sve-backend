@@ -1,7 +1,9 @@
+import { CentroGenerator, ClientNameGenerator } from "../Lib/MockDataGenerator";
+
 const randomBool = () => Math.random() < 0.8;
 const randomType = () => (Math.random() < 0.5 ? 1 : 2);
 
-export const Clientes = [
+export const ClientesArray = [
   {
     uuid: "68d9d02e867740e4a08444db44c84de4",
     identificador: "1000028553",
@@ -259,3 +261,12 @@ export const Clientes = [
     permitirTransferencia: randomBool(),
   },
 ];
+
+export const Clientes = ClientesArray.map((item) => {
+  return {
+    ...item,
+    descricao: ClientNameGenerator(),
+    email: "",
+    centro: CentroGenerator(),
+  };
+});
