@@ -1,0 +1,101 @@
+[
+  {
+    "uuid": "7f3c1d6488104db3bee27c0abc385606",
+    "identificador": "INMP",
+    "descricao": "INMP",
+    "incluidoEm": "06/09/2024",
+    "alteradoEm": null,
+    "excluidoEm": null,
+    "incluidoPor": "CARGA",
+    "alteradoPor": null,
+    "excluidoPor": null
+  },
+  {
+    "uuid": "9867815cdb024a9eb188cd050a84ed88",
+    "identificador": "IPB1",
+    "descricao": "IPB1",
+    "incluidoEm": "06/09/2024",
+    "alteradoEm": null,
+    "excluidoEm": null,
+    "incluidoPor": "CARGA",
+    "alteradoPor": null,
+    "excluidoPor": null
+  },
+  {
+    "uuid": "22cd8dde72d247679d617688cb7a2831",
+    "identificador": "IPE6",
+    "descricao": "IPE6",
+    "incluidoEm": "06/09/2024",
+    "alteradoEm": null,
+    "excluidoEm": null,
+    "incluidoPor": "CARGA",
+    "alteradoPor": null,
+    "excluidoPor": null
+  },
+  {
+    "uuid": "e6e40840998e4654b756bd073a02e18d",
+    "identificador": "IPPE",
+    "descricao": "IPPE",
+    "incluidoEm": "06/09/2024",
+    "alteradoEm": null,
+    "excluidoEm": null,
+    "incluidoPor": "CARGA",
+    "alteradoPor": null,
+    "excluidoPor": null
+  },
+  {
+    "uuid": "729f5ec4181348ceb63ab9ccde3b65e0",
+    "identificador": "IPPP",
+    "descricao": "IPPP",
+    "incluidoEm": "06/09/2024",
+    "alteradoEm": null,
+    "excluidoEm": null,
+    "incluidoPor": "CARGA",
+    "alteradoPor": null,
+    "excluidoPor": null
+  },
+  {
+    "uuid": "7a950a026e334b5c993624d11bca3610",
+    "identificador": "IPSL",
+    "descricao": "IPSL",
+    "incluidoEm": "06/09/2024",
+    "alteradoEm": null,
+    "excluidoEm": null,
+    "incluidoPor": "CARGA",
+    "alteradoPor": null,
+    "excluidoPor": null
+  },
+  {
+    "uuid": "0e4afb6bba0e4a4ab6834558c1e64b6e",
+    "identificador": "IPSP",
+    "descricao": "IPSP",
+    "incluidoEm": "06/09/2024",
+    "alteradoEm": null,
+    "excluidoEm": null,
+    "incluidoPor": "CARGA",
+    "alteradoPor": null,
+    "excluidoPor": null
+  },
+  {
+    "uuid": "846f4f9507b04d81ad3c932c24544736",
+    "identificador": "PAC",
+    "descricao": "PAC",
+    "incluidoEm": "06/09/2024",
+    "alteradoEm": null,
+    "excluidoEm": null,
+    "incluidoPor": "CARGA",
+    "alteradoPor": null,
+    "excluidoPor": null
+  },
+  {
+    "uuid": "81e72170cc4b4cdeae8124d32e7d7961",
+    "identificador": "SCOM",
+    "descricao": "SCOM",
+    "incluidoEm": "06/09/2024",
+    "alteradoEm": null,
+    "excluidoEm": null,
+    "incluidoPor": "CARGA",
+    "alteradoPor": null,
+    "excluidoPor": null
+  }
+]

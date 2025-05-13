@@ -1,0 +1,68 @@
+[
+  {
+    "uuid": "30c917f5d736431a9169c558aee7c925",
+    "identificador": "AROMA1-IP21",
+    "descricao": "AROMÁTICOS",
+    "incluidoEm": "01/01/2012",
+    "alteradoEm": null,
+    "excluidoEm": null,
+    "incluidoPor": "CARGA",
+    "alteradoPor": null,
+    "excluidoPor": null
+  },
+  {
+    "uuid": "cd29bf4c2254447cb15e770f61c3aea1",
+    "identificador": "WTRI83",
+    "descricao": "CONEXÃO UNIB RS",
+    "incluidoEm": "01/01/2012",
+    "alteradoEm": null,
+    "excluidoEm": null,
+    "incluidoPor": "CARGA",
+    "alteradoPor": null,
+    "excluidoPor": null
+  },
+  {
+    "uuid": "ef4f9dbe7fc24a66acb7d6a6e18e7f94",
+    "identificador": "INFOEV101",
+    "descricao": "ETENO VERDE",
+    "incluidoEm": "01/01/2012",
+    "alteradoEm": null,
+    "excluidoEm": null,
+    "incluidoPor": "CARGA",
+    "alteradoPor": null,
+    "excluidoPor": null
+  },
+  {
+    "uuid": "fc55fca39cef4eb383e7d023439224ed",
+    "identificador": "OLEFI1-IP21",
+    "descricao": "OLEFINAS 1",
+    "incluidoEm": "01/01/2012",
+    "alteradoEm": null,
+    "excluidoEm": null,
+    "incluidoPor": "CARGA",
+    "alteradoPor": null,
+    "excluidoPor": null
+  },
+  {
+    "uuid": "79e0a8bc3b5c4dd6b5a15b610a680ff2",
+    "identificador": "OLEFI2-IP21",
+    "descricao": "OLEFINAS 2",
+    "incluidoEm": "01/01/2012",
+    "alteradoEm": null,
+    "excluidoEm": null,
+    "incluidoPor": "CARGA",
+    "alteradoPor": null,
+    "excluidoPor": null
+  },
+  {
+    "uuid": "cc4bfbf3e48f4bfe921d0e8ce486756d",
+    "identificador": "UTIL-IP21",
+    "descricao": "UTILIDADES",
+    "incluidoEm": "01/01/2012",
+    "alteradoEm": null,
+    "excluidoEm": null,
+    "incluidoPor": "CARGA",
+    "alteradoPor": null,
+    "excluidoPor": null
+  }
+]

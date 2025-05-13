@@ -1,0 +1,68 @@
+[
+  {
+    "uuid": "ed9b11a01988444ca7b8244079e3382c",
+    "identificador": "KWH",
+    "descricao": "KILOWATT HORA",
+    "incluidoEm": "20/05/2020",
+    "alteradoEm": null,
+    "excluidoEm": null,
+    "incluidoPor": "BRASKEM\\ISABEC05",
+    "alteradoPor": null,
+    "excluidoPor": null
+  },
+  {
+    "uuid": "f493c5beafe94dfeaec71f66a2e6b0bc",
+    "identificador": "MWH",
+    "descricao": "MEGAWATT HORA",
+    "incluidoEm": "06/04/2020",
+    "alteradoEm": null,
+    "excluidoEm": null,
+    "incluidoPor": "BRASKEM\\ISABEC05",
+    "alteradoPor": null,
+    "excluidoPor": null
+  },
+  {
+    "uuid": "536e6c315a024558a7ea9bfcfd041a74",
+    "identificador": "M3",
+    "descricao": "METROS CÚBICOS",
+    "incluidoEm": "26/09/2013",
+    "alteradoEm": null,
+    "excluidoEm": null,
+    "incluidoPor": "CARGA",
+    "alteradoPor": null,
+    "excluidoPor": null
+  },
+  {
+    "uuid": "4736d31c908f472c96d5a8f5b8bb17e0",
+    "identificador": "NM3",
+    "descricao": "NORMAL METROS CÚBICOS",
+    "incluidoEm": "06/04/2020",
+    "alteradoEm": null,
+    "excluidoEm": null,
+    "incluidoPor": "BRASKEM\\ISABEC05",
+    "alteradoPor": null,
+    "excluidoPor": null
+  },
+  {
+    "uuid": "1d73bc6df71b4bdfb75db9ae4ea44a59",
+    "identificador": "KG",
+    "descricao": "QUILOGRAMAS",
+    "incluidoEm": "26/09/2013",
+    "alteradoEm": null,
+    "excluidoEm": null,
+    "incluidoPor": "CARGA",
+    "alteradoPor": null,
+    "excluidoPor": null
+  },
+  {
+    "uuid": "69ad07bbcaeb4f9bb2c0dd7669c1b7df",
+    "identificador": "TO",
+    "descricao": "TONELADAS",
+    "incluidoEm": "26/09/2013",
+    "alteradoEm": null,
+    "excluidoEm": null,
+    "incluidoPor": "CARGA",
+    "alteradoPor": null,
+    "excluidoPor": null
+  }
+]

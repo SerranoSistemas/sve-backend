@@ -1,0 +1,34 @@
+[
+  {
+    "uuid": "9412358c10ae471a8d4ebdac1bc2fd0c",
+    "descricao": "GG-BRA-SISTEMAMEDICAO-ADMMASTER"
+  },
+  {
+    "uuid": "d799086a0cb04845b9a219d6d8678aaa",
+    "descricao": "GG-BRA-SISTEMAMEDICAO-ADMINISTRADOR-Q2RS"
+  },
+  {
+    "uuid": "11535b85c74b41e984d38dec9acbce8e",
+    "descricao": "GG-BRA-SISTEMAMEDICAO-OPERACIONAL-Q2RS"
+  },
+  {
+    "uuid": "a7c15e90ea1d465d9b49f8f956e0da8e",
+    "descricao": "GG-BRA-SISTEMAMEDICAO-CONSULTA-Q2RS"
+  },
+  {
+    "uuid": "68f9dfa77938453482becbe3445cf476",
+    "descricao": "GG-BRA-SISTEMAMEDICAO-CUSTOMERSERVICE"
+  },
+  {
+    "uuid": "8c3d67868e714d80ba9667d2cb279a93",
+    "descricao": "GG-BRA-SISTEMAMEDICAO-ADMINISTRADOR-GREENSA"
+  },
+  {
+    "uuid": "35a652f429004ebd8446b90b786fc36a",
+    "descricao": "GG-BRA-SISTEMAMEDICAO-OPERACIONAL-GREENSA"
+  },
+  {
+    "uuid": "bffa5469ec274b34ba7eea5ca454c1bf",
+    "descricao": "GG-BRA-SISTEMAMEDICAO-CONSULTA-GREENSA"
+  }
+]

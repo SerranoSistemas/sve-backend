@@ -1,0 +1,112 @@
+[
+  {
+    "uuid": "dbe43c620615453f81cf47c46e6a4d57",
+    "identificador": "BRASKEM GREEN",
+    "descricao": "EMED BRASKEM GREEN",
+    "incluidoEm": "04/03/2024",
+    "alteradoEm": null,
+    "excluidoEm": null,
+    "incluidoPor": "BRASKEM\\WENDLS01",
+    "alteradoPor": null,
+    "excluidoPor": null
+  },
+  {
+    "uuid": "cc0c52185cd44e17a5d9f4154b66ee16",
+    "identificador": "DSM",
+    "descricao": "EMED DSM ELASTÔMEROS",
+    "incluidoEm": "14/12/2011",
+    "alteradoEm": null,
+    "excluidoEm": null,
+    "incluidoPor": "CARGA",
+    "alteradoPor": null,
+    "excluidoPor": null
+  },
+  {
+    "uuid": "61e3aea1762b443fbe7298d3557e5e65",
+    "identificador": "INNOVA",
+    "descricao": "EMED INNOVA",
+    "incluidoEm": "14/12/2011",
+    "alteradoEm": null,
+    "excluidoEm": null,
+    "incluidoPor": "CARGA",
+    "alteradoPor": null,
+    "excluidoPor": null
+  },
+  {
+    "uuid": "57659b5d6f86462eb8665eac3c171598",
+    "identificador": "LANXESS",
+    "descricao": "EMED LANXESS",
+    "incluidoEm": "14/12/2011",
+    "alteradoEm": null,
+    "excluidoEm": null,
+    "incluidoPor": "CARGA",
+    "alteradoPor": null,
+    "excluidoPor": null
+  },
+  {
+    "uuid": "56085d72b44d4c40bd3d0fbe03d80f6f",
+    "identificador": "OXITENO",
+    "descricao": "EMED OXITENO",
+    "incluidoEm": "14/12/2011",
+    "alteradoEm": null,
+    "excluidoEm": null,
+    "incluidoPor": "CARGA",
+    "alteradoPor": null,
+    "excluidoPor": null
+  },
+  {
+    "uuid": "6c582ed580ab467aa4557722980547a9",
+    "identificador": "PE4",
+    "descricao": "EMED PE4",
+    "incluidoEm": "14/12/2011",
+    "alteradoEm": null,
+    "excluidoEm": null,
+    "incluidoPor": "CARGA",
+    "alteradoPor": null,
+    "excluidoPor": null
+  },
+  {
+    "uuid": "2bc536ec12f94b4ebe57c35f6662b90d",
+    "identificador": "PE6",
+    "descricao": "EMED PE6",
+    "incluidoEm": "14/12/2011",
+    "alteradoEm": null,
+    "excluidoEm": null,
+    "incluidoPor": "CARGA",
+    "alteradoPor": null,
+    "excluidoPor": null
+  },
+  {
+    "uuid": "1ada76e8417447a5b472e9913f4f60c9",
+    "identificador": "PP1",
+    "descricao": "EMED PP1",
+    "incluidoEm": "14/12/2011",
+    "alteradoEm": null,
+    "excluidoEm": null,
+    "incluidoPor": "CARGA",
+    "alteradoPor": null,
+    "excluidoPor": null
+  },
+  {
+    "uuid": "76451c760f8740a29c162f9517c7717d",
+    "identificador": "PP2/PE5 ",
+    "descricao": "EMED PP2/PE5 ",
+    "incluidoEm": "14/12/2011",
+    "alteradoEm": null,
+    "excluidoEm": null,
+    "incluidoPor": "CARGA",
+    "alteradoPor": null,
+    "excluidoPor": null
+  },
+  {
+    "uuid": "e7374052e86044afad740f8d9aabd9a9",
+    "identificador": "WHITE MARTINS",
+    "descricao": "EMED WHITE MARTINS",
+    "incluidoEm": "14/12/2011",
+    "alteradoEm": null,
+    "excluidoEm": null,
+    "incluidoPor": "CARGA",
+    "alteradoPor": null,
+    "excluidoPor": null
+  }
+]
