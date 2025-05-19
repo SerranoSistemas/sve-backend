@@ -21,8 +21,10 @@ Router.get("/", (REQ: Request, RES: Response) => {
       adDominio: "AD dominio",
       adUsuario: "AD dominio",
       comunicarComPims: "1", //Vem em string 0 OU 1
+      enviarEmailNotasFiscaisPendentes: "1",
       horarioDeCorte: "03:00", //'00:00'
       horarioTransferenciasAutomaticas: "10:00",
+      horarioEmailNotasFiscaisPendentes: "15:00",
       horarioLeituraAutomatica: "04:00",
       idiomaPrimario: {
         pt: "Primário",
@@ -30,7 +32,7 @@ Router.get("/", (REQ: Request, RES: Response) => {
         es: "Primario",
       },
       idiomaSecundario: {
-        pt: "Secundário",
+        pt: "Secundário", 
         en: "Secondary",
         es: "Secundario",
       },
