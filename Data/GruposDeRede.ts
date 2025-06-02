@@ -28,6 +28,8 @@ export const GruposDeRede = [
       { chave: "3.1", valor: ESCRITA },
       { chave: "3.2", valor: ESCRITA },
       { chave: "3.3", valor: ESCRITA },
+      { chave: "3.4", valor: ESCRITA },
+      { chave: "3.5", valor: ESCRITA },
 
       //CADASTRO
       { chave: "4", valor: ESCRITA },
@@ -106,6 +108,8 @@ export const GruposDeRede = [
       { chave: "3.1", valor: ESCRITA },
       { chave: "3.2", valor: ESCRITA },
       { chave: "3.3", valor: ESCRITA },
+      { chave: "3.4", valor: ESCRITA },
+      { chave: "3.5", valor: ESCRITA },
 
       //CADASTRO
       { chave: "4", valor: LEITURA },
@@ -145,6 +149,8 @@ export const GruposDeRede = [
       { chave: "3.1", valor: ESCRITA },
       { chave: "3.2", valor: ESCRITA },
       { chave: "3.3", valor: ESCRITA },
+      { chave: "3.4", valor: ESCRITA },
+      { chave: "3.5", valor: ESCRITA },
 
       //CADASTRO
       { chave: "4", valor: ESCRITA },
@@ -184,6 +190,8 @@ export const GruposDeRede = [
       { chave: "3.1", valor: LEITURA },
       { chave: "3.2", valor: ESCRITA },
       { chave: "3.3", valor: ESCRITA },
+      { chave: "3.4", valor: ESCRITA },
+      { chave: "3.5", valor: ESCRITA },
 
       //CADASTRO
       { chave: "4", valor: ESCRITA },
@@ -223,6 +231,8 @@ export const GruposDeRede = [
       { chave: "3.1", valor: ESCRITA },
       { chave: "3.2", valor: ESCRITA },
       { chave: "3.3", valor: ESCRITA },
+      { chave: "3.4", valor: ESCRITA },
+      { chave: "3.5", valor: ESCRITA },
 
       //CADASTRO
       { chave: "4", valor: ESCRITA },
@@ -262,6 +272,8 @@ export const GruposDeRede = [
       { chave: "3.1", valor: LEITURA },
       { chave: "3.2", valor: ESCRITA },
       { chave: "3.3", valor: ESCRITA },
+      { chave: "3.4", valor: ESCRITA },
+      { chave: "3.5", valor: ESCRITA },
 
       //CADASTRO
       { chave: "4", valor: ESCRITA },
@@ -301,6 +313,8 @@ export const GruposDeRede = [
       { chave: "3.1", valor: ESCRITA },
       { chave: "3.2", valor: ESCRITA },
       { chave: "3.3", valor: ESCRITA },
+      { chave: "3.4", valor: ESCRITA },
+      { chave: "3.5", valor: ESCRITA },
 
       //CADASTRO
       { chave: "4", valor: ESCRITA },

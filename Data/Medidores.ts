@@ -7544,7 +7544,7 @@ export const MedidoresArray = [
 export const Medidores = MedidoresArray.map((item) => {
   return {
     ...item,
-    identificador: TagGenerator(),
-    descricao: MedidorDescGenerator(),
+    // identificador: TagGenerator(),
+    // descricao: MedidorDescGenerator(),
   };
 });

@@ -72,7 +72,7 @@ export const PlantasArray = [
 export const Plantas = PlantasArray.map((item) => {
   return {
     ...item,
-    identificador: PlantaCodigoGenerator(),
-    descricao: PlantaDescGenerator(),
+    // identificador: PlantaCodigoGenerator(),
+    // descricao: PlantaDescGenerator(),
   };
 });

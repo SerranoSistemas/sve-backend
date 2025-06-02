@@ -265,8 +265,8 @@ export const ClientesArray = [
 export const Clientes = ClientesArray.map((item) => {
   return {
     ...item,
-    descricao: ClientNameGenerator(),
-    email: "",
-    centro: CentroGenerator(),
+    // descricao: ClientNameGenerator(),
+    // email: "",
+    // centro: CentroGenerator(),
   };
 });

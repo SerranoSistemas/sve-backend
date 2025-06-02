@@ -1,7 +1,6 @@
 import { Clientes } from "./Clientes";
 import { Medidores } from "./Medidores";
 import { v4 as uuidv4 } from "uuid";
-import { Automacao } from "./Types";
 import { Produtos } from "./Produto";
 
 export const generateFakeAutomacoes = (): any[] => {

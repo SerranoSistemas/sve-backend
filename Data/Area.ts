@@ -680,7 +680,7 @@ export const FilterAreaText = (data: any[], text: string | null) => {
 export const Areas = AreasArray.map((item) => {
   return {
     ...item,
-    descricao: AreaDescGenerator(),
-    identificador: AreaCodigoGenerator(),
+    // descricao: AreaDescGenerator(),
+    // identificador: AreaCodigoGenerator(),
   };
 });

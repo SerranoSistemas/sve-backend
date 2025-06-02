@@ -114,5 +114,9 @@ export const EstacoesDeMedicaoArray = [
 ];
 
 export const EstacoesDeMedicao = EstacoesDeMedicaoArray.map((item) => {
-  return { ...item, descricao: EstacaoMedicaoDescGenerator(), identificador: EstacaoMedicaoCodigoGenerator() };
+  return {
+    ...item,
+    //descricao: EstacaoMedicaoDescGenerator(),
+    //identificador: EstacaoMedicaoCodigoGenerator() };
+  };
 });

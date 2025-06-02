@@ -133,10 +133,10 @@ export const MedicoesArray: Medicao[] = [
 export const Medicoes = MedicoesArray.map((item) => {
   return {
     ...item,
-    produto: ProductDescGenerator(),
-    medidor: {
-      uuid: item.medidor.uuid,
-      identificador: TagGenerator(),
-    },
+    // produto: ProductDescGenerator(),
+    // medidor: {
+    //   uuid: item.medidor.uuid,
+    //   identificador: TagGenerator(),
+    // },
   };
 });

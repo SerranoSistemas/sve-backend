@@ -3,7 +3,7 @@ import { GenerateRandomValue } from "../Lib/Utils";
 
 export type FundoEscala = {
   uuid: string; //UUID
-  minMes: number; //INTEGER
+  minMes: number; //INTEGER 
   minMesOriginal: number; //INTEGER
   dia: string; //STRING
   multa: number; //FLOAT

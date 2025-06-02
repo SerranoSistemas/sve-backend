@@ -313,16 +313,20 @@ export const GenerateTransferencias = () => {
 
   return Transferencias.map((ordem) => ({
     codigoExportacao: ordem.uuid,
-    demonstrativo: DemonstrativoGenerator(),
+    //demonstrativo: DemonstrativoGenerator(),
+    demonstrativo: ordem.demonstrativo,
     contrato: ordem.contrato,
     medidor: {
-      identificador: TagGenerator(),
+      //identificador: TagGenerator(),
+      identificador: ordem.tag,
     },
     cliente: {
-      nome: ClientNameGenerator(),
+      //nome: ClientNameGenerator(),
+      nome: ordem.cliente,
     },
     produto: {
-      descricao: ProductDescGenerator(),
+      //descricao: ProductDescGenerator(),
+      descricao: ordem.produto,
     },
     desconto: ordem.desconto,
     quantidadeConsumida: Math.floor(Math.random() * (ordem.quantidadeTransferida / 2)), // Exemplo de quantidade consumida gerada aleatoriamente

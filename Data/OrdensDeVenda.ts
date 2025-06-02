@@ -327,16 +327,20 @@ export const GenerateOrdensDeVenda = () => {
 
   return OrdensDeVenda.map((ordem) => ({
     codigoExportacao: ordem.uuid,
-    demonstrativo: DemonstrativoGenerator(),
+    //demonstrativo: DemonstrativoGenerator(),
+    demonstrativo: ordem.demonstrativo,
     contrato: ordem.contrato,
     medidor: {
-      identificador: TagGenerator(),
+      identificador: ordem.tag,
+      // identificador: TagGenerator(),
     },
     cliente: {
-      nome: ClientNameGenerator(),
+      NOME: ordem.cliente,
+      //nome: ClientNameGenerator(),
     },
     produto: {
-      descricao: ProductDescGenerator(),
+      descricao: ordem.produto,
+      //descricao: ProductDescGenerator(),
     },
     depositoDeDestino: {
       identificador: ordem.deposito,

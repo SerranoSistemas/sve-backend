@@ -411,7 +411,7 @@ export const FilterProdutoText = (data: any[], text: string | null) => {
 export const Produtos = ProdutosArray.map((item) => {
   return {
     ...item,
-    identificador: IdentificadorGenerator(),
-    descricao: ProductDescGenerator(),
+    // identificador: IdentificadorGenerator(),
+    // descricao: ProductDescGenerator(),
   };
 });

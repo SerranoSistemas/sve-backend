@@ -13,7 +13,7 @@ export const DetalhamentoDeMedicao: Detalhamento[] = [
   //   unidadeDeMedidaPrimaria: "T",
   //   unidadeDeMedidaSecundaria: "T",
   //   diferenca: 0,
-  //   acrescimo: 0,
+  //   acrescimo: 0, 
   //   desconto: 0,
   //   medicaoLiberada: 0,
   //   unidadeDeMedidaLiberacao: "",

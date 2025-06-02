@@ -1487,8 +1487,8 @@ export const GetProdutosPorCliente = () => {
   return ProdutosPorCliente.map((item) => {
     return {
       ...item,
-      transacaoDoDia: TransacaoGenerator(),
-      transacaoDoDiaAnterior: TransacaoGenerator(),
+      // transacaoDoDia: TransacaoGenerator(),
+      // transacaoDoDiaAnterior: TransacaoGenerator(),
     };
   });
 };

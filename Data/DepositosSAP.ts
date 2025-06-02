@@ -105,7 +105,7 @@ export const DepositosSAPArray = [
 export const DepositosSAP = DepositosSAPArray.map((item) => {
   return {
     ...item,
-    identificador: DepositoGenerator(),
-    descricao: DepositoGenerator(),
+    // identificador: DepositoGenerator(),
+    // descricao: DepositoGenerator(),
   };
 });

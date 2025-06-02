@@ -120,16 +120,16 @@ export const GenerateEstornos = () => {
     demonstrativo: DemonstrativoGenerator(),
     contrato: ordem.contrato,
     medidor: {
-      //identificador: ordem.tag,
-      identificador: TagGenerator(),
+      identificador: ordem.tag,
+      //identificador: TagGenerator(),
     },
     cliente: {
-      //nome: ordem.cliente,
-      nome: ClientNameGenerator(),
+      nome: ordem.cliente,
+      //nome: ClientNameGenerator(),
     },
     produto: {
-      // descricao: ordem.produto,
-      descricao: ProductDescGenerator(),
+      descricao: ordem.produto,
+      //descricao: ProductDescGenerator(),
     },
     tipo: Math.floor(Math.random() * 3) + 1,
     periodicidade: ordem.periodicidade,
