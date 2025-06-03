@@ -16,6 +16,7 @@ import { Router as ClientesRoutes } from "./Routes/Clientes";
 import { Router as FundoEscalaRoutes } from "./Routes/FundoEscala";
 import { Router as MedicaoRoutes } from "./Routes/Medicao";
 import { Router as MedidorRoutes } from "./Routes/Medidor";
+import { Router as EnergiaRouter } from "./Routes/Energia";
 import { Router as AutomacaoPimsRoutes } from "./Routes/AutomacaoPims";
 import { Router as AutomacoesRoutes } from "./Routes/Automacoes";
 import { Router as EvidenciasRoutes } from "./Routes/Evidencias";
@@ -30,54 +31,55 @@ import { GerarRelatorioComparativo } from "./Data/RelatorioComparativo";
 
 const PORT = process.env.PORT || 3000;
 
-const APP = express();
+const app = express();
 
 // Aplicando middlewares globais
-APP.use(express.json());
-APP.use(Middleware);
-APP.use(cors());
+app.use(express.json());
+app.use(Middleware);
+app.use(cors());
 
-APP.get("/", (req: Request, res: Response) => res.status(200).json({ mensagem: "Bem vindo ao Sistema de Medição" }));
+app.get("/", (req: Request, res: Response) => res.status(200).json({ mensagem: "Bem vindo ao Sistema de Medição" }));
 
 //Cadastros
-APP.use("/planta", Router_Planta);
-APP.use("/unidadeDeMedida", Router_UnidadesDeMedida);
-APP.use("/medicao", Router_Medicoes);
-APP.use("/servidorPims", Router_ServersPIMS);
-APP.use("/area", Router_Area);
-APP.use("/produto", Router_Produto);
-APP.use("/estacaoDeMedicao", EstacaoMedicaoRouter);
-APP.use("/deposito", DepositosRoutes);
-APP.use("/cliente", ClientesRoutes);
-APP.use("/medidor", MedidorRoutes);
+app.use("/planta", Router_Planta);
+app.use("/unidadeDeMedida", Router_UnidadesDeMedida);
+app.use("/medicao", Router_Medicoes);
+app.use("/servidorPims", Router_ServersPIMS);
+app.use("/area", Router_Area);
+app.use("/produto", Router_Produto);
+app.use("/estacaoDeMedicao", EstacaoMedicaoRouter);
+app.use("/deposito", DepositosRoutes);
+app.use("/cliente", ClientesRoutes);
+app.use("/medidor", MedidorRoutes);
 
 //Movimentação
-APP.use("/fundodeescala", FundoEscalaRoutes);
-APP.use("/medicao", MedicaoRoutes);
-APP.use("/automacao-pims", AutomacaoPimsRoutes);
-APP.use("/automacoes", AutomacoesRoutes);
+app.use("/fundodeescala", FundoEscalaRoutes);
+app.use("/medicao", MedicaoRoutes);
+app.use("/automacao-pims", AutomacaoPimsRoutes);
+app.use("/automacoes", AutomacoesRoutes);
+app.use("/energia", EnergiaRouter);
 
 //Geral
-APP.use("/sistema", SistemaRoutes);
-APP.use("/arquivo", ArquivoRoutes);
-APP.use("/grupoderede", GruposDeRedeRoutes);
-APP.use("/configuracao", ConfiguracaoRoutes);
-APP.use("/evidencia", EvidenciasRoutes);
-APP.use("/permissao", PermissaoRoutes);
+app.use("/sistema", SistemaRoutes);
+app.use("/arquivo", ArquivoRoutes);
+app.use("/grupoderede", GruposDeRedeRoutes);
+app.use("/configuracao", ConfiguracaoRoutes);
+app.use("/evidencia", EvidenciasRoutes);
+app.use("/permissao", PermissaoRoutes);
 
 //SAP
-APP.use("/produtoPorCliente", ProdutoPorClienteRoutes);
-APP.use("/estorno", EstornoRoutes);
-APP.use("/transferencia", TransferenciasRoutes);
-APP.use("/ordemDeVenda", OrdensDeVendaRoutes);
+app.use("/produtoPorCliente", ProdutoPorClienteRoutes);
+app.use("/estorno", EstornoRoutes);
+app.use("/transferencia", TransferenciasRoutes);
+app.use("/ordemDeVenda", OrdensDeVendaRoutes);
 
 //relatorios
-APP.use("/relatorio", RelatoriosRoutes);
+app.use("/relatorio", RelatoriosRoutes);
 
-APP.use((req: Request, res: Response, next: Function) => {
+app.use((req: Request, res: Response, next: Function) => {
   res.status(404).send("Rota não encontrada");
 });
 
-APP.listen(PORT, () => console.log(`Servidor rodando na porta ${PORT}`));
+app.listen(PORT, () => console.log(`Servidor rodando na porta ${PORT}`));
 
-export default APP;
+export default app;
