@@ -21,7 +21,7 @@ Router.post("/detalhes", (REQ: Request, RES: Response) => {
   const [, mes, ano] = data.split("/");
 
   const response: ResponseType = {
-    data: [],
+    data: MedicoesEnergia, 
     sucesso: true,
     mensagem: "Dados processados com sucesso",
     page: null,

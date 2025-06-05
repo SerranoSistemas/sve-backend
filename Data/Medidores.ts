@@ -62,6 +62,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "ad6b0c4806894758b52a147a0d07e3dc",
@@ -104,6 +105,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "2827a2e7bd46436f8eda4f903099df31",
@@ -146,6 +148,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: null,
   },
   {
     uuid: "3b0c3f8922664588a113177edcd47d31",
@@ -188,6 +191,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "2325e15cc78d4a6581934b4556329ee5",
@@ -230,6 +234,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "3112683324fb4d4eba62eafd43fc7593",
@@ -272,6 +277,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "657d0f1a5bcd48d5989a473d983da3e8",
@@ -314,6 +320,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "a47888cdb02a4ff8b643fa920e7a0b2d",
@@ -356,6 +363,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "406b5aa0105e46cba7fd32db2628de24",
@@ -398,6 +406,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "684dfdce3f764d9ba7610b33a2d52fed",
@@ -440,6 +449,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "735b7d76d2ab46a2903d808962e9618c",
@@ -482,6 +492,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "473e30f9ebed4bb7b87c5e488ed59982",
@@ -524,6 +535,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "54be97f083e8470f92aa9dda0939001d",
@@ -566,6 +578,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "2aae92a94e524af086ce5318c8cf5018",
@@ -608,6 +621,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "24c79bc652b34e719c7ff1e8ef5fe6cc",
@@ -650,6 +664,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "2bfff95e3be44537812980b233a8c56a",
@@ -692,6 +707,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "97d661bf44084017b4e20b8286993b2b",
@@ -734,6 +750,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "c3d0996c201c4d4bbf602fe4712da9e6",
@@ -776,6 +793,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "296e61e965054b2da372232193004556",
@@ -818,6 +836,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "98e262117025436887e736eb903a091a",
@@ -860,6 +879,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "bb8ff31226bd4c689e6db7d6057d7067",
@@ -902,6 +922,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "befaedbdb1584e1d93001220004713d8",
@@ -944,6 +965,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "1d363cb9cc144becaa75f0972a7cf79e",
@@ -986,6 +1008,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "e7fd89e7c3524454ab9d76c4f02fc9a0",
@@ -1028,6 +1051,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "ad9b325ce50a417d89dd788bccc97178",
@@ -1070,6 +1094,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "729091d557064d89aca18b9b3f9391ca",
@@ -1112,6 +1137,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "a57848d0410f44a2884ef8d5e657e4dd",
@@ -1154,6 +1180,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "94e2c2b3ef3a44a3a37fc5d2fbe4ac1a",
@@ -1196,6 +1223,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "f1d1aa632e3c47a381df19e8836f14ed",
@@ -1238,6 +1266,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "aa291801e0b44388b8f1d8acfa80db01",
@@ -1280,6 +1309,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "21d5c96df4a242ceba12486152754e38",
@@ -1322,6 +1352,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "f0ed380ed0e845ef82c436d05ce78320",
@@ -1364,6 +1395,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "3eeeac12f88142678cd83c919ba7bcc6",
@@ -1406,6 +1438,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "a5611321d6ef49f1829279d20681edda",
@@ -1448,6 +1481,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "4693524aac6c427f95965e26bc7bc0d7",
@@ -1490,6 +1524,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "24fa6b3618ce4beba55b76b874f2ee57",
@@ -1532,6 +1567,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "dc3c7d356a47420abd0fc7dd385c20e3",
@@ -1574,6 +1610,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "fda32ab876034b81bc178373af3c7aad",
@@ -1616,6 +1653,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "2bc7c4707f654289be9b4c537cf42002",
@@ -1658,6 +1696,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "4fd65f277017492e89cd9dded2648ba8",
@@ -1700,6 +1739,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "fb53d7ed41644978addfb9e987a51c45",
@@ -1742,6 +1782,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "428aced3e7ad42fa835242625471d94b",
@@ -1784,6 +1825,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "918034e468734d7f87271da24d8668d7",
@@ -1826,6 +1868,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "7bf0e6615ec046b5b0aa5409a837fc8b",
@@ -1868,6 +1911,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "f9aed51fd4fb457d9e64812267ccc639",
@@ -1910,6 +1954,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "b3a0ea9063fb4ef3a43f823414b7d8e4",
@@ -1952,6 +1997,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "fc3ba57b288e4d5ba3106643b4cddbea",
@@ -1994,6 +2040,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "0511d78d51c94b07b1ce92d65e2e70d6",
@@ -2036,6 +2083,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "9f523a89670941edb38f863034ee3668",
@@ -2078,6 +2126,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "a86023c17a964ffa92a3419a6e91f47f",
@@ -2120,6 +2169,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "591a5163912542c593be240c4355a52e",
@@ -2162,6 +2212,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "4022483f426b4732828e5d63e304811a",
@@ -2204,6 +2255,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "d41322e7525b47699fed692b4ca48065",
@@ -2246,6 +2298,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "7f529e2d48eb418eac5d87ff3efb1c91",
@@ -2288,6 +2341,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "fb59eec0051f4680a415b8574e70a44c",
@@ -2330,6 +2384,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "7d9f00505b6a4e75acb47d305c86c5f0",
@@ -2372,6 +2427,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "b9319508d4a64573be27a2510a235f06",
@@ -2414,6 +2470,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "304894b090d148bb8a1717b771c39f16",
@@ -2456,6 +2513,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "8faf760811bb4e27b5c41d3cce083e1c",
@@ -2498,6 +2556,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "5f0b9e5ecf3e4355a018dfb553b47953",
@@ -2540,6 +2599,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "3537d6f907464bb3857e8463961374e0",
@@ -2582,6 +2642,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "78f95137513d474dbb663860e87e6d62",
@@ -2624,6 +2685,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "3b5011ab785e43529ad84b36ee6bdf7c",
@@ -2666,6 +2728,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "3fe93854f61f473a88e5f58dd91673a6",
@@ -2708,6 +2771,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "71716fb44bb245a98268a230c0251631",
@@ -2750,6 +2814,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "23199c8aad2641e3980de0ccf57d8290",
@@ -2792,6 +2857,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "d0a877c8fbf54ad081745db74f023d8b",
@@ -2834,6 +2900,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "b55a4a134d334c50847ffc646560fc96",
@@ -2876,6 +2943,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "7093ec6818ee449ebc3014a3107c3809",
@@ -2918,6 +2986,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "be27027bc5594fcb9cbf01061bd11185",
@@ -2960,6 +3029,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "d20fa33ba84d4f918b7d9028b14a8a53",
@@ -3002,6 +3072,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "1579b6f75a5940e2bc105fe9f95e96c9",
@@ -3044,6 +3115,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "f4eddbfd4fe24f01a6c1c973bea017ec",
@@ -3086,6 +3158,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "a84d8de14a2044bc8f0191ef744df7fd",
@@ -3128,6 +3201,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "9f4fde9d1c0c420e9ccfb609a2836567",
@@ -3170,6 +3244,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "a9ccc673bf75432bac786d97ad28a830",
@@ -3212,6 +3287,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "c284fa922bff4344a9b07c5560e1203e",
@@ -3254,6 +3330,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "5cd0482295264500a4086f8dac6e3052",
@@ -3296,6 +3373,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "e2c24012cfd34a57aad0b39086554e5e",
@@ -3338,6 +3416,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "05b12286e671410686ec6010b77bd288",
@@ -3380,6 +3459,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "e401bd8607154f20a22a0a41bc5aaa94",
@@ -3422,6 +3502,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "05e2f40fcb2d49aa8b4537ceb710cef1",
@@ -3464,6 +3545,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "91ab09a93db74046b6146f0f504f75e4",
@@ -3506,6 +3588,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "13458a4d3ba24a2fbd77748aade83bb8",
@@ -3548,6 +3631,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "0d2bd4986d35478d920c4bf86e0e685d",
@@ -3590,6 +3674,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "382aa387af0d414d91ecf5286c668059",
@@ -3632,6 +3717,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "b50871590d1d42a3b30b899f9a21886f",
@@ -3674,6 +3760,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "467ded00c8384a6a9642d4e3e8103f58",
@@ -3716,6 +3803,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "e7516189ab154922bc44b36b8ad72d2d",
@@ -3758,6 +3846,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "aad96eac89274598a8557205b562051a",
@@ -3800,6 +3889,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "a74643f04dfe4553853fe3f4073d7dcf",
@@ -3842,6 +3932,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "2f1393a71d124bf9bacf53c2e9a80683",
@@ -3884,6 +3975,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "158ced4915be4d26ac3d916574e34571",
@@ -3926,6 +4018,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "026eb6c571c44971b3cabaa04778a036",
@@ -3968,6 +4061,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "d70b3717f5784fb5b922cc09aecfce35",
@@ -4010,6 +4104,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "d9c6ec8426a64a1ba1d36ccca4b00d7d",
@@ -4052,6 +4147,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "5ebd914e27684ffaba3cb86a5f2f3d74",
@@ -4094,6 +4190,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "17af1b456f034ab39eeaa13388a9b7f2",
@@ -4136,6 +4233,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "41575ac07d7b4c65897b1b6d8c3bb9e6",
@@ -4178,6 +4276,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "bce01dea4d51426eb3a2f757a20e8053",
@@ -4220,6 +4319,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "899d1168c4144c6a95fb05a4db39b338",
@@ -4262,6 +4362,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "72fb34d25e2343339003d1dc8fa1c83a",
@@ -4304,6 +4405,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "a870aea600644638b35fc7a8ab468767",
@@ -4346,6 +4448,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "bfae2493a06144c2a3dd35223a8de2b4",
@@ -4388,6 +4491,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "1d928e347f3e4639b449695b1218d7ef",
@@ -4430,6 +4534,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "cc4d982996b547bc8758f28c00eeecea",
@@ -4472,6 +4577,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "ca18aee7167d45dcadfa3261e1ce888e",
@@ -4514,6 +4620,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "e945afc592fb447fa3e4805380f9f851",
@@ -4556,6 +4663,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "3b55fd8bcb75486883efe98642f6649e",
@@ -4598,6 +4706,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "27b5074ae4ab46389303864f5bb77dc6",
@@ -4640,6 +4749,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "be1e3fccee32496d90e698a51d9880ac",
@@ -4682,6 +4792,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "43be07fed8804075bf16a63f0961376f",
@@ -4724,6 +4835,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "0f394bac40db401db3db4c1f7865150b",
@@ -4766,6 +4878,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "30fb3136f03140088329ec2c5496a844",
@@ -4808,6 +4921,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "9fa6fe81ec194616a82fb062e52bfd74",
@@ -4850,6 +4964,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "e87ac072c5304d31a2d52ccf5080cd33",
@@ -4892,6 +5007,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "68b609d6d38640c4be30f91f006bb83b",
@@ -4934,6 +5050,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "1226de67bd27468e8115b01acecffff9",
@@ -4976,6 +5093,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "349f019b52fb4f7884fbc28bb3b3592e",
@@ -5018,6 +5136,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "5ee65bf6c14a4012a0888fa45c1589c6",
@@ -5060,6 +5179,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "f325fe2f22454b0aa936c10d9dd1dfb3",
@@ -5102,6 +5222,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "77778b8636ce4f6abaa0c4dcaf05adb7",
@@ -5144,6 +5265,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "051fed95ccda4da8b2369beb664cb73c",
@@ -5186,6 +5308,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "17f7dd30b7f249bdafef1450131e8624",
@@ -5228,6 +5351,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "26455b839eb344b4ae9bb8158ff87447",
@@ -5270,6 +5394,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "ae23a1be2d38488bbb49ed3a1725fe27",
@@ -5312,6 +5437,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "b9f19b9a57264ff6b4f76f674637ea6b",
@@ -5354,6 +5480,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "54511b13c96c44ceba256d6d4348beda",
@@ -5396,6 +5523,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "2090f7606086430d9b8d629174629ba8",
@@ -5438,6 +5566,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "3d730333b7584f88bab318272b9ea308",
@@ -5480,6 +5609,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "ccf2fb53c25c4ebca1ff9bcd13d5dd13",
@@ -5522,6 +5652,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "6b3d04f7e38e4f409323f0da9b0bf5ce",
@@ -5564,6 +5695,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "8cd9cc5af1b34318a4e7f6795722c1df",
@@ -5606,6 +5738,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "6d2403fea20448a891860ae8f03d2e19",
@@ -5648,6 +5781,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "94f3d4607fbe4f97a41a50bc4aa7eea1",
@@ -5690,6 +5824,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "80cc866d9536479390ce94331f23c91b",
@@ -5732,6 +5867,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "6f94aa72d5cf4eb3a08a66e61ee72318",
@@ -5774,6 +5910,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "d791b7c756ea48a1b8bf8d1d403f0d55",
@@ -5816,6 +5953,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "b0c6ec09e7c7434187a9ae454eff9db1",
@@ -5858,6 +5996,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "d3ddda77b0c840eabb0eab1f4ec7555f",
@@ -5900,6 +6039,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "b1122156c4434a10becb9bb6a90af931",
@@ -5942,6 +6082,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "1484c8b3898b4802ad9112c64c42f9ff",
@@ -5984,6 +6125,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "2629cb28760e443a90f54816ee928ea2",
@@ -6026,6 +6168,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "b7403f4a22c04bb39f614f2e9df5c60c",
@@ -6068,6 +6211,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "7af67e872347462aba3d44e33d797c51",
@@ -6110,6 +6254,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "7eacec51523148098007753c197cb176",
@@ -6152,6 +6297,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "0049d19d6e0744058d0a31550a401a03",
@@ -6194,6 +6340,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "d0232ffc8bcc49c09eb07b88c181c349",
@@ -6236,6 +6383,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "9428bc93f7db4a76bcf7ed7f90a3984a",
@@ -6278,6 +6426,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "5a779ed525d64c75980ce824932ae90e",
@@ -6320,6 +6469,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "30b2002554074227bf75dabac12269c0",
@@ -6362,6 +6512,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "60a77c9ecd804c6b93545f338db7a957",
@@ -6404,6 +6555,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "71f9b6ebb2804896a46505d1dd4521aa",
@@ -6446,6 +6598,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "3d00337723a2444790324312f92f1775",
@@ -6488,6 +6641,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "e6998c400d7b4c3b8797bb39b32a753f",
@@ -6530,6 +6684,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "349ddfba92a341d9b220321377d4aa2c",
@@ -6572,6 +6727,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "4c789475c16a43fc98233e508f2a380a",
@@ -6614,6 +6770,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "ce5afc43a2264ef8be30a0f1bf6fe17e",
@@ -6656,6 +6813,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "dfc296b50f934e59be5907ba61e6cb36",
@@ -6698,6 +6856,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "6e265344e9a047969c9b7faadbec4056",
@@ -6740,6 +6899,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "db81bf1d11ac4f5e8438203137a47c95",
@@ -6782,6 +6942,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "aea0ad0506d748d2bb886c4f17cb3917",
@@ -6824,6 +6985,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "7e82d2e329d647da9220dda9c1c68d34",
@@ -6866,6 +7028,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "4dc91469833d4ee9b4a12c03d4b48699",
@@ -6908,6 +7071,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "8a46bd017cb746eaa51bbe2f3ca9bf43",
@@ -6950,6 +7114,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "9921a314d04f4f608aa91cf47cc7d003",
@@ -6992,6 +7157,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "2d0d34816bb048c6a708f47f4ee3fdee",
@@ -7034,6 +7200,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "42949cf88f9c4fe283ec0afceb641601",
@@ -7076,6 +7243,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "72a6d567c66d4a9a8c3295e4db520251",
@@ -7118,6 +7286,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "82bf1c360b76475f9cc14ca2a066addc",
@@ -7160,6 +7329,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "34df42e62387419f82498585a38bc88c",
@@ -7202,6 +7372,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "a73f41ea80a54602989ea0277c24dfeb",
@@ -7244,6 +7415,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "8bb98b06180f429586f3de5601e04c5b",
@@ -7286,6 +7458,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "17ece36a9dbc45819cafb215cb7bcc6d",
@@ -7328,6 +7501,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "38c9706b037747b18540eeac9c58e577",
@@ -7370,6 +7544,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "5668d39a36ca436b85e789343129c0e5",
@@ -7412,6 +7587,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "2e0a1d79cdc34ed6bece3fd97e9ad6be",
@@ -7454,6 +7630,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "6eab7f1b11d74afb8c9da77bb90d61cd",
@@ -7496,6 +7673,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
   {
     uuid: "3b6a1d7ad4ec4e22913d8006e9382631",
@@ -7538,6 +7716,7 @@ export const MedidoresArray = [
     toleranciaDeContrato: randomFloat(0, 100),
     toleranciaDeDesvioPercentual: randomFloat(0, 100),
     executarTransferenciaEntreCentros: randomBool(),
+    tipoMedidorEnergia: 2,
   },
 ];
 
