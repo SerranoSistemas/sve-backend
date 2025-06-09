@@ -47,7 +47,7 @@ export const GerarRelatorioComparativo = (
       data: Dia,
       soma: 999,
       dados: Agrupadores.map((_, index) => {
-        return [2999999.999, index, 999.999, 0, (index + 1) * 100, 999.999, 0, (index + 1) * 100, index % 2 === 0];
+        return [2999999.999, index, 999.999, 0, (index + 1) * 100, 999.999, 0, (index + 1) * 100, index % 2 === 0, 999.999];
       }),
     };
   });
@@ -63,8 +63,9 @@ export const GerarRelatorioComparativo = (
       "DifPercent",
       "AcumUnib",
       "AcumParceiro",
-      "DifAcum", 
+      "DifAcum",
       "medidorOficialPrimario",
+      "medicaoOficial",
     ],
     agrupadores: Agrupadores,
     dados: Dados,
