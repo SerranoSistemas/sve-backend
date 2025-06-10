@@ -1,6 +1,7 @@
 import express, { Request, Response } from "express";
 import { ResponseType } from "../Data/Types";
 import { MedicoesEnergia } from "../Data/Energia.Medicao";
+import { gerarEnergiaDetalhamentos } from "../Data/Energia.Detalhes";
 
 const Router = express.Router();
 
@@ -20,8 +21,10 @@ Router.post("/detalhes", (REQ: Request, RES: Response) => {
 
   const [, mes, ano] = data.split("/");
 
+  const detalhamentos = gerarEnergiaDetalhamentos(`${mes}/${ano}`);
+
   const response: ResponseType = {
-    data: MedicoesEnergia, 
+    data: detalhamentos,
     sucesso: true,
     mensagem: "Dados processados com sucesso",
     page: null,
