@@ -58,9 +58,9 @@ export function gerarEnergiaDetalhamentos(data: string) {
       medicaoLiberadaAtiva: valorPrimario,
       medicaoLiberadaReativa: valorSecundario,
 
-      fatorDePotencia: valorPrimario * 0.67,
+      fatorDePotencia: Math.random(),
 
-      observacao: "",
+      observacao: Math.random() < 0.5 ? "Observação aleatória" : "",
 
       statusTagLiberacao: Math.random() > 0.15 ? "L" : "P", // 'L' é Liberada, qualquer outra coisa não
       dataStatusTagLiberacao: `${dia.toString().padStart(2, "0")}/${mes.toString().padStart(2, "0")}/${ano
